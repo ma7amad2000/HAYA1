@@ -130,8 +130,7 @@ async def ihd(client: Client, message: Message):
         ) 
     )
     
-@app.on_message(command(["‹ رمزيات شباب","‹ رمزيات شباب"]))
-
+@app.on_message(comman(["صوره","صور"]))
 async def ihd(client: Client, message: Message):
 
     rs = random.randint(39,148)
