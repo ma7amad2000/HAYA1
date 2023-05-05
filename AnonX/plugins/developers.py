@@ -1,3 +1,4 @@
+
 import asyncio
 
 import os
@@ -26,25 +27,25 @@ from random import  choice, randint
 )
 async def huhh(client: Client, message: Message):
     await message.reply_photo(
-        photo=f"https://telegra.ph/file/be8fb2f02cf57e1725ccd.jpg",
-        caption=f"""**⩹━★⊷━⌞ 𝐇𝐀𝐘𝐀 • 𝙎𝙊𝙐𝙍𝘾𝙀 ⌝━⊶★━⩺**\nمرحبا بك عزيزي {message.from_user.mention} في قسم مطورين cr ميوزك\nللتحدث مع مطورين اضغط علي الازرار بالاسفل👇\n**⩹━★⊷━⌞ 𝐇𝐀𝐘𝐀 • 𝙎𝙊𝙐𝙍𝘾𝙀 ⌝━⊶★━⩺**""",
+        photo=f"https://c.top4top.io/p_2680dmevf1.jpg,
+        caption=f"""⩹━★⊷━⌞ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐇𝐀𝐘𝐀⌝━⊶★━⩺\nمرحبا بك عزيزي {message.from_user.mention} في قسم مطورين cr ميوزك\nللتحدث مع مطورين اضغط علي الازرار بالاسفل👇\n⩹━★⊷━⌞ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐇𝐀𝐘𝐀⌝━⊶★━⩺""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "᳒『𝐖𝐇𝐈𝐒𝐊𝐄𝐘 𝐓𝐍𝐓 ⏎ 』⌯►", url=f"https://t.me/lV_P_Nl"), 
+                        "᳒𝐖𝐇𝐈𝐒𝐊𝐄𝐘⌯►", url=f"https://t.me/lV_P_Nl"), 
                  ],[
                     InlineKeyboardButton(
-                          "᳒『𝐖𝐇𝐈𝐒𝐊𝐄𝐘 𝐓𝐍𝐓 ⏎ 』⌯►", url=f"https://t.me/lV_P_Nl"), 
+                        "قروب المساعده", url=f"https://t.me/HL_BG"),
                 ],[
                     InlineKeyboardButton(
-                    "᳒『𝐖𝐇𝐈𝐒𝐊𝐄𝐘 𝐓𝐍𝐓 ⏎ 』⌯►", url=f"https://t.me/lV_P_Nl"), 
+                        "قناة السورس", url=f"https://t.me/lN_B_Fl"),
                     InlineKeyboardButton(
-                          "᳒『𝐖𝐇𝐈𝐒𝐊𝐄𝐘 𝐓𝐍𝐓 ⏎ 』⌯►", url=f"https://t.me/lV_P_Nl"), 
+                        "بوتي", url=f"https://t.me/HAYA01BOT"),
                 ],[
                 
                     InlineKeyboardButton(
-                        "★⌞ 𝐇𝐀𝐘𝐀 • 𝙎𝙊𝙐𝙍𝘾𝙀 ⌝⚡", url=f"https://t.me/lN_B_Fl"),
+                        "★⌞ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐇𝐀𝐘𝐀⌝⚡", url=f"https://t.me/lN_B_Fl"),
                 ],
 
             ]
@@ -61,7 +62,7 @@ async def huhh(client: Client, message: Message):
 
 
 @app.on_message(
-    command(["وسكي تعال","محمد","الوسكي","مبرمج","whiskey ","وسكي" ,"المطور"])
+    command(["وسكي انجم","محمد","وسكي","مبرمج","whiskey ","whis" ,"المطور"])
     & filters.group
     & ~filters.edited
 )
@@ -69,7 +70,7 @@ async def yas(client, message):
     usr = await client.get_chat("lV_P_Nl")
     name = usr.first_name
     photo = await app.download_media(usr.photo.big_file_id)
-    await message.reply_photo(photo,       caption=f"**⩹━★⊷━⌞ 𝐇𝐀𝐘𝐀 • 𝙎𝙊𝙐𝙍𝘾𝙀 ⌝━⊶★━⩺\n\n🧞‍♂️ ¦𝙽𝙰𝙼𝙴 :{name}\n🎯 ¦𝚄𝚂𝙴𝚁 :@{usr.username}\n💣 ¦𝙸𝙳 :`{usr.id}`\n🚀 ¦𝙱𝙸𝙾 :{usr.bio}\n\n**⩹━★⊷━⌞ 𝐇𝐀𝐘𝐀 • 𝙎𝙊𝙐𝙍𝘾𝙀 ⌝━⊶★━⩺**", 
+    await message.reply_photo(photo,       caption=f"⩹━★⊷━⌞ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐇𝐀𝐘𝐀⌝━⊶★━⩺\n\n🧞‍♂️ ¦𝙽𝙰𝙼𝙴 :{name}\n🎯 ¦𝚄𝚂𝙴𝚁 :@{usr.username}\n💣 ¦𝙸𝙳 :{usr.id}\n🚀 ¦𝙱𝙸𝙾 :{usr.bio}\n\n⩹━★⊷━⌞ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐇𝐀𝐘𝐀⌝━⊶★━⩺**", 
     reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -82,15 +83,15 @@ async def yas(client, message):
 
 
 @app.on_message(
-    command(["حساب مساعد تعال","حساب مساعد","فودكا","مساعده","help","مساعد"])
+    command(["مساعده","قروب المساعده","ساعدني"])
     & filters.group
     & ~filters.edited
 )
 async def yas(client, message):
-    usr = await client.get_chat("whiskey_2OOO")
+    usr = await client.get_chat("HL_BG")
     name = usr.first_name
     photo = await app.download_media(usr.photo.big_file_id)
-    await message.reply_photo(photo,       caption=f"**⩹━★⊷━⌞ 𝐇𝐀𝐘𝐀 • 𝙎𝙊𝙐𝙍𝘾𝙀 ⌝━⊶★━⩺\n\n🧞‍♂️ ¦𝙽𝙰𝙼𝙴 :{name}\n🎯 ¦𝚄𝚂𝙴𝚁 :@{usr.username}\n💣 ¦𝙸𝙳 :`{usr.id}`\n🚀 ¦𝙱𝙸𝙾 :{usr.bio}\n\n**⩹━★⊷━⌞ 𝐇𝐀𝐘𝐀 • 𝙎𝙊𝙐𝙍𝘾𝙀 ⌝━⊶★━⩺**", 
+    await message.reply_photo(photo,       caption=f"⩹━★⊷━⌞ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐇𝐀𝐘𝐀⌝━⊶★━⩺\n\n🧞‍♂️ ¦𝙽𝙰𝙼𝙴 :{name}\n🎯 ¦𝚄𝚂𝙴𝚁 :@{usr.username}\n💣 ¦𝙸𝙳 :{usr.id}\n🚀 ¦𝙱𝙸𝙾 :{usr.bio}\n\n⩹━★⊷━⌞ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐇𝐀𝐘𝐀⌝━⊶★━⩺**", 
     reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -103,7 +104,7 @@ async def yas(client, message):
 
 
 @app.on_message(
-    command(["حياه انجم","حياه","حياه","حياه","haya","حياتي"])
+    command(["بوت","حياه","حياتي","سورس","بوتي"])
     & filters.group
     & ~filters.edited
 )
@@ -111,8 +112,9 @@ async def yas(client, message):
     usr = await client.get_chat("HAYA01BOT")
     name = usr.first_name
     photo = await app.download_media(usr.photo.big_file_id)
-    await message.reply_photo(photo,       caption=f"**⩹━★⊷━⌞ 𝐇𝐀𝐘𝐀 • 𝙎𝙊𝙐𝙍𝘾𝙀 ⌝━⊶★━⩺\n\n🧞‍♂️ ¦𝙽𝙰𝙼𝙴 :{name}\n🎯 ¦𝚄𝚂𝙴𝚁 :@{usr.username}\n💣 ¦𝙸𝙳 :`{usr.id}`\n🚀 ¦𝙱𝙸𝙾 :{usr.bio}\n\n**⩹━★⊷━⌞ 𝐇𝐀𝐘𝐀 • 𝙎𝙊𝙐𝙍𝘾𝙀 ⌝━⊶★━⩺**\n مرحبا معاك حياه😊", 
-    reply_markup=InlineKeyboardMarkup(
+    await message.reply_photo(photo,       caption=f"⩹━★⊷━⌞ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐇𝐀𝐘𝐀⌝━⊶★━⩺\n\n🧞‍♂️ ¦𝙽𝙰𝙼𝙴 :{name}\n🎯 ¦𝚄𝚂𝙴𝚁 :@{usr.username}\n💣 ¦𝙸𝙳 :{usr.id}\n🚀 ¦𝙱𝙸𝙾 :{usr.bio}\n\n⩹━★⊷━⌞ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐇𝐀𝐘𝐀⌝━⊶★━⩺**",
+
+reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
@@ -131,17 +133,17 @@ async def yas(client, message):
 )
 async def huhh(client: Client, message: Message):
     await message.reply_photo(
-        photo=f"https://telegra.ph/file/be8fb2f02cf57e1725ccd.jpg",
-        caption=f"""**⩹⊷━⌞ 𝐇𝐀𝐘𝐀 • 𝙎𝙊𝙐𝙍𝘾𝙀 ⌝━━⩺**\nمرحبا بك عزيزي {message.from_user.mention} في قسم الذكاء الاصتناعي الخاص بسورس cr\nلتتمكن من استخدام اوامر الذكاء الاصتناعي اكتب \n /gpt + السؤال بالاسفل👇\n**⩹━━⌞ 𝐇𝐀𝐘𝐀 • 𝙎𝙊𝙐𝙍𝘾𝙀 ⌝━━⩺**""",
+        photo=f"https://c.top4top.io/p_2680dmevf1.jpg",
+        caption=f"""⩹⊷━⌞ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐇𝐀𝐘𝐀⌝━━⩺\nمرحبا بك عزيزي {message.from_user.mention} في قسم الذكاء الاصتناعي الخاص بسورس cr\nلتتمكن من استخدام اوامر الذكاء الاصتناعي اكتب \n /gpt + السؤال بالاسفل👇\n⩹━━⌞ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐇𝐀𝐘𝐀⌝━━⩺""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "᳒『𝐖𝐇𝐈𝐒𝐊𝐄𝐘 𝐓𝐍𝐓 ⏎ 』⌯‹", url=f"https://t.me/lV_P_Nl"), 
+                        "᳒𝐖𝐇𝐈𝐒𝐊𝐄𝐘⌯‹", url=f"https://t.me/lV_P_Nl"), 
                  ],[
                 
                     InlineKeyboardButton(
-                        "★⌞ 𝐇𝐀𝐘𝐀 • 𝙎𝙊𝙐𝙍𝘾𝙀 ⌝⚡", url=f"https://t.me/lN_B_Fl"),
+                        "★⌞ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐇𝐀𝐘𝐀⌝⚡", url=f"https://t.me/lN_B_Fl"),
                 ],
 
             ]
@@ -149,7 +151,3 @@ async def huhh(client: Client, message: Message):
         ),
 
     )
-
-
-
-    
