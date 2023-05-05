@@ -1,4 +1,3 @@
-
 import asyncio
 
 import os
@@ -20,8 +19,8 @@ from random import  choice, randint
 )
 async def huhh(client: Client, message: Message):
     await message.reply_photo(
-        photo=f"https://telegra.ph/file/be8fb2f02cf57e1725ccd.jpg",
-        caption=f"""╭═★⊷⌯⧼[⌞ 𝐇𝐀𝐘𝐀 • 𝙎𝙊𝙐𝙍𝘾𝙀 ⌝](https://t.me/lN_B_Fl)⧽⌯⊶★═╮\n★‹ [⌞ 𝐇𝐀𝐘𝐀 • 𝙎𝙊𝙐𝙍𝘾𝙀 ⌝𝐀](https://t.me/lN_B_Fl)\n★‹ [𝒉𝒂𝒚𝒂 𝒎𝒖𝒔𝒊𝒄ঌ 『 𝒃𝒐𝒕 ⏎ 』](https://t.me/HAYA01BOT)\n★‹ [『𝐖𝐇𝐈𝐒𝐊𝐄𝐘 𝐓𝐍𝐓 ⏎ 』](https://t.me/lV_P_Nl)\n★‹ [ρ᥆kᥱꪔ᥆ꪀ](https://t.me/HL_BG)\n╰═★⊷⌯⧼[⌞ 𝐇𝐀𝐘𝐀 • 𝙎𝙊𝙐𝙍𝘾𝙀 ⌝](https://t.me/lN_B_Fl)⧽⌯⊶★═╯\n ⍟ Welcome to source HaYa""",
+        photo=f"https://c.top4top.io/p_2680dmevf1.jpg",
+        caption=f"""╭═★⊷⌯⧼[⌞ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐇𝐀𝐘𝐀⌝](https://t.me/lN_B_Fl)⧽⌯⊶★═╮\n★‹ [⌞ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐇𝐀𝐘𝐀⌝𝐀](https://t.me/lN_B_Fl)\n★‹ [『𝐖𝐇𝐈𝐒𝐊𝐄𝐘 𝐓𝐍𝐓 ⏎ 』 𝐌𝐔𝐒𝐈𝐂 『 𝒃𝒐𝒕 ⏎ 』](https://t.me/HAYA01BOT?startgroup=true)\n★‹ [『𝐖𝐇𝐈𝐒𝐊𝐄𝐘 𝐓𝐍𝐓 ⏎ 』](https://t.me/lV_P_Nl)\n★‹ [『 فريق حياه للبرمجه⏎ 』 ](https://t.me/HL_BG)\n╰═★⊷⌯⧼[⌞ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐇𝐀𝐘𝐀⌝](https://t.me/lN_B_Fl)⧽⌯⊶★═╯\n ⍟ ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ sᴏᴜʀᴄᴇ ʜᴀʏᴀ """,
         reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -29,7 +28,7 @@ async def huhh(client: Client, message: Message):
                         "『𝐖𝐇𝐈𝐒𝐊𝐄𝐘 𝐓𝐍𝐓 ⏎ 』༄►", url=f"https://t.me/lV_P_Nl"), 
                 ],[
                     InlineKeyboardButton(
-                        "⌞ 𝐇𝐀𝐘𝐀 • 𝙎𝙊𝙐𝙍𝘾𝙀 ⌝⚡️", url=f"https://t.me/lN_B_Fl"),
+                        "⌞ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐇𝐀𝐘𝐀⌝⚡️", url=f"https://t.me/lN_B_Fl"),
                 ],[
                     InlineKeyboardButton(
                         "𝐀𝐃𝐃 𝐌𝐄💞", url=f"https://t.me/HAYA01BOT?startgroup=true"),
@@ -43,7 +42,7 @@ async def huhh(client: Client, message: Message):
 
 
 
-@app.on_message(command(["غنيلي", "غني", "غ", "🎙 ¦ غـنيـلي"]))
+@app.on_message(command(["غنيلي", "غني", "غ", "🎙 ¦ غـنيـلي","حياه غنيلي"]))
 async def ihd(client: Client, message: Message):
     rl = random.randint(3,267)
     url = f"https://t.me/bsmaatt/{rl}"
@@ -57,6 +56,3 @@ async def ihd(client: Client, message: Message):
             ]
         )
     )
-
-
-
