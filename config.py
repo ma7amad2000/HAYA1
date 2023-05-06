@@ -76,14 +76,14 @@ clean = {}
 autoclean = []
 
 
-START_IMG_URL = getenv("START_IMG_URL", "https://te.legra.ph/file/6298d377ad3eb46711644.jpg")
+START_IMG_URL = getenv("START_IMG_URL", "https://c.top4top.io/p_2680dmevf1.jpg")
 
 PING_IMG_URL = getenv(
     "PING_IMG_URL",
-    "https://te.legra.ph/file/6298d377ad3eb46711644.jpg",
+    "https://c.top4top.io/p_2680dmevf1.jpg",
 )
 
-PLAYLIST_IMG_URL = "https://te.legra.ph/file/4ec5ae4381dffb039b4ef.jpg"
+PLAYLIST_IMG_URL = "https://c.top4top.io/p_2680dmevf1.jpg"
 
 GLOBAL_IMG_URL = "https://te.legra.ph/file/6298d377ad3eb46711644.jpg"
 
@@ -130,9 +130,9 @@ if UPSTREAM_REPO:
 if PING_IMG_URL:
     if PING_IMG_URL != "assets/Ping.jpeg":
         if not re.match("(?:http|https)://", PING_IMG_URL):
-            PING_IMG_URL = "https://te.legra.ph/file/6298d377ad3eb46711644.jpg"
+            PING_IMG_URL = "https://c.top4top.io/p_2680dmevf1.jpg"
 
 if START_IMG_URL:
     if START_IMG_URL != "assets/Ping.jpeg":
         if not re.match("(?:http|https)://", START_IMG_URL):
-            START_IMG_URL = "https://te.legra.ph/file/6298d377ad3eb46711644.jpg"
+            START_IMG_URL = "https://c.top4top.io/p_2680dmevf1.jpg"
