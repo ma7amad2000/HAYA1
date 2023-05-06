@@ -26,7 +26,7 @@ async def iddlock(client, message):
       iddof.append(message.chat.id)
       return await message.reply_text("تم تعطيل الايدي بنجاح ✅🔒")
    else:
-      return await message.reply_text("لازم تكون ادمن يشخه علشان اسمع كلامك")
+      return await message.reply_text("لازم تكون عندك رتبه ياتر عشان نسمع كلامك💦")
 
 @app.on_message(
     command(["فتح الايدي","تفعيل الايدي"])
@@ -41,7 +41,7 @@ async def iddopen(client, message):
       iddof.remove(message.chat.id)
       return await message.reply_text("تم فتح الايدي بنجاح ✅🔓")
    else:
-      return await message.reply_text("لازم تكون ادمن يشخه علشان اسمع كلامك")
+      return await message.reply_text("لازم تكون عندك رتبه ياتر عشان نسمع كلامك💦")
 
 
 
@@ -84,7 +84,7 @@ async def lllock(client, message):
       iddof.append(message.chat.id)
       return await message.reply_text(" تم تعطيل جمالي بنجاح✅🔒")
    else:
-      return await message.reply_text("لازم تكون ادمن يشخه علشان اسمع كلامك")
+      return await message.reply_text("لازم تكون عندك رتبه ياتر عشان نسمع كلامك💦")
 
 @app.on_message(
     command(["فتح جمالي","تفعيل جمالي"])
@@ -99,7 +99,7 @@ async def idljjopen(client, message):
       iddof.remove(message.chat.id)
       return await message.reply_text("تم فتح جمالي بنجاح ✅🔓")
    else:
-      return await message.reply_text("لازم تكون ادمن يشخه علشان اسمع كلامك")
+      return await message.reply_text("لازم تكون عندك رتبه ياتر عشان نسمع كلامك💦")
 
 
 
@@ -117,7 +117,7 @@ async def idjjdd(client, message):
     i = ["0","10", "15","20", "25","30","35", "40","45", "50","55", "60"," 66", "70","77", "80","85", "90","99", "100","1000" ]
     ik = random.choice(i)
     photo = await app.download_media(usr.photo.big_file_id)
-    await message.reply_photo(photo,       caption=f"نسبه جمالك يا مز انت \n│ \n└ʙʏ: {ik} %😂❤️", 
+    await message.reply_photo(photo,       caption=f"نسبه جمالك يا طرف انت \n│ \n└ʙʏ: {ik} %😂❤️", 
     reply_markup=InlineKeyboardMarkup(
             [
                 [
