@@ -27,9 +27,9 @@ from pytgcalls.types.stream import StreamAudioEnded
 
 import config
 from strings import get_string
-from YukkiMusic import LOGGER, YouTube, app
-from YukkiMusic.misc import db
-from YukkiMusic.utils.database import (add_active_chat,
+from AnonX import LOGGER, YouTube, app
+from AnonX.misc import db
+from AnonX.utils.database import (add_active_chat,
                                        add_active_video_chat,
                                        get_assistant,
                                        get_audio_bitrate, get_lang,
@@ -39,11 +39,11 @@ from YukkiMusic.utils.database import (add_active_chat,
                                        remove_active_chat,
                                        remove_active_video_chat,
                                        set_loop)
-from YukkiMusic.utils.exceptions import AssistantErr
-from YukkiMusic.utils.inline.play import (stream_markup,
+from AnonX.utils.exceptions import AssistantErr
+from AnonX.utils.inline.play import (stream_markup,
                                           telegram_markup)
-from YukkiMusic.utils.stream.autoclear import auto_clean
-from YukkiMusic.utils.thumbnails import gen_thumb
+from AnonX.utils.stream.autoclear import auto_clean
+from AnonX.utils.thumbnails import gen_thumb
 
 autoend = {}
 counter = {}
