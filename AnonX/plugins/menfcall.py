@@ -7,12 +7,12 @@ from AnonX.core.call import Anon
 from AnonX.utils.database import *
 from pytgcalls.exceptions import (NoActiveGroupCall,TelegramServerError)
 
-@app.on_message(filters.regex("من في المكالمه"))
+@app.on_message(filters.regex("مين في الكول"))
 async def strcall(client, message):
-    assistant = await group_assistant(message.chat.id)
+    assistant = await group_assistant(Yukki,message.chat.id)
     try:
         await assistant.join_group_call(message.chat.id, AudioPiped("./assets/vega.mp3"), stream_type=StreamType().pulse_stream)
-        text="🔔 الاعضاء المتواجدين في المكالمه :\n\n"
+        text="🔔 الاعضاء المتواجدين في الكول :\n\n"
         participants = await assistant.get_participants(message.chat.id)
         k =0
         for participant in participants:
@@ -29,7 +29,7 @@ async def strcall(client, message):
         await asyncio.sleep(5)
         await assistant.leave_group_call(message.chat.id)
     except NoActiveGroupCall:
-        await message.reply(f"عمووووو المكالمه مش مفتوح اصلااا\n❌")
+        await message.reply(f"عمووووو الكول مش مفتوح اصلااا\n❌")
     except TelegramServerError:
         await message.reply(f"ارسل الامر تاني في مشكله في سيرفر التلجرام\n❌")
         

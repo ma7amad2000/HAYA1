@@ -1,3 +1,4 @@
+
 import asyncio
 
 import os
@@ -14,24 +15,24 @@ from AnonX import app
 from random import  choice, randint
 
 @app.on_message(
-    command(["سورس من","سورس","السورس","سورسي", "سورس حياه"])
+    command(["سورس مين","سورس","السورس","سورسي", "cr"])
     & ~filters.edited
 )
 async def huhh(client: Client, message: Message):
     await message.reply_photo(
-        photo=f"https://c.top4top.io/p_2680dmevf1.jpg",
-        caption=f"""╭═★⊷⌯⧼[⌞ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐇𝐀𝐘𝐀⌝](https://t.me/lN_B_Fl)⧽⌯⊶★═╮\n★‹ [⌞ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐇𝐀𝐘𝐀⌝𝐀](https://t.me/lN_B_Fl)\n★‹ [𝐇𝐀𝐘𝐀 𝐌𝐔𝐒𝐈𝐂 『 𝒃𝒐𝒕 ⏎ 』](https://t.me/HAYA01BOT?startgroup=true)\n★‹ [『𝐖𝐇𝐈𝐒𝐊𝐄𝐘 ⏎ 』](https://t.me/lV_P_Nl)\n★‹ [group help](https://t.me/HL_BG)\n╰═★⊷⌯⧼[⌞ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐇𝐀𝐘𝐀⌝](https://t.me/lN_B_Fl)⧽⌯⊶★═╯\n ⍟𝑊𝐸𝐿𝐶𝑂𝑀𝐸 𝑇𝑂 𝑆𝑂𝑈𝑅𝐶𝐸 𝐻𝐴𝑌𝐴 𖠅 """,
+        photo=f"https://telegra.ph/file/be8fb2f02cf57e1725ccd.jpg",
+        caption=f"""╭═★⊷⌯⧼[⌞ 𝘾𝙍 • 𝙎𝙊𝙐𝙍𝘾𝙀 ⌝](https://t.me/pp_g3)⧽⌯⊶★═╮\n★‹ [⌞ 𝘾𝙍 • 𝙎𝙊𝙐𝙍𝘾𝙀 ⌝𝐀](https://t.me/pp_g3)\n★‹ [𝐶𝑅𝐼𝑆𝑇𝐼𝑁](https://t.me/dr_criss)\n★‹ [𝙏َِ𝙊َِ𝙈ِ](https://t.me/DEV_TOM)\n★‹ [ρ᥆kᥱꪔ᥆ꪀ](https://t.me/devpokemon)\n╰═★⊷⌯⧼[⌞ 𝘾𝙍 • 𝙎𝙊𝙐𝙍𝘾𝙀 ⌝](https://t.me/pp_g3)⧽⌯⊶★═╯\n ⍟ Welcome to source cr""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "『𝐖𝐇𝐈𝐒𝐊𝐄𝐘 ⏎ 』༄►", url=f"https://t.me/lV_P_Nl"), 
+                        "𝙏َِ𝙊َِ𝙈ِ༄►", url=f"https://t.me/DEV_TOM"), 
                 ],[
                     InlineKeyboardButton(
-                        "⌞ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐇𝐀𝐘𝐀⌝⚡️", url=f"https://t.me/lN_B_Fl"),
+                        "⌞ 𝘾𝙍 • 𝙎𝙊𝙐𝙍𝘾𝙀 ⌝⚡️", url=f"https://t.me/pp_g3"),
                 ],[
                     InlineKeyboardButton(
-                        "𝐀𝐃𝐃 𝐌𝐄💞", url=f"https://t.me/HAYA01BOT?startgroup=true"),
+                        "𝐀𝐃𝐃 𝐌𝐄💞", url=f"https://t.me/DEVTOM_bot?startgroup=true"),
                 ],
 
             ]
@@ -42,7 +43,7 @@ async def huhh(client: Client, message: Message):
 
 
 
-@app.on_message(command(["غنيلي", "غني", "غ", "حياه غنيلي"]))
+@app.on_message(command(["غنيلي", "غني", "غ", "🎙 ¦ غـنيـلي"]))
 async def ihd(client: Client, message: Message):
     rl = random.randint(3,267)
     url = f"https://t.me/bsmaatt/{rl}"
@@ -56,18 +57,6 @@ async def ihd(client: Client, message: Message):
             ]
         )
     )
-    
-@app.on_message(command(["صورة","صور"]))
-async def ihd(client: Client, message: Message):
-    rs = random.randint(39,148)
-    url = f"https://t.me/GTTUTY/{rs}"
-    await client.send_photo(message.chat.id,url,caption="💕 ¦ تـم اختيـار الصوره لـك",parse_mode="html",
-    reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton(
-                        message.from_user.first_name, url=f"https://t.me/{message.from_user.username}")
-                ],
-            ]
-        )
-    )
+
+
+

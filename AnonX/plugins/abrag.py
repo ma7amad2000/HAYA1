@@ -12,7 +12,7 @@ from pyrogram.types import (InlineKeyboardButton,CallbackQuery,InlineKeyboardMar
 from AnonX import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app)
 from AnonX.misc import SUDOERS
 
-@app.on_message(command(["ابراج حياه","ابراج حياة"]))
+@app.on_message(command(["ابراج","ابراج"]))
 async def abrag(c: Client, m: Message):
     global mid
     mid = m.message_id
@@ -33,14 +33,14 @@ async def abrag(c: Client, m: Message):
 
 
     ])
-    await m.reply_text("• مرحبآ بك عزيزي × قسم ( ابراج حياه ) آنقر علي الازرار لآختيار برجك - 💠\n√", reply_markup=keyboard)
+    await m.reply_text("• مرحبآ بك عزيزي × قسم ( ابراج ) آنقر علي الازرار لآختيار برجك - 💠\n√", reply_markup=keyboard)
 
 
 @app.on_callback_query(filters.regex("^elgadee (\\d+)$"))
 async def elgadee(c: Client, m: CallbackQuery):
     a = m.data.split(" ")
     if m.from_user.id != int(a[1]):
-        await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂𝐒𝐎𝐔𝐑𝐂𝐄 𝐇𝐀𝐘𝐀", show_alert=True)
+        await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂", show_alert=True)
         return
     await m.message.delete()
     abrag_text = """•︙برج الجدي
@@ -58,7 +58,7 @@ async def elgadee(c: Client, m: CallbackQuery):
 async def eldaloo(c: Client, m: CallbackQuery):
     a = m.data.split(" ")
     if m.from_user.id != int(a[1]):
-        await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂𝐒𝐎𝐔𝐑𝐂𝐄 𝐇𝐀𝐘𝐀", show_alert=True)
+        await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂", show_alert=True)
         return
     await m.message.delete()
     abrag_text = """•︙برج الدلو
@@ -76,7 +76,7 @@ async def eldaloo(c: Client, m: CallbackQuery):
 async def elhout(c: Client, m: CallbackQuery):
     a = m.data.split(" ")
     if m.from_user.id != int(a[1]):
-        await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂𝐒𝐎𝐔𝐑𝐂𝐄 𝐇𝐀𝐘𝐀", show_alert=True)
+        await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂", show_alert=True)
         return
     await m.message.delete()
     abrag_text = """•︙برج الحوت
@@ -94,7 +94,7 @@ async def elhout(c: Client, m: CallbackQuery):
 async def elhamal(c: Client, m: CallbackQuery):
     a = m.data.split(" ")
     if m.from_user.id != int(a[1]):
-        await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂𝐒𝐎𝐔𝐑𝐂𝐄 𝐇𝐀𝐘𝐀", show_alert=True)
+        await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂", show_alert=True)
         return
     await m.message.delete()
     abrag_text = """•︙برج الحمل
@@ -112,7 +112,7 @@ async def elhamal(c: Client, m: CallbackQuery):
 async def elthawr(c: Client, m: CallbackQuery):
     a = m.data.split(" ")
     if m.from_user.id != int(a[1]):
-        await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂𝐒𝐎𝐔𝐑𝐂𝐄 𝐇𝐀𝐘𝐀", show_alert=True)
+        await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂", show_alert=True)
         return
     await m.message.delete()
     abrag_text = """•︙برج الثور
@@ -130,7 +130,7 @@ async def elthawr(c: Client, m: CallbackQuery):
 async def elgawzaa(c: Client, m: CallbackQuery):
     a = m.data.split(" ")
     if m.from_user.id != int(a[1]):
-        await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂𝐒𝐎𝐔𝐑𝐂𝐄 𝐇𝐀𝐘𝐀", show_alert=True)
+        await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂", show_alert=True)
         return
     await m.message.delete()
     abrag_text = """•︙برج الجوزاء
@@ -148,7 +148,7 @@ async def elgawzaa(c: Client, m: CallbackQuery):
 async def elsaratan(c: Client, m: CallbackQuery):
     a = m.data.split(" ")
     if m.from_user.id != int(a[1]):
-        await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂𝐒𝐎𝐔𝐑𝐂𝐄 𝐇𝐀𝐘𝐀", show_alert=True)
+        await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂", show_alert=True)
         return
     await m.message.delete()
     abrag_text = """•︙برج السرطان
@@ -166,7 +166,7 @@ async def elsaratan(c: Client, m: CallbackQuery):
 async def elaasad(c: Client, m: CallbackQuery):
     a = m.data.split(" ")
     if m.from_user.id != int(a[1]):
-        await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂𝐒𝐎𝐔𝐑𝐂𝐄 𝐇𝐀𝐘𝐀", show_alert=True)
+        await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂", show_alert=True)
         return
     await m.message.delete()
     abrag_text = """•︙برج الاسد
@@ -184,7 +184,7 @@ async def elaasad(c: Client, m: CallbackQuery):
 async def elazraaa(c: Client, m: CallbackQuery):
     a = m.data.split(" ")
     if m.from_user.id != int(a[1]):
-        await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂𝐒𝐎𝐔𝐑𝐂𝐄 𝐇𝐀𝐘𝐀", show_alert=True)
+        await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂", show_alert=True)
         return
     await m.message.delete()
     abrag_text = """•︙برج العذراء
@@ -202,7 +202,7 @@ async def elazraaa(c: Client, m: CallbackQuery):
 async def elmezaan(c: Client, m: CallbackQuery):
     a = m.data.split(" ")
     if m.from_user.id != int(a[1]):
-        await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂𝐒𝐎𝐔𝐑𝐂𝐄 𝐇𝐀𝐘𝐀", show_alert=True)
+        await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂", show_alert=True)
         return
     await m.message.delete()
     abrag_text = """•︙برج الميزان
@@ -220,7 +220,7 @@ async def elmezaan(c: Client, m: CallbackQuery):
 async def elaqrab(c: Client, m: CallbackQuery):
     a = m.data.split(" ")
     if m.from_user.id != int(a[1]):
-        await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂𝐒𝐎𝐔𝐑𝐂𝐄 𝐇𝐀𝐘𝐀", show_alert=True)
+        await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂", show_alert=True)
         return
     await m.message.delete()
     abrag_text = """•︙برج العقرب
@@ -238,15 +238,15 @@ async def elaqrab(c: Client, m: CallbackQuery):
 async def elqoos(c: Client, m: CallbackQuery):
     a = m.data.split(" ")
     if m.from_user.id != int(a[1]):
-        await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂𝐒𝐎𝐔𝐑𝐂𝐄 𝐇𝐀𝐘𝐀", show_alert=True)
+        await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂", show_alert=True)
         return
     await m.message.delete()
     abrag_text = """•︙برج القوس
 •︙من تاريخ 2021-4-1
-┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉𝐒𝐎𝐔𝐑𝐂𝐄 𝐇𝐀𝐘𝐀
+┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
 •︙عاطفياً :  كن طويل البال مع الشريك وامنحه مزيداً من الوقت، فهو ساعدك كثيراً ويستحق منك بعض التضحية 
-┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉𝐒𝐎𝐔𝐑𝐂𝐄 𝐇𝐀𝐘𝐀
+┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
 •︙صحياً :  تجنّب قدر الإمكان الأماكن الرطبة ولا سيما أنك تعاني الربو وضيقاً في التنفس
-┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉𝐒𝐎𝐔𝐑𝐂𝐄 𝐇𝐀𝐘𝐀
-•︙مهنياً :  قد يفقدك هذا اليوم الظروف المشجعة على التحرّك والاستثمار وتوظيف الأموال وتحقيق الأرباحᴅᴇᴠ ᴡʜɪsᴋᴇ  """
+┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
+•︙مهنياً :  قد يفقدك هذا اليوم الظروف المشجعة على التحرّك والاستثمار وتوظيف الأموال وتحقيق الأرباح"""
     await m.message.reply_text(abrag_text, reply_to_message_id=mid)
