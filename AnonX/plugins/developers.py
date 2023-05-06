@@ -82,12 +82,12 @@ async def yas(client, message):
 
 
 @app.on_message(
-    command(["كريستال","كرستال","كريس"])
+    command(["قروب مساعده","مساعده","الدليل"])
     & filters.group
     & ~filters.edited
 )
 async def yas(client, message):
-    usr = await client.get_chat("SSXHH")
+    usr = await client.get_chat("HL_BG")
     name = usr.first_name
     photo = await app.download_media(usr.photo.big_file_id)
     await message.reply_photo(photo,       caption=f"**⩹━★⊷━⌞ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐇𝐀𝐘𝐀 ⌝━⊶★━⩺\n\n🧞‍♂️ ¦𝙽𝙰𝙼𝙴 :{name}\n🎯 ¦𝚄𝚂𝙴𝚁 :@{usr.username}\n💣 ¦𝙸𝙳 :`{usr.id}`\n🚀 ¦𝙱𝙸𝙾 :{usr.bio}\n\n**⩹━★⊷━⌞ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐇𝐀𝐘𝐀 ⌝━⊶★━⩺**", 
@@ -103,7 +103,7 @@ async def yas(client, message):
 
 
 @app.on_message(
-    command(["حياة","حياتي","حياه","بوت","بوتي"])
+    command(["حياة","حياتي","حياه","بوت"])
     & filters.group
     & ~filters.edited
 )
@@ -122,8 +122,7 @@ async def yas(client, message):
         ),
     )
     
-    
-  
+
 
 @app.on_message(
     command(["/api"])
@@ -133,7 +132,7 @@ async def yas(client, message):
 async def huhh(client: Client, message: Message):
     await message.reply_photo(
         photo=f"https://c.top4top.io/p_2680dmevf1.jpg",
-        caption=f"""**⩹⊷━⌞ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐇𝐀𝐘𝐀 ⌝━━⩺**\nمرحبا بك عزيزي {message.from_user.mention} في قسم الذكاء الاصتناعي الخاص بسورس حياه\nلتتمكن من استخدام اوامر الذكاء الاصتناعي اكتب \n /gpt + السؤال بالاسفل👇\n**⩹━━⌞ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐇𝐀𝐘𝐀 ⌝━━⩺**""",
+        caption=f"""**⩹⊷━⌞ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐇𝐀𝐘𝐀 ⌝━━⩺**\nمرحبا بك عزيزي {message.from_user.mention} في قسم الذكاء الاصتناعي الخاص بسورس cr\nلتتمكن من استخدام اوامر الذكاء الاصتناعي اكتب \n /gpt + السؤال بالاسفل👇\n**⩹━━⌞ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐇𝐀𝐘𝐀 ⌝━━⩺**""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
