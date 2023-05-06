@@ -1,8 +1,8 @@
 """
-        [InlineKeyboardButton("◁", callback_data="Yrw1 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("➡️ التالي", callback_data="Yrw3 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("𝐖𝐇𝐈𝐒𝐊𝐄𝐘", callback_data="moslsl " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌞ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐇𝐀𝐘𝐀 ⌝⚡", url=f"https://t.me/lN_B_Fl")],
+        [InlineKeyboardButton("◁", callback_data="Yrw1 " + str(m.from_user.id))],
+        [InlineKeyboardButton("➡️ التالي", callback_data="Yrw3 " + str(m.from_user.id))],
+        [InlineKeyboardButton("『𝐖𝐇𝐈𝐒𝐊𝐄𝐘 🥱 ⏎ 』", callback_data="moslsl " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌞ 𝐇𝐀𝐘𝐀  • 𝙎𝙊𝙐𝙍𝘾𝙀 ⌝⚡", url=f"https://t.me/lN_B_Fl")],
 """
 
 import asyncio
@@ -32,14 +32,14 @@ async def aflamAR(c: Client, m: Message):
     mid = m.message_id
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
 
-        [InlineKeyboardButton("افلام 🎬", callback_data="film " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("مسلسلات 📼", callback_data="moslsl " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("مسرحيات 🎭 ", callback_data="msrahia " + (https://t.me/lV_P_Nl))],
+        [InlineKeyboardButton("افلام 🎬", callback_data="film " + str(m.from_user.id))],
+        [InlineKeyboardButton("مسلسلات 📼", callback_data="moslsl " + str(m.from_user.id))],
+        [InlineKeyboardButton("مسرحيات 🎭 ", callback_data="msrahia " + str(m.from_user.id))],
 
-        [InlineKeyboardButton("⌞ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐇𝐀𝐘𝐀⌝⚡", url=f"https://t.me/lN_B_Fl")],
+        [InlineKeyboardButton("⌞ 𝐇𝐀𝐘𝐀  • 𝙎𝙊𝙐𝙍𝘾𝙀 ⌝⚡", url=f"https://t.me/lN_B_Fl")],
 
     ])
-    await m.reply_text("◍ اهلا بيك في قائمة الافلام والمسلسلات العربيه\n√", reply_markup=keyboard)
+    await m.reply_text("◍ اهلا بيك في قسم الافلام والمسلسلات في سورس حياه\n√", reply_markup=keyboard)
 
 
 # Replay Edit
@@ -51,14 +51,14 @@ async def aflamAR2(c: Client, m: CallbackQuery):
         return
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
 
-        [InlineKeyboardButton("افلام 🎬", callback_data="film " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("مسلسلات 📼", callback_data="moslsl " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("مسرحيات 🎭 ", callback_data="msrahia " + (https://t.me/lV_P_Nl))],
+        [InlineKeyboardButton("افلام 🎬", callback_data="film " + str(m.from_user.id))],
+        [InlineKeyboardButton("مسلسلات 📼", callback_data="moslsl " + str(m.from_user.id))],
+        [InlineKeyboardButton("مسرحيات 🎭 ", callback_data="msrahia " + str(m.from_user.id))],
 
-        [InlineKeyboardButton("⌞ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐇𝐀𝐘𝐀⌝⚡", url=f"https://t.me/lN_B_Fl")],
+        [InlineKeyboardButton("⌞ 𝐇𝐀𝐘𝐀  • 𝙎𝙊𝙐𝙍𝘾𝙀 ⌝⚡", url=f"https://t.me/lN_B_Fl")],
 
     ])
-    await m.message.edit_text("◍ اهلا بيك في قائمة الافلام والمسلسلات العربيه\n√", reply_markup=keyboard)
+    await m.message.edit_text("◍ اهلا بيك في قسم الافلام والمسلسلات في سورس حياه\n√", reply_markup=keyboard)
 
 
 @app.on_callback_query(filters.regex("^film (\\d+)$"))
@@ -69,12 +69,12 @@ async def film(c: Client, m: CallbackQuery):
         return
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
 
-        [InlineKeyboardButton("كوميدي 😹", callback_data="comedy " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("اكشن 🔥", callback_data="action " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("دراما 🌚", callback_data="drama " + (https://t.me/lV_P_Nl))],
+        [InlineKeyboardButton("كوميدي 😹", callback_data="comedy " + str(m.from_user.id))],
+        [InlineKeyboardButton("اكشن 🔥", callback_data="action " + str(m.from_user.id))],
+        [InlineKeyboardButton("دراما 🌚", callback_data="drama " + str(m.from_user.id))],
 
-        [InlineKeyboardButton("𝐖𝐇𝐈𝐒𝐊𝐄𝐘", callback_data="aflamAR2 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌞ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐇𝐀𝐘𝐀⌝⚡", url=f"https://t.me/lN_B_Fl")],
+        [InlineKeyboardButton("『𝐇𝐀𝐘𝐀 🥱 ⏎ 』", callback_data="aflamAR2 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌞ 𝐇𝐀𝐘𝐀  • 𝙎𝙊𝙐𝙍𝘾𝙀 ⌝⚡", url=f"https://t.me/lN_B_Fl")],
 
     ])
     await m.message.edit_text("◍ اهلا بيك في قائمة الافلام العربيه\n√", reply_markup=keyboard)
@@ -94,29 +94,29 @@ async def comedy(c: Client, m: CallbackQuery):
         return
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
 
-        [InlineKeyboardButton("⌯ وقفة رجاله", callback_data="Xco1 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الخطة العايمة", callback_data="Xco2 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ بنات ثانوي", callback_data="Xco3 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ عفريت ترانزيت", callback_data="Xco4 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ زكي شان", callback_data="Xco5 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ سمير وشهير وبهير", callback_data="Xco6 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ تصبح علي خير", callback_data="Xco7 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ بابا", callback_data="Xco8 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ جدو نحنوح", callback_data="Xco9 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ سمير ابو النيل", callback_data="Xco10 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ كلبي دليلي", callback_data="Xco11 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ بنات العم", callback_data="Xco12 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ علي بابا", callback_data="Xco13 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ فول الصين العظيم", callback_data="Xco14 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ حسن وبقلظ", callback_data="Xco15 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الكويسين", callback_data="Xco16 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ يوم مالوش لازمه", callback_data="Xco17 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ غبي منه فيه", callback_data="Xco18 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ خير وبركه", callback_data="Xco19 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ البدله", callback_data="Xco20 " + (https://t.me/lV_P_Nl))],
+        [InlineKeyboardButton("⌯ وقفة رجاله", callback_data="Xco1 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الخطة العايمة", callback_data="Xco2 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ بنات ثانوي", callback_data="Xco3 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ عفريت ترانزيت", callback_data="Xco4 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ زكي شان", callback_data="Xco5 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ سمير وشهير وبهير", callback_data="Xco6 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ تصبح علي خير", callback_data="Xco7 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ بابا", callback_data="Xco8 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ جدو نحنوح", callback_data="Xco9 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ سمير ابو النيل", callback_data="Xco10 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ كلبي دليلي", callback_data="Xco11 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ بنات العم", callback_data="Xco12 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ علي بابا", callback_data="Xco13 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ فول الصين العظيم", callback_data="Xco14 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ حسن وبقلظ", callback_data="Xco15 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الكويسين", callback_data="Xco16 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ يوم مالوش لازمه", callback_data="Xco17 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ غبي منه فيه", callback_data="Xco18 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ خير وبركه", callback_data="Xco19 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ البدله", callback_data="Xco20 " + str(m.from_user.id))],
 
-        [InlineKeyboardButton("𝐖𝐇𝐈𝐒𝐊𝐄𝐘", callback_data="film " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌞ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐇𝐀𝐘𝐀⌝⚡", url=f"https://t.me/lN_B_Fl")],
+        [InlineKeyboardButton("『𝐇𝐀𝐘𝐀 🥱 ⏎ 』", callback_data="film " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌞ 𝐇𝐀𝐘𝐀  • 𝙎𝙊𝙐𝙍𝘾𝙀 ⌝⚡", url=f"https://t.me/lN_B_Fl")],
 
     ])
     await m.message.edit_text("◍ اهلا بك في قائمة الافلام الكوميدي العربيه\n√", reply_markup=keyboard)
@@ -129,9 +129,9 @@ async def Xco1(c: Client, m: CallbackQuery):
         await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂", show_alert=True)
         return
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton("⌯ جوده متوسطه", callback_data="XXco1 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ جوده عاليه", callback_data="XXco2 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("◁", callback_data="comedy " + (https://t.me/lV_P_Nl))],
+        [InlineKeyboardButton("⌯ جوده متوسطه", callback_data="XXco1 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ جوده عاليه", callback_data="XXco2 " + str(m.from_user.id))],
+        [InlineKeyboardButton("◁", callback_data="comedy " + str(m.from_user.id))],
     ])
     await m.message.edit_text("""🎥 اسم الفيلم : وقفة رجالة
     📖 انتاج سنة : 2021
@@ -149,9 +149,9 @@ async def Xco2(c: Client, m: CallbackQuery):
         await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂", show_alert=True)
         return
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton("⌯ جوده متوسطه", callback_data="XXco3 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ جوده عاليه", callback_data="XXco4 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("◁", callback_data="comedy " + (https://t.me/lV_P_Nl))],
+        [InlineKeyboardButton("⌯ جوده متوسطه", callback_data="XXco3 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ جوده عاليه", callback_data="XXco4 " + str(m.from_user.id))],
+        [InlineKeyboardButton("◁", callback_data="comedy " + str(m.from_user.id))],
     ])
     await m.message.edit_text("""🎥 اسم الفيلم : الخطة العايمة
         📖 انتاج سنة  : 2020
@@ -169,9 +169,9 @@ async def Xco3(c: Client, m: CallbackQuery):
         await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂", show_alert=True)
         return
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton("⌯ جوده متوسطه", callback_data="XXco5 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ جوده عاليه", callback_data="XXco6 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("◁", callback_data="comedy " + (https://t.me/lV_P_Nl))],
+        [InlineKeyboardButton("⌯ جوده متوسطه", callback_data="XXco5 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ جوده عاليه", callback_data="XXco6 " + str(m.from_user.id))],
+        [InlineKeyboardButton("◁", callback_data="comedy " + str(m.from_user.id))],
     ])
     await m.message.edit_text("""🎥 اسم الفيلم : بنات ثانوي
          انتاج سنة : 2020
@@ -189,9 +189,9 @@ async def Xco4(c: Client, m: CallbackQuery):
         await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂", show_alert=True)
         return
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton("⌯ جوده متوسطه", callback_data="XXco7 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ جوده عاليه", callback_data="XXco8 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("◁", callback_data="comedy " + (https://t.me/lV_P_Nl))],
+        [InlineKeyboardButton("⌯ جوده متوسطه", callback_data="XXco7 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ جوده عاليه", callback_data="XXco8 " + str(m.from_user.id))],
+        [InlineKeyboardButton("◁", callback_data="comedy " + str(m.from_user.id))],
     ])
     await m.message.edit_text("""🎥 اسم الفيلم : عفريت ترانزيت
         📖 انتاج سنة : 2020
@@ -209,9 +209,9 @@ async def Xco5(c: Client, m: CallbackQuery):
         await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂", show_alert=True)
         return
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton("⌯ جوده متوسطه", callback_data="XXco9 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ جوده عاليه", callback_data="XXco10 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("◁", callback_data="comedy " + (https://t.me/lV_P_Nl))],
+        [InlineKeyboardButton("⌯ جوده متوسطه", callback_data="XXco9 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ جوده عاليه", callback_data="XXco10 " + str(m.from_user.id))],
+        [InlineKeyboardButton("◁", callback_data="comedy " + str(m.from_user.id))],
     ])
     await m.message.edit_text("""🎥 اسم الفيلم : زكي شان
         📖 انتاج سنة  : 2005
@@ -229,9 +229,9 @@ async def Xco6(c: Client, m: CallbackQuery):
         await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂", show_alert=True)
         return
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton("⌯ جوده متوسطه", callback_data="XXco11 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ جوده عاليه", callback_data="XXco12 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("◁", callback_data="comedy " + (https://t.me/lV_P_Nl))],
+        [InlineKeyboardButton("⌯ جوده متوسطه", callback_data="XXco11 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ جوده عاليه", callback_data="XXco12 " + str(m.from_user.id))],
+        [InlineKeyboardButton("◁", callback_data="comedy " + str(m.from_user.id))],
     ])
     await m.message.edit_text("""🎥 اسم الفيلم : سمير وشهير وبهير
         📖 انتاج سنة  : 2010
@@ -249,9 +249,9 @@ async def Xco7(c: Client, m: CallbackQuery):
         await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂", show_alert=True)
         return
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton("⌯ جوده متوسطه", callback_data="XXco13 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ جوده عاليه", callback_data="XXco14 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("◁", callback_data="comedy " + (https://t.me/lV_P_Nl))],
+        [InlineKeyboardButton("⌯ جوده متوسطه", callback_data="XXco13 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ جوده عاليه", callback_data="XXco14 " + str(m.from_user.id))],
+        [InlineKeyboardButton("◁", callback_data="comedy " + str(m.from_user.id))],
     ])
     await m.message.edit_text("""🎥 اسم الفيلم : تصبح علي خير
         📖 انتاج سنة  : 2017
@@ -269,9 +269,9 @@ async def Xco8(c: Client, m: CallbackQuery):
         await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂", show_alert=True)
         return
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton("⌯ جوده متوسطه", callback_data="XXco15 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ جوده عاليه", callback_data="XXco16 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("◁", callback_data="comedy " + (https://t.me/lV_P_Nl))],
+        [InlineKeyboardButton("⌯ جوده متوسطه", callback_data="XXco15 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ جوده عاليه", callback_data="XXco16 " + str(m.from_user.id))],
+        [InlineKeyboardButton("◁", callback_data="comedy " + str(m.from_user.id))],
     ])
     await m.message.edit_text("""🎥 اسم الفيلم : بابا
         📖 انتاج سنة  : 2012
@@ -289,9 +289,9 @@ async def Xco9(c: Client, m: CallbackQuery):
         await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂", show_alert=True)
         return
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton("⌯ جوده متوسطه", callback_data="XXco17 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ جوده عاليه", callback_data="XXco18 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("◁", callback_data="comedy " + (https://t.me/lV_P_Nl))],
+        [InlineKeyboardButton("⌯ جوده متوسطه", callback_data="XXco17 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ جوده عاليه", callback_data="XXco18 " + str(m.from_user.id))],
+        [InlineKeyboardButton("◁", callback_data="comedy " + str(m.from_user.id))],
     ])
     await m.message.edit_text("""🎥 اسم الفيلم : جدو نحنوح
         📖 انتاج سنة  : 2018
@@ -309,9 +309,9 @@ async def Xco10(c: Client, m: CallbackQuery):
         await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂", show_alert=True)
         return
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton("⌯ جوده متوسطه", callback_data="XXco19 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ جوده عاليه", callback_data="XXco20 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("◁", callback_data="comedy " + (https://t.me/lV_P_Nl))],
+        [InlineKeyboardButton("⌯ جوده متوسطه", callback_data="XXco19 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ جوده عاليه", callback_data="XXco20 " + str(m.from_user.id))],
+        [InlineKeyboardButton("◁", callback_data="comedy " + str(m.from_user.id))],
     ])
     await m.message.edit_text("""🎥 اسم الفيلم : سمير ابو النيل
         📖 انتاج سنة : 2013
@@ -329,9 +329,9 @@ async def Xco11(c: Client, m: CallbackQuery):
         await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂", show_alert=True)
         return
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton("⌯ جوده متوسطه", callback_data="XXco21 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ جوده عاليه", callback_data="XXco22 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("◁", callback_data="comedy " + (https://t.me/lV_P_Nl))],
+        [InlineKeyboardButton("⌯ جوده متوسطه", callback_data="XXco21 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ جوده عاليه", callback_data="XXco22 " + str(m.from_user.id))],
+        [InlineKeyboardButton("◁", callback_data="comedy " + str(m.from_user.id))],
     ])
     await m.message.edit_text("""🎥 اسم الفيلم : كلبي دليلي
         📖 انتاج سنة : 2013
@@ -349,9 +349,9 @@ async def Xco12(c: Client, m: CallbackQuery):
         await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂", show_alert=True)
         return
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton("⌯ جوده متوسطه", callback_data="XXco23 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ جوده عاليه", callback_data="XXco24 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("◁", callback_data="comedy " + (https://t.me/lV_P_Nl))],
+        [InlineKeyboardButton("⌯ جوده متوسطه", callback_data="XXco23 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ جوده عاليه", callback_data="XXco24 " + str(m.from_user.id))],
+        [InlineKeyboardButton("◁", callback_data="comedy " + str(m.from_user.id))],
     ])
     await m.message.edit_text("""🎥 اسم الفيلم : بنات العم
         📖 انتاج سنة : 2012
@@ -369,9 +369,9 @@ async def Xco13(c: Client, m: CallbackQuery):
         await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂", show_alert=True)
         return
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton("⌯ جوده متوسطه", callback_data="XXco25 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ جوده عاليه", callback_data="XXco26 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("◁", callback_data="comedy " + (https://t.me/lV_P_Nl))],
+        [InlineKeyboardButton("⌯ جوده متوسطه", callback_data="XXco25 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ جوده عاليه", callback_data="XXco26 " + str(m.from_user.id))],
+        [InlineKeyboardButton("◁", callback_data="comedy " + str(m.from_user.id))],
     ])
     await m.message.edit_text("""🎥 اسم الفيلم : علي بابا
         📖 انتاج سنة : 2018
@@ -389,9 +389,9 @@ async def Xco14(c: Client, m: CallbackQuery):
         await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂", show_alert=True)
         return
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton("⌯ جوده متوسطه", callback_data="XXco27 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ جوده عاليه", callback_data="XXco28 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("◁", callback_data="comedy " + (https://t.me/lV_P_Nl))],
+        [InlineKeyboardButton("⌯ جوده متوسطه", callback_data="XXco27 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ جوده عاليه", callback_data="XXco28 " + str(m.from_user.id))],
+        [InlineKeyboardButton("◁", callback_data="comedy " + str(m.from_user.id))],
     ])
     await m.message.edit_text("""🎥 اسم الفيلم : فول الصين العظيم
         📖 انتاج سنة : 2004
@@ -409,9 +409,9 @@ async def Xco15(c: Client, m: CallbackQuery):
         await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂", show_alert=True)
         return
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton("⌯ جوده متوسطه", callback_data="XXco29 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ جوده عاليه", callback_data="XXco30 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("◁", callback_data="comedy " + (https://t.me/lV_P_Nl))],
+        [InlineKeyboardButton("⌯ جوده متوسطه", callback_data="XXco29 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ جوده عاليه", callback_data="XXco30 " + str(m.from_user.id))],
+        [InlineKeyboardButton("◁", callback_data="comedy " + str(m.from_user.id))],
     ])
     await m.message.edit_text("""🎥 اسم الفيلم : حسن وبقلظ
         📖 انتاج سنة : 2016
@@ -429,9 +429,9 @@ async def Xco16(c: Client, m: CallbackQuery):
         await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂", show_alert=True)
         return
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton("⌯ جوده متوسطه", callback_data="XXco31 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ جوده عاليه", callback_data="XXco32 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("◁", callback_data="comedy " + (https://t.me/lV_P_Nl))],
+        [InlineKeyboardButton("⌯ جوده متوسطه", callback_data="XXco31 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ جوده عاليه", callback_data="XXco32 " + str(m.from_user.id))],
+        [InlineKeyboardButton("◁", callback_data="comedy " + str(m.from_user.id))],
     ])
     await m.message.edit_text("""🎥 اسم الفيلم : الكويسين
         📖 انتاج سنة : 2018
@@ -449,9 +449,9 @@ async def Xco17(c: Client, m: CallbackQuery):
         await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂", show_alert=True)
         return
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton("⌯ جوده متوسطه", callback_data="XXco33 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ جوده عاليه", callback_data="XXco34 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("◁", callback_data="comedy " + (https://t.me/lV_P_Nl))],
+        [InlineKeyboardButton("⌯ جوده متوسطه", callback_data="XXco33 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ جوده عاليه", callback_data="XXco34 " + str(m.from_user.id))],
+        [InlineKeyboardButton("◁", callback_data="comedy " + str(m.from_user.id))],
     ])
     await m.message.edit_text("""🎥 اسم الفيلم : يوم مالوش لازمة
         📖 انتاج سنة : 2015
@@ -469,9 +469,9 @@ async def Xco18(c: Client, m: CallbackQuery):
         await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂", show_alert=True)
         return
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton("⌯ جوده متوسطه", callback_data="XXco35 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ جوده عاليه", callback_data="XXco36 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("◁", callback_data="comedy " + (https://t.me/lV_P_Nl))],
+        [InlineKeyboardButton("⌯ جوده متوسطه", callback_data="XXco35 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ جوده عاليه", callback_data="XXco36 " + str(m.from_user.id))],
+        [InlineKeyboardButton("◁", callback_data="comedy " + str(m.from_user.id))],
     ])
     await m.message.edit_text("""🎥 اسم الفيلم : غبي منه فيه
         📖 انتاج سنة : 2004
@@ -489,9 +489,9 @@ async def Xco19(c: Client, m: CallbackQuery):
         await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂", show_alert=True)
         return
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton("⌯ جوده متوسطه", callback_data="XXco37 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ جوده عاليه", callback_data="XXco38 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("◁", callback_data="comedy " + (https://t.me/lV_P_Nl))],
+        [InlineKeyboardButton("⌯ جوده متوسطه", callback_data="XXco37 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ جوده عاليه", callback_data="XXco38 " + str(m.from_user.id))],
+        [InlineKeyboardButton("◁", callback_data="comedy " + str(m.from_user.id))],
     ])
     await m.message.edit_text("""🎥 اسم الفيلم : خير وبركة
         📖 انتاج سنة : 2017
@@ -510,9 +510,9 @@ async def Xco20(c: Client, m: CallbackQuery):
         await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂", show_alert=True)
         return
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton("⌯ جوده متوسطه", callback_data="XXco39 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ جوده عاليه", callback_data="XXco40 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("◁", callback_data="comedy " + (https://t.me/lV_P_Nl))],
+        [InlineKeyboardButton("⌯ جوده متوسطه", callback_data="XXco39 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ جوده عاليه", callback_data="XXco40 " + str(m.from_user.id))],
+        [InlineKeyboardButton("◁", callback_data="comedy " + str(m.from_user.id))],
     ])
     await m.message.edit_text("""🎥 اسم الفيلم : البدلة
         📖 انتاج سنة : 2018
@@ -941,18 +941,18 @@ async def action(c: Client, m: CallbackQuery):
         return
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
 
-        [InlineKeyboardButton("حملة فرعون", callback_data="Xact1 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("بني ادم", callback_data="Xact2 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("الخليه", callback_data="Xact3 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("حرب كرموز", callback_data="Xact4 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("من ضهر راجل", callback_data="Xact5 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("زنزانة سبعة", callback_data="Xact6 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("خارج عن القانون", callback_data="Xact7 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("ولاد العم", callback_data="Xact8 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("وش سجون", callback_data="Xact9 " + (https://t.me/lV_P_Nl))],
+        [InlineKeyboardButton("حملة فرعون", callback_data="Xact1 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("بني ادم", callback_data="Xact2 " + str(m.from_user.id))],
+        [InlineKeyboardButton("الخليه", callback_data="Xact3 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("حرب كرموز", callback_data="Xact4 " + str(m.from_user.id))],
+        [InlineKeyboardButton("من ضهر راجل", callback_data="Xact5 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("زنزانة سبعة", callback_data="Xact6 " + str(m.from_user.id))],
+        [InlineKeyboardButton("خارج عن القانون", callback_data="Xact7 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("ولاد العم", callback_data="Xact8 " + str(m.from_user.id))],
+        [InlineKeyboardButton("وش سجون", callback_data="Xact9 " + str(m.from_user.id))],
 
-        [InlineKeyboardButton("𝐖𝐇𝐈𝐒𝐊𝐄𝐘", callback_data="aflamAR2 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌞ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐇𝐀𝐘𝐀⌝⚡", url=f"https://t.me/lN_B_Fl")],
+        [InlineKeyboardButton("『𝐇𝐀𝐘𝐀 🥱 ⏎ 』", callback_data="aflamAR2 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌞ 𝐇𝐀𝐘𝐀  • 𝙎𝙊𝙐𝙍𝘾𝙀 ⌝⚡", url=f"https://t.me/lN_B_Fl")],
 
     ])
     await m.message.edit_text("اهلا بك في قائمة الافلام الاكشن العربيه", reply_markup=keyboard)
@@ -965,9 +965,9 @@ async def Xact1(c: Client, m: CallbackQuery):
         await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂", show_alert=True)
         return
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton("⌯ جوده متوسطه", callback_data="XXact1 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ جوده عاليه", callback_data="XXact2 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("◁", callback_data="action " + (https://t.me/lV_P_Nl))],
+        [InlineKeyboardButton("⌯ جوده متوسطه", callback_data="XXact1 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ جوده عاليه", callback_data="XXact2 " + str(m.from_user.id))],
+        [InlineKeyboardButton("◁", callback_data="action " + str(m.from_user.id))],
     ])
     await m.message.edit_text("""🎥 اسم الفيلم : حملة فرعون
 📖 انتاج سنة : 2019
@@ -985,9 +985,9 @@ async def Xact2(c: Client, m: CallbackQuery):
         await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂", show_alert=True)
         return
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton("⌯ جوده متوسطه", callback_data="XXact3 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ جوده عاليه", callback_data="XXact4 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("◁", callback_data="action " + (https://t.me/lV_P_Nl))],
+        [InlineKeyboardButton("⌯ جوده متوسطه", callback_data="XXact3 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ جوده عاليه", callback_data="XXact4 " + str(m.from_user.id))],
+        [InlineKeyboardButton("◁", callback_data="action " + str(m.from_user.id))],
     ])
     await m.message.edit_text("""🎥 اسم الفيلم : بني ادم
 📖 انتاج سنة : 2018
@@ -1005,9 +1005,9 @@ async def Xact3(c: Client, m: CallbackQuery):
         await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂", show_alert=True)
         return
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton("⌯ جوده متوسطه", callback_data="XXact5 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ جوده عاليه", callback_data="XXact6 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("◁", callback_data="action " + (https://t.me/lV_P_Nl))],
+        [InlineKeyboardButton("⌯ جوده متوسطه", callback_data="XXact5 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ جوده عاليه", callback_data="XXact6 " + str(m.from_user.id))],
+        [InlineKeyboardButton("◁", callback_data="action " + str(m.from_user.id))],
     ])
     await m.message.edit_text("""فيلم #الخلية | دراما , اكشن | 2017
 عندما يذهب صديقه ضحية عملية إرهابية، يقسم سيف، وهو ضابط عمليات خاصة، على الثأر لصديقه، ويطلب مساعدة الضابط صابر في سبيل تحقيق ذلك.
@@ -1021,9 +1021,9 @@ async def Xact4(c: Client, m: CallbackQuery):
         await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂", show_alert=True)
         return
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton("⌯ جوده متوسطه", callback_data="XXact7 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ جوده عاليه", callback_data="XXact8 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("◁", callback_data="action " + (https://t.me/lV_P_Nl))],
+        [InlineKeyboardButton("⌯ جوده متوسطه", callback_data="XXact7 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ جوده عاليه", callback_data="XXact8 " + str(m.from_user.id))],
+        [InlineKeyboardButton("◁", callback_data="action " + str(m.from_user.id))],
     ])
     await m.message.edit_text("""🎥 اسم الفيلم : حرب كرموز
 📖 انتاج سنة : 2018
@@ -1041,9 +1041,9 @@ async def Xact5(c: Client, m: CallbackQuery):
         await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂", show_alert=True)
         return
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton("⌯ جوده متوسطه", callback_data="XXact9 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ جوده عاليه", callback_data="XXact10 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("◁", callback_data="action " + (https://t.me/lV_P_Nl))],
+        [InlineKeyboardButton("⌯ جوده متوسطه", callback_data="XXact9 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ جوده عاليه", callback_data="XXact10 " + str(m.from_user.id))],
+        [InlineKeyboardButton("◁", callback_data="action " + str(m.from_user.id))],
     ])
     await m.message.edit_text("""🎥 اسم الفيلم : من ضهر راجل
 📖 انتاج سنة : 2015
@@ -1061,9 +1061,9 @@ async def Xact6(c: Client, m: CallbackQuery):
         await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂", show_alert=True)
         return
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton("⌯ جوده متوسطه", callback_data="XXact11 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ جوده عاليه", callback_data="XXact12 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("◁", callback_data="action " + (https://t.me/lV_P_Nl))],
+        [InlineKeyboardButton("⌯ جوده متوسطه", callback_data="XXact11 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ جوده عاليه", callback_data="XXact12 " + str(m.from_user.id))],
+        [InlineKeyboardButton("◁", callback_data="action " + str(m.from_user.id))],
     ])
     await m.message.edit_text("""🎥 اسم الفيلم : زنزانة سبعة
 📖 انتاج سنة : 2020
@@ -1081,9 +1081,9 @@ async def Xact7(c: Client, m: CallbackQuery):
         await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂", show_alert=True)
         return
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton("⌯ جوده متوسطه", callback_data="XXact13 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ جوده عاليه", callback_data="XXact14 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("◁", callback_data="action " + (https://t.me/lV_P_Nl))],
+        [InlineKeyboardButton("⌯ جوده متوسطه", callback_data="XXact13 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ جوده عاليه", callback_data="XXact14 " + str(m.from_user.id))],
+        [InlineKeyboardButton("◁", callback_data="action " + str(m.from_user.id))],
     ])
     await m.message.edit_text("""🎥 اسم الفيلم : خارج عن القانون
 📖 انتاج سنة : 2007
@@ -1101,9 +1101,9 @@ async def Xact8(c: Client, m: CallbackQuery):
         await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂", show_alert=True)
         return
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton("⌯ جوده متوسطه", callback_data="XXact15 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ جوده عاليه", callback_data="XXact16 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("◁", callback_data="action " + (https://t.me/lV_P_Nl))],
+        [InlineKeyboardButton("⌯ جوده متوسطه", callback_data="XXact15 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ جوده عاليه", callback_data="XXact16 " + str(m.from_user.id))],
+        [InlineKeyboardButton("◁", callback_data="action " + str(m.from_user.id))],
     ])
     await m.message.edit_text("""🎥 اسم الفيلم : ولاد العم
 📖 انتاج سنة : 2009
@@ -1121,9 +1121,9 @@ async def Xact9(c: Client, m: CallbackQuery):
         await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂", show_alert=True)
         return
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton("⌯ جوده متوسطه", callback_data="XXact17 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ جوده عاليه", callback_data="XXact18 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("◁", callback_data="action " + (https://t.me/lV_P_Nl))],
+        [InlineKeyboardButton("⌯ جوده متوسطه", callback_data="XXact17 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ جوده عاليه", callback_data="XXact18 " + str(m.from_user.id))],
+        [InlineKeyboardButton("◁", callback_data="action " + str(m.from_user.id))],
     ])
     await m.message.edit_text("""🎥 اسم الفيلم : وش سجون
 📖 انتاج سنة : 2014
@@ -1331,14 +1331,14 @@ async def drama(c: Client, m: CallbackQuery):
         return
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
 
-        [InlineKeyboardButton("⌯ هذه ليلتي", callback_data="Xdra1 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ ورقة جمعية", callback_data="Xdra2 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ حظر تجوال", callback_data="Xdra3 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ القط", callback_data="Xdra4 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ خان تيولا", callback_data="Xdra5 " + (https://t.me/lV_P_Nl))],
+        [InlineKeyboardButton("⌯ هذه ليلتي", callback_data="Xdra1 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ ورقة جمعية", callback_data="Xdra2 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ حظر تجوال", callback_data="Xdra3 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ القط", callback_data="Xdra4 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ خان تيولا", callback_data="Xdra5 " + str(m.from_user.id))],
 
-        [InlineKeyboardButton("𝐖𝐇𝐈𝐒𝐊𝐄𝐘", callback_data="aflamAR2 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌞ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐇𝐀𝐘𝐀⌝⚡", url=f"https://t.me/lN_B_Fl")],
+        [InlineKeyboardButton("『𝐇𝐀𝐘𝐀 🥱 ⏎ 』", callback_data="aflamAR2 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌞ 𝐇𝐀𝐘𝐀  • 𝙎𝙊𝙐??𝘾𝙀 ⌝⚡", url=f"https://t.me/lN_B_Fl")],
 
     ])
     await m.message.edit_text("اهلا بك في قائمة الافلام الدراما العربيه", reply_markup=keyboard)
@@ -1351,9 +1351,9 @@ async def Xdra1(c: Client, m: CallbackQuery):
         await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂", show_alert=True)
         return
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton("⌯ جوده متوسطه", callback_data="XXdra1 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ جوده عاليه", callback_data="XXdra2 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("◁", callback_data="drama " + (https://t.me/lV_P_Nl))],
+        [InlineKeyboardButton("⌯ جوده متوسطه", callback_data="XXdra1 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ جوده عاليه", callback_data="XXdra2 " + str(m.from_user.id))],
+        [InlineKeyboardButton("◁", callback_data="drama " + str(m.from_user.id))],
     ])
     await m.message.edit_text("""🎥 اسم الفيلم : هذه ليلتي
 📖 انتاج سنة : 2019
@@ -1371,9 +1371,9 @@ async def Xdra2(c: Client, m: CallbackQuery):
         await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂", show_alert=True)
         return
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton("⌯ جوده متوسطه", callback_data="XXdra3 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ جوده عاليه", callback_data="XXdra4 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("◁", callback_data="drama " + (https://t.me/lV_P_Nl))],
+        [InlineKeyboardButton("⌯ جوده متوسطه", callback_data="XXdra3 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ جوده عاليه", callback_data="XXdra4 " + str(m.from_user.id))],
+        [InlineKeyboardButton("◁", callback_data="drama " + str(m.from_user.id))],
     ])
     await m.message.edit_text("""🎥 اسم الفيلم : ورقة جمعية
 📖 انتاج سنة : 2020
@@ -1391,9 +1391,9 @@ async def Xdra3(c: Client, m: CallbackQuery):
         await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂", show_alert=True)
         return
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton("⌯ جوده متوسطه", callback_data="XXdra5 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ جوده عاليه", callback_data="XXdra6 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("◁", callback_data="drama " + (https://t.me/lV_P_Nl))],
+        [InlineKeyboardButton("⌯ جوده متوسطه", callback_data="XXdra5 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ جوده عاليه", callback_data="XXdra6 " + str(m.from_user.id))],
+        [InlineKeyboardButton("◁", callback_data="drama " + str(m.from_user.id))],
     ])
     await m.message.edit_text("""🎥 اسم الفيلم : حظر تجول
 📖 انتاج سنة : 2021
@@ -1411,9 +1411,9 @@ async def Xdra4(c: Client, m: CallbackQuery):
         await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂", show_alert=True)
         return
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton("⌯ جوده متوسطه", callback_data="XXdra7 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ جوده عاليه", callback_data="XXdra8 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("◁", callback_data="drama " + (https://t.me/lV_P_Nl))],
+        [InlineKeyboardButton("⌯ جوده متوسطه", callback_data="XXdra7 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ جوده عاليه", callback_data="XXdra8 " + str(m.from_user.id))],
+        [InlineKeyboardButton("◁", callback_data="drama " + str(m.from_user.id))],
     ])
     await m.message.edit_text("""🎥 اسم الفيلم : القط
 📖 انتاج سنة : 2014
@@ -1431,9 +1431,9 @@ async def Xdra5(c: Client, m: CallbackQuery):
         await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂", show_alert=True)
         return
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton("⌯ جوده متوسطه", callback_data="XXdra9 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ جوده عاليه", callback_data="XXdra10 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("◁", callback_data="drama " + (https://t.me/lV_P_Nl))],
+        [InlineKeyboardButton("⌯ جوده متوسطه", callback_data="XXdra9 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ جوده عاليه", callback_data="XXdra10 " + str(m.from_user.id))],
+        [InlineKeyboardButton("◁", callback_data="drama " + str(m.from_user.id))],
     ])
     await m.message.edit_text("""🎥 اسم الفيلم : خان تيولا
 📖 انتاج سنة : 2020
@@ -1569,15 +1569,15 @@ async def moslsl(c: Client, m: CallbackQuery):
         return
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
 
-        [InlineKeyboardButton("حشمت في البيت الأبيض 📼", callback_data="Xmos1 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("لعبة النسيان 📼", callback_data="Xmos2 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("ب 100 وش 📼", callback_data="Xmos3 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("آدم 📼", callback_data="Xmos4 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("توبه 📼", callback_data="toba " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("ابو العروسة 📼", callback_data="Xmos5 " + (https://t.me/lV_P_Nl))],
+        [InlineKeyboardButton("حشمت في البيت الأبيض 📼", callback_data="Xmos1 " + str(m.from_user.id))],
+        [InlineKeyboardButton("لعبة النسيان 📼", callback_data="Xmos2 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("ب 100 وش 📼", callback_data="Xmos3 " + str(m.from_user.id))],
+        [InlineKeyboardButton("آدم 📼", callback_data="Xmos4 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("توبه 📼", callback_data="toba " + str(m.from_user.id))],
+        [InlineKeyboardButton("ابو العروسة 📼", callback_data="Xmos5 " + str(m.from_user.id))],
 
-        [InlineKeyboardButton("𝐖𝐇𝐈𝐒𝐊𝐄𝐘", callback_data="aflamAR2 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌞ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐇𝐀𝐘𝐀⌝⚡", url=f"https://t.me/lN_B_Fl")],
+        [InlineKeyboardButton("『𝐇𝐀𝐘𝐀 🥱 ⏎ 』", callback_data="aflamAR2 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌞ 𝐇𝐀𝐘𝐀  • 𝙎𝙊𝙐𝙍𝘾𝙀 ⌝⚡", url=f"https://t.me/lN_B_Fl")],
 
     ])
     await m.message.edit_text("◍ اهلا بيك في قائمة المسلسلات العربيه\n√", reply_markup=keyboard)
@@ -1591,22 +1591,22 @@ async def Xmos1(c: Client, m: CallbackQuery):
         return
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
 
-        [InlineKeyboardButton("⌯ الحلقة 1", callback_data="Zmos214 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 2", callback_data="Zmos215 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 3", callback_data="Zmos216 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 4", callback_data="Zmos217 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 5", callback_data="Zmos218 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 6", callback_data="Zmos219 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 7", callback_data="Zmos220 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 8", callback_data="Zmos221 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 9", callback_data="Zmos222 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 10", callback_data="Zmos223 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 11", callback_data="Zmos224 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 12", callback_data="Zmos225 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 13", callback_data="Zmos226 " + (https://t.me/lV_P_Nl))],
+        [InlineKeyboardButton("⌯ الحلقة 1", callback_data="Zmos214 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 2", callback_data="Zmos215 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 3", callback_data="Zmos216 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 4", callback_data="Zmos217 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 5", callback_data="Zmos218 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 6", callback_data="Zmos219 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 7", callback_data="Zmos220 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 8", callback_data="Zmos221 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 9", callback_data="Zmos222 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 10", callback_data="Zmos223 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 11", callback_data="Zmos224 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 12", callback_data="Zmos225 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 13", callback_data="Zmos226 " + str(m.from_user.id))],
 
-        [InlineKeyboardButton("𝐖𝐇𝐈𝐒𝐊𝐄𝐘", callback_data="moslsl " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌞ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐇𝐀𝐘𝐀⌝⚡", url=f"https://t.me/lN_B_Fl")],
+        [InlineKeyboardButton("『𝐇𝐀𝐘𝐀 🥱 ⏎ 』", callback_data="moslsl " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌞ 𝐇𝐀𝐘𝐀  • 𝙎𝙊𝙐𝙍𝘾𝙀 ⌝⚡", url=f"https://t.me/lN_B_Fl")],
 
     ])
     await m.message.edit_text("◍ اهلا بيك في مسلسل 📼 حشمت في البيت الأبيض\n√", reply_markup=keyboard)
@@ -1620,39 +1620,39 @@ async def Xmos2(c: Client, m: CallbackQuery):
         return
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
 
-        [InlineKeyboardButton("⌯ الحلقة 1", callback_data="Zmos229 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 2", callback_data="Zmos230 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 3", callback_data="Zmos231 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 4", callback_data="Zmos232 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 5", callback_data="Zmos233 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 6", callback_data="Zmos234 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 7", callback_data="Zmos235 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 8", callback_data="Zmos236 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 9", callback_data="Zmos237 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 10", callback_data="Zmos238 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 11", callback_data="Zmos239 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 12", callback_data="Zmos240 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 13", callback_data="Zmos241 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 14", callback_data="Zmos242 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 15", callback_data="Zmos243 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 16", callback_data="Zmos244 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 17", callback_data="Zmos245 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 18", callback_data="Zmos246 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 19", callback_data="Zmos247 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 20", callback_data="Zmos248 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 21", callback_data="Zmos249 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 22", callback_data="Zmos250 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 23", callback_data="Zmos251 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 24", callback_data="Zmos252 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 25", callback_data="Zmos253 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 26", callback_data="Zmos254 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 27", callback_data="Zmos255 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 28", callback_data="Zmos256 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 29", callback_data="Zmos257 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 30", callback_data="Zmos258 " + (https://t.me/lV_P_Nl))],
+        [InlineKeyboardButton("⌯ الحلقة 1", callback_data="Zmos229 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 2", callback_data="Zmos230 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 3", callback_data="Zmos231 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 4", callback_data="Zmos232 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 5", callback_data="Zmos233 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 6", callback_data="Zmos234 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 7", callback_data="Zmos235 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 8", callback_data="Zmos236 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 9", callback_data="Zmos237 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 10", callback_data="Zmos238 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 11", callback_data="Zmos239 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 12", callback_data="Zmos240 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 13", callback_data="Zmos241 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 14", callback_data="Zmos242 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 15", callback_data="Zmos243 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 16", callback_data="Zmos244 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 17", callback_data="Zmos245 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 18", callback_data="Zmos246 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 19", callback_data="Zmos247 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 20", callback_data="Zmos248 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 21", callback_data="Zmos249 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 22", callback_data="Zmos250 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 23", callback_data="Zmos251 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 24", callback_data="Zmos252 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 25", callback_data="Zmos253 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 26", callback_data="Zmos254 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 27", callback_data="Zmos255 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 28", callback_data="Zmos256 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 29", callback_data="Zmos257 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 30", callback_data="Zmos258 " + str(m.from_user.id))],
 
-        [InlineKeyboardButton("𝐖𝐇𝐈𝐒𝐊𝐄𝐘", callback_data="moslsl " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌞ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐇𝐀𝐘𝐀⌝⚡", url=f"https://t.me/lN_B_Fl")],
+        [InlineKeyboardButton("『𝐇𝐀𝐘𝐀 🥱 ⏎ 』", callback_data="moslsl " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌞ 𝐇𝐀𝐘𝐀  • 𝙎𝙊𝙐𝙍𝘾𝙀 ⌝⚡", url=f"https://t.me/lN_B_Fl")],
 
     ])
     await m.message.edit_text("◍ اهلا بيك في مسلسل 📼 2- لعبة النسيان\n√", reply_markup=keyboard)
@@ -1666,39 +1666,39 @@ async def Xmos3(c: Client, m: CallbackQuery):
         return
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
 
-        [InlineKeyboardButton("⌯ الحلقة 1", callback_data="Zmos261 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 2", callback_data="Zmos262 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 3", callback_data="Zmos263 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 4", callback_data="Zmos264 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 5", callback_data="Zmos265 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 6", callback_data="Zmos266 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 7", callback_data="Zmos267 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 8", callback_data="Zmos268 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 9", callback_data="Zmos269 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 10", callback_data="Zmos270 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 11", callback_data="Zmos271 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 12", callback_data="Zmos272 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 13", callback_data="Zmos273 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 14", callback_data="Zmos274 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 15", callback_data="Zmos275 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 16", callback_data="Zmos276 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 17", callback_data="Zmos277 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 18", callback_data="Zmos278 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 19", callback_data="Zmos279 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 20", callback_data="Zmos280 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 21", callback_data="Zmos281 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 22", callback_data="Zmos282 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 23", callback_data="Zmos283 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 24", callback_data="Zmos284 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 25", callback_data="Zmos285 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 26", callback_data="Zmos286 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 27", callback_data="Zmos287 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 28", callback_data="Zmos288 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 29", callback_data="Zmos289 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 30", callback_data="Zmos290 " + (https://t.me/lV_P_Nl))],
+        [InlineKeyboardButton("⌯ الحلقة 1", callback_data="Zmos261 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 2", callback_data="Zmos262 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 3", callback_data="Zmos263 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 4", callback_data="Zmos264 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 5", callback_data="Zmos265 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 6", callback_data="Zmos266 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 7", callback_data="Zmos267 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 8", callback_data="Zmos268 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 9", callback_data="Zmos269 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 10", callback_data="Zmos270 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 11", callback_data="Zmos271 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 12", callback_data="Zmos272 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 13", callback_data="Zmos273 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 14", callback_data="Zmos274 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 15", callback_data="Zmos275 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 16", callback_data="Zmos276 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 17", callback_data="Zmos277 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 18", callback_data="Zmos278 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 19", callback_data="Zmos279 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 20", callback_data="Zmos280 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 21", callback_data="Zmos281 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 22", callback_data="Zmos282 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 23", callback_data="Zmos283 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 24", callback_data="Zmos284 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 25", callback_data="Zmos285 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 26", callback_data="Zmos286 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 27", callback_data="Zmos287 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 28", callback_data="Zmos288 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 29", callback_data="Zmos289 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 30", callback_data="Zmos290 " + str(m.from_user.id))],
 
-        [InlineKeyboardButton("𝐖𝐇𝐈𝐒𝐊𝐄𝐘", callback_data="moslsl " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌞ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐇𝐀𝐘𝐀⌝⚡", url=f"https://t.me/lN_B_Fl")],
+        [InlineKeyboardButton("『𝐇𝐀𝐘𝐀 🥱 ⏎ 』", callback_data="moslsl " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌞ 𝐇𝐀𝐘𝐀  • 𝙎𝙊𝙐𝙍𝘾𝙀 ⌝⚡", url=f"https://t.me/lN_B_Fl")],
 
     ])
     await m.message.edit_text("◍ اهلا بيك في مسلسل 📼 3- ب 100 وش\n√", reply_markup=keyboard)
@@ -1712,39 +1712,39 @@ async def Xmos4(c: Client, m: CallbackQuery):
         return
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
 
-        [InlineKeyboardButton("⌯ الحلقة 1", callback_data="Zmos293 " + (https://t.me/lV_P_Nl))], 
-        [InlineKeyboardButton("⌯ الحلقة 2", callback_data="Zmos294 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 3", callback_data="Zmos295 " + (https://t.me/lV_P_Nl))], 
-        [InlineKeyboardButton("⌯ الحلقة 4", callback_data="Zmos296 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 5", callback_data="Zmos297 " + (https://t.me/lV_P_Nl))], 
-        [InlineKeyboardButton("⌯ الحلقة 6", callback_data="Zmos298 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 7", callback_data="Zmos299 " + (https://t.me/lV_P_Nl))], 
-        [InlineKeyboardButton("⌯ الحلقة 8", callback_data="Zmos300 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 9", callback_data="Zmos301 " + (https://t.me/lV_P_Nl))], 
-        [InlineKeyboardButton("⌯ الحلقة 10", callback_data="Zmos302 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 11", callback_data="Zmos303 " + (https://t.me/lV_P_Nl))], 
-        [InlineKeyboardButton("⌯ الحلقة 12", callback_data="Zmos304 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 13", callback_data="Zmos305 " + (https://t.me/lV_P_Nl))], 
-        [InlineKeyboardButton("⌯ الحلقة 14", callback_data="Zmos306 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 15", callback_data="Zmos307 " + (https://t.me/lV_P_Nl))], 
-        [InlineKeyboardButton("⌯ الحلقة 16", callback_data="Zmos308 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 17", callback_data="Zmos309 " + (https://t.me/lV_P_Nl))], 
-        [InlineKeyboardButton("⌯ الحلقة 18", callback_data="Zmos310 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 19", callback_data="Zmos311 " + (https://t.me/lV_P_Nl))], 
-        [InlineKeyboardButton("⌯ الحلقة 20", callback_data="Zmos312 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 21", callback_data="Zmos313 " + (https://t.me/lV_P_Nl))], 
-        [InlineKeyboardButton("⌯ الحلقة 22", callback_data="Zmos314 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 23", callback_data="Zmos315 " + (https://t.me/lV_P_Nl))], 
-        [InlineKeyboardButton("⌯ الحلقة 24", callback_data="Zmos316 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 25", callback_data="Zmos317 " + (https://t.me/lV_P_Nl))], 
-        [InlineKeyboardButton("⌯ الحلقة 26", callback_data="Zmos318 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 27", callback_data="Zmos319 " + (https://t.me/lV_P_Nl))], 
-        [InlineKeyboardButton("⌯ الحلقة 28", callback_data="Zmos320 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 29", callback_data="Zmos321 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 30", callback_data="Zmos322 " + (https://t.me/lV_P_Nl))],
+        [InlineKeyboardButton("⌯ الحلقة 1", callback_data="Zmos293 " + str(m.from_user.id))], 
+        [InlineKeyboardButton("⌯ الحلقة 2", callback_data="Zmos294 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 3", callback_data="Zmos295 " + str(m.from_user.id))], 
+        [InlineKeyboardButton("⌯ الحلقة 4", callback_data="Zmos296 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 5", callback_data="Zmos297 " + str(m.from_user.id))], 
+        [InlineKeyboardButton("⌯ الحلقة 6", callback_data="Zmos298 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 7", callback_data="Zmos299 " + str(m.from_user.id))], 
+        [InlineKeyboardButton("⌯ الحلقة 8", callback_data="Zmos300 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 9", callback_data="Zmos301 " + str(m.from_user.id))], 
+        [InlineKeyboardButton("⌯ الحلقة 10", callback_data="Zmos302 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 11", callback_data="Zmos303 " + str(m.from_user.id))], 
+        [InlineKeyboardButton("⌯ الحلقة 12", callback_data="Zmos304 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 13", callback_data="Zmos305 " + str(m.from_user.id))], 
+        [InlineKeyboardButton("⌯ الحلقة 14", callback_data="Zmos306 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 15", callback_data="Zmos307 " + str(m.from_user.id))], 
+        [InlineKeyboardButton("⌯ الحلقة 16", callback_data="Zmos308 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 17", callback_data="Zmos309 " + str(m.from_user.id))], 
+        [InlineKeyboardButton("⌯ الحلقة 18", callback_data="Zmos310 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 19", callback_data="Zmos311 " + str(m.from_user.id))], 
+        [InlineKeyboardButton("⌯ الحلقة 20", callback_data="Zmos312 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 21", callback_data="Zmos313 " + str(m.from_user.id))], 
+        [InlineKeyboardButton("⌯ الحلقة 22", callback_data="Zmos314 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 23", callback_data="Zmos315 " + str(m.from_user.id))], 
+        [InlineKeyboardButton("⌯ الحلقة 24", callback_data="Zmos316 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 25", callback_data="Zmos317 " + str(m.from_user.id))], 
+        [InlineKeyboardButton("⌯ الحلقة 26", callback_data="Zmos318 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 27", callback_data="Zmos319 " + str(m.from_user.id))], 
+        [InlineKeyboardButton("⌯ الحلقة 28", callback_data="Zmos320 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 29", callback_data="Zmos321 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 30", callback_data="Zmos322 " + str(m.from_user.id))],
 
-        [InlineKeyboardButton("𝐖𝐇𝐈𝐒𝐊𝐄𝐘", callback_data="moslsl " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌞ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐇𝐀𝐘𝐀⌝⚡", url=f"https://t.me/lN_B_Fl")],
+        [InlineKeyboardButton("『𝐇𝐀𝐘𝐀 🥱 ⏎ 』", callback_data="moslsl " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌞ 𝐇𝐀𝐘𝐀  • 𝙎𝙊𝙐𝙍𝘾𝙀 ⌝⚡", url=f"https://t.me/lN_B_Fl")],
 
     ])
     await m.message.edit_text("◍ اهلا بيك في مسلسل 📼 4- آدم\n√", reply_markup=keyboard)
@@ -1758,69 +1758,69 @@ async def Xmos5(c: Client, m: CallbackQuery):
         return
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
 
-        [InlineKeyboardButton("⌯ الحلقة 1", callback_data="Zmos325 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 2", callback_data="Zmos326 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 3", callback_data="Zmos327 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 4", callback_data="Zmos328 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 5", callback_data="Zmos329 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 6", callback_data="Zmos330 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 7", callback_data="Zmos331 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 8", callback_data="Zmos332 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 9", callback_data="Zmos333 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 10", callback_data="Zmos334 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 11", callback_data="Zmos335 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 12", callback_data="Zmos336 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 13", callback_data="Zmos337 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 14", callback_data="Zmos338 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 15", callback_data="Zmos339 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 16", callback_data="Zmos340 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 17", callback_data="Zmos341 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 18", callback_data="Zmos342 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 19", callback_data="Zmos343 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 20", callback_data="Zmos344 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 21", callback_data="Zmos345 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 22", callback_data="Zmos346 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 23", callback_data="Zmos347 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 24", callback_data="Zmos348 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 25", callback_data="Zmos349 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 26", callback_data="Zmos350 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 27", callback_data="Zmos351 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 28", callback_data="Zmos352 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 29", callback_data="Zmos353 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 30", callback_data="Zmos354 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 31", callback_data="Zmos355 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 32", callback_data="Zmos356 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 33", callback_data="Zmos357 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 34", callback_data="Zmos358 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 35", callback_data="Zmos359 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 36", callback_data="Zmos360 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 37", callback_data="Zmos361 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 38", callback_data="Zmos362 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 39", callback_data="Zmos363 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 40", callback_data="Zmos364 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 41", callback_data="Zmos365 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 42", callback_data="Zmos366 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 43", callback_data="Zmos367 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 44", callback_data="Zmos368 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 45", callback_data="Zmos369 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 46", callback_data="Zmos370 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 47", callback_data="Zmos371 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 48", callback_data="Zmos372 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 49", callback_data="Zmos373 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 50", callback_data="Zmos374 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 51", callback_data="Zmos375 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 52", callback_data="Zmos376 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 53", callback_data="Zmos377 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 54", callback_data="Zmos378 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 55", callback_data="Zmos379 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 56", callback_data="Zmos380 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 57", callback_data="Zmos381 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 58", callback_data="Zmos382 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 59", callback_data="Zmos383 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 60", callback_data="Zmos384 " + (https://t.me/lV_P_Nl))],
+        [InlineKeyboardButton("⌯ الحلقة 1", callback_data="Zmos325 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 2", callback_data="Zmos326 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 3", callback_data="Zmos327 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 4", callback_data="Zmos328 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 5", callback_data="Zmos329 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 6", callback_data="Zmos330 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 7", callback_data="Zmos331 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 8", callback_data="Zmos332 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 9", callback_data="Zmos333 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 10", callback_data="Zmos334 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 11", callback_data="Zmos335 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 12", callback_data="Zmos336 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 13", callback_data="Zmos337 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 14", callback_data="Zmos338 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 15", callback_data="Zmos339 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 16", callback_data="Zmos340 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 17", callback_data="Zmos341 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 18", callback_data="Zmos342 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 19", callback_data="Zmos343 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 20", callback_data="Zmos344 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 21", callback_data="Zmos345 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 22", callback_data="Zmos346 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 23", callback_data="Zmos347 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 24", callback_data="Zmos348 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 25", callback_data="Zmos349 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 26", callback_data="Zmos350 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 27", callback_data="Zmos351 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 28", callback_data="Zmos352 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 29", callback_data="Zmos353 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 30", callback_data="Zmos354 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 31", callback_data="Zmos355 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 32", callback_data="Zmos356 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 33", callback_data="Zmos357 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 34", callback_data="Zmos358 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 35", callback_data="Zmos359 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 36", callback_data="Zmos360 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 37", callback_data="Zmos361 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 38", callback_data="Zmos362 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 39", callback_data="Zmos363 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 40", callback_data="Zmos364 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 41", callback_data="Zmos365 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 42", callback_data="Zmos366 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 43", callback_data="Zmos367 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 44", callback_data="Zmos368 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 45", callback_data="Zmos369 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 46", callback_data="Zmos370 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 47", callback_data="Zmos371 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 48", callback_data="Zmos372 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 49", callback_data="Zmos373 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 50", callback_data="Zmos374 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 51", callback_data="Zmos375 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 52", callback_data="Zmos376 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 53", callback_data="Zmos377 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 54", callback_data="Zmos378 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 55", callback_data="Zmos379 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 56", callback_data="Zmos380 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 57", callback_data="Zmos381 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 58", callback_data="Zmos382 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 59", callback_data="Zmos383 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 60", callback_data="Zmos384 " + str(m.from_user.id))],
 
-        [InlineKeyboardButton("𝐖𝐇𝐈𝐒𝐊𝐄𝐘", callback_data="moslsl " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌞ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐇𝐀𝐘𝐀⌝⚡", url=f"https://t.me/lN_B_Fl")],
+        [InlineKeyboardButton("『𝐇𝐀𝐘𝐀 🥱 ⏎ 』", callback_data="moslsl " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌞ 𝐇𝐀𝐘𝐀  • 𝙎𝙊𝙐𝙍𝘾𝙀 ⌝⚡", url=f"https://t.me/lN_B_Fl")],
 
     ])
     await m.message.edit_text("◍ اهلا بيك في مسلسل 📼 6-ابو العروسة\n√", reply_markup=keyboard)
@@ -1834,39 +1834,39 @@ async def toba(c: Client, m: CallbackQuery):
         return
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
 
-        [InlineKeyboardButton("⌯ الحلقة 1", callback_data="toba1 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 2", callback_data="toba2 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 3", callback_data="toba3 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 4", callback_data="toba4 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 5", callback_data="toba5 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 6", callback_data="toba6 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 7", callback_data="toba7" + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 8", callback_data="toba8 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 9", callback_data="toba9 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 10", callback_data="toba10 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 11", callback_data="toba11 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 12", callback_data="toba12 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 13", callback_data="toba13 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 14", callback_data="toba14 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 15", callback_data="toba15 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 16", callback_data="toba16 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 17", callback_data="toba17 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 18", callback_data="toba18 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 19", callback_data="toba19 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 20", callback_data="toba20 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 21", callback_data="toba21 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 22", callback_data="toba22 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 23", callback_data="toba23 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 24", callback_data="toba24 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 25", callback_data="toba25 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 26", callback_data="toba26 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 27", callback_data="toba27 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 28", callback_data="toba28 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 29", callback_data="toba29 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 30", callback_data="toba30 " + (https://t.me/lV_P_Nl))],
+        [InlineKeyboardButton("⌯ الحلقة 1", callback_data="toba1 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 2", callback_data="toba2 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 3", callback_data="toba3 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 4", callback_data="toba4 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 5", callback_data="toba5 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 6", callback_data="toba6 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 7", callback_data="toba7" + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 8", callback_data="toba8 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 9", callback_data="toba9 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 10", callback_data="toba10 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 11", callback_data="toba11 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 12", callback_data="toba12 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 13", callback_data="toba13 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 14", callback_data="toba14 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 15", callback_data="toba15 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 16", callback_data="toba16 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 17", callback_data="toba17 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 18", callback_data="toba18 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 19", callback_data="toba19 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 20", callback_data="toba20 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 21", callback_data="toba21 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 22", callback_data="toba22 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 23", callback_data="toba23 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 24", callback_data="toba24 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 25", callback_data="toba25 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 26", callback_data="toba26 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 27", callback_data="toba27 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 28", callback_data="toba28 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 29", callback_data="toba29 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 30", callback_data="toba30 " + str(m.from_user.id))],
 
-        [InlineKeyboardButton("𝐖𝐇𝐈𝐒𝐊𝐄𝐘", callback_data="moslsl " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌞ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐇𝐀𝐘𝐀⌝⚡", url=f"https://t.me/lN_B_Fl")],
+        [InlineKeyboardButton("『𝐇𝐀𝐘𝐀 🥱 ⏎ 』", callback_data="moslsl " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌞ 𝐇𝐀𝐘𝐀  • 𝙎𝙊𝙐𝙍𝘾𝙀 ⌝⚡", url=f"https://t.me/lN_B_Fl")],
 
     ])
     await m.message.edit_text("◍ اهلا بيك في مسلسل 📼 5-توبه\n√", reply_markup=keyboard)
@@ -3805,10 +3805,10 @@ async def msrahia(c: Client, m: CallbackQuery):
         return
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
 
-        [InlineKeyboardButton("🎭 1- مسرح مصر", callback_data="Xms1 " + (https://t.me/lV_P_Nl))],
+        [InlineKeyboardButton("🎭 1- مسرح مصر", callback_data="Xms1 " + str(m.from_user.id))],
 
-        [InlineKeyboardButton("𝐖𝐇𝐈𝐒𝐊𝐄𝐘", callback_data="aflamAR2 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌞ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐇𝐀𝐘𝐀⌝⚡", url=f"https://t.me/lN_B_Fl")],
+        [InlineKeyboardButton("『𝐇𝐀𝐘𝐀 🥱 ⏎ 』", callback_data="aflamAR2 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌞ 𝐇𝐀𝐘𝐀  • 𝙎𝙊𝙐𝙍𝘾𝙀 ⌝⚡", url=f"https://t.me/lN_B_Fl")],
 
     ])
     await m.message.edit_text("◍ اهلا بيك في قائمة المسرحيات العربيه\n√", reply_markup=keyboard)
@@ -3822,14 +3822,14 @@ async def Xms1(c: Client, m: CallbackQuery):
         return
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
 
-        [InlineKeyboardButton("الجزء الأول 🎭", callback_data="Xmsrh1 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("الجزء الثاني 🎭", callback_data="Xmsrh2 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("الجزء الثالث 🎭", callback_data="Xmsrh3 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("الجزء الرابع 🎭", callback_data="Xmsrh4 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("الجزء الخامس 🎭", callback_data="Xmsrh5 " + (https://t.me/lV_P_Nl))],
+        [InlineKeyboardButton("الجزء الأول 🎭", callback_data="Xmsrh1 " + str(m.from_user.id))],
+        [InlineKeyboardButton("الجزء الثاني 🎭", callback_data="Xmsrh2 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("الجزء الثالث 🎭", callback_data="Xmsrh3 " + str(m.from_user.id))],
+        [InlineKeyboardButton("الجزء الرابع 🎭", callback_data="Xmsrh4 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("الجزء الخامس 🎭", callback_data="Xmsrh5 " + str(m.from_user.id))],
 
-        [InlineKeyboardButton("𝐖𝐇𝐈𝐒𝐊𝐄𝐘", callback_data="msrahia " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌞ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐇𝐀𝐘𝐀⌝⚡", url=f"https://t.me/lN_B_Fl")],
+        [InlineKeyboardButton("『𝐇𝐀𝐘𝐀 🥱 ⏎ 』", callback_data="msrahia " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌞ 𝐇𝐀𝐘𝐀  • 𝙎𝙊𝙐𝙍𝘾𝙀 ⌝⚡", url=f"https://t.me/lN_B_Fl")],
 
     ])
     await m.message.edit_text("◍ اهلا بيك في قائمة اجزاء مسرح مصر\n√", reply_markup=keyboard)
@@ -3843,26 +3843,26 @@ async def Xmsrh1(c: Client, m: CallbackQuery):
         return
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
 
-        [InlineKeyboardButton("⌯ الحلقة 1", callback_data="Zmsrh388 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 2", callback_data="Zmsrh389 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 3", callback_data="Zmsrh390 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 4", callback_data="Zmsrh391 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 5", callback_data="Zmsrh392 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 6", callback_data="Zmsrh393 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 7", callback_data="Zmsrh394 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 8", callback_data="Zmsrh395 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 9", callback_data="Zmsrh396 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 10", callback_data="Zmsrh397 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 11", callback_data="Zmsrh398 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 12", callback_data="Zmsrh399 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 13", callback_data="Zmsrh400 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 14", callback_data="Zmsrh401 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 15", callback_data="Zmsrh402 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 16", callback_data="Zmsrh403 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 17", callback_data="Zmsrh404 " + (https://t.me/lV_P_Nl))],
+        [InlineKeyboardButton("⌯ الحلقة 1", callback_data="Zmsrh388 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 2", callback_data="Zmsrh389 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 3", callback_data="Zmsrh390 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 4", callback_data="Zmsrh391 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 5", callback_data="Zmsrh392 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 6", callback_data="Zmsrh393 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 7", callback_data="Zmsrh394 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 8", callback_data="Zmsrh395 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 9", callback_data="Zmsrh396 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 10", callback_data="Zmsrh397 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 11", callback_data="Zmsrh398 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 12", callback_data="Zmsrh399 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 13", callback_data="Zmsrh400 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 14", callback_data="Zmsrh401 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 15", callback_data="Zmsrh402 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 16", callback_data="Zmsrh403 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 17", callback_data="Zmsrh404 " + str(m.from_user.id))],
 
-        [InlineKeyboardButton("𝐖𝐇𝐈𝐒𝐊𝐄𝐘", callback_data="Xms1 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌞ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐇𝐀𝐘𝐀⌝⚡", url=f"https://t.me/lN_B_Fl")],
+        [InlineKeyboardButton("『𝐇𝐀𝐘𝐀 🥱 ⏎ 』", callback_data="Xms1 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌞ 𝐇𝐀𝐘𝐀  • 𝙎𝙊𝙐𝙍𝘾𝙀 ⌝⚡", url=f"https://t.me/lN_B_Fl")],
 
     ])
     await m.message.edit_text("◍ اهلا بيك في قائمه 🔘 | روايات والقصص |\n√", reply_markup=keyboard)
@@ -3877,23 +3877,23 @@ async def Xmsrh2(c: Client, m: CallbackQuery):
         return
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
 
-        [InlineKeyboardButton("⌯ الحلقة 1", callback_data="Zmsrh406 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 2", callback_data="Zmsrh407 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 3", callback_data="Zmsrh408 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 4", callback_data="Zmsrh409 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 5", callback_data="Zmsrh410 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 6", callback_data="Zmsrh411 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 7", callback_data="Zmsrh412 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 8", callback_data="Zmsrh413 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 9", callback_data="Zmsrh414 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 10", callback_data="Zmsrh415 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 11", callback_data="Zmsrh416 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 12", callback_data="Zmsrh417 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 13", callback_data="Zmsrh418 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 14", callback_data="Zmsrh419 " + (https://t.me/lV_P_Nl))],
+        [InlineKeyboardButton("⌯ الحلقة 1", callback_data="Zmsrh406 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 2", callback_data="Zmsrh407 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 3", callback_data="Zmsrh408 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 4", callback_data="Zmsrh409 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 5", callback_data="Zmsrh410 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 6", callback_data="Zmsrh411 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 7", callback_data="Zmsrh412 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 8", callback_data="Zmsrh413 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 9", callback_data="Zmsrh414 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 10", callback_data="Zmsrh415 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 11", callback_data="Zmsrh416 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 12", callback_data="Zmsrh417 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 13", callback_data="Zmsrh418 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 14", callback_data="Zmsrh419 " + str(m.from_user.id))],
 
-        [InlineKeyboardButton("𝐖𝐇𝐈𝐒𝐊𝐄𝐘", callback_data="Xms1 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌞ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐇𝐀𝐘𝐀⌝⚡", url=f"https://t.me/lN_B_Fl")],
+        [InlineKeyboardButton("『𝐇𝐀𝐘𝐀 🥱 ⏎ 』", callback_data="Xms1 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌞ 𝐇𝐀𝐘𝐀  • 𝙎𝙊𝙐𝙍𝘾𝙀 ⌝⚡", url=f"https://t.me/lN_B_Fl")],
 
     ])
     await m.message.edit_text("◍ اهلا بيك في قائمه 🔘 | روايات والقصص |\n√", reply_markup=keyboard)
@@ -3908,31 +3908,31 @@ async def Xmsrh3(c: Client, m: CallbackQuery):
         return
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
 
-        [InlineKeyboardButton("⌯ الحلقة 1", callback_data="Zmsrh421 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 2", callback_data="Zmsrh422 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 3", callback_data="Zmsrh423 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 4", callback_data="Zmsrh424 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 5", callback_data="Zmsrh425 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 6", callback_data="Zmsrh426 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 7", callback_data="Zmsrh427 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 8", callback_data="Zmsrh428 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 9", callback_data="Zmsrh429 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 10", callback_data="Zmsrh430 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 11", callback_data="Zmsrh431 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 12", callback_data="Zmsrh432 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 13", callback_data="Zmsrh433 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 14", callback_data="Zmsrh434 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 15", callback_data="Zmsrh435 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 16", callback_data="Zmsrh436 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 17", callback_data="Zmsrh437 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 18", callback_data="Zmsrh438 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 19", callback_data="Zmsrh439 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 20", callback_data="Zmsrh440 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 21", callback_data="Zmsrh441 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 22", callback_data="Zmsrh442 " + (https://t.me/lV_P_Nl))],
+        [InlineKeyboardButton("⌯ الحلقة 1", callback_data="Zmsrh421 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 2", callback_data="Zmsrh422 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 3", callback_data="Zmsrh423 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 4", callback_data="Zmsrh424 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 5", callback_data="Zmsrh425 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 6", callback_data="Zmsrh426 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 7", callback_data="Zmsrh427 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 8", callback_data="Zmsrh428 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 9", callback_data="Zmsrh429 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 10", callback_data="Zmsrh430 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 11", callback_data="Zmsrh431 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 12", callback_data="Zmsrh432 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 13", callback_data="Zmsrh433 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 14", callback_data="Zmsrh434 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 15", callback_data="Zmsrh435 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 16", callback_data="Zmsrh436 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 17", callback_data="Zmsrh437 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 18", callback_data="Zmsrh438 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 19", callback_data="Zmsrh439 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 20", callback_data="Zmsrh440 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 21", callback_data="Zmsrh441 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 22", callback_data="Zmsrh442 " + str(m.from_user.id))],
 
-        [InlineKeyboardButton("𝐖𝐇𝐈𝐒𝐊𝐄𝐘", callback_data="Xms1 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌞ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐇𝐀𝐘𝐀⌝⚡", url=f"https://t.me/lN_B_Fl")],
+        [InlineKeyboardButton("『𝐇𝐀𝐘𝐀 🥱 ⏎ 』", callback_data="Xms1 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌞ 𝐇𝐀𝐘𝐀  • 𝙎𝙊𝙐𝙍𝘾𝙀 ⌝⚡", url=f"https://t.me/lN_B_Fl")],
 
     ])
     await m.message.edit_text("◍ اهلا بيك في قائمه 🔘 | روايات والقصص |\n√", reply_markup=keyboard)
@@ -3947,22 +3947,22 @@ async def Xmsrh4(c: Client, m: CallbackQuery):
         return
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
 
-        [InlineKeyboardButton("⌯ الحلقة 1", callback_data="Zmsrh444 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 2", callback_data="Zmsrh445 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 3", callback_data="Zmsrh446 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 4", callback_data="Zmsrh447 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 5", callback_data="Zmsrh448 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 6", callback_data="Zmsrh449 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 7", callback_data="Zmsrh450 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 8", callback_data="Zmsrh451 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 9", callback_data="Zmsrh452 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 10", callback_data="Zmsrh453 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 11", callback_data="Zmsrh454 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 12", callback_data="Zmsrh455 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 13", callback_data="Zmsrh456 " + (https://t.me/lV_P_Nl))],
+        [InlineKeyboardButton("⌯ الحلقة 1", callback_data="Zmsrh444 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 2", callback_data="Zmsrh445 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 3", callback_data="Zmsrh446 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 4", callback_data="Zmsrh447 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 5", callback_data="Zmsrh448 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 6", callback_data="Zmsrh449 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 7", callback_data="Zmsrh450 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 8", callback_data="Zmsrh451 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 9", callback_data="Zmsrh452 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 10", callback_data="Zmsrh453 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 11", callback_data="Zmsrh454 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 12", callback_data="Zmsrh455 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 13", callback_data="Zmsrh456 " + str(m.from_user.id))],
 
-        [InlineKeyboardButton("𝐖𝐇𝐈𝐒𝐊𝐄𝐘", callback_data="Xms1 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌞ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐇𝐀𝐘𝐀⌝⚡", url=f"https://t.me/lN_B_Fl")],
+        [InlineKeyboardButton("『𝐇𝐀𝐘𝐀 🥱 ⏎ 』", callback_data="Xms1 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌞ 𝐇𝐀𝐘𝐀  • 𝙎𝙊𝙐𝙍𝘾𝙀 ⌝⚡", url=f"https://t.me/lN_B_Fl")],
 
     ])
     await m.message.edit_text("◍ اهلا بيك في قائمه 🔘 | روايات والقصص |\n√", reply_markup=keyboard)
@@ -3977,31 +3977,31 @@ async def Xmsrh5(c: Client, m: CallbackQuery):
         return
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
 
-        [InlineKeyboardButton("⌯ الحلقة 1", callback_data="Zmsrh467 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 2", callback_data="Zmsrh468 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 3", callback_data="Zmsrh469 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 4", callback_data="Zmsrh470 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 5", callback_data="Zmsrh471 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 6", callback_data="Zmsrh472 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 7", callback_data="Zmsrh473 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 8", callback_data="Zmsrh474 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 9", callback_data="Zmsrh475 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 10", callback_data="Zmsrh476 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 11", callback_data="Zmsrh477 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 12", callback_data="Zmsrh478 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 13", callback_data="Zmsrh479 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 14", callback_data="Zmsrh480 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 15", callback_data="Zmsrh481 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 16", callback_data="Zmsrh482 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 17", callback_data="Zmsrh483 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 18", callback_data="Zmsrh484 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 19", callback_data="Zmsrh485 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 20", callback_data="Zmsrh486 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌯ الحلقة 21", callback_data="Zmsrh487 " + (https://t.me/lV_P_Nl))] +
-        [InlineKeyboardButton("⌯ الحلقة 22", callback_data="Zmsrh488 " + (https://t.me/lV_P_Nl))],
+        [InlineKeyboardButton("⌯ الحلقة 1", callback_data="Zmsrh467 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 2", callback_data="Zmsrh468 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 3", callback_data="Zmsrh469 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 4", callback_data="Zmsrh470 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 5", callback_data="Zmsrh471 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 6", callback_data="Zmsrh472 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 7", callback_data="Zmsrh473 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 8", callback_data="Zmsrh474 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 9", callback_data="Zmsrh475 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 10", callback_data="Zmsrh476 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 11", callback_data="Zmsrh477 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 12", callback_data="Zmsrh478 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 13", callback_data="Zmsrh479 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 14", callback_data="Zmsrh480 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 15", callback_data="Zmsrh481 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 16", callback_data="Zmsrh482 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 17", callback_data="Zmsrh483 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 18", callback_data="Zmsrh484 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 19", callback_data="Zmsrh485 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 20", callback_data="Zmsrh486 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌯ الحلقة 21", callback_data="Zmsrh487 " + str(m.from_user.id))] +
+        [InlineKeyboardButton("⌯ الحلقة 22", callback_data="Zmsrh488 " + str(m.from_user.id))],
 
-        [InlineKeyboardButton("𝐖𝐇𝐈𝐒𝐊𝐄𝐘", callback_data="Xms1 " + (https://t.me/lV_P_Nl))],
-        [InlineKeyboardButton("⌞ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐇𝐀𝐘𝐀⌝⚡", url=f"https://t.me/lN_B_Fl")],
+        [InlineKeyboardButton("『𝐇𝐀𝐘𝐀 🥱 ⏎ 』", callback_data="Xms1 " + str(m.from_user.id))],
+        [InlineKeyboardButton("⌞ 𝐇𝐀𝐘𝐀  • 𝙎𝙊𝙐𝙍𝘾𝙀 ⌝⚡", url=f"https://t.me/lN_B_Fl")],
 
     ])
     await m.message.edit_text("◍ اهلا بيك في قائمه 🔘 | روايات والقصص |\n√", reply_markup=keyboard)
