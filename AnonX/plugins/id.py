@@ -14,7 +14,7 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 
 iddof = []
 @app.on_message(
-    command(["قفل الايدي","تعطيل الايدي"])
+    command(["قفل ايدي","تعطيل ايدي"])
     & filters.group
     & ~filters.edited
 )
@@ -29,7 +29,7 @@ async def iddlock(client, message):
       return await message.reply_text("لازم تكون عندك رتبه ياتر عشان نسمع كلامك💦")
 
 @app.on_message(
-    command(["فتح الايدي","تفعيل الايدي"])
+    command(["فتح ايدي","تفعيل ايدي"])
     & filters.group
     & ~filters.edited
 )
