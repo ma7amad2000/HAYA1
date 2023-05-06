@@ -21,7 +21,7 @@ from random import  choice, randint
                 
                 
 @app.on_message(
-    command(["مطورين سي ار","المطورين","مطورين","مطورين cr"])
+    command(["مطورين حياه","المطورين","مطورين","مطورين"])
     & ~filters.edited
 )
 async def huhh(client: Client, message: Message):
@@ -103,7 +103,7 @@ async def yas(client, message):
 
 
 @app.on_message(
-    command(["حياة","حياتي","حياه","بوت"])
+    command(["حياة","حياتي","حياه","بوت","بوتي"])
     & filters.group
     & ~filters.edited
 )
@@ -125,14 +125,14 @@ async def yas(client, message):
 
 
 @app.on_message(
-    command(["/api"])
+    command(["ذكاء حياه"])
     & ~filters.edited
     
 )
 async def huhh(client: Client, message: Message):
     await message.reply_photo(
         photo=f"https://c.top4top.io/p_2680dmevf1.jpg",
-        caption=f"""**⩹⊷━⌞ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐇𝐀𝐘𝐀 ⌝━━⩺**\nمرحبا بك عزيزي {message.from_user.mention} في قسم الذكاء الاصتناعي الخاص بسورس cr\nلتتمكن من استخدام اوامر الذكاء الاصتناعي اكتب \n /gpt + السؤال بالاسفل👇\n**⩹━━⌞ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐇𝐀𝐘𝐀 ⌝━━⩺**""",
+        caption=f"""**⩹⊷━⌞ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐇𝐀𝐘𝐀 ⌝━━⩺**\nمرحبا بك عزيزي {message.from_user.mention} في قسم الذكاء الاصتناعي الخاص بسورس حياه\nلتتمكن من استخدام اوامر الذكاء الاصتناعي اكتب \n /gpt + السؤال بالاسفل👇\n**⩹━━⌞ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐇𝐀𝐘𝐀 ⌝━━⩺**""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
