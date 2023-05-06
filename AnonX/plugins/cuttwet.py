@@ -3724,9 +3724,9 @@ async def iddlock(client, message):
       if message.chat.id in iddof:
         return await message.reply_text("تم معطل من قبل🔒")
       iddof.append(message.chat.id)
-      return await message.reply_text("تم تعطيل كت بنجاح ✅🔒")
+        return await message.reply_text("تم تعطيل كت بنجاح ✅🔒")
    else:
-      return await message.reply_text("علق دبور توا نسمع كلامك ياحشره")
+        return await message.reply_text("علق دبور توا نسمع كلامك ياحشره")
 
 @app.on_message(
     command(["فتح كت","تفعيل تويت"])
@@ -3739,6 +3739,6 @@ async def iddopen(client, message):
       if not message.chat.id in iddof:
         return await message.reply_text("كت مفعل من قبل ✅")
       iddof.remove(message.chat.id)
-      return await message.reply_text("تم فتح كت بنجاح ✅🔓")
+        return await message.reply_text("تم فتح كت بنجاح ✅🔓")
    else:
       return await message.reply_text("علق دبور توا تسمع كلامك ياحشره")
