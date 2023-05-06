@@ -6,10 +6,10 @@ from pyrogram.types import CallbackQuery, InlineKeyboardMarkup
 from config import (AUTO_DOWNLOADS_CLEAR, BANNED_USERS,
                     SOUNCLOUD_IMG_URL, STREAM_IMG_URL,
                     TELEGRAM_AUDIO_URL, TELEGRAM_VIDEO_URL, adminlist)
-from YukkiMusic import YouTube, app
+from AnonX import YouTube, app
 from YukkiMusic.core.call import Yukki
-from YukkiMusic.misc import SUDOERS, db
-from YukkiMusic.utils.database import (is_active_chat,
+from AnonX.misc import SUDOERS, db
+from AnonX.utils.database import (is_active_chat,
                                        is_music_playing, is_muted,
                                        is_nonadmin_chat, music_off,
                                        music_on, mute_off, mute_on,
