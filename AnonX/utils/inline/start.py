@@ -1,7 +1,7 @@
 from typing import Union
 
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
-# from telebot import *
+from pyrogram import Client
 import config
 
 
@@ -55,16 +55,9 @@ def private_panel(_, BOT_USERNAME, OWNER: Union[bool, int] = None):
      ]
     return buttons
 
-# @bot.message_handler(commands=["start"])
-# def start(message):
-#                 ch = "قناتك بدون @"
-#                 idu = message.chat.id
-#                 join = requests.get(f"https://api.telegram.org/bot{token}/getChatMember?chat_id=@{ch}&user_id={idu}").text
-#                 if '"status":"left"' in join:
-#                     bot.send_message(message.chat.id,f"""
-# 🚸| عذرا عزيزي
-# 🔰| عليك الاشتراك بقناة البوت لتتمكن من استخدامه
-# {ch} 
+channel1_id = "https://t.me/lN_B_Fl"
+channel2_id = "https://t.me/HL_BG"
 
-# ‼️| اشترك ثم ارسل /start
-#                     """)
+with app:
+    is_subscribed_to_channel1 = app.get_chat_member(channel1_id, 'اشترك').status != 'kicked'
+    is_subscribed_to_channel2 = app.get_chat_member(channel2_id, 'ااشنرك').status != 'kicked'
