@@ -122,7 +122,7 @@ txt = [
         
 
 
-@app.on_message(command(["حياه لو تخيريني","خيريني"]))
+@app.on_message(command(["لو تخيريني","خيريني"]))
 
 async def khyrok(client: Client, message: Message):
 
