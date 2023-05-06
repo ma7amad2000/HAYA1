@@ -40,7 +40,7 @@ async def huhh(client: Client, message: Message):
                     InlineKeyboardButton(
                         "channel", url=f"https://t.me/lN_B_Fl"),
                     InlineKeyboardButton(
-                        "MyBot", url=f"https://t.me/HAYA01BOT"),
+                        "رفيقي", url=f"https://t.me/A_Q_Xo"),
                 ],[
                 
                     InlineKeyboardButton(
@@ -82,12 +82,12 @@ async def yas(client, message):
 
 
 @app.on_message(
-    command(["قروب مساعده","مساعده","الدليل"])
+    command(["عبد الله","شيكاغو","عبادي"])
     & filters.group
     & ~filters.edited
 )
 async def yas(client, message):
-    usr = await client.get_chat("HL_BG")
+    usr = await client.get_chat("A_Q_Xo")
     name = usr.first_name
     photo = await app.download_media(usr.photo.big_file_id)
     await message.reply_photo(photo,       caption=f"**⩹━★⊷━⌞ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐇𝐀𝐘𝐀 ⌝━⊶★━⩺\n\n🧞‍♂️ ¦𝙽𝙰𝙼𝙴 :{name}\n🎯 ¦𝚄𝚂𝙴𝚁 :@{usr.username}\n💣 ¦𝙸𝙳 :`{usr.id}`\n🚀 ¦𝙱𝙸𝙾 :{usr.bio}\n\n**⩹━★⊷━⌞ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐇𝐀𝐘𝐀 ⌝━⊶★━⩺**", 
