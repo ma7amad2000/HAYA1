@@ -22,26 +22,26 @@ from AnonX import app
 #########################################################################################
 
 # Replay Text
-channel1_id = "https://t.me/lN_B_Fl"
-channel2_id = "https://t.me/HL_BG"
+# channel1_id = "https://t.me/lN_B_Fl"
+# channel2_id = "https://t.me/HL_BG"
 
-@app.on_message(
-        command(["الاشتراك"])
-        & ~filters.edited
-)
- async def ashtrak(d: Client, f: Message):
-   global mid
-    mid = d.message_id
-    keyboard = InlineKeyboardMarkup(inline_keyboard=[
+# @app.on_message(
+#         command(["الاشتراك"])
+#         & ~filters.edited
+# )
+#  async def ashtrak(d: Client, f: Message):
+#    global mid
+#     mid = d.message_id
+#     keyboard = InlineKeyboardMarkup(inline_keyboard=[
 
-        [InlineKeyboardButton("قناتي", callback_data="channel1" + str(d.from_user.id))],
-        [InlineKeyboardButton("قروبي", callback_data="channel2" + str(d.from_user.id))],
+#         [InlineKeyboardButton("قناتي", callback_data="channel1" + str(d.from_user.id))],
+#         [InlineKeyboardButton("قروبي", callback_data="channel2" + str(d.from_user.id))],
        
 
-        [InlineKeyboardButton("⌞ 𝐇𝐀𝐘𝐀  • 𝙎𝙊𝙐𝙍𝘾𝙀 ⌝⚡", url=f"https://t.me/lN_B_Fl")],
+#         [InlineKeyboardButton("⌞ 𝐇𝐀𝐘𝐀  • 𝙎𝙊𝙐𝙍𝘾𝙀 ⌝⚡", url=f"https://t.me/lN_B_Fl")],
 
-    ])
-    await d.reply_text("◍ اهلا بيك في قسم الافلام والمسلسلات في سورس حياه\n√", reply_markup=keyboard)
+#     ])
+#     await d.reply_text("◍ اهلا بيك في قسم الافلام والمسلسلات في سورس حياه\n√", reply_markup=keyboard)
 @app.on_message(
     command(["افلام"])
     & ~filters.edited
