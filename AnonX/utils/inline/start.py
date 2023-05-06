@@ -1,7 +1,7 @@
 from typing import Union
 
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
-from pyrogram import Client
+
 import config
 
 
@@ -55,9 +55,4 @@ def private_panel(_, BOT_USERNAME, OWNER: Union[bool, int] = None):
      ]
     return buttons
 
-channel1_id = "https://t.me/lN_B_Fl"
-channel2_id = "https://t.me/HL_BG"
 
-with app:
-    is_subscribed_to_channel1 = app.get_chat_member(channel1_id, 'اشترك').status != 'kicked'
-    is_subscribed_to_channel2 = app.get_chat_member(channel2_id, 'ااشنرك').status != 'kicked'
