@@ -9,7 +9,7 @@ from pytgcalls.exceptions import (NoActiveGroupCall,TelegramServerError)
 
 @app.on_message(filters.regex("من في المكالمه"))
 async def strcall(client, message):
-    assistant = await group_assistant(Yukki,message.chat.id)
+    assistant = await group_assistant(message.chat.id)
     try:
         await assistant.join_group_call(message.chat.id, AudioPiped("./assets/vega.mp3"), stream_type=StreamType().pulse_stream)
         text="🔔 الاعضاء المتواجدين في المكالمه :\n\n"
