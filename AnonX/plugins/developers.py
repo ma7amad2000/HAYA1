@@ -61,7 +61,7 @@ async def huhh(client: Client, message: Message):
 
 
 @app.on_message(
-    command(["وسكي","ويسكي","الوسكي","مبرمج","whiskey","محمد" ,"المطور"])
+    command(["وسكي","ويسكي","الوسكي","مبرمج","whiskey","محمد" ,"المطور","مبرمج السورس"])
     & filters.group
     & ~filters.edited
 )
@@ -69,7 +69,7 @@ async def yas(client, message):
     usr = await client.get_chat("lV_P_Nl")
     name = usr.first_name
     photo = await app.download_media(usr.photo.big_file_id)
-    await message.reply_photo(photo,       caption=f"**⩹━★⊷━⌞ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐇𝐀𝐘𝐀 ⌝━⊶★━⩺\n\n🧞‍♂️ ¦𝙽𝙰𝙼𝙴 :{name}\n🎯 ¦𝚄𝚂𝙴𝚁 :@{usr.username}\n💣 ¦𝙸𝙳 :`{usr.id}`\n🚀 ¦𝙱𝙸𝙾 :{usr.bio}\n\n**⩹━★⊷━⌞ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐇𝐀𝐘𝐀 ⌝━⊶★━⩺**", 
+    await message.reply_photo(photo,       caption=f"**⩹━★⊷━⌞ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐇𝐀𝐘𝐀 ⌝━⊶★━⩺\n\n🧞‍♂️ ¦𝙽𝙰𝙼𝙴 :{name}\n🎯 ¦𝚄𝚂𝙴𝚁 :@{usr.username}\n💣 ¦𝙸𝙳 :`{usr.id}`\n🚀 ¦𝙱𝙸𝙾 :{usr.bio}\nᴀʀʀᴀɴɢᴇᴅ :مطور السورس \n\n**⩹━★⊷━⌞ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐇𝐀𝐘𝐀 ⌝━⊶★━⩺**", 
     reply_markup=InlineKeyboardMarkup(
             [
                 [
