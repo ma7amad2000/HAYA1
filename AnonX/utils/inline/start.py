@@ -24,7 +24,7 @@ def start_pannel(_, BOT_USERNAME, OWNER: Union[bool, int] = None):
         ],
      ]
     return buttons
-     
+
 
 def private_panel(_, BOT_USERNAME, OWNER: Union[bool, int] = None):
     buttons = [
@@ -41,7 +41,7 @@ def private_panel(_, BOT_USERNAME, OWNER: Union[bool, int] = None):
         ],
         [
             InlineKeyboardButton(
-                text="✨️ 『𝐂𝐑𝐘𝐒𝐓𝐀𝐋 ⏎ 』 ✨️]ِ", url=f"https://t.me/ssxhh"
+                text="𝐖𝐇𝐈𝐒𝐊𝐄𝐘", url=f"https://t.me/lV_P_Nl"
             ),
             InlineKeyboardButton(
                 text="👤 مطور البوت", user_id=OWNER
@@ -49,10 +49,8 @@ def private_panel(_, BOT_USERNAME, OWNER: Union[bool, int] = None):
         ],
         [
             InlineKeyboardButton(
-                text=" ⌞ 𝐒𝐎𝐔𝐑𝐂𝐄 🦋𝐂𝐑𝐘𝐒𝐓𝐀𝐋  ⌝ ", url=f"https://t.me/no1bros"
+                text=" ⌞ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐇𝐀𝐘𝐀 ⌝ ", url=f"https://t.me/lN_B_Fl"
             )
         ],
      ]
     return buttons
-
-
