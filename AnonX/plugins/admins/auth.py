@@ -12,12 +12,12 @@ from pyrogram.types import Message
 
 from config import BANNED_USERS, adminlist
 from strings import get_command
-from YukkiMusic import app
-from YukkiMusic.utils.database import (delete_authuser, get_authuser,
+from AnonX import app
+from AnonX.utils.database import (delete_authuser, get_authuser,
                                        get_authuser_names,
                                        save_authuser)
-from YukkiMusic.utils.decorators import AdminActual, AdminRightsCheck, language
-from YukkiMusic.utils.formatters import int_to_alpha
+from AnonX.utils.decorators import AdminActual, AdminRightsCheck, language
+from AnonX.utils.formatters import int_to_alpha
 
 
 # Command
