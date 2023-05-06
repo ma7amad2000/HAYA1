@@ -68,5 +68,3 @@ def start(message):
 
 ‼️| اشترك ثم ارسل /start
                     """)
-                else:
-                 bot.send_photo(message.chat.id,url, """• 𝚆𝙴𝙻𝙲𝙾𝙼𝙴  •''''''')
