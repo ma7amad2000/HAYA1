@@ -76,16 +76,16 @@ clean = {}
 autoclean = []
 
 
-START_IMG_URL = getenv("START_IMG_URL", "https://c.top4top.io/p_2680dmevf1.jpg")
+START_IMG_URL = getenv("START_IMG_URL", "https://te.legra.ph/file/6298d377ad3eb46711644.jpg")
 
 PING_IMG_URL = getenv(
     "PING_IMG_URL",
-    "https://c.top4top.io/p_2680dmevf1.jpg",
+    "https://te.legra.ph/file/6298d377ad3eb46711644.jpg",
 )
 
 PLAYLIST_IMG_URL = "https://te.legra.ph/file/4ec5ae4381dffb039b4ef.jpg"
 
-GLOBAL_IMG_URL = "https://c.top4top.io/p_2680dmevf1.jpg"
+GLOBAL_IMG_URL = "https://te.legra.ph/file/6298d377ad3eb46711644.jpg"
 
 STATS_IMG_URL = "https://te.legra.ph/file/e906c2def5afe8a9b9120.jpg"
 
@@ -103,7 +103,7 @@ SPOTIFY_ARTIST_IMG_URL = "https://te.legra.ph/file/37d163a2f75e0d3b403d6.jpg"
 
 SPOTIFY_ALBUM_IMG_URL = "https://te.legra.ph/file/b35fd1dfca73b950b1b05.jpg"
 
-SPOTIFY_PLAYLIST_IMG_URL = "https://c.top4top.io/p_2680dmevf1.jpg"
+SPOTIFY_PLAYLIST_IMG_URL = "https://te.legra.ph/file/6298d377ad3eb46711644.jpg"
 
 
 def time_to_seconds(time):
@@ -130,9 +130,9 @@ if UPSTREAM_REPO:
 if PING_IMG_URL:
     if PING_IMG_URL != "assets/Ping.jpeg":
         if not re.match("(?:http|https)://", PING_IMG_URL):
-            PING_IMG_URL = "https://c.top4top.io/p_2680dmevf1.jpg"
+            PING_IMG_URL = "https://te.legra.ph/file/6298d377ad3eb46711644.jpg"
 
 if START_IMG_URL:
     if START_IMG_URL != "assets/Ping.jpeg":
         if not re.match("(?:http|https)://", START_IMG_URL):
-            START_IMG_URL = "https://c.top4top.io/p_2680dmevf1.jpg"
+            START_IMG_URL = "https://te.legra.ph/file/6298d377ad3eb46711644.jpg"
