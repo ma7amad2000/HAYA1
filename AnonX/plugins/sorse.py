@@ -8,7 +8,7 @@ from AnonX import app, Telegram
 )
 async def huhh(client: Client, message: Message):
     await message.reply_photo(
-        photo=f"https://telegra.ph/file/0ea3958575d1e41735c7e.jpg",
+        photo=f"https://b.top4top.io/p_2682mb2f41.jpg",
         caption=f"""
 ╭────么       • ◈ •     么────╮ 
 么  [𝒔𝒐𝒖𝒓𝒄𝒆 𝒉𝒂𝒚𝒂♡](https://t.me/lN_B_Fl)
