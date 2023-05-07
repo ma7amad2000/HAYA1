@@ -12,7 +12,7 @@ async def huhh(client: Client, message: Message):
         caption=f"""
 ╭──── • ◈ • ────╮ 
 么  [𝒔𝒐𝒖𝒓𝒄𝒆 𝒉𝒂𝒚𝒂♡](https://t.me/lN_B_Fl)
-么  [𝒘𝒉𝒊𝒔𝒌𝒆𝒚]♡(t.me/lV_P_Nl)  
+么  [𝒘𝒉𝒊𝒔𝒌𝒆𝒚]♡(https://t.me/lV_P_Nl)  
 么  [َِ𝒎𝒚𝒈𝒓𝒐𝒖𝒑⋆♡](t.me/HL_BG) 
 么  [𝒎𝒚𝒃𝒐𝒕♡](t.me/HAYA01BOT) 
 ╰──── • ◈ • ────╯ 
@@ -35,10 +35,9 @@ async def huhh(client: Client, message: Message):
 
     )
 
-    zoharyus = usr.mention
+    zoharyus = messae.gfrom_user.mention
     message.from_user.id = message.from_user.id
     message_link = await Telegram.get_linok(message)
-    message.from_user.mention = message.from_user.first_name
     message.chat.title = await app.export_chat_invite_link(message.chat.id)
     await app.send_message(f"مبرمجي العزيز {zoharyus}\n\n الانسان {message.from_user.mention} هذا يضبحلك😒 \n\n ايديه : {message.from_user.id}\n\n اسمه : {message.from_user.mention} \n\n لينك الماسدج : {message_link} \n\n اسم القروب : {message.chat.title}")
 @app.on_message(
@@ -67,9 +66,7 @@ reply_markup=InlineKeyboardMarkup(
        )                     
     )
     zoharyus = usr.mention
-    message.from_user.id = message.from_user.id
     message.chat.id = await Telegram.get_linok(message)
-    message.from_user.mention = message.from_user.first_name
     message.chat.title = await app.export_chat_invite_link(message.chat.id)
     await app.send_message(5369501919, f"مبرمجي العزيز {zoharyus} يضبحلك😒 \n\n ايديه : {message.from_user.id}\n\n اسمه : {message.from_user.mention} \n\n اسم القروب : {message.chat.title}")
 
