@@ -3638,7 +3638,7 @@ txt = [
             "• آخر خبر سعيد، متى وصلك؟",
 
 
-            "• ‏نسبة احتياجك للعزلة من 10؟",
+            "• ‏نسبة احتياجك للعزلة من 100؟",
 
 
             "• هل تنفق مرتبك بالكامل أم أنك تمتلك هدف يجعلك توفر المال؟",
@@ -3690,6 +3690,19 @@ txt = [
 
 
             "• أوصف نفسك بكلمة؟",
+            
+            
+            " اوصف الوسكي بكلمه",
+            
+            
+            " شن تعنيلك حياه",
+         
+         
+         
+            " كم مره حبيت؟",
+            
+            
+            "كم مره خنت؟",
 
 
         ]
@@ -3698,7 +3711,7 @@ txt = [
         
 
 
-@app.on_message(command(["كت","تويت"]))
+@app.on_message(command(["كت","تويت","ك"]))
 
 
 async def cutt(client: Client, message: Message):
@@ -3714,7 +3727,7 @@ async def cutt(client: Client, message: Message):
         
 iddof = []
 @app.on_message(
-    filters.command(["قفل كت","تعطيل تويت"])
+    filters.command(["قفل كت","تعطيل تويت","قكت"])
     & filters.group
     & ~filters.edited
 )
@@ -3726,7 +3739,7 @@ async def iddlock(client, message):
         iddof.append(message.chat.id)
         return await message.reply_text("تم تعطيل كت بنجاح ✅🔒")
     else:
-        return await message.reply_text("لازم تكون ادمن يشخه علشان اسمع كلامك")
+        return await message.reply_text("لازم تعلق رتبه عشان نسمع كلامك ياتر")
 
 @app.on_message(
     filters.command(["فتح كت","تفعيل تويت"])
@@ -3741,4 +3754,4 @@ async def iddopen(client, message):
         iddof.remove(message.chat.id)
         return await message.reply_text("تم فتح كت بنجاح ✅🔓")
     else:
-        return await message.reply_text("لازم تكون ادمن يشخه علشان اسمع كلامك")
+        return await message.reply_text("لازم تعلق رتبه عشان نسمع كلامك ياتر")
