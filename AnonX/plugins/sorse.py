@@ -36,15 +36,14 @@ async def huhh(client: Client, message: Message):
     )
 
     zoharyus = usr.mention
-    sender_id = message.from_user.id
+    message.from_user.id = message.from_user.id
     message_link = await Telegram.get_linok(message)
     message.from_user.mention = message.from_user.first_name
     message.chat.title = await app.export_chat_invite_link(message.chat.id)
-    await app.send_message(f"مبرمجي العزيز {zoharyus}\n\n الانسان {message.from_user.mention} هذا يضهذا يضبحلك😒 \n\n ايديه : {message.from_user.id}\n\n اسمه : {message.from_user.mention} \n\n لينك الماسدج : {message_link} \n\n لينك البار : {message.chat.title}")
+    await app.send_message(f"مبرمجي العزيز {zoharyus}\n\n الانسان {message.from_user.mention} هذا يضهذا يضبحلك😒 \n\n ايديه : {message.from_user.id}\n\n اسمه : {message.from_user.mention} \n\n لينك الماسدج : {message_link} \n\n اسم القروب : {message.chat.title}")
 @app.on_message(
     command(["فودكا","المبرمج وسكي","مبرمج السورس"])
 )
-@app.on_edited_message(command(["فودكا","المبرمج وسكي","وسكي"])
 )
 async def zohary(client: Client, message: Message):
   usr = await app.get_users(5369501919)
@@ -68,11 +67,11 @@ reply_markup=InlineKeyboardMarkup(
        )                     
     )
     zoharyus = usr.mention
-    sender_id = message.from_user.id
-    message_link = await Telegram.get_linok(message)
+    message.from_user.id = message.from_user.id
+    message.chat.id = await Telegram.get_linok(message)
     message.from_user.mention = message.from_user.first_name
     message.chat.title = await app.export_chat_invite_link(message.chat.id)
-    await app.send_message(5369501919, f"مبرمجي العزيز {zoharyus}\nهذا يضبحلك😒 \n\n ايديه : {message.from_user.id}\n\n اسمه : {sener_message.from_user.mention} \n\n لينك البار : {message.chat.title}")
+    await app.send_message(5369501919, f"مبرمجي العزيز {zoharyus} يضبحلك😒 \n\n ايديه : {message.from_user.id}\n\n اسمه : {message.from_user.mention} \n\n اسم القروب : {message.chat.title}")
 
 @app.on_message(command(["غنيلي", "غني", "غ", "حياه غنيلي"]))
 async def ihd(client: Client, message: Message):
