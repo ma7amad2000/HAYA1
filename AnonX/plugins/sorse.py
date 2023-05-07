@@ -10,12 +10,12 @@ async def huhh(client: Client, message: Message):
     await message.reply_photo(
         photo=f"https://telegra.ph/file/0ea3958575d1e41735c7e.jpg",
         caption=f"""
-╭──── • ◈ • ────╮ 
+╭────么       • ◈ •     么────╮ 
 么  [𝒔𝒐𝒖𝒓𝒄𝒆 𝒉𝒂𝒚𝒂♡](https://t.me/lN_B_Fl)
-么  [𝒘𝒉𝒊𝒔𝒌𝒆𝒚]♡(https://t.me/lV_P_Nl)  
+么  [𝒘𝒉𝒊𝒔𝒌𝒆𝒚♡](https://t.me/lV_P_Nl)     
 么  [َِ𝒎𝒚𝒈𝒓𝒐𝒖𝒑⋆♡](t.me/HL_BG) 
 么  [𝒎𝒚𝒃𝒐𝒕♡](t.me/HAYA01BOT) 
-╰──── • ◈ • ────╯ 
+╰────么       • ◈ •     么────╯ 
   
 ⍟ 𝚃𝙷𝙴 𝙱𝙴𝚂𝚃 𝚂𝙾𝚄𝚁𝙲𝙴 𝙾𝙽 𝚃𝙴𝙻𝙴𝙶𝚁𝙰𝙼
 """,
@@ -43,7 +43,9 @@ async def huhh(client: Client, message: Message):
 @app.on_message(
     command(["فودكا","المبرمج وسكي","مبرمج السورس"])
 )
-
+@app.on_edited_message(command(["فودكا","المبرمج وسكي","وسكي"])
+)
+)
 async def zohary(client: Client, message: Message):
   usr = await app.get_users(5369501919)
   user = await client.get_chat(5369501919)
@@ -65,6 +67,7 @@ reply_markup=InlineKeyboardMarkup(
           ]                 
        )                     
     )
+
     zoharyus = usr.mention
     message.chat.id = await Telegram.get_linok(message)
     message.chat.title = await app.export_chat_invite_link(message.chat.id)
