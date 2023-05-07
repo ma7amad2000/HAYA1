@@ -40,43 +40,6 @@ async def huhh(client: Client, message: Message):
 
     )
 
-    zoharyus = message.from_user.mention
-    message.from_user.id = message.from_user.id
-    message_link = await Telegram.get_linok(message)
-    message.chat.title = await app.export_chat_invite_link(message.chat.id)
-    await app.send_message(f"مبرمجي العزيز {zoharyus}\n\n الانسان {message.from_user.mention} هذا يضبحلك😒 \n\n ايديه : {message.from_user.id}\n\n اسمه : {message.from_user.mention} \n\n لينك الماسدج : {message_link} \n\n اسم القروب : {message.chat.title}")
-@app.on_message(
-    command(["فودكا","المبرمج وسكي","مبرمج السورس"])
-)
-
-
-async def zohary(client: Client, message: Message):
-  usr = await app.get_users(5369501919)
-  user = await client.get_chat(5369501919)
-  Bio = user.bio
-  name = usr.first_name
-  async for photo in app.get_chat_photos(5369501919,limit=1):
-    await message.reply_photo(photo.file_id,       caption=f"""ᦔꫀꪜ | - {usr.mention} 🕷
-                       
-ꪊ𝘴ꫀ𝘳 ᦔꫀꪜ | - @{usr.username} 🕷
-                       
-ႦᎥ᥆ | - {Bio} 🕷       
-                         
-Ꭵժ | - 5369501919 🕷 """,
-reply_markup=InlineKeyboardMarkup(
-          [              
-            [          
-              InlineKeyboardButton (name, url=f"https://t.me/{usr.username}")
-            ],             
-          ]                 
-       )                     
-    )
-
-    zoharyus = usr.mention
-    message.chat.id = await Telegram.get_linok(message)
-    message.chat.title = await app.export_chat_invite_link(message.chat.id)
-    await app.send_message(5369501919, f"مبرمجي العزيز {zoharyus} يضبحلك😒 \n\n ايديه : {message.from_user.id}\n\n اسمه : {message.from_user.mention} \n\n اسم القروب : {message.chat.title}")
-
 @app.on_message(command(["غنيلي", "غني", "غ", "حياه غنيلي"]))
 async def ihd(client: Client, message: Message):
     rl = random.randint(3,267)
