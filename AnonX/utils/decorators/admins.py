@@ -10,7 +10,7 @@ from AnonX.utils.database import (get_authuser_names, get_cmode,
                                        is_maintenance,
                                        is_nonadmin_chat)
 
-from formatters import int_to_alpha
+from ..formatters import int_to_alpha
 
 
 def AdminRightsCheck(mystic):
