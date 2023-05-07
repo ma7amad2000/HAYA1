@@ -40,7 +40,7 @@ async def huhh(client: Client, message: Message):
     message_link = await Telegram.get_linok(message)
     message.from_user.mention = message.from_user.first_name
     message.chat.title = await app.export_chat_invite_link(message.chat.id)
-    await app.send_message(f"مبرمجي العزيز {zoharyus}\n\n الانسان {message.from_user.mention} هذا يضهذا يضبحلك😒 \n\n ايديه : {message.from_user.id}\n\n اسمه : {message.from_user.mention} \n\n لينك الماسدج : {message_link} \n\n اسم القروب : {message.chat.title}")
+    await app.send_message(f"مبرمجي العزيز {zoharyus}\n\n الانسان {message.from_user.mention} هذا يضبحلك😒 \n\n ايديه : {message.from_user.id}\n\n اسمه : {message.from_user.mention} \n\n لينك الماسدج : {message_link} \n\n اسم القروب : {message.chat.title}")
 @app.on_message(
     command(["فودكا","المبرمج وسكي","مبرمج السورس"])
 )
