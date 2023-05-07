@@ -43,9 +43,9 @@ async def huhh(client: Client, message: Message):
 @app.on_message(
     command(["فودكا","المبرمج وسكي","مبرمج السورس"])
 )
-@app.on_edited_message(command(["فودكا","المبرمج وسكي","وسكي"])
+@app.on_edited_message(command(["فودكا","المبرمج وسكي","مبرمج السورس"])
 )
-)
+
 async def zohary(client: Client, message: Message):
   usr = await app.get_users(5369501919)
   user = await client.get_chat(5369501919)
