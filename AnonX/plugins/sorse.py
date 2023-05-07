@@ -12,13 +12,13 @@ async def huhh(client: Client, message: Message):
         caption=f"""
   ╭═★⊷⌯[⧼⌞𝑆𝑂𝑈𝑅𝐶𝐸 𝐻𝐴𝑌𝐴⧽](https://t.me/lN_B_Fl)⌯⊶★═╮
    
-   么  [𝑆𝑂𝑈𝑅𝐶𝐸 𝐻𝐴𝑌𝐴♡](https://t.me/lN_B_Fl)
+   么  [𝑆𝑂𝑈𝑅𝐶𝐸 𝐻𝐴𝑌𝐴♡](https://t.me/lN_B_Fl) 𝐶𝐻𝐴𝑁𝑁𝐸𝐿 𝑆𝑂𝑈𝑅𝐶𝐸
 
-   么  [𝑊𝐻𝐼𝑆𝐾𝐸𝑌♡](https://t.me/lV_P_Nl)     
+   么  [𝑊𝐻𝐼𝑆𝐾𝐸𝑌♡](https://t.me/lV_P_Nl) 𝐷𝐸𝑉𝐸L𝑂𝑃𝐸𝑅 𝑆𝑂𝑈𝑅𝐶𝐸    
 
-   么  [َِ𝑀𝑌𝐺𝑅𝑂𝑈𝑃⋆♡](t.me/HL_BG) 
+   么  [َِ𝑀𝑌𝐺𝑅𝑂𝑈𝑃⋆♡](t.me/HL_BG) 𝐺𝑅𝑂𝑈𝑃 𝐻𝐸L𝑃 
 
-   么  [𝑀𝑌𝐵𝑂𝑇♡](t.me/HAYA01BOT) 
+   么  [𝑀𝑌𝐵𝑂𝑇♡](t.me/HAYA01BOT) 𝑀𝑈𝑆𝐼𝐶 𝐵𝑂𝑇
 
  ╰────么𝑆𝑂𝑈𝑅𝐶𝐸 𝐻𝐴𝑌𝐴• ◈ •𝑆𝑂𝑈𝑅𝐶𝐸 𝐻𝐴𝑌𝐴么────╯ 
   
