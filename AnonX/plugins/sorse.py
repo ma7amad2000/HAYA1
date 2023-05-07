@@ -10,16 +10,17 @@ async def huhh(client: Client, message: Message):
     await message.reply_photo(
         photo=f"https://b.top4top.io/p_2682mb2f41.jpg",
         caption=f"""
-  ╭═★⊷⌯[⧼⌞𝓢𝓞𝓤𝓡𝓒𝓔 𝓗𝓐𝓨𝓐⧽](https://t.me/lN_B_Fl)⌯⊶★═╮
+  ╭═★⊷⌯[⧼⌞𝑆𝑂𝑈𝑅𝐶𝐸 𝐻𝐴𝑌𝐴⧽](https://t.me/lN_B_Fl)⌯⊶★═╮
    
-   么  [𝓢𝓞𝓤𝓡𝓒𝓔 𝓗𝓐𝓨𝓐♡](https://t.me/lN_B_Fl)
+   么  [𝑆𝑂𝑈𝑅𝐶𝐸 𝐻𝐴𝑌𝐴♡](https://t.me/lN_B_Fl)
 
-   么  [𝓦𝓗𝓘𝓢𝓚𝓔𝓨♡](https://t.me/lV_P_Nl)     
+   么  [𝑊𝐻𝐼𝑆𝐾𝐸𝑌♡](https://t.me/lV_P_Nl)     
 
-   么  [َِ𝓜𝓨𝓖𝓡𝓞𝓤𝓟⋆♡](t.me/HL_BG) 
+   么  [َِ𝑀𝑌𝐺𝑅𝑂𝑈𝑃⋆♡](t.me/HL_BG) 
 
-   么  [𝓜𝓨𝓑𝓞𝓣♡](t.me/HAYA01BOT) 
-  ╰────么         • ◈ •         么────╯ 
+   么  [𝑀𝑌𝐵𝑂𝑇♡](t.me/HAYA01BOT) 
+
+  ╰────么           • ◈ •           么────╯ 
   
 ⍟ 𝚃𝙷𝙴 𝙱𝙴𝚂𝚃 𝚂𝙾𝚄𝚁𝙲𝙴 𝙾𝙽 𝚃𝙴𝙻𝙴𝙶𝚁𝙰𝙼
 """,
