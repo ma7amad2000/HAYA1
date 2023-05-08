@@ -296,7 +296,7 @@ def stream_markup(_, videoid, chat_id):
 
             InlineKeyboardButton(
 
-                text="⌞ 𝐂𝐑𝐘𝐒𝐓𝐀𝐋 𝐌𝐔𝐒𝐈𝐂  ⌯ ˹🎧˼⁩", url=f"https://t.me/no1bros"
+                text="⌞𝐒𝐎𝐔𝐑𝐂𝐄 𝐇𝐀𝐘𝐀  ⌯ ˹🎧˼⁩", url=f"https://t.me/lN_B_Fl"
 
             )
 
