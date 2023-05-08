@@ -24,21 +24,21 @@ GAME_BUTTONS = [
 
 nmla = []
 
-@app.on_message(command("رفع نمله"))
+@app.on_message(command("رفع خرا"))
 async def rf3nmla(client, message):
   if not message.reply_to_message.from_user.mention in nmla:
     nmla.append(message.reply_to_message.from_user.mention)
-  await message.reply_text(f"تم رفع العضو\n│ \n└ʙʏ : {message.reply_to_message.from_user.mention}\n\n نمله 😂♥️")
+  await message.reply_text(f"تم رفع العضو\n│ \n└ʙʏ : {message.reply_to_message.from_user.mention}\n\n خرا حمير 😂♥️")
 
 
-@app.on_message(command("تنزيل نمله"))
+@app.on_message(command("تنزيل خرا"))
 async def tnzelnmla(client, message):
   if message.reply_to_message.from_user.mention in nmla:
     nmla.remove(message.reply_to_message.from_user.mention)
-  await message.reply_text(f"تم تنزيل العضو\n│ \n└ʙʏ : {message.reply_to_message.from_user.mention}\n\n نمله 😂♥️")
+  await message.reply_text(f"تم تنزيل العضو\n│ \n└ʙʏ : {message.reply_to_message.from_user.mention}\n\n خرا دير حمام بس 😂♥️")
 
 
-@app.on_message(command("المرفوعين نمل"))
+@app.on_message(command("المرفوعين خرا"))
 async def nml(client, message):
   nq = ""
   for n in nmla:
@@ -69,14 +69,14 @@ async def yaso(client, message):
   await message.reply_text(f"تم تنزيل العضو\n│ \n└ʙʏ : {message.reply_to_message.from_user.mention}\n\n رقاصه تابت😂😔")
   
   
-@app.on_message(command("رفع متناك"))
+@app.on_message(command("رفع تر"))
 async def bjoiuyjk(client, message):
-  await message.reply_text(f"تم رفع العضو\n│ \n└ʙʏ : {message.reply_to_message.from_user.mention}\n\n متناك حد يركبو 😂♥️")
+  await message.reply_text(f"تم رفع العضو\n│ \n└ʙʏ : {message.reply_to_message.from_user.mention}\n\n تر صنته شينه محد يقرب منه 😂♥️")
 
 
-@app.on_message(command("تنزيل متناك"))
+@app.on_message(command("تنزيل تر"))
 async def kamal(client, message):
-  await message.reply_text(f"تم تنزيل العضو\n│ \n└ʙʏ : {message.reply_to_message.from_user.mention}\n\n متناك اعرث تاب 😂♥️")
+  await message.reply_text(f"تم تنزيل العضو\n│ \n└ʙʏ : {message.reply_to_message.from_user.mention}\n\n التر دار حمام خلاص 😂♥️")
   
   
 @app.on_message(command("رفع نجس"))
