@@ -1,4 +1,5 @@
-#『𝐖𝐇𝐈𝐒𝐊𝐄𝐘 𝐓𝐍𝐓 ⏎ 』, [18/10/44 05:29 ص]
+
+
 import math
 
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
@@ -77,7 +78,7 @@ def stream_markup_timer(_, videoid, chat_id, played, dur):
 
             InlineKeyboardButton(
 
-                text="ايقاف مؤقت🚫",
+                text="▷",
 
                 callback_data=f"ADMIN Resume|{chat_id}",
 
@@ -85,25 +86,25 @@ def stream_markup_timer(_, videoid, chat_id, played, dur):
 
             InlineKeyboardButton(
 
-                text="استئناف", callback_data=f"ADMIN Pause|{chat_id}"
+                text="II", callback_data=f"ADMIN Pause|{chat_id}"
 
             ),
 
             InlineKeyboardButton(
 
-                text="القائمه", callback_data=f"add_playlist {videoid}"
+                text="☆", callback_data=f"add_playlist {videoid}"
 
             ),
 
             InlineKeyboardButton(
 
-                text="تخطي✨", callback_data=f"ADMIN Skip|{chat_id}"
+                text="‣‣I", callback_data=f"ADMIN Skip|{chat_id}"
 
             ),
 
             InlineKeyboardButton(
 
-                text="ايقاف♥", callback_data=f"ADMIN Stop|{chat_id}"
+                text="▢", callback_data=f"ADMIN Stop|{chat_id}"
 
             ),
 
@@ -123,7 +124,7 @@ def stream_markup_timer(_, videoid, chat_id, played, dur):
 
             InlineKeyboardButton(
 
-                text="✯ اغلاق❌ ✯", callback_data=f"close"
+                text="✯ ᴄʟᴏsᴇ ✯", callback_data=f"close"
 
             )
 
@@ -201,7 +202,7 @@ def telegram_markup_timer(_, chat_id, played, dur):
 
             InlineKeyboardButton(
 
-                text="ايقاف مؤقت🚫",
+                text="▷",
 
                 callback_data=f"ADMIN Resume|{chat_id}",
 
@@ -209,19 +210,19 @@ def telegram_markup_timer(_, chat_id, played, dur):
 
             InlineKeyboardButton(
 
-                text="استئناف", callback_data=f"ADMIN Pause|{chat_id}"
+                text="II", callback_data=f"ADMIN Pause|{chat_id}"
 
             ),
 
             InlineKeyboardButton(
 
-                text="تخطي✨", callback_data=f"ADMIN Skip|{chat_id}"
+                text="‣‣I", callback_data=f"ADMIN Skip|{chat_id}"
 
             ),
 
             InlineKeyboardButton(
 
-                text="ايقاف♥", callback_data=f"ADMIN Stop|{chat_id}"
+                text="▢", callback_data=f"ADMIN Stop|{chat_id}"
 
             ),
 
@@ -241,7 +242,7 @@ def telegram_markup_timer(_, chat_id, played, dur):
 
             InlineKeyboardButton(
 
-                text="✯ اغلاق❌ ✯", callback_data=f"close"
+                text="✯ ᴄʟᴏsᴇ ✯", callback_data=f"close"
 
             )
 
@@ -259,34 +260,33 @@ def stream_markup(_, videoid, chat_id):
 
             InlineKeyboardButton(
 
-                text="ايقاف مؤقت🚫",
+                text="▷",
 
                 callback_data=f"ADMIN Resume|{chat_id}",
 
-#『𝐖𝐇𝐈𝐒𝐊𝐄𝐘 𝐓𝐍𝐓 ⏎ 』, [18/10/44 05:29 ص]
-),
+            ),
 
             InlineKeyboardButton(
 
-text="استئناف", callback_data=f"ADMIN Pause|{chat_id}"
+                text="II", callback_data=f"ADMIN Pause|{chat_id}"
 
             ),
 
             InlineKeyboardButton(
 
-                text="القائمه", callback_data=f"add_playlist {videoid}"
+                text="☆", callback_data=f"add_playlist {videoid}"
 
             ),
 
             InlineKeyboardButton(
 
-                text="تخطي✨", callback_data=f"ADMIN Skip|{chat_id}"
+                text="‣‣I", callback_data=f"ADMIN Skip|{chat_id}"
 
             ),
 
             InlineKeyboardButton(
 
-                text="ايقاف♥", callback_data=f"ADMIN Stop|{chat_id}"
+                text="▢", callback_data=f"ADMIN Stop|{chat_id}"
 
             ),
 
@@ -296,7 +296,7 @@ text="استئناف", callback_data=f"ADMIN Pause|{chat_id}"
 
             InlineKeyboardButton(
 
-                text="⌞ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐇𝐀𝐘𝐀   ⌯ ˹🎧˼⁩", url=f"https://t.me/lN_B_Fl"
+                text="⌞ 𝐂𝐑𝐘𝐒𝐓𝐀𝐋 𝐌𝐔𝐒𝐈𝐂  ⌯ ˹🎧˼⁩", url=f"https://t.me/no1bros"
 
             )
 
@@ -306,7 +306,7 @@ text="استئناف", callback_data=f"ADMIN Pause|{chat_id}"
 
             InlineKeyboardButton(
 
-                text="✯ اغلاق❌ ✯", callback_data=f"close"
+                text="✯ ᴄʟᴏsᴇ ✯", callback_data=f"close"
 
             )
 
@@ -324,7 +324,7 @@ def telegram_markup(_, chat_id):
 
             InlineKeyboardButton(
 
-                text="ايقاف مؤقت🚫",
+                text="▷",
 
                 callback_data=f"ADMIN Resume|{chat_id}",
 
@@ -332,19 +332,19 @@ def telegram_markup(_, chat_id):
 
             InlineKeyboardButton(
 
-                text="استئناف", callback_data=f"ADMIN Pause|{chat_id}"
+                text="II", callback_data=f"ADMIN Pause|{chat_id}"
 
             ),
 
             InlineKeyboardButton(
 
-                text="تخطي✨", callback_data=f"ADMIN Skip|{chat_id}"
+                text="‣‣I", callback_data=f"ADMIN Skip|{chat_id}"
 
             ),
 
             InlineKeyboardButton(
 
-                text="ايقاف♥", callback_data=f"ADMIN Stop|{chat_id}"
+                text="▢", callback_data=f"ADMIN Stop|{chat_id}"
 
             ),
 
@@ -364,7 +364,7 @@ def telegram_markup(_, chat_id):
 
             InlineKeyboardButton(
 
-                text="✯ اغلاق❌ ✯", callback_data=f"close"
+                text="✯ ᴄʟᴏsᴇ ✯", callback_data=f"close"
 
             )
 
@@ -526,10 +526,9 @@ def slider_markup(
 
                 text=_["P_B_1"],
 
-#『𝐖𝐇𝐈𝐒𝐊𝐄𝐘 𝐓𝐍𝐓 ⏎ 』, [18/10/44 05:29 ص]
-callback_data=f"MusicStream {videoid}|{user_id}|a|{channel}|{fplay}",
+                callback_data=f"MusicStream {videoid}|{user_id}|a|{channel}|{fplay}",
 
-),
+            ),
 
             InlineKeyboardButton(
 
@@ -561,7 +560,7 @@ callback_data=f"MusicStream {videoid}|{user_id}|a|{channel}|{fplay}",
 
             InlineKeyboardButton(
 
-                text="ايقاف مؤقت🚫",
+                text="▷",
 
                 callback_data=f"slider F|{query_type}|{query}|{user_id}|{channel}|{fplay}",
 
@@ -583,7 +582,7 @@ close_keyboard = InlineKeyboardMarkup(
 
                     InlineKeyboardButton(
 
-                        text="✯ اغلاق❌ ✯", callback_data="close"
+                        text="✯ ᴄʟᴏsᴇ ✯", callback_data="close"
 
                     )
 
@@ -603,7 +602,7 @@ def queue_markup(_, videoid, chat_id):
 
             InlineKeyboardButton(
 
-                text="ايقاف مؤقت🚫",
+                text="▷",
 
                 callback_data=f"ADMIN Resume|{chat_id}",
 
@@ -611,25 +610,25 @@ def queue_markup(_, videoid, chat_id):
 
             InlineKeyboardButton(
 
-                text="استئناف", callback_data=f"ADMIN Pause|{chat_id}"
+                text="II", callback_data=f"ADMIN Pause|{chat_id}"
 
             ),
 
             InlineKeyboardButton(
 
-                text="القائمه", callback_data=f"add_playlist {videoid}"
+                text="☆", callback_data=f"add_playlist {videoid}"
 
             ),
 
             InlineKeyboardButton(
 
-                text="تخطي✨", callback_data=f"ADMIN Skip|{chat_id}"
+                text="‣‣I", callback_data=f"ADMIN Skip|{chat_id}"
 
             ),
 
             InlineKeyboardButton(
 
-                text="ايقاف♥", callback_data=f"ADMIN Stop|{chat_id}"
+                text="▢", callback_data=f"ADMIN Stop|{chat_id}"
 
             ),
 
@@ -649,7 +648,7 @@ def queue_markup(_, videoid, chat_id):
 
             InlineKeyboardButton(
 
-                text="✯ اغلاق❌ ✯", callback_data=f"close"
+                text="✯ ᴄʟᴏsᴇ ✯", callback_data=f"close"
 
             )
 
