@@ -12,12 +12,12 @@ import redis, re
 from pyrogram import *
 from pyrogram.types import *
 from pyrogram.errors import PeerIdInvalid
-from config import *
+import config
 
-TOKEN = BOT_TOKEN
-app = Client("remymbot",TOKEN = BOT_TOKEN, 
-  api_id=API_HASH, api_hash=API_HASH, 
-  bot_token=TOKEN, 
+
+app = Client("remymbot", 
+  api_id=config.API_ID, api_hash=config.API_HASH, 
+  bot_token=config.TOKEN, 
 )
 bot_id = app.bot_token.split(":")[0]
 
