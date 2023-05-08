@@ -14,7 +14,7 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 
 iddof = []
 @app.on_message(
-    command(["قفل الايدي","تعطيل الايدي"])
+    command(["قفل ايدي","تعطيل ايدي"])
     & filters.group
     & ~filters.edited
 )
@@ -29,7 +29,7 @@ async def iddlock(client, message):
       return await message.reply_text("لازم تكون عندك رتبه ياتر عشان نسمع كلامك💦")
 
 @app.on_message(
-    command(["فتح الايدي","تفعيل الايدي"])
+    command(["فتح ايدي","تفعيل ايدي"])
     & filters.group
     & ~filters.edited
 )
@@ -57,7 +57,7 @@ async def iddd(client, message):
     usr = await client.get_chat(message.from_user.id)
     name = usr.first_name
     photo = await app.download_media(usr.photo.big_file_id)
-    await message.reply_photo(photo,       caption=f"""🤡 ¦𝙽𝙰𝙼𝙴 :{message.from_user.mention}\n🎯 ¦𝚄𝚂𝙴𝚁 :@{message.from_user.username}\n🎃 ¦𝙸𝙳 :`{message.from_user.id}`\n💌 ¦𝙱𝙸𝙾 :{usr.bio}\n✨ ¦𝙲𝙷𝙰𝚃: {message.chat.title}\n♻️ ¦𝙸𝙳.𝙶𝚁𝙾𝚄𝙿 :`{message.chat.id}`""", 
+    await message.reply_photo(photo,       caption=f"""𝐒𝐎𝐔𝐑𝐂𝐄 𝐇𝐀𝐘𝐀  \n🤡 ¦اســمك :{message.from_user.mention}\n🎯 ¦يــوزرك :@{message.from_user.username}\n🎃 ¦ايـــديـك :`{message.from_user.id}`\n💌 ¦البـــايـو متــاعك :{usr.bio}\n✨ ¦القــروب: {message.chat.title}\n♻️ ¦ايــدي القـروب :`{message.chat.id}`\n 𝐒𝐎𝐔𝐑𝐂𝐄 𝐇𝐀𝐘𝐀 """, 
     reply_markup=InlineKeyboardMarkup(
             [
                 [
