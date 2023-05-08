@@ -14,7 +14,7 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 
 iddof = []
 @app.on_message(
-    command(["قفل ايدي","تعطيل ايدي"])
+    command(["قفل الايدي","تعطيل الايدي"])
     & filters.group
     & ~filters.edited
 )
@@ -26,10 +26,10 @@ async def iddlock(client, message):
       iddof.append(message.chat.id)
       return await message.reply_text("تم تعطيل الايدي بنجاح ✅🔒")
    else:
-      return await message.reply_text("لازم تكون عندك رتبه ياتر عشان نسمع كلامك ياتر💦")
+      return await message.reply_text("لازم تكون عندك رتبه ياتر عشان نسمع كلامك💦")
 
 @app.on_message(
-    command(["فتح ايدي","تفعيل ايدي"])
+    command(["فتح الايدي","تفعيل الايدي"])
     & filters.group
     & ~filters.edited
 )
@@ -41,7 +41,7 @@ async def iddopen(client, message):
       iddof.remove(message.chat.id)
       return await message.reply_text("تم فتح الايدي بنجاح ✅🔓")
    else:
-      return await message.reply_text("لازم تكون عندك رتبه ياتر عشان نسمع كلامك ياتر💦")
+      return await message.reply_text("لازم تكون عندك رتبه ياتر عشان نسمع كلامك💦")
 
 
 
@@ -57,7 +57,7 @@ async def iddd(client, message):
     usr = await client.get_chat(message.from_user.id)
     name = usr.first_name
     photo = await app.download_media(usr.photo.big_file_id)
-    await message.reply_photo(photo,       caption=f"""💂‍¦ ← اسمك :{message.from_user.mention}\n🛬¦← يوزرك: :@{message.from_user.username}\n🛡¦← ايديك :`{message.from_user.id}`\n💌 ¦← بايو :{usr.bio}\n👨‍✈️¦← اسم القروب : {message.chat.title}\n♻️ ¦← ايدي القروب :`{message.chat.id}`\n\n• ⌞  𝐒𝐎𝐔𝐑𝐂𝐄 𝐇𝐀𝐘𝐀  ⌝ •⚡️""", 
+    await message.reply_photo(photo,       caption=f"""🤡 ¦𝙽𝙰𝙼𝙴 :{message.from_user.mention}\n🎯 ¦𝚄𝚂𝙴𝚁 :@{message.from_user.username}\n🎃 ¦𝙸𝙳 :`{message.from_user.id}`\n💌 ¦𝙱𝙸𝙾 :{usr.bio}\n✨ ¦𝙲𝙷𝙰𝚃: {message.chat.title}\n♻️ ¦𝙸𝙳.𝙶𝚁𝙾𝚄𝙿 :`{message.chat.id}`""", 
     reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -84,7 +84,7 @@ async def lllock(client, message):
       iddof.append(message.chat.id)
       return await message.reply_text(" تم تعطيل جمالي بنجاح✅🔒")
    else:
-      return await message.reply_text("لازم تكون عندك رتبه ياتر عشان نسمع كلامك ياتر💦")
+      return await message.reply_text("لازم تكون عندك رتبه ياتر عشان نسمع كلامك💦")
 
 @app.on_message(
     command(["فتح جمالي","تفعيل جمالي"])
@@ -99,7 +99,7 @@ async def idljjopen(client, message):
       iddof.remove(message.chat.id)
       return await message.reply_text("تم فتح جمالي بنجاح ✅🔓")
    else:
-      return await message.reply_text("لازم تكون عندك رتبه ياتر عشان نسمع كلامك ياتر💦")
+      return await message.reply_text("لازم تكون عندك رتبه ياتر عشان نسمع كلامك💦")
 
 
 
