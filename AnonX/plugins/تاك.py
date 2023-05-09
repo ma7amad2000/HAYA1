@@ -69,7 +69,7 @@ async def nummmm(client: app, message):
      return await message.reply_text("**التاك قيد التشغيل حالياً ،**")
   chek = await client.get_chat_member(message.chat.id, message.from_user.id)
   if not chek.status in ["administrator", "creator"]:
-    await message.reply("**يجب انت تكون مشرف لاستخدام الامر 🖱️**")
+    await message.reply("**علق رتبه توا نسمع كلامك 🖱️**")
     return
   await message.reply_text("**جاري بدأ المنشن ، لايقاف الامر اضغط **\n /cancel او اكتب بس منشن")
   i = 0
