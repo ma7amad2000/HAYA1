@@ -55,7 +55,7 @@ async def gak_owne(client: Client, message: Message):
    
 
    
-@app.on_message(command(["اسمي", "اسمي اي"]) & filters.group )
+@app.on_message(command(["اسمي", "شن اسمي"]) & filters.group )
 async def vgdg(client: Client, message: Message):
     await message.reply_text(
         f"""❤️‍🔥 اسمك »»  {message.from_user.mention()}""") 
@@ -63,7 +63,7 @@ async def vgdg(client: Client, message: Message):
         
 
 array = []
-@app.on_message(command(["@all", "تاك","تاك للكل"]) & ~filters.private)
+@app.on_message(command(["@all","تاغ","تاغ للكل","تغغ"]) & ~filters.private)
 async def nummmm(client: app, message):
   if message.chat.id in array:
      return await message.reply_text("**التاك قيد التشغيل حالياً ،**")
@@ -109,11 +109,11 @@ async def nummmm(client: app, message):
   array.remove(message.chat.id)
 
 
-@app.on_message(command(["بس المنشن", "/cancel","خلاص"]))
+@app.on_message(command(["بطل", "/cancel","خلاص"]))
 async def stop(client, message):
   chek = await client.get_chat_member(message.chat.id, message.from_user.id)
   if not chek.status in ["administrator", "creator"]:
-    await message.reply("**يجب انت تكون مشرف لاستخدام الامر 🖱️")
+    await message.reply("**علق رتبه توا نسمع كلامك 🖱️")
     return
   if message.chat.id not in array:
      await message.reply("**المنشن متوقف بالفعل**")
