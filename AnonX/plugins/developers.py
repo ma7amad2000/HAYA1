@@ -32,7 +32,7 @@ async def huhh(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "𝐖𝐇𝐈𝐒𝐊𝐄𝐘", url=f"https://t.me/lV_P_Nl"), 
+                        "𝐖𝐇𝐈𝐒𝐊𝐄𝐘", url=f"https://t.me/bp_bp"), 
                  ],[
                     InlineKeyboardButton(
                         "group haya", url=f"https://t.me/HL_BG"),
@@ -66,7 +66,7 @@ async def huhh(client: Client, message: Message):
     & ~filters.edited
 )
 async def yas(client, message):
-    usr = await client.get_chat("lV_P_Nl")
+    usr = await client.get_chat("bp_bp")
     name = usr.first_name
     photo = await app.download_media(usr.photo.big_file_id)
     await message.reply_photo(photo,       caption=f"**⩹━★⊷━⌞ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐇𝐀𝐘𝐀 ⌝━⊶★━⩺\n\n🧞‍♂️ ¦𝙽𝙰𝙼𝙴 :{name}\n🎯 ¦𝚄𝚂𝙴𝚁 :@{usr.username}\n💣 ¦𝙸𝙳 :`{usr.id}`\n🚀 ¦𝙱𝙸𝙾 :{usr.bio}\nᴀʀʀᴀɴɢᴇᴅ :مطور السورس \n\n**⩹━★⊷━⌞ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐇𝐀𝐘𝐀 ⌝━⊶★━⩺**", 
@@ -137,7 +137,7 @@ async def huhh(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "᳒𝐖𝐇𝐈𝐒𝐊𝐄𝐘⌯‹", url=f"https://t.me/lV_P_Nl"), 
+                        "᳒𝐖𝐇𝐈𝐒𝐊𝐄𝐘⌯‹", url=f"https://t.me/bp_bp"), 
                  ],[
                 
                     InlineKeyboardButton(
