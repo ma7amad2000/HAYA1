@@ -72,7 +72,7 @@ async def iddd(client, message):
 
 iddof = []
 @app.on_message(
-    command(["قفل جمالي","تعطيل جمالي"])
+    command(["قفل صورتي","تعطيل صورتي"])
     & filters.group
     & ~filters.edited
 )
@@ -80,14 +80,14 @@ async def lllock(client, message):
    get = await app.get_chat_member(message.chat.id, message.from_user.id)
    if get.status in ["creator", "administrator"]:
       if message.chat.id in iddof:
-        return await message.reply_text("جمالي معطل من قبل✅")
+        return await message.reply_text("امر صورتي معطل من قبل✅")
       iddof.append(message.chat.id)
-      return await message.reply_text(" تم تعطيل جمالي بنجاح✅🔒")
+      return await message.reply_text(" تم تعطيل امر صورتي بنجاح✅🔒")
    else:
       return await message.reply_text("لازم تكون عندك رتبه ياتر عشان نسمع كلامك💦")
 
 @app.on_message(
-    command(["فتح جمالي","تفعيل جمالي"])
+    command(["فتح صورتي","تفعيل صورتي"])
     & filters.group
     & ~filters.edited
 )
@@ -95,9 +95,9 @@ async def idljjopen(client, message):
    get = await app.get_chat_member(message.chat.id, message.from_user.id)
    if get.status in ["creator", "administrator"]:
       if not message.chat.id in iddof:
-        return await message.reply_text("جمالي مفعل من قبل✅")
+        return await message.reply_text("امر صورتي مفعل من قبل✅")
       iddof.remove(message.chat.id)
-      return await message.reply_text("تم فتح جمالي بنجاح ✅🔓")
+      return await message.reply_text("تم فتح امر صورتي بنجاح ✅🔓")
    else:
       return await message.reply_text("لازم تكون عندك رتبه ياتر عشان نسمع كلامك💦")
 
@@ -105,7 +105,7 @@ async def idljjopen(client, message):
 
 
 @app.on_message(
-    command(["جمالي"])
+    command(["جمالي","ص","صورتي"])
     & filters.group
     & ~filters.edited
 )
