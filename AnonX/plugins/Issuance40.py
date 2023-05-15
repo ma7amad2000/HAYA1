@@ -35,14 +35,14 @@ async def bkouqw(client: Client, message: Message):
 ★᚜ نظام تشغيل:-حياه بوت ميوزك
 ★᚜ الاصدار 4.0.1 pyrogram 
 ★᚜ تاريخ تاسيس:-21-3-2023
-★᚜ مأسس حياه:- [𝐖𝐇𝐈𝐒𝐊𝐄𝐘༄►](https://t.me/lV_P_Nl)
+★᚜ مأسس حياه:- [𓏺᭙ɦᎥ᥉ƙᥱᥡ ༄►](https://t.me/bp_bp)
 
 **⩹━★⊷⌯𝐒𝐎𝐔𝐑𝐂𝐄 𝐇𝐀𝐘𝐀⌯⊶★━⩺**""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "⌞ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐇𝐀𝐘𝐀⌝", url=f"https://t.me/lN_B_Fl"), 
+                        "⌞ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐇𝐀𝐘𝐀⌝", url=f"https://t.me/HL_BG"), 
                  ],[
                  InlineKeyboardButton(
                         "◁", callback_data="hpdtsnju"),
