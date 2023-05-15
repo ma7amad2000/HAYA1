@@ -114,7 +114,7 @@ def stream_markup_timer(_, videoid, chat_id, played, dur):
 
             InlineKeyboardButton(
 
-                text="⌞  𝐒𝐎𝐔𝐑𝐂𝐄 𝐇𝐀𝐘𝐀  ⌯ ˹🎧˼⁩", url=f"https://t.me/lN_B_Fl"
+                text="⌞  𝐒𝐎𝐔𝐑𝐂𝐄 𝐇𝐀𝐘𝐀  ⌯ ˹🎧˼⁩", url=f"https://t.me/HL_BG"
 
             )
 
@@ -232,7 +232,7 @@ def telegram_markup_timer(_, chat_id, played, dur):
 
             InlineKeyboardButton(
 
-                text="⌞ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐇𝐀𝐘𝐀  ⌯ ˹🎧˼⁩", url=f"https://t.me/lN_B_Fl"
+                text="⌞ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐇𝐀𝐘𝐀  ⌯ ˹🎧˼⁩", url=f"https://t.me/HL_BG"
 
             )
 
@@ -296,7 +296,7 @@ def stream_markup(_, videoid, chat_id):
 
             InlineKeyboardButton(
 
-                text="⌞  𝐒𝐎𝐔𝐑𝐂𝐄 𝐇𝐀𝐘𝐀   ⌯ ˹🎧˼⁩", url=f"https://t.me/lN_B_Fl"
+                text="⌞  𝐒𝐎𝐔𝐑𝐂𝐄 𝐇𝐀𝐘𝐀   ⌯ ˹🎧˼⁩", url=f"https://t.me/HL_BG"
 
             )
 
@@ -354,7 +354,7 @@ def telegram_markup(_, chat_id):
 
             InlineKeyboardButton(
 
-                text="⌞  𝐒𝐎𝐔𝐑𝐂𝐄 𝐇𝐀𝐘𝐀 ⌯ ˹🎧˼⁩", url=f"https://t.me/lN_B_Fl"
+                text="⌞  𝐒𝐎𝐔𝐑𝐂𝐄 𝐇𝐀𝐘𝐀 ⌯ ˹🎧˼⁩", url=f"https://t.me/HL_BG"
 
             )
 
@@ -638,7 +638,7 @@ def queue_markup(_, videoid, chat_id):
 
             InlineKeyboardButton(
 
-                text="⌞  𝐒𝐎𝐔𝐑𝐂𝐄 𝐇𝐀𝐘𝐀   ⌯ ˹🎧˼⁩", url=f"https://t.me/lN_B_Fl"
+                text="⌞  𝐒𝐎𝐔𝐑𝐂𝐄 𝐇𝐀𝐘𝐀   ⌯ ˹🎧˼⁩", url=f"https://t.me/HL_BG"
 
             )
 
