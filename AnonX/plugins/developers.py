@@ -32,19 +32,19 @@ async def huhh(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "𝐖𝐇𝐈𝐒𝐊𝐄𝐘", url=f"https://t.me/bp_bp"), 
+                        "𓏺᭙ɦᎥ᥉ƙᥱᥡ", url=f"https://t.me/bp_bp"), 
                  ],[
                     InlineKeyboardButton(
-                        "group haya", url=f"https://t.me/HL_BG"),
+                        "chaneall haya", url=f"https://t.me/HL_BG"),
                 ],[
                     InlineKeyboardButton(
-                        "channel", url=f"https://t.me/lN_B_Fl"),
+                        "channel", url=f"https://t.me/hl_bg"),
                     InlineKeyboardButton(
                         "MyBot", url=f"https://t.me/HAYA01BOT"),
                 ],[
                 
                     InlineKeyboardButton(
-                        "★⌞ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐇𝐀𝐘𝐀 ⌝⚡", url=f"https://t.me/lN_B_Fl"),
+                        "★⌞ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐇𝐀𝐘𝐀 ⌝⚡", url=f"https://t.me/HL_BG"),
                 ],
 
             ]
@@ -137,11 +137,11 @@ async def huhh(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "᳒𝐖𝐇𝐈𝐒𝐊𝐄𝐘⌯‹", url=f"https://t.me/bp_bp"), 
+                        "𓏺᭙ɦᎥ᥉ƙᥱᥡ‹", url=f"https://t.me/bp_bp"), 
                  ],[
                 
                     InlineKeyboardButton(
-                        "★⌞ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐇𝐀𝐘𝐀 ⌝⚡", url=f"https://t.me/lN_B_Fl"),
+                        "★⌞ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐇𝐀𝐘𝐀 ⌝⚡", url=f"https://t.me/HL_BG"),
                 ],
 
             ]
