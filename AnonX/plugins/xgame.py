@@ -1,3 +1,4 @@
+#𓏺ينجححᯓ𓆩˹ 𓏺᭙ɦᎥ᥉ƙᥱᥡ ( ٍٍٍٍٍٍٍٍٍٍّّّّّّّّّّ |ياااربب🎬 ™, [27/10/44 06:56 ص]
 import asyncio
 from pyrogram import Client, filters
 from strings import get_command
@@ -8,13 +9,13 @@ from AnonX import app
 import re
 import sys
 
-GAME_MESSAGE = "⩹━★⊷━⌞ 𝘾𝙍 • 𝙎𝙊𝙐𝙍𝘾𝙀 ⌝━⊶★━⩺\n\n★¦ مرحبا بك عزيزي:\n★¦في قسم العاب cr\n\n⩹━★⊷━⌞ 𝘾𝙍 • 𝙎𝙊𝙐𝙍𝘾𝙀 ⌝━⊶★━⩺"
+GAME_MESSAGE = "⩹━★⊷━⌞ ᥉᥆ᥙᖇᥴᥱ ꫝꪖꪗꪖ⌝━⊶★━⩺\n\n★¦ مرحبا بك عزيزي:\n★¦في قسم العاب حياه\n\n⩹━★⊷━⌞ ᥉᥆ᥙᖇᥴᥱ ꫝꪖꪗꪖ⌝━⊶★━⩺"
 GAME_BUTTONS = [
     [ 
         InlineKeyboardButton ('★¦العاب 3D', callback_data= 'GAME1'),
-        InlineKeyboardButton ('cr cr', callback_data= 'GAME2'),
+        InlineKeyboardButton ('حياه حياه', callback_data= 'GAME2'),
         ],[
-        InlineKeyboardButton ('⌞ 𝘾𝙍 • 𝙎𝙊𝙐𝙍𝘾𝙀 ⌝⚡️', url =f"https://t.me/pp_g3")              
+        InlineKeyboardButton ('⌞ ᥉᥆ᥙᖇᥴᥱ ꫝꪖꪗꪖ⌝⚡️', url =f"https://t.me/HL_BG")              
                  ],[
                 InlineKeyboardButton(
                         "◁", callback_data="close"),
@@ -105,6 +106,8 @@ async def vvvtyy(client, message):
 
 
 @app.on_message(command("تنزيل بقره"))
+
+#𓏺ينجححᯓ𓆩˹ 𓏺᭙ɦᎥ᥉ƙᥱᥡ ( ٍٍٍٍٍٍٍٍٍٍّّّّّّّّّّ |ياااربب🎬 ™, [27/10/44 06:56 ص]
 async def tttryuh(client, message):
   await message.reply_text(f"تم تنزيل العض\n│ \n└ʙʏو : {message.reply_to_message.from_user.mention}\n\n خلاص خلص لبن 😂")
   
@@ -196,9 +199,9 @@ async def yuhhss(client, message):
 
 @app.on_message(command("تنزيل بنتي"))
 async def hloih(client, message):
-  await message.reply_text(f"تم تنزيل العضو\n│ \n└ʙʏ : {message.reply_to_message.from_user.mention}\n\nكنت بهزر انا مخلفتش لسه🤡😂  ")  
-  
-  
+  await message.reply_text(f"تم تنزيل العضو\n│ \n└ʙʏ : {message.reply_to_message.from_user.mention}\n\nكنت بهزر انا مخلفتش لسه🤡😂  ")
+
+#𓏺ينجححᯓ𓆩˹ 𓏺᭙ɦᎥ᥉ƙᥱᥡ ( ٍٍٍٍٍٍٍٍٍٍّّّّّّّّّّ |ياااربب🎬 ™, [27/10/44 06:56 ص]
 @app.on_message(command("رفع خاين"))
 async def kloss(client, message):
   await message.reply_text(f"تم رفع العضو\n│ \n└ʙʏ : {message.reply_to_message.from_user.mention}\n\n خنتها كام مره قول متتكسفش يخاين")
@@ -296,7 +299,7 @@ async def nobo(client, message):
 async def llok(client, message):
   await message.reply_text(f"تم رفع العضو\n│ \n└ʙʏ : {message.reply_to_message.from_user.mention}\n\n حرامي وهبلغ عنه😹🚓")
 
-
+#𓏺ينجححᯓ𓆩˹ 𓏺᭙ɦᎥ᥉ƙᥱᥡ ( ٍٍٍٍٍٍٍٍٍٍّّّّّّّّّّ |ياااربب🎬 ™, [27/10/44 06:56 ص]
 @app.on_message(command("تنزيل حرامي"))
 async def kaompj(client, message):
   await message.reply_text(f"تم تنزيل العضو\n│ \n└ʙʏ : {message.reply_to_message.from_user.mention}\n\n حرامي ربنا تاب عليه😂😔")
@@ -308,7 +311,7 @@ async def kaompj(client, message):
 )
 async def zohary(client: Client, message: Message):
     await message.reply_photo(
-        photo=f"https://telegra.ph/file/e7bb54b34faadd2c9b199.jpg",
+        photo=f"https://b.top4top.io/p_2682mb2f41.jpg",
         caption= GAME_MESSAGE,
         reply_markup=InlineKeyboardMarkup(GAME_BUTTONS)
     )  
@@ -316,7 +319,7 @@ async def zohary(client: Client, message: Message):
 async def callback_query(client, CallbackQuery):
           if CallbackQuery.data == "GAME1":
             
-             GAME1_MESSAGE = "⩹━★⊷━⌞ 𝘾𝙍 • 𝙎𝙊𝙐𝙍𝘾𝙀 ⌝━⊶★━⩺\n\nمرحبا بك في قسم العاب cr 3D\n\n⩹━★⊷━⌞ 𝘾𝙍 • 𝙎𝙊𝙐𝙍𝘾𝙀 ⌝━⊶★━⩺"
+             GAME1_MESSAGE = "⩹━★⊷━⌞ ᥉᥆ᥙᖇᥴᥱ ꫝꪖꪗꪖ⌝━⊶★━⩺\n\nمرحبا بك في قسم العاب حياه 3D\n\n⩹━★⊷━⌞ ᥉᥆ᥙᖇᥴᥱ ꫝꪖꪗꪖ⌝━⊶★━⩺"
 
              GAME1_BUTTONS = [
                  [
@@ -360,14 +363,14 @@ async def callback_query(client, CallbackQuery):
               )
           elif CallbackQuery.data == "GAME":
                
-               RETURN_GAME = "⩹━★⊷━⌞ 𝘾𝙍 • 𝙎𝙊𝙐𝙍𝘾𝙀 ⌝━⊶★━⩺\n\n★¦مرحبا بك في قسم العاب cr\n★¦اختار ما تشاء من الالعاب مسليه وستمتع بها\n\n⩹━★⊷━⌞ 𝘾𝙍 • 𝙎𝙊𝙐𝙍𝘾𝙀 ⌝━⊶★━⩺" 
+               RETURN_GAME = "⩹━★⊷━⌞ ᥉᥆ᥙᖇᥴᥱ ꫝꪖꪗꪖ⌝━⊶★━⩺\n\n★¦مرحبا بك في قسم العاب حياه\n★¦اختار ما تشاء من الالعاب مسليه وستمتع بها\n\n⩹━★⊷━⌞ ᥉᥆ᥙᖇᥴᥱ ꫝꪖꪗꪖ⌝━⊶★━⩺" 
 
                RETURN_BUTTON = [
                     [ 
                       InlineKeyboardButton ('★¦العاب 3D', callback_data= 'GAME1'),
-                      InlineKeyboardButton ('★¦العاب cr', callback_data= 'GAME2')
+                      InlineKeyboardButton ('★¦العاب حياه', callback_data= 'GAME2')
                       ],[
-        InlineKeyboardButton ('⌞ 𝘾𝙍 • 𝙎𝙊𝙐𝙍𝘾𝙀 ⌝⚡️', url =f"https://t.me/pp_g3")              
+        InlineKeyboardButton ('⌞ ᥉᥆ᥙᖇᥴᥱ ꫝꪖꪗꪖ⌝⚡️', url =f"https://t.me/HL_BG")              
                  ],[
                 InlineKeyboardButton(
                         "◁", callback_data="close"),
@@ -380,11 +383,12 @@ async def callback_query(client, CallbackQuery):
                     )
           elif CallbackQuery.data == "GAME2":
                
-               SOURCE_GAME = "⩹━★⊷━⌞ 𝘾𝙍 • 𝙎𝙊𝙐𝙍𝘾𝙀 ⌝━⊶★━⩺\n\n★¦العاب cr\n★¦كت\n★¦تويت\n★¦اسال\n★¦اصراحه\n\n⩹━★⊷━⌞ 𝘾𝙍 • 𝙎𝙊𝙐𝙍𝘾𝙀 ⌝━⊶★━⩺." 
+               SOURCE_GAME = "⩹━★⊷━⌞ ᥉᥆ᥙᖇᥴᥱ ꫝꪖꪗꪖ⌝━⊶★━⩺\n\n★¦العاب حياه\n★¦كت\n★¦تويت\n★¦اسال\n★¦اصراحه\n\n⩹━★⊷━⌞ ᥉᥆ᥙᖇᥴᥱ ꫝꪖꪗꪖ⌝━⊶★━⩺."
 
-               SORGAM_BUTTON = [
+#𓏺ينجححᯓ𓆩˹ 𓏺᭙ɦᎥ᥉ƙᥱᥡ ( ٍٍٍٍٍٍٍٍٍٍّّّّّّّّّّ |ياااربب🎬 ™, [27/10/44 06:56 ص]
+SORGAM_BUTTON = [
                     [ 
-                      InlineKeyboardButton ('⌞ 𝘾𝙍 • 𝙎𝙊𝙐𝙍𝘾𝙀 ⌝⚡️', url =f"https://t.me/pp_g3")
+                      InlineKeyboardButton ('⌞ ᥉᥆ᥙᖇᥴᥱ ꫝꪖꪗꪖ⌝⚡️', url =f"https://t.me/HL_BG")
                       ],[
                          InlineKeyboardButton ('◁', callback_data= 'GAME')
                     ]
@@ -393,4 +397,3 @@ async def callback_query(client, CallbackQuery):
                  SOURCE_GAME ,
                  reply_markup = InlineKeyboardMarkup(SORGAM_BUTTON) 
                     )
-    
