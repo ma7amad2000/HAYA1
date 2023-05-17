@@ -16,13 +16,13 @@ from pyrogram.errors import MessageNotModified
 
 
 @app.on_message(
-    filters.command("cr")
+    filters.command("haya")
     
 )
 async def cr_source(client: Client, message: Message):
     await message.reply_photo(
-        photo=f"https://graph.org/file/c973727bddf803e028539.jpg",
-        caption=f"""**⩹━★⊷━⌞ 𝘾𝙍 • 𝙎𝙊𝙐𝙍𝘾𝙀 ⌝━⊶★━⩺**\nمرحبا بك عزيزي {message.from_user.mention}\nانا بوت الذكاء الاصطناعي الخاص بسورس cr \nلمعرفة الاوامر اضغط على الأزرار بالأسفل👇\n**⩹━★⊷━⌞ 𝘾𝙍 • 𝙎𝙊𝙐𝙍𝘾𝙀 ⌝━⊶★━⩺**""",
+        photo=f"https://b.top4top.io/p_2682mb2f41.jpg",
+        caption=f"""**⩹━★⊷━⌞ 𓏺᥉᥆ᥙᖇᥴᥱ ꫝꪖꪗꪖ⌝⌯⊶★━⩺ ⌝━⊶★━⩺**\nمرحبا بك عزيزي {message.from_user.mention}\nانا بوت الذكاء الاصطناعي الخاص بسورس حياه \nلمعرفة الاوامر اضغط على الأزرار بالأسفل👇\n**⩹━★⊷━⌞𓏺᥉᥆ᥙᖇᥴᥱ ꫝꪖꪗꪖ⌝⌯⊶★━⩺ ⌝━⊶★━⩺**""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -30,13 +30,13 @@ async def cr_source(client: Client, message: Message):
                         "طريقة الإستخدام", callback_data="usage"), 
                  ],[
                     InlineKeyboardButton(
-                        "𝙏َِ𝙊َِ𝙈ِ", url=f"https://t.me/DEV_TOM"),
+                        "𓆩˹ 𓏺᭙ɦᎥ᥉ƙᥱᥡ", url=f"https://t.me/bp_bp"),
                     InlineKeyboardButton(
-                        "ρ᥆kᥱꪔ᥆ꪀ", url=f"https://t.me/devpokemon"),
+                        "حسابي الثاني", url=f"https://t.me/lV_P_Nl"),
                 ],[
                 
                     InlineKeyboardButton(
-                        "★⌞ 𝘾𝙍 • 𝙎𝙊𝙐𝙍𝘾𝙀 ⌝⚡", url=f"https://t.me/pp_g3"),
+                        "★⌞𓏺᥉᥆ᥙᖇᥴᥱ ꫝꪖꪗꪖ⌝⌯⊶★━⩺ ⌝⚡", url=f"https://t.me/HL_BG"),
                 ],
 
             ]
@@ -50,12 +50,12 @@ async def cr_source(client: Client, message: Message):
 async def cr_usage(_, callback_query: CallbackQuery):
     await callback_query.answer()
     await callback_query.message.edit_text(
-        text="""**⩹━★⊷⌯⌞ 𝘾𝙍 • 𝙎𝙊𝙐𝙍𝘾𝙀 ⌝⌯⊶★━⩺**
+        text="""**⩹━★⊷⌯⌞ 𓏺᥉᥆ᥙᖇᥴᥱ ꫝꪖꪗꪖ⌝⌯⊶★━⩺**
 ★¦ اهلا بك عزيزي في قسم الأوامر
 ★¦ لتتمكن من تشغيل الذكاء الاصطناعي فقط اكتب
 ★¦ /gpt - لـلـسـؤال آي سـؤال بالـذكـاء الاسـطـناعي
 
-**⩹━★⊷⌯⌞ 𝘾𝙍 • 𝙎𝙊𝙐𝙍𝘾𝙀 ⌝⌯⊶★━⩺**""",
+**⩹━★⊷⌯⌞ 𓏺᥉᥆ᥙᖇᥴᥱ ꫝꪖꪗꪖ⌝⌯⊶★━⩺**""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -73,10 +73,10 @@ async def cr_back(_, callback_query: CallbackQuery):
   
     await message.edit_reply_markup(reply_markup=InlineKeyboardMarkup(
         [
-            [InlineKeyboardButton("طريقة الإستخدام", callback_data="tommm")],
-            [InlineKeyboardButton("𝙏َِ𝙊َِ𝙈ِ", url=f"https://t.me/DEV_TOM"),
-             InlineKeyboardButton("ρ᥆kᥱꪔ᥆ꪀ", url=f"https://t.me/devpokemon")],
-            [InlineKeyboardButton("★⌞ 𝘾𝙍 • 𝙎𝙊𝙐𝙍𝘾𝙀 ⌝⚡", url=f"https://t.me/pp_g3")],
+            [InlineKeyboardButton("طريقة الإستخدام", callback_data="دليل")],
+            [InlineKeyboardButton("𓆩˹ 𓏺᭙ɦᎥ᥉ƙᥱᥡ", url=f"https://t.me/bp_bp"),
+             InlineKeyboardButton("حسابي الثاني", url=f"https://t.me/lV_P_Nl")],
+            [InlineKeyboardButton("★⌞𓏺᥉᥆ᥙᖇᥴᥱ ꫝꪖꪗꪖ⌝⌯⊶★━⩺ ⌝⚡", url=f"https://t.me/HL_BG")],
         ]
     ))
 
