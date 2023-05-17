@@ -1,4 +1,3 @@
-#𓏺ينجححᯓ𓆩˹ 𓏺᭙ɦᎥ᥉ƙᥱᥡ ( ٍٍٍٍٍٍٍٍٍٍّّّّّّّّّّ |ياااربب🎬 ™, [27/10/44 06:56 ص]
 import asyncio
 from pyrogram import Client, filters
 from strings import get_command
@@ -106,8 +105,6 @@ async def vvvtyy(client, message):
 
 
 @app.on_message(command("تنزيل بقره"))
-
-#𓏺ينجححᯓ𓆩˹ 𓏺᭙ɦᎥ᥉ƙᥱᥡ ( ٍٍٍٍٍٍٍٍٍٍّّّّّّّّّّ |ياااربب🎬 ™, [27/10/44 06:56 ص]
 async def tttryuh(client, message):
   await message.reply_text(f"تم تنزيل العض\n│ \n└ʙʏو : {message.reply_to_message.from_user.mention}\n\n خلاص خلص لبن 😂")
   
@@ -199,9 +196,9 @@ async def yuhhss(client, message):
 
 @app.on_message(command("تنزيل بنتي"))
 async def hloih(client, message):
-  await message.reply_text(f"تم تنزيل العضو\n│ \n└ʙʏ : {message.reply_to_message.from_user.mention}\n\nكنت بهزر انا مخلفتش لسه🤡😂  ")
-
-#𓏺ينجححᯓ𓆩˹ 𓏺᭙ɦᎥ᥉ƙᥱᥡ ( ٍٍٍٍٍٍٍٍٍٍّّّّّّّّّّ |ياااربب🎬 ™, [27/10/44 06:56 ص]
+  await message.reply_text(f"تم تنزيل العضو\n│ \n└ʙʏ : {message.reply_to_message.from_user.mention}\n\nكنت بهزر انا مخلفتش لسه🤡😂  ")  
+  
+  
 @app.on_message(command("رفع خاين"))
 async def kloss(client, message):
   await message.reply_text(f"تم رفع العضو\n│ \n└ʙʏ : {message.reply_to_message.from_user.mention}\n\n خنتها كام مره قول متتكسفش يخاين")
@@ -209,7 +206,7 @@ async def kloss(client, message):
 
 @app.on_message(command("تنزيل خاين"))
 async def fiihug(client, message):
-  await message.reply_text(f"تم تنزيل العضو\n│ \n└ʙʏ : {message.reply_to_message.from_user.mention}\n\n ايدا طلع سوء تفاهم انت اشرف من الشرف يسالك😂❤️")
+  await message.reply_text(f"تم تنزيل العضو\n│ \n└ʙʏ : {message.reply_to_message.from_user.mention}\n\n ايدا طلع سوء تفاهم انت اشرف من الشرف يسالك??❤️")
   
   
 @app.on_message(command("رفع خول"))
@@ -299,7 +296,7 @@ async def nobo(client, message):
 async def llok(client, message):
   await message.reply_text(f"تم رفع العضو\n│ \n└ʙʏ : {message.reply_to_message.from_user.mention}\n\n حرامي وهبلغ عنه😹🚓")
 
-#𓏺ينجححᯓ𓆩˹ 𓏺᭙ɦᎥ᥉ƙᥱᥡ ( ٍٍٍٍٍٍٍٍٍٍّّّّّّّّّّ |ياااربب🎬 ™, [27/10/44 06:56 ص]
+
 @app.on_message(command("تنزيل حرامي"))
 async def kaompj(client, message):
   await message.reply_text(f"تم تنزيل العضو\n│ \n└ʙʏ : {message.reply_to_message.from_user.mention}\n\n حرامي ربنا تاب عليه😂😔")
@@ -311,7 +308,7 @@ async def kaompj(client, message):
 )
 async def zohary(client: Client, message: Message):
     await message.reply_photo(
-        photo=f"https://b.top4top.io/p_2682mb2f41.jpg",
+        photo=f"https://telegra.ph/file/e7bb54b34faadd2c9b199.jpg",
         caption= GAME_MESSAGE,
         reply_markup=InlineKeyboardMarkup(GAME_BUTTONS)
     )  
@@ -383,10 +380,9 @@ async def callback_query(client, CallbackQuery):
                     )
           elif CallbackQuery.data == "GAME2":
                
-               SOURCE_GAME = "⩹━★⊷━⌞ ᥉᥆ᥙᖇᥴᥱ ꫝꪖꪗꪖ⌝━⊶★━⩺\n\n★¦العاب حياه\n★¦كت\n★¦تويت\n★¦اسال\n★¦اصراحه\n\n⩹━★⊷━⌞ ᥉᥆ᥙᖇᥴᥱ ꫝꪖꪗꪖ⌝━⊶★━⩺."
+               SOURCE_GAME = "⩹━★⊷━⌞ ᥉᥆ᥙᖇᥴᥱ ꫝꪖꪗꪖ⌝━⊶★━⩺\n\n★¦العاب حياه\n★¦كت\n★¦تويت\n★¦اسال\n★¦اصراحه\n\n⩹━★⊷━⌞ ᥉᥆ᥙᖇᥴᥱ ꫝꪖꪗꪖ⌝━⊶★━⩺." 
 
-#𓏺ينجححᯓ𓆩˹ 𓏺᭙ɦᎥ᥉ƙᥱᥡ ( ٍٍٍٍٍٍٍٍٍٍّّّّّّّّّّ |ياااربب🎬 ™, [27/10/44 06:56 ص]
-SORGAM_BUTTON = [
+               SORGAM_BUTTON = [
                     [ 
                       InlineKeyboardButton ('⌞ ᥉᥆ᥙᖇᥴᥱ ꫝꪖꪗꪖ⌝⚡️', url =f"https://t.me/HL_BG")
                       ],[
@@ -397,3 +393,4 @@ SORGAM_BUTTON = [
                  SOURCE_GAME ,
                  reply_markup = InlineKeyboardMarkup(SORGAM_BUTTON) 
                     )
+    
