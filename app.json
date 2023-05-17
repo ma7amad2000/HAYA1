@@ -1,7 +1,7 @@
 {
-    "name": "Almany ダ ᴍᴜsɪᴄ",
+    "name": "cr ダ ᴍᴜsɪᴄ",
     "description": "A Telegram Music Player Bot, written in Python with Pyrogram and Py-Tgcalls.",
-    "logo": "https://telegra.ph/file/b57d3c266380d6d758b9d.jpg",
+    "logo": "https://telegra.ph/file/56d1760224589ee370186.jpg",
     "keywords": [
     "python3",
     "telegram",
@@ -34,7 +34,7 @@
       },
       "MUSIC_BOT_NAME": {
         "description": "A name for your Music Bot. You can use special characters bot ko jhaat farak ni padega",
-        "value": "Almany ダ ᴍᴜsɪᴄ",
+        "value": "cr ダ ᴍᴜsɪᴄ",
         "required": true
       },
       "OWNER_ID": {
