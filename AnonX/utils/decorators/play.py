@@ -141,10 +141,10 @@ def PlayWrapper(command):
 def PlayWrapperCHH(command):
     async def wrapper(client, message):
         if await is_maintenance() is False:
-            if message.from_user.id not in SUDOERS:
-                return await message.reply_text(
-                    "Bot is under maintenance. Please wait for some time..."
-                )
+#             if message.from_user.id not in SUDOERS:
+#                 return await message.reply_text(
+#                     "Bot is under maintenance. Please wait for some time..."
+#                 )
         if PRIVATE_BOT_MODE == str(True):
             if not await is_served_private_chat(message.chat.id):
                 await message.reply_text(
