@@ -173,7 +173,7 @@ async def start_comm(client, message: Message, _):
                             text="• ʏᴏᴜᴛᴜʙᴇ •", url=f"{link}"
                         ),
                         InlineKeyboardButton(
-                            text="Source manga •", url="https://t.me/NattChat"
+                            text="𝘾𝙍 • 𝙎𝙊𝙐𝙍𝘾𝙀 •", url="https://t.me/pp_g3"
                         ),
                     ],
                 ]
