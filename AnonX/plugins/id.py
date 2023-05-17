@@ -72,7 +72,7 @@ async def iddd(client, message):
 
 iddof = []
 @app.on_message(
-    command(["قفل جمالي","تعطيل جمالي"])
+    command(["قفل صورتي","تعطيل صورتي"])
     & filters.group
     & ~filters.edited
 )
@@ -80,14 +80,14 @@ async def lllock(client, message):
    get = await app.get_chat_member(message.chat.id, message.from_user.id)
    if get.status in ["creator", "administrator"]:
       if message.chat.id in iddof:
-        return await message.reply_text("جمالي معطل من قبل✅")
+        return await message.reply_text("صورتي معطل من قبل✅")
       iddof.append(message.chat.id)
-      return await message.reply_text(" تم تعطيل جمالي بنجاح✅🔒")
+      return await message.reply_text(" تم تعطيل صورتي بنجاح✅🔒")
    else:
       return await message.reply_text("لازم تكون ادمن يشخه علشان اسمع كلامك")
 
 @app.on_message(
-    command(["فتح جمالي","تفعيل جمالي"])
+    command(["فتح صورتي","تفعيل صورتي"])
     & filters.group
     & ~filters.edited
 )
@@ -95,9 +95,9 @@ async def idljjopen(client, message):
    get = await app.get_chat_member(message.chat.id, message.from_user.id)
    if get.status in ["creator", "administrator"]:
       if not message.chat.id in iddof:
-        return await message.reply_text("جمالي مفعل من قبل✅")
+        return await message.reply_text("صورتي مفعل من قبل✅")
       iddof.remove(message.chat.id)
-      return await message.reply_text("تم فتح جمالي بنجاح ✅🔓")
+      return await message.reply_text("تم فتح صورتي بنجاح ✅🔓")
    else:
       return await message.reply_text("لازم تكون ادمن يشخه علشان اسمع كلامك")
 
@@ -105,7 +105,7 @@ async def idljjopen(client, message):
 
 
 @app.on_message(
-    command(["جمالي"])
+    command(["صورتي"])
     & filters.group
     & ~filters.edited
 )
@@ -117,7 +117,7 @@ async def idjjdd(client, message):
     i = ["0","10", "15","20", "25","30","35", "40","45", "50","55", "60"," 66", "70","77", "80","85", "90","99", "100","1000" ]
     ik = random.choice(i)
     photo = await app.download_media(usr.photo.big_file_id)
-    await message.reply_photo(photo,       caption=f"نسبه جمالك يا مز انت \n│ \n└ʙʏ: {ik} %😂❤️", 
+    await message.reply_photo(photo,       caption=f"نسبه جمالك يا طرف انت \n│ \n└ʙʏ: {ik} %😂❤️", 
     reply_markup=InlineKeyboardMarkup(
             [
                 [
