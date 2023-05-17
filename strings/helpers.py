@@ -64,17 +64,17 @@ HELP_4 = """🍒 **<u>ʙʀᴏᴀᴅᴄᴀsᴛ ғᴇᴀᴛᴜʀᴇ</u>** [ᴏɴʟ
 
 **ᴇxᴀᴍᴩʟᴇ:** `/broadcast -user -assistant -pin ᴛᴇsᴛɪɴɢ ʙʀᴏᴀᴅᴄᴀsᴛ`
 """
-HELP_5 = """⚡<u>⌞ almany • source ⌝مطورين :</u>
+HELP_5 = """⚡<u>⌞ HaYa • source ⌝مطورين :</u>
 
-[ᯓ𓆩˹ ََََََََََََََََََََََََََََََََََََََََََََََََAlmany ( ٍٍٍٍٍٍٍٍٍٍّّّّّّّّّّ](https://t.me/M)
+[ᯓ𓆩˹ 𓏺᭙ɦᎥ᥉ƙᥱᥡ  ( ٍٍٍٍٍٍٍٍٍٍّّّّّّّّّّ](https://t.me/bp_bp)
 
 
 
-[𓌹 ↱ 𓌺](https://t.me/TRN)
+[𓌹 ↱ 𓏺᭙ɦᎥ᥉ƙᥱᥡ 𓌺](https://t.me/bp_bp)
 
-[ᯓ𓆩˹](https://t.me/DE)
+[ᯓ𓆩𓏺᭙ɦᎥ᥉ƙᥱᥡ ˹](https://t.me/bp_bp)
 
-[𝙲  ](https://t.me/m)
+[𝙲 𓏺᭙ɦᎥ᥉ƙᥱᥡ  ](https://t.me/bp_bp)
 
 
 
