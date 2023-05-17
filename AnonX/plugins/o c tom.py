@@ -47,7 +47,7 @@ async def get_group_call(
 
 
 @app.on_message(
-    filters.command("فتح الكول") & filters.group & filters.channel
+    filters.command("فتح المكالمه") & filters.group & filters.channel
 )
 async def opengc(client: Client, message: Message):
     flags = " ".join(message.command[1:])
@@ -82,7 +82,7 @@ async def opengc(client: Client, message: Message):
 
 
 @app.on_message(
-    filters.regex("قفل الكول") & filters.group & filters.channel
+    filters.regex("قفل االمكالمه) & filters.group & filters.channel
 )
 async def end_vc(client: Client, message: Message):
     chat_id = message.chat.id
