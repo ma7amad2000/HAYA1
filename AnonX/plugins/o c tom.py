@@ -82,7 +82,7 @@ async def opengc(client: Client, message: Message):
 
 
 @app.on_message(
-    filters.regex("قفل االمكالمه) & filters.group & filters.channel
+    filters.regex("قفل االمكالمه") & filters.group & filters.channel
 )
 async def end_vc(client: Client, message: Message):
     chat_id = message.chat.id
