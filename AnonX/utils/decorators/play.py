@@ -1,3 +1,4 @@
+𝒉𝒂𝒚𝒂 𝒎𝒖𝒔𝒊𝒄ঌ 『 مساعد ⏎ 』, [28/10/44 05:22 م]
 #
 # Copyright (C) 2021-2022 by TeamYukki@Github, < https://github.com/TeamYukki >.
 #
@@ -33,7 +34,7 @@ def PlayWrapper(command):
         if PRIVATE_BOT_MODE == str(True):
             if not await is_served_private_chat(message.chat.id):
                 await message.reply_text(
-                    "**Private Music Bot**\n\nOnly for authorized chats from the owner. Ask my owner to allow your chat first."
+                    "Private Music Bot\n\nOnly for authorized chats from the owner. Ask my owner to allow your chat first."
                 )
                 return await app.leave_chat(message.chat.id)
         if await is_commanddelete_on(message.chat.id):
@@ -97,7 +98,9 @@ def PlayWrapper(command):
             except:
                 return await message.reply_text(_["cplay_4"])
             channel = chat.title
-        else:
+
+𝒉𝒂𝒚𝒂 𝒎𝒖𝒔𝒊𝒄ঌ 『 مساعد ⏎ 』, [28/10/44 05:22 م]
+else:
             chat_id = message.chat.id
             channel = None
         playmode = await get_playmode(message.chat.id)
@@ -148,7 +151,7 @@ def PlayWrapperCHH(command):
         if PRIVATE_BOT_MODE == str(True):
             if not await is_served_private_chat(message.chat.id):
                 await message.reply_text(
-                    "**Private Music Bot**\n\nOnly for authorized chats from the owner. Ask my owner to allow your chat first."
+                    "Private Music Bot\n\nOnly for authorized chats from the owner. Ask my owner to allow your chat first."
                 )
                 return await app.leave_chat(message.chat.id)
         if await is_commanddelete_on(message.chat.id):
@@ -205,7 +208,9 @@ def PlayWrapperCHH(command):
             )
         if message.command[0][0] == "c" or message.command[0][0] == "#":
             chat_id = await get_cmode(message.chat.id)
-            if chat_id is None:
+
+𝒉𝒂𝒚𝒂 𝒎𝒖𝒔𝒊𝒄ঌ 『 مساعد ⏎ 』, [28/10/44 05:22 م]
+if chat_id is None:
                 return await message.reply_text(_["setting_12"])
             try:
                 chat = await app.get_chat(chat_id)
