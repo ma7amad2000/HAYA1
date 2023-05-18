@@ -1,4 +1,4 @@
-𝒉𝒂𝒚𝒂 𝒎𝒖𝒔𝒊𝒄ঌ 『 مساعد ⏎ 』, [28/10/44 05:22 م]
+#𝒉𝒂𝒚𝒂 𝒎𝒖𝒔𝒊𝒄ঌ 『 مساعد ⏎ 』, [28/10/44 05:22 م]
 #
 # Copyright (C) 2021-2022 by TeamYukki@Github, < https://github.com/TeamYukki >.
 #
@@ -99,7 +99,7 @@ def PlayWrapper(command):
                 return await message.reply_text(_["cplay_4"])
             channel = chat.title
 
-𝒉𝒂𝒚𝒂 𝒎𝒖𝒔𝒊𝒄ঌ 『 مساعد ⏎ 』, [28/10/44 05:22 م]
+#𝒉𝒂𝒚𝒂 𝒎𝒖𝒔𝒊𝒄ঌ 『 مساعد ⏎ 』, [28/10/44 05:22 م]
 else:
             chat_id = message.chat.id
             channel = None
@@ -209,7 +209,7 @@ def PlayWrapperCHH(command):
         if message.command[0][0] == "c" or message.command[0][0] == "#":
             chat_id = await get_cmode(message.chat.id)
 
-𝒉𝒂𝒚𝒂 𝒎𝒖𝒔𝒊𝒄ঌ 『 مساعد ⏎ 』, [28/10/44 05:22 م]
+#𝒉𝒂𝒚𝒂 𝒎𝒖𝒔𝒊𝒄ঌ 『 مساعد ⏎ 』, [28/10/44 05:22 م]
 if chat_id is None:
                 return await message.reply_text(_["setting_12"])
             try:
