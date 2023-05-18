@@ -533,8 +533,8 @@ async def play_commnd_chh(
     plist_type = None
     spotify = None
     print(message)
-    user_id = message.chat.id
-    user_name = message.chat.first_name
+    user_id = message.from_user.id
+    user_name = message.from_user.first_name
     audio_telegram = (
         (
             message.reply_to_message.audio
@@ -654,7 +654,7 @@ async def play_commnd_chh(
                     details = await YouTube.playlist(
                         url,
                         config.PLAYLIST_FETCH_LIMIT,
-                        message.chat.id,
+                        message.from_user.id,
                     )
                 except Exception as e:
                     print(e)
@@ -707,7 +707,7 @@ async def play_commnd_chh(
                 plist_type = "spplay"
                 img = config.SPOTIFY_PLAYLIST_IMG_URL
                 cap = _["play_12"].format(
-                    message.chat.first_name
+                    message.from_user.first_name
                 )
             elif "album" in url:
                 try:
@@ -718,7 +718,7 @@ async def play_commnd_chh(
                 plist_type = "spalbum"
                 img = config.SPOTIFY_ALBUM_IMG_URL
                 cap = _["play_12"].format(
-                    message.chat.first_name
+                    message.from_user.first_name
                 )
             elif "artist" in url:
                 try:
@@ -729,7 +729,7 @@ async def play_commnd_chh(
                 plist_type = "spartist"
                 img = config.SPOTIFY_ARTIST_IMG_URL
                 cap = _["play_12"].format(
-                    message.chat.first_name
+                    message.from_user.first_name
                 )
             else:
                 return await mystic.edit_text(_["play_17"])
@@ -753,7 +753,7 @@ async def play_commnd_chh(
                 streamtype = "playlist"
                 plist_type = "apple"
                 cap = _["play_13"].format(
-                    message.chat.first_name
+                    message.from_user.first_name
                 )
                 img = url
             else:
@@ -822,10 +822,10 @@ async def play_commnd_chh(
                 await stream(
                     _,
                     mystic,
-                    message.chat.id,
+                    message.from_user.id,
                     url,
                     chat_id,
-                    message.chat.first_name,
+                    message.from_user.first_name,
                     message.chat.id,
                     video=video,
                     streamtype="index",
@@ -919,7 +919,7 @@ async def play_commnd_chh(
             buttons = playlist_markup(
                 _,
                 ran_hash,
-                message.chat.id,
+                message.from_user.id,
                 plist_type,
                 "c" if channel else "g",
                 "f" if fplay else "d",
@@ -938,7 +938,7 @@ async def play_commnd_chh(
                 buttons = slider_markup(
                     _,
                     track_id,
-                    message.chat.id,
+                    message.from_user.id,
                     query,
                     0,
                     "c" if channel else "g",
@@ -960,7 +960,7 @@ async def play_commnd_chh(
                 buttons = track_markup(
                     _,
                     track_id,
-                    message.chat.id,
+                    message.from_user.id,
                     "c" if channel else "g",
                     "f" if fplay else "d",
                 )
