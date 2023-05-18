@@ -3,7 +3,7 @@ import asyncio
 import os
 import time
 import requests
-from config import START_IMG_URL
+from config import START_IMG_URL,OWNER_ID
 from pyrogram import filters
 import random
 from pyrogram import Client
@@ -48,7 +48,7 @@ async def huhh(client: Client, message: Message):
 
 
 @app.on_message(
-    command(["ويسكي","مبرمج السورس","مطور","المطور"])
+    command(["ويسكي","مبرمج السورس","وسكي","الوسكي"])
     & filters.group
     & ~filters.edited
 )
@@ -111,12 +111,12 @@ async def yas(client, message):
     
 
 @app.on_message(
-    command(["بوتي","بوت","حياه"])
+    command(["مطور البوت"])
     & filters.group
     & ~filters.edited
 )
 async def yas(client, message):
-    usr = await client.get_chat("@HAYA01BOT")
+    usr = await client.get_chat("OWNER_ID")
     name = usr.first_name
     photo = await app.download_media(usr.photo.big_file_id)
     await message.reply_photo(photo,       caption=f"**⩹━★⊷━⌞  𓏺᥉᥆ᥙᖇᥴᥱ ꫝꪖꪗꪖ ⌝━⊶★━⩺\n\n ¦ᦔꫀꪜ :{name}\n ¦ꪊ𝘴ꫀ𝘳 :@{usr.username}\n ¦Ꭵժ :`{usr.id}`\n ¦ႦᎥ᥆ :{usr.bio}\n\n**⩹━★⊷━⌞  𓏺᥉᥆ᥙᖇᥴᥱ ꫝꪖꪗꪖ ⌝━⊶★━⩺**", 
