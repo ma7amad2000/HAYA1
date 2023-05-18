@@ -1,4 +1,3 @@
-#𝒉𝒂𝒚𝒂 𝒎𝒖𝒔𝒊𝒄ঌ 『 مساعد ⏎ 』, [28/10/44 05:26 م]
 #
 # Copyright (C) 2021-2022 by TeamYukki@Github, < https://github.com/TeamYukki >.
 #
@@ -119,11 +118,9 @@ async def play_commnd(
                     message.chat.id,
                     streamtype="telegram",
                     forceplay=fplay,
-
-#𝒉𝒂𝒚𝒂 𝒎𝒖𝒔𝒊𝒄ঌ 『 مساعد ⏎ 』, [28/10/44 05:26 م]
-)
+                )
             except Exception as e:
-                ex_type = type(e).name
+                ex_type = type(e).__name__
                 err = (
                     e
                     if ex_type == "AssistantErr"
@@ -173,7 +170,7 @@ async def play_commnd(
                     forceplay=fplay,
                 )
             except Exception as e:
-                ex_type = type(e).name
+                ex_type = type(e).__name__
                 err = (
                     e
                     if ex_type == "AssistantErr"
@@ -221,9 +218,7 @@ async def play_commnd(
                 and not config.SPOTIFY_CLIENT_SECRET
             ):
                 return await mystic.edit_text(
-
-#𝒉𝒂𝒚𝒂 𝒎𝒖𝒔𝒊𝒄ঌ 『 مساعد ⏎ 』, [28/10/44 05:26 م]
-"This bot isn't able to play spotify queries. Please ask my owner to enable spotify."
+                    "This bot isn't able to play spotify queries. Please ask my owner to enable spotify."
                 )
             if "track" in url:
                 try:
@@ -315,9 +310,7 @@ async def play_commnd(
                 return await mystic.edit_text(
                     _["play_6"].format(
                         config.DURATION_LIMIT_MIN,
-
-#𝒉𝒂𝒚𝒂 𝒎𝒖𝒔𝒊𝒄ঌ 『 مساعد ⏎ 』, [28/10/44 05:26 م]
-details["duration_min"],
+                        details["duration_min"],
                     )
                 )
             try:
@@ -333,7 +326,7 @@ details["duration_min"],
                     forceplay=fplay,
                 )
             except Exception as e:
-                ex_type = type(e).name
+                ex_type = type(e).__name__
                 err = (
                     e
                     if ex_type == "AssistantErr"
@@ -354,7 +347,7 @@ details["duration_min"],
                 )
             except Exception as e:
                 return await mystic.edit_text(
-                    _["general_3"].format(type(e).name)
+                    _["general_3"].format(type(e).__name__)
                 )
             await mystic.edit_text(_["str_2"])
             try:
@@ -371,7 +364,7 @@ details["duration_min"],
                     forceplay=fplay,
                 )
             except Exception as e:
-                ex_type = type(e).name
+                ex_type = type(e).__name__
                 err = (
                     e
                     if ex_type == "AssistantErr"
@@ -422,9 +415,7 @@ details["duration_min"],
                 return await mystic.edit_text(
                     _["play_15"],
                     reply_markup=InlineKeyboardMarkup(buttons),
-
-#𝒉𝒂𝒚𝒂 𝒎𝒖𝒔𝒊𝒄ঌ 『 مساعد ⏎ 』, [28/10/44 05:26 م]
-)
+                )
         try:
             await stream(
                 _,
@@ -440,7 +431,7 @@ details["duration_min"],
                 forceplay=fplay,
             )
         except Exception as e:
-            ex_type = type(e).name
+            ex_type = type(e).__name__
             err = (
                 e
                 if ex_type == "AssistantErr"
@@ -542,8 +533,8 @@ async def play_commnd_chh(
     plist_type = None
     spotify = None
     print(message)
-    user_id = message.from_user.id
-    user_name = message.from_user.first_name
+    user_id = message.chat.id
+    user_name = message.chat.first_name
     audio_telegram = (
         (
             message.reply_to_message.audio
@@ -555,9 +546,7 @@ async def play_commnd_chh(
     video_telegram = (
         (
             message.reply_to_message.video
-
-#𝒉𝒂𝒚𝒂 𝒎𝒖𝒔𝒊𝒄ঌ 『 مساعد ⏎ 』, [28/10/44 05:26 م]
-or message.reply_to_message.document
+            or message.reply_to_message.document
         )
         if message.reply_to_message
         else None
@@ -599,7 +588,7 @@ or message.reply_to_message.document
                     forceplay=fplay,
                 )
             except Exception as e:
-                ex_type = type(e).name
+                ex_type = type(e).__name__
                 err = (
                     e
                     if ex_type == "AssistantErr"
@@ -649,7 +638,7 @@ or message.reply_to_message.document
                     forceplay=fplay,
                 )
             except Exception as e:
-                ex_type = type(e).name
+                ex_type = type(e).__name__
                 err = (
                     e
                     if ex_type == "AssistantErr"
@@ -660,14 +649,12 @@ or message.reply_to_message.document
         return
     elif url:
         if await YouTube.exists(url):
-
-#𝒉𝒂𝒚𝒂 𝒎𝒖𝒔𝒊𝒄ঌ 『 مساعد ⏎ 』, [28/10/44 05:26 م]
-if "playlist" in url:
+            if "playlist" in url:
                 try:
                     details = await YouTube.playlist(
                         url,
                         config.PLAYLIST_FETCH_LIMIT,
-                        message.from_user.id,
+                        message.chat.id,
                     )
                 except Exception as e:
                     print(e)
@@ -720,7 +707,7 @@ if "playlist" in url:
                 plist_type = "spplay"
                 img = config.SPOTIFY_PLAYLIST_IMG_URL
                 cap = _["play_12"].format(
-                    message.from_user.first_name
+                    message.chat.first_name
                 )
             elif "album" in url:
                 try:
@@ -731,7 +718,7 @@ if "playlist" in url:
                 plist_type = "spalbum"
                 img = config.SPOTIFY_ALBUM_IMG_URL
                 cap = _["play_12"].format(
-                    message.from_user.first_name
+                    message.chat.first_name
                 )
             elif "artist" in url:
                 try:
@@ -742,7 +729,7 @@ if "playlist" in url:
                 plist_type = "spartist"
                 img = config.SPOTIFY_ARTIST_IMG_URL
                 cap = _["play_12"].format(
-                    message.from_user.first_name
+                    message.chat.first_name
                 )
             else:
                 return await mystic.edit_text(_["play_17"])
@@ -756,9 +743,7 @@ if "playlist" in url:
                 img = details["thumb"]
                 cap = _["play_11"].format(
                     details["title"], details["duration_min"]
-
-#𝒉𝒂𝒚𝒂 𝒎𝒖𝒔𝒊𝒄ঌ 『 مساعد ⏎ 』, [28/10/44 05:26 م]
-)
+                )
             elif "playlist" in url:
                 spotify = True
                 try:
@@ -768,7 +753,7 @@ if "playlist" in url:
                 streamtype = "playlist"
                 plist_type = "apple"
                 cap = _["play_13"].format(
-                    message.from_user.first_name
+                    message.chat.first_name
                 )
                 img = url
             else:
@@ -809,7 +794,7 @@ if "playlist" in url:
                     forceplay=fplay,
                 )
             except Exception as e:
-                ex_type = type(e).name
+                ex_type = type(e).__name__
                 err = (
                     e
                     if ex_type == "AssistantErr"
@@ -830,24 +815,24 @@ if "playlist" in url:
                 )
             except Exception as e:
                 return await mystic.edit_text(
-                    _["general_3"].format(type(e).name)
+                    _["general_3"].format(type(e).__name__)
                 )
             await mystic.edit_text(_["str_2"])
             try:
                 await stream(
                     _,
                     mystic,
-                    message.from_user.id,
+                    message.chat.id,
                     url,
                     chat_id,
-                    message.from_user.first_name,
+                    message.chat.first_name,
                     message.chat.id,
                     video=video,
                     streamtype="index",
                     forceplay=fplay,
                 )
             except Exception as e:
-                ex_type = type(e).name
+                ex_type = type(e).__name__
                 err = (
                     e
                     if ex_type == "AssistantErr"
@@ -861,9 +846,7 @@ if "playlist" in url:
         if len(message.command) < 2:
             buttons = botplaylist_markup(_)
             return await mystic.edit_text(
-
-#𝒉𝒂𝒚𝒂 𝒎𝒖𝒔𝒊𝒄ঌ 『 مساعد ⏎ 』, [28/10/44 05:26 م]
-_["playlist_1"],
+                _["playlist_1"],
                 reply_markup=InlineKeyboardMarkup(buttons),
             )
         slider = True
@@ -916,7 +899,7 @@ _["playlist_1"],
                 forceplay=fplay,
             )
         except Exception as e:
-            ex_type = type(e).name
+            ex_type = type(e).__name__
             err = (
                 e
                 if ex_type == "AssistantErr"
@@ -936,7 +919,7 @@ _["playlist_1"],
             buttons = playlist_markup(
                 _,
                 ran_hash,
-                message.from_user.id,
+                message.chat.id,
                 plist_type,
                 "c" if channel else "g",
                 "f" if fplay else "d",
@@ -955,7 +938,7 @@ _["playlist_1"],
                 buttons = slider_markup(
                     _,
                     track_id,
-                    message.from_user.id,
+                    message.chat.id,
                     query,
                     0,
                     "c" if channel else "g",
@@ -975,11 +958,9 @@ _["playlist_1"],
                 )
             else:
                 buttons = track_markup(
-
-#𝒉𝒂𝒚𝒂 𝒎𝒖𝒔𝒊𝒄ঌ 『 مساعد ⏎ 』, [28/10/44 05:26 م]
-_,
+                    _,
                     track_id,
-                    message.from_user.id,
+                    message.chat.id,
                     "c" if channel else "g",
                     "f" if fplay else "d",
                 )
@@ -1063,7 +1044,7 @@ async def play_music(client, CallbackQuery, _):
             forceplay=ffplay,
         )
     except Exception as e:
-        ex_type = type(e).name
+        ex_type = type(e).__name__
         err = (
             e
             if ex_type == "AssistantErr"
@@ -1102,9 +1083,7 @@ async def play_playlists_command(client, CallbackQuery, _):
         fplay,
     ) = callback_request.split("|")
     if CallbackQuery.from_user.id != int(user_id):
-
-#𝒉𝒂𝒚𝒂 𝒎𝒖𝒔𝒊𝒄ঌ 『 مساعد ⏎ 』, [28/10/44 05:26 م]
-try:
+        try:
             return await CallbackQuery.answer(
                 _["playcb_1"], show_alert=True
             )
@@ -1175,7 +1154,7 @@ try:
             forceplay=ffplay,
         )
     except Exception as e:
-        ex_type = type(e).name
+        ex_type = type(e).__name__
         err = (
             e
             if ex_type == "AssistantErr"
@@ -1235,9 +1214,7 @@ async def slider_queries(client, CallbackQuery, _):
     if what == "B":
         if rtype == 0:
             query_type = 9
-
-𝒉𝒂𝒚𝒂 𝒎𝒖𝒔𝒊𝒄ঌ 『 مساعد ⏎ 』, [28/10/44 05:26 م]
-else:
+        else:
             query_type = int(rtype - 1)
         try:
             await CallbackQuery.answer(_["playcb_2"])
