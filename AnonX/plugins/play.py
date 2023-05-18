@@ -1,3 +1,4 @@
+#𝒉𝒂𝒚𝒂 𝒎𝒖𝒔𝒊𝒄ঌ 『 مساعد ⏎ 』, [28/10/44 05:26 م]
 #
 # Copyright (C) 2021-2022 by TeamYukki@Github, < https://github.com/TeamYukki >.
 #
@@ -118,9 +119,11 @@ async def play_commnd(
                     message.chat.id,
                     streamtype="telegram",
                     forceplay=fplay,
-                )
+
+#𝒉𝒂𝒚𝒂 𝒎𝒖𝒔𝒊𝒄ঌ 『 مساعد ⏎ 』, [28/10/44 05:26 م]
+)
             except Exception as e:
-                ex_type = type(e).__name__
+                ex_type = type(e).name
                 err = (
                     e
                     if ex_type == "AssistantErr"
@@ -170,7 +173,7 @@ async def play_commnd(
                     forceplay=fplay,
                 )
             except Exception as e:
-                ex_type = type(e).__name__
+                ex_type = type(e).name
                 err = (
                     e
                     if ex_type == "AssistantErr"
@@ -218,7 +221,9 @@ async def play_commnd(
                 and not config.SPOTIFY_CLIENT_SECRET
             ):
                 return await mystic.edit_text(
-                    "This bot isn't able to play spotify queries. Please ask my owner to enable spotify."
+
+#𝒉𝒂𝒚𝒂 𝒎𝒖𝒔𝒊𝒄ঌ 『 مساعد ⏎ 』, [28/10/44 05:26 م]
+"This bot isn't able to play spotify queries. Please ask my owner to enable spotify."
                 )
             if "track" in url:
                 try:
@@ -310,7 +315,9 @@ async def play_commnd(
                 return await mystic.edit_text(
                     _["play_6"].format(
                         config.DURATION_LIMIT_MIN,
-                        details["duration_min"],
+
+#𝒉𝒂𝒚𝒂 𝒎𝒖𝒔𝒊𝒄ঌ 『 مساعد ⏎ 』, [28/10/44 05:26 م]
+details["duration_min"],
                     )
                 )
             try:
@@ -326,7 +333,7 @@ async def play_commnd(
                     forceplay=fplay,
                 )
             except Exception as e:
-                ex_type = type(e).__name__
+                ex_type = type(e).name
                 err = (
                     e
                     if ex_type == "AssistantErr"
@@ -347,7 +354,7 @@ async def play_commnd(
                 )
             except Exception as e:
                 return await mystic.edit_text(
-                    _["general_3"].format(type(e).__name__)
+                    _["general_3"].format(type(e).name)
                 )
             await mystic.edit_text(_["str_2"])
             try:
@@ -364,7 +371,7 @@ async def play_commnd(
                     forceplay=fplay,
                 )
             except Exception as e:
-                ex_type = type(e).__name__
+                ex_type = type(e).name
                 err = (
                     e
                     if ex_type == "AssistantErr"
@@ -415,7 +422,9 @@ async def play_commnd(
                 return await mystic.edit_text(
                     _["play_15"],
                     reply_markup=InlineKeyboardMarkup(buttons),
-                )
+
+#𝒉𝒂𝒚𝒂 𝒎𝒖𝒔𝒊𝒄ঌ 『 مساعد ⏎ 』, [28/10/44 05:26 م]
+)
         try:
             await stream(
                 _,
@@ -431,7 +440,7 @@ async def play_commnd(
                 forceplay=fplay,
             )
         except Exception as e:
-            ex_type = type(e).__name__
+            ex_type = type(e).name
             err = (
                 e
                 if ex_type == "AssistantErr"
@@ -546,7 +555,9 @@ async def play_commnd_chh(
     video_telegram = (
         (
             message.reply_to_message.video
-            or message.reply_to_message.document
+
+#𝒉𝒂𝒚𝒂 𝒎𝒖𝒔𝒊𝒄ঌ 『 مساعد ⏎ 』, [28/10/44 05:26 م]
+or message.reply_to_message.document
         )
         if message.reply_to_message
         else None
@@ -588,7 +599,7 @@ async def play_commnd_chh(
                     forceplay=fplay,
                 )
             except Exception as e:
-                ex_type = type(e).__name__
+                ex_type = type(e).name
                 err = (
                     e
                     if ex_type == "AssistantErr"
@@ -638,7 +649,7 @@ async def play_commnd_chh(
                     forceplay=fplay,
                 )
             except Exception as e:
-                ex_type = type(e).__name__
+                ex_type = type(e).name
                 err = (
                     e
                     if ex_type == "AssistantErr"
@@ -649,7 +660,9 @@ async def play_commnd_chh(
         return
     elif url:
         if await YouTube.exists(url):
-            if "playlist" in url:
+
+#𝒉𝒂𝒚𝒂 𝒎𝒖𝒔𝒊𝒄ঌ 『 مساعد ⏎ 』, [28/10/44 05:26 م]
+if "playlist" in url:
                 try:
                     details = await YouTube.playlist(
                         url,
@@ -743,7 +756,9 @@ async def play_commnd_chh(
                 img = details["thumb"]
                 cap = _["play_11"].format(
                     details["title"], details["duration_min"]
-                )
+
+#𝒉𝒂𝒚𝒂 𝒎𝒖𝒔𝒊𝒄ঌ 『 مساعد ⏎ 』, [28/10/44 05:26 م]
+)
             elif "playlist" in url:
                 spotify = True
                 try:
@@ -794,7 +809,7 @@ async def play_commnd_chh(
                     forceplay=fplay,
                 )
             except Exception as e:
-                ex_type = type(e).__name__
+                ex_type = type(e).name
                 err = (
                     e
                     if ex_type == "AssistantErr"
@@ -815,7 +830,7 @@ async def play_commnd_chh(
                 )
             except Exception as e:
                 return await mystic.edit_text(
-                    _["general_3"].format(type(e).__name__)
+                    _["general_3"].format(type(e).name)
                 )
             await mystic.edit_text(_["str_2"])
             try:
@@ -832,7 +847,7 @@ async def play_commnd_chh(
                     forceplay=fplay,
                 )
             except Exception as e:
-                ex_type = type(e).__name__
+                ex_type = type(e).name
                 err = (
                     e
                     if ex_type == "AssistantErr"
@@ -846,7 +861,9 @@ async def play_commnd_chh(
         if len(message.command) < 2:
             buttons = botplaylist_markup(_)
             return await mystic.edit_text(
-                _["playlist_1"],
+
+#𝒉𝒂𝒚𝒂 𝒎𝒖𝒔𝒊𝒄ঌ 『 مساعد ⏎ 』, [28/10/44 05:26 م]
+_["playlist_1"],
                 reply_markup=InlineKeyboardMarkup(buttons),
             )
         slider = True
@@ -899,7 +916,7 @@ async def play_commnd_chh(
                 forceplay=fplay,
             )
         except Exception as e:
-            ex_type = type(e).__name__
+            ex_type = type(e).name
             err = (
                 e
                 if ex_type == "AssistantErr"
@@ -958,7 +975,9 @@ async def play_commnd_chh(
                 )
             else:
                 buttons = track_markup(
-                    _,
+
+#𝒉𝒂𝒚𝒂 𝒎𝒖𝒔𝒊𝒄ঌ 『 مساعد ⏎ 』, [28/10/44 05:26 م]
+_,
                     track_id,
                     message.from_user.id,
                     "c" if channel else "g",
@@ -1044,7 +1063,7 @@ async def play_music(client, CallbackQuery, _):
             forceplay=ffplay,
         )
     except Exception as e:
-        ex_type = type(e).__name__
+        ex_type = type(e).name
         err = (
             e
             if ex_type == "AssistantErr"
@@ -1083,7 +1102,9 @@ async def play_playlists_command(client, CallbackQuery, _):
         fplay,
     ) = callback_request.split("|")
     if CallbackQuery.from_user.id != int(user_id):
-        try:
+
+#𝒉𝒂𝒚𝒂 𝒎𝒖𝒔𝒊𝒄ঌ 『 مساعد ⏎ 』, [28/10/44 05:26 م]
+try:
             return await CallbackQuery.answer(
                 _["playcb_1"], show_alert=True
             )
@@ -1154,7 +1175,7 @@ async def play_playlists_command(client, CallbackQuery, _):
             forceplay=ffplay,
         )
     except Exception as e:
-        ex_type = type(e).__name__
+        ex_type = type(e).name
         err = (
             e
             if ex_type == "AssistantErr"
@@ -1214,7 +1235,9 @@ async def slider_queries(client, CallbackQuery, _):
     if what == "B":
         if rtype == 0:
             query_type = 9
-        else:
+
+𝒉𝒂𝒚𝒂 𝒎𝒖𝒔𝒊𝒄ঌ 『 مساعد ⏎ 』, [28/10/44 05:26 م]
+else:
             query_type = int(rtype - 1)
         try:
             await CallbackQuery.answer(_["playcb_2"])
