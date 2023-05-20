@@ -155,7 +155,7 @@ async def start_comm(client, message: Message, _):
                 published = result["publishedTime"]
             searched_text = f"""
 😲**معلومات المسارات**😲
-
+[مقدم من سورس حياه](https://t.me/HL_BG) 
 📌**عنوان:** {title}
 
 ⏳**المدة:** {duration} ᴍɪɴᴜᴛᴇs
@@ -165,7 +165,9 @@ async def start_comm(client, message: Message, _):
 📎**رابط القناة:** [ᴠɪsɪᴛ ᴄʜᴀɴɴᴇʟ]({channellink})
 🔗**الرابط:** [ᴡᴀᴛᴄʜ ᴏɴ ʏᴏᴜᴛᴜʙᴇ]({link})
 
-💖 البحث يعمل بواسطة {config.MUSIC_BOT_NAME}"""
+💖 البحث يعمل بواسطة {config.MUSIC_BOT_NAME} \n
+ 𓏺[᥉᥆ᥙᖇᥴᥱ ꫝꪖꪗꪖ](https://t.me/HL_BG)
+"""
             key = InlineKeyboardMarkup(
                 [
                     [
