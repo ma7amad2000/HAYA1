@@ -14,7 +14,7 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 
 iddof = []
 @app.on_message(
-    command(["قفل الايدي","تعطيل الايدي"])
+    command(["قفل ايدي","تعطيل ايدي"])
     & filters.group
     & ~filters.edited
 )
