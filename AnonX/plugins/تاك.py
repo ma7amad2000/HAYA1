@@ -15,7 +15,7 @@ from pyrogram.errors import FloodWait
 
 
 
-@app.on_message(command(["المالك", "صاحب الخرابه", "المنشي"]) & filters.group)
+@app.on_message(command(["صاحب الخرابه", "المنشي"]) & filters.group)
 async def gak_owne(client: Client, message: Message):
       if len(message.command) >= 2:
          return 
@@ -37,7 +37,7 @@ async def gak_owne(client: Client, message: Message):
    
 
    
-@app.on_message(command(["اسمي", "اسمي اي"]) & filters.group )
+@app.on_message(command(["اسمي", "شن اسمي"]) & filters.group )
 async def vgdg(client: Client, message: Message):
     await message.reply_text(
         f"""❤️‍🔥 اسمك »»  {message.from_user.mention()}""") 
@@ -45,7 +45,7 @@ async def vgdg(client: Client, message: Message):
         
 
 array = []
-@app.on_message(command(["@all", "تاك","تاك للكل"]) & ~filters.private)
+@app.on_message(command(["@all", "تاغ","تاغ للكل"]) & ~filters.private)
 async def nummmm(client: app, message):
   if message.chat.id in array:
      return await message.reply_text("**التاك قيد التشغيل حالياً ،**")
@@ -53,7 +53,7 @@ async def nummmm(client: app, message):
   if not chek.status in ["administrator", "creator"]:
     await message.reply("**يجب انت تكون مشرف لاستخدام الامر 🖱️**")
     return
-  await message.reply_text("**جاري بدأ المنشن ، لايقاف الامر اضغط **\n /cancel او اكتب بس منشن")
+  await message.reply_text("**جاري بدأ المنشن ، لايقاف الامر اضغط **\n اكتب خلاص او اكتب وقف منشن")
   i = 0
   txt = ""
   zz = message.text
@@ -62,7 +62,7 @@ async def nummmm(client: app, message):
           photo = await client.download_media(photo_id)
           zz = message.caption
   try:
-   zz = zz.replace("@all","").replace("تاك","").replace("نادي الكل","")
+   zz = zz.replace("@all","").replace("تاغ","").replace("كلمهم","")
   except:
     pass
   array.append(message.chat.id)
@@ -91,7 +91,7 @@ async def nummmm(client: app, message):
   array.remove(message.chat.id)
 
 
-@app.on_message(command(["بس المنشن", "/cancel","بس منشن"]))
+@app.on_message(command(["وقف منشن", "/cancel","خلاص"]))
 async def stop(client, message):
   chek = await client.get_chat_member(message.chat.id, message.from_user.id)
   if not chek.status in ["administrator", "creator"]:
