@@ -31,7 +31,7 @@ async def rf3nmla(client, message):
   await message.reply_text(f"تم رفع العضو\n│ \n└ʙʏ : {message.reply_to_message.from_user.mention}\n\n زامل ولد زامل 😂♥️")
 
 
-@app.on_message(command("تنزيل نمله"))
+@app.on_message(command("ت زامل"))
 async def tnzelnmla(client, message):
   if message.reply_to_message.from_user.mention in nmla:
     nmla.remove(message.reply_to_message.from_user.mention)
