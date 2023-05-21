@@ -24,21 +24,21 @@ GAME_BUTTONS = [
 
 nmla = []
 
-@app.on_message(command("رفع نمله"))
+@app.on_message(command("رفع زامل"))
 async def rf3nmla(client, message):
   if not message.reply_to_message.from_user.mention in nmla:
     nmla.append(message.reply_to_message.from_user.mention)
-  await message.reply_text(f"تم رفع العضو\n│ \n└ʙʏ : {message.reply_to_message.from_user.mention}\n\n نمله 😂♥️")
+  await message.reply_text(f"تم رفع العضو\n│ \n└ʙʏ : {message.reply_to_message.from_user.mention}\n\n زامل ولد زامل 😂♥️")
 
 
 @app.on_message(command("تنزيل نمله"))
 async def tnzelnmla(client, message):
   if message.reply_to_message.from_user.mention in nmla:
     nmla.remove(message.reply_to_message.from_user.mention)
-  await message.reply_text(f"تم تنزيل العضو\n│ \n└ʙʏ : {message.reply_to_message.from_user.mention}\n\n نمله 😂♥️")
+  await message.reply_text(f"تم تنزيل العضو\n│ \n└ʙʏ : {message.reply_to_message.from_user.mention}\n\n من المزمل 😂♥️")
 
 
-@app.on_message(command("المرفوعين نمل"))
+@app.on_message(command("المرفوعين زوامل"))
 async def nml(client, message):
   nq = ""
   for n in nmla:
