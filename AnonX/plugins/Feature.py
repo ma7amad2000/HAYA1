@@ -39,7 +39,7 @@ from random import  choice, randint
     command(["مميزات","مميزات cr"])
  )
 async def mmmezat(client, message):
-        await message.reply_text(f"""**مرحبآ بك عزيزي » {message.from_user.mention}**في قسم مميزات سورس cr ميوزك\n
+        await message.reply_text(f"""**مرحبآ بك عزيزي » {message.from_user.mention}**في قسم مميزات سورس حياه ميوزك\n
 ⩹━★⊷⌯⌞ ⩹━⊷⌯ 𓏺᥉᥆ᥙᖇᥴᥱ ꫝꪖꪗꪖ⌝⌯⊶★━⩺
 
 ★قايمه مميزات سورس حياه الليبي
