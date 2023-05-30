@@ -11,7 +11,7 @@ import redis, re
 from pyrogram import *
 from pyrogram.types import *
 from pyrogram.errors import PeerIdInvalid
-from config import BOT_TOKEN, API_ID, API_HASH
+from config import *
 
 TOKEN = BOT_TOKEN
 app = Client("remymbot",TOKEN, 
