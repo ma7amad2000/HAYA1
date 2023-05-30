@@ -14,8 +14,8 @@ from pyrogram.errors import PeerIdInvalid
 from config import *
 
 TOKEN = BOT_TOKEN
-app = Client("remymbot",TOKEN = BOT_TOKEN, 
-  api_id=API_HASH, api_hash=API_HASH, 
+app = Client("remymbot",TOKEN, 
+  api_id=API_ID, api_hash=API_HASH, 
   bot_token=TOKEN, 
 )
 bot_id = app.bot_token.split(":")[0]
