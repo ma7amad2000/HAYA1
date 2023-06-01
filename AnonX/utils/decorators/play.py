@@ -15,11 +15,7 @@ from AnonX.utils.inline.playlist import botplaylist_markup
 
 def PlayWrapper(command):
     async def wrapper(client, message):
-        if await is_maintenance() is False:
-            if message.from_user.id not in SUDOERS:
-                return await message.reply_text(
-                    "» البوت تحت الصيانه. من فضلك انتظر بعض الوقت..."
-                )
+    
         if PRIVATE_BOT_MODE == str(True):
             if not await is_served_private_chat(message.chat.id):
                 await message.reply_text(
