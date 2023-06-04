@@ -1,7 +1,7 @@
 {
-    "name": "cr ダ ᴍᴜsɪᴄ",
-    "description": "A Telegram Music Player Bot, written in Python with Pyrogram and Py-Tgcalls.",
-    "logo": "https://telegra.ph/file/56d1760224589ee370186.jpg",
+    "name": "HaYa ダ ᴍᴜsɪᴄ",
+    "description": "اسم البوت التي تبيه",
+    "logo": "https://graph.org/file/300e2214b4bbf1a72feaa.jpg",
     "keywords": [
     "python3",
     "telegram",
@@ -13,17 +13,17 @@
     ],
     "env": {
       "API_ID": {
-        "description": "Get this value from https://my.telegram.org",
+        "description": "الايبي ايدي مكون من 7 ارقام",
         "value": "",
         "required": true
       },
       "API_HASH": {
-        "description": "Get this value from https://my.telegram.org",
+        "description": "ايبي هاش المسترج مع الايبي ايدي",
         "value": "",
         "required": true
       },
       "BOT_TOKEN": {
-        "description": "A Bot's token from Botfather",
+        "description": "توكن بوتك لو ماتعرفش كيف تبي تدير بوت ؟",
         "value": "",
         "required": true
       },
@@ -33,32 +33,32 @@
         "required": false
       },
       "MUSIC_BOT_NAME": {
-        "description": "A name for your Music Bot. You can use special characters bot ko jhaat farak ni padega",
-        "value": "cr ダ ᴍᴜsɪᴄ",
+        "description": "اسم بوت الميوزك متاعك",
+        "value": "HaYa ダ ᴍᴜsɪᴄ",
         "required": true
       },
       "OWNER_ID": {
-        "description": "The user id(s) of user(s) whom you would like to add as a OWNER. Multiple values shall be seperated with a space.",
+        "description": "ايديك ولو تبي تخلي مطور ثاني معاك خلي مسافه بين ايديك وايديه",
         "value": "",
         "required": true
       },
       "STRING_SESSION": {
-        "description": "A Pyrogram String Session. One Assistant is Compulsory.",
+        "description": "جلسة بايروجرام v1",
         "value": "",
         "required": true
       },
       "HEROKU_API_KEY": {
-        "description": "Your Heroku account's API key",
+        "description": "مفتاح الهيروكو تلقاه في اعدادات حساب اهيروكو",
         "value": "",
         "required": false
       },
       "HEROKU_APP_NAME": {
-        "description": "Your heroku app/bot's name",
+        "description": "اسم التطبيق يكون انجليزي وكل حروفه سمول",
         "value": "",
         "required": false
       },
       "LOG_GROUP_ID": {
-        "description": "Your Log Group ID, add your bot and promote as an admin with full rights!. Channel ki id mat daal dena bsdk.",
+        "description": "ايدي قروب التخزين ولازم يكون بدايته -100",
         "value": "",
         "required": true
       }
