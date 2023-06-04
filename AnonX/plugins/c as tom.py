@@ -9,7 +9,7 @@ from pytgcalls.exceptions import NoActiveGroupCall, TelegramServerError
 
 @app.on_message(filters.regex("اسم المساعد"))
 async def tom_name(client, message):
-    assistant = await group_assistant(Anon, message.chat.id)
+    assistant = await group_assistant(client, message.chat.id)
     await message.reply("ارسل اسم المساعد الجديد:")
     try:
         new_name = await client.ask(message.chat.id, "اكتب اسم المساعد الجديد:")
