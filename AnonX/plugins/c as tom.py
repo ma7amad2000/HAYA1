@@ -15,5 +15,4 @@ async def tom_name(client, message):
         new_name = await client.ask(message.chat.id, "اكتب اسم المساعد الجديد:")
         await assistant.update_profile(first_name=new_name)
         await message.reply(f"تم تغيير اسم المساعد الى {new_name}")
-    except Exception as e:
-        await message.reply("حدث خطأ اثناء تغيير اسم المساعد!")
+  
