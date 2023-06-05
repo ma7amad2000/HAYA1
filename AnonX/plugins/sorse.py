@@ -84,7 +84,7 @@ async def ihd(client: Client, message: Message):
     @app.on_message(command(["هلا"]))
 async def ihd(client: Client, message: Message):
     rl = random.randint(3,267)
-    url = f"https://t.me/zx_ho7/{rl}"
+    url = f"https://t.me/FFRRSW/{rl}"
     await client.send_voice(message.chat.id,url,caption="🔥 ¦اهليـــن بيـــك",parse_mode="html",
     reply_markup=InlineKeyboardMarkup(
             [
