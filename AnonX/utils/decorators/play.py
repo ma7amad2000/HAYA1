@@ -15,8 +15,10 @@ from AnonX.utils.database.memorydatabase import is_maintenance
 from AnonX.utils.inline.playlist import botplaylist_markup
 
 
+
 def PlayWrapper(command):
     async def wrapper(client, message):
+    
         if PRIVATE_BOT_MODE == str(True):
             if not await is_served_private_chat(message.chat.id):
                 await message.reply_text(
