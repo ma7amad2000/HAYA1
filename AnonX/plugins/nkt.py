@@ -30,29 +30,29 @@ import config
 
 txt = [
 
-#             "ايوووااا",
+            "ايوووااا",
 
 
-#              "نعممم؟؟",
+             "نعممم؟؟",
             
 
-#             "عيونها الكحليه",
+            "عيونها الكحليه",
             
             
-#             "هاني جايي",
+            "هاني جايي",
             
             
-#            "اسممي {MUSIC_BOT_NAME}",
+           "اسممي {MUSIC_BOT_NAME}",
             
             
-#              "معش تععيطط جيتككك",
+             "معش تععيطط جيتككك",
             
             
-             "https://t.me/c/1904354189/9642",
+             "عنديي اسمم راا",
             
             
        
-#             "هل تامن بالحب",
+             "ناديني باسمي MUSIC_BOT_NAME",
             
             
 #             "ماهو اخطر سر اليك",
@@ -469,7 +469,7 @@ txt = [
         
 
 
-@app.on_message(command(["بوت","{MUSIC_BOT_NAME}"]))
+@app.on_message(command(["بوت"]))
 
 
 async def cutt(client: Client, message: Message):
