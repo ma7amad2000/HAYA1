@@ -7,6 +7,7 @@ from pyrogram.types import (InlineKeyboardButton,
                             InlineKeyboardMarkup, Message)
 from strings.filters import command
 from pyrogram import filters, Client
+import config
 
 #▒▒▇▇▒▒▒▒▒▒▒▒▒▒▒▇▇▒▒▇▇▇▇▇▇▒▒▇▇▇▇▇▇▇▒▒▒▒▒▒▒▒▇▇▒▒▒▒▒▒▒▒▒▒▒▒▒▒
 #▒▒▒▇▇▒▒▒▒▒▒▒▒▒▇▇▒▒▒▇▇▒▒▒▒▒▒▇▇▒▒▒▒▒▒▒▒▒▒▒▇▇▒▒▇▇▒▒▒▒▒▒▒▒▒▒▒▒
@@ -29,31 +30,31 @@ from pyrogram import filters, Client
 
 txt = [
 
-            "الوضع تحت التطوير",
+            "ايوووااا",
 
 
-#             "",
+             "نعممم؟؟",
             
 
-#             "ممكن تعمل اي في حياتك",
+            "عيونها الكحليه",
             
             
-#             "انت راضي عن حياتك",
+            "هاني جايي",
             
             
-#             "اسم حببتك الاوله ايه",
+           "",
             
             
-#             "ما هو هدفك في الحياه",
+             "ما هو هدفك في الحياه",
             
             
-#             "كم مجموعك الدراسي",
+             "كم مجموعك الدراسي",
             
             
-#             "ما هو الاكل المفضل لك",
+             "ما هو الاكل المفضل لك",
             
             
-#             "هل تحب سماع القران الكريم",
+             "هل تحب سماع القران الكريم",
             
             
 #             "هل تامن بالحب",
@@ -473,7 +474,7 @@ txt = [
         
 
 
-@app.on_message(command(["نكت","نكته"]))
+@app.on_message(command(["بوت","حياه"]))
 
 
 async def cutt(client: Client, message: Message):
