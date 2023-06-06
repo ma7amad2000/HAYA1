@@ -128,7 +128,7 @@ async def yas(client, message):
     & ~filters.edited
 )
 async def yas(client, message):
-    user_OW = config.OWNER_ID
+    user_OW = OWNER_ID
     usr = await client.get_chat("user_OW")
     name = usr.first_name
     photo = await app.download_media(usr.photo.big_file_id)
