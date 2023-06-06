@@ -137,7 +137,7 @@ async def yas(client, message):
            [
                 [
                     InlineKeyboardButton(
-                        name, url=f"https://t.me/{user_OW}")
+                        name, url=f"https://t.me/HL_BG")
                 ],
             ]
         ),
