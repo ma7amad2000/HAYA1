@@ -122,27 +122,6 @@ async def yas(client, message):
     )
     
 
-@app.on_message(
-    command(["مطور البوت"])
-    & filters.group
-    & ~filters.edited
-)
-async def yas(client, message):
-    user_OW = OWNER_ID
-    usr = await client.get_chat("user_OW")
-    name = usr.first_name
-    photo = await app.download_media(usr.photo.big_file_id)
-    await message.reply_photo(photo, 
-    reply_markup=InlineKeyboardMarkup(
-           [
-                [
-                    InlineKeyboardButton(
-                        name, url=f"https://t.me/HL_BG")
-                ],
-            ]
-        ),
-    )
-    
 
 
 @app.on_message(
