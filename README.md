@@ -1,8 +1,8 @@
 <h2 align="center">
-    ─ ダ𝐒𝐎𝐔𝐑𝐂𝐄 𝐇𝐀𝐘𝐀」──
+    ─ ダ𓏺َِ᥉َِ᥆َِꪊَِᖇَِᥴُِ꧖ َِ᥉َِρُِꪖَِᖇَِᥴُِƙَِ」──
 </h2>
 
 <p align="center">
-  <img src="https://c.top4top.io/p_2680dmevf1.jpg">
+  <img src="https://graph.org/file/2577f47589c4b4c63e4a6.jpg">
 </p>
 
