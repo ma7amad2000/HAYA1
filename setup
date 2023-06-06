@@ -125,4 +125,4 @@ OWNER_ID = $ownid""" > .env
 clear
 
 pprint "\n\n\nThanks for using cr Music installer, your vars have been saved successfully ! \nIf you wanna add more variables add them in your env by : vi .env"
-pprint "\n\nتقدر تبدا تشغيل البوت بـ : bash Zara\n\n"
+pprint "\n\nتقدر تبدا تشغيل البوت بـ : bash zara \n\n"
