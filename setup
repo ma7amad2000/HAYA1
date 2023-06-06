@@ -51,7 +51,7 @@ packages(){
 			pprint "SUCCESS.\n\n" "cgreen"
 		else
 			pprint "FAIL.\n\n" "cred"
-			pprint "You need to install ffmpeg manually in order to deploy cr Music, exiting...\n" "cblue"
+			pprint "تحتاج إلى تثبيت ffmpeg يدويًا لنشر HAYA Music ، الخروج...\n" "cblue"
 			exit 1
 		fi
 	fi
@@ -94,7 +94,7 @@ update
 packages
 node
 installation
-pprint "\n\n\n\n\ncr Music Installation Completed !" "cgreen"
+pprint "\n\n\n\n\nسورس حياه ميوزك !" "cgreen"
 sleep 1
 clear
 
@@ -108,7 +108,7 @@ pprint "\nMONGO DB URI: "; color_reset; read mongo_db
 pprint "\nLOG GROUP ID: "; color_reset; read logger
 pprint "\nSTRING SESSION: "; color_reset; read string_session
 
-pprint "\n\nProcessing your vars, wait a while !" "cgreen"
+pprint "\n\nيتم معالجة الفارات!" "cgreen"
 
 if [ -f .env ]; then
 	rm .env
@@ -125,4 +125,4 @@ OWNER_ID = $ownid""" > .env
 clear
 
 pprint "\n\n\nThanks for using cr Music installer, your vars have been saved successfully ! \nIf you wanna add more variables add them in your env by : vi .env"
-pprint "\n\nNow you can start the bot by : bash Zara\n\n"
+pprint "\n\nتقدر تبدا تشغيل البوت بـ : bash Zara\n\n"
