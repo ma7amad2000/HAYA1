@@ -19,13 +19,13 @@ async def huhh(client: Client, message: Message):
     await message.reply_photo(
         photo=f"https://b.top4top.io/p_2682mb2f41.jpg",
         caption=f"""
- [𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼](https://t.me/HL_BG)
-
- [𓏺𝙒𝙃𝙄𝙎𝙆𓏺𝙎𝞝𝙔](https://t.me/BP_BP)
+ `[𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼](https://t.me/HL_BG)`
+ —————————————
+ `[𓏺𝙒𝙃𝙄𝙎𝙆𓏺𝙎𝞝𝙔](https://t.me/BP_BP)`
  
- [𓏺𝙂𝙍𝙊𝙐𝙋 𝙃𝞝𝙇𝙋](https://t.me/HL_BG)
+ `[𓏺𝙂𝙍𝙊𝙐𝙋 𝙃𝞝𝙇𝙋](https://t.me/HL_BG)`
   
- [⍟𓏺𝙒𝞝𝙇𝘾𝙊𝙈𝙀 𝙏𝙊 𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼](https://t.me/HL_BG)
+ `[⍟𓏺𝙒𝞝𝙇𝘾𝙊𝙈𝙀 𝙏𝙊 𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼](https://t.me/HL_BG)`
 """,
         reply_markup=InlineKeyboardMarkup(
             [
@@ -49,7 +49,7 @@ async def huhh(client: Client, message: Message):
 async def ihd(client: Client, message: Message):
     rl = random.randint(3,267)
     url = f"https://t.me/bsmaatt/{rl}"
-    await client.send_voice(message.chat.id,url,caption="🔥 ¦ تـم اختيـار الاغـنـية لـك",parse_mode="html",
+    await client.send_voice(message.chat.id,url,caption="`🔥 ¦ تـم اختيـار الاغـنـية لـك`",parse_mode="html",
     reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -64,7 +64,7 @@ async def ihd(client: Client, message: Message):
 async def ihd(client: Client, message: Message):
     rs = random.randint(39,148)
     url = f"https://t.me/GTTUTY/{rs}"
-    await client.send_photo(message.chat.id,url,caption="💕 ¦ تـم اختيـار الصوره لـك",parse_mode="html",
+    await client.send_photo(message.chat.id,url,caption="`💕 ¦ تـم اختيـار الصوره لـك`",parse_mode="html",
     reply_markup=InlineKeyboardMarkup(
             [
                 [
