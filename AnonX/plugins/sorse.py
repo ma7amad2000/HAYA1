@@ -21,7 +21,7 @@ async def huhh(client: Client, message: Message):
         caption=f"""
  [𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼](https://t.me/HL_BG)
 
- [𓏺𝙒𝙃𝙄𝙎𝙆𓏺𝙎𝞝𝙔]((https://t.me/BP_BP)
+ [𓏺𝙒𝙃𝙄𝙎𝙆𓏺𝙎𝞝𝙔](https://t.me/BP_BP)
  
  [𓏺𝙂𝙍𝙊𝙐𝙋 𝙃𝞝𝙇𝙋](https://t.me/HL_BG)
   
