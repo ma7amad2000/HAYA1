@@ -1,8 +1,3 @@
-from telethon import events
-from telethon.errors import ChatAdminRequiredError
-from telethon.errors.rpcerrorlist import UserNotParticipantError
-from telethon.tl.functions.channels import GetParticipantRequest
-
 import asyncio
 
 import os
