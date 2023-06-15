@@ -138,7 +138,7 @@ async def start_comm(client, message: Message, _):
                 )
             return
         if name[0:3] == "inf":
-            m = await message.reply_text("🔎")
+            m = await message.reply_text("ثواني ياحبي بس")
             query = (str(name)).replace("info_", "", 1)
             query = f"https://www.youtube.com/watch?v={query}"
             results = VideosSearch(query, limit=1)
@@ -155,7 +155,7 @@ async def start_comm(client, message: Message, _):
                 published = result["publishedTime"]
             searched_text = f"""
 😲**معلومات المسارات**😲
-[مقدم من سورس حياه](https://t.me/HL_BG) \n [المطور]({https://t.me/config.OWNER_ID})
+[مقدم من سورس حياه](https://t.me/HL_BG) \n [المطور]({config.OWNER_ID})
 📌**عنوان:** {title}
 
 ⏳**المدة:** {duration} ᴍɪɴᴜᴛᴇs
