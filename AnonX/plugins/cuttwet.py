@@ -3712,13 +3712,13 @@ async def cutt(client: Client, message: Message):
 
         f"{a}")
         
-iddof = []
+iddof = ["معطل"]
 @app.on_message(
     command(["قفل كت","تعطيل تويت"])
     & filters.group
     & ~filters.edited
 )
-async def iddlock(client, message):
+async def iddlock_two(client, message):
    get = await app.get_chat_member(message.chat.id, message.from_user.id)
    if get.status in ["creator", "administrator"]:
       if message.chat.id in iddof:
@@ -3733,7 +3733,7 @@ async def iddlock(client, message):
     & filters.group
     & ~filters.edited
 )
-async def iddlock(client, message):
+async def iddlock_two(client, message):
    get = await app.get_chat_member(message.chat.id, message.from_user.id)
    if get.status in ["creator", "administrator"]:
       if message.chat.id in iddof:
