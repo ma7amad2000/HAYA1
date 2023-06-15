@@ -18,7 +18,7 @@ ACTIVEVIDEO_COMMAND = get_command("ACTIVEVIDEO_COMMAND")
 )
 async def activevc(_, message: Message):
     mystic = await message.reply_text(
-        "ɢᴇᴛᴛɪɴɢ ᴀᴄᴛɪᴠᴇ ᴠᴏɪᴄᴇᴄʜᴀᴛs ʟɪsᴛ..."
+        "الحصول على قائمة محادثات صوتية نشطة ..."
     )
     served_chats = await get_active_chats()
     text = ""
@@ -27,7 +27,7 @@ async def activevc(_, message: Message):
         try:
             title = (await app.get_chat(x)).title
         except Exception:
-            title = "ᴩʀɪᴠᴀᴛᴇ ᴄʜᴀᴛ"
+            title = "محادثه خاصه"
         if (await app.get_chat(x)).username:
             user = (await app.get_chat(x)).username
             text += f"<b>{j + 1}.</b>  [{title}](https://t.me/{user})[`{x}`]\n"
@@ -35,12 +35,14 @@ async def activevc(_, message: Message):
             text += f"<b>{j + 1}. {title}</b> [`{x}`]\n"
         j += 1
     if not text:
-        await mystic.edit_text("ɴᴏ ᴀᴄᴛɪᴠᴇ ᴠᴏɪᴄᴇᴄʜᴀᴛs ᴏɴ ᴍᴜsɪᴄʙᴏᴛ...")
+        await mystic.edit_text("**ا توجد محادثه صةتسه نشطه**")
     else:
         await mystic.edit_text(
-            f"**ʟɪsᴛ ᴏғ ᴄᴜʀʀᴇɴᴛʟʏ ᴀᴄᴛɪᴠᴇ ᴠᴏɪᴄᴇᴄʜᴀᴛs ᴏɴ ᴍᴜsɪᴄ ʙᴏᴛ :-**\n\n{text}",
+            f"**المحادثات الصوتيه النشطه في البوت :-**\n\n{text}",
             disable_web_page_preview=True,
         )
+#حقوق سورس حيا
+#ركز وانت تعدل ياللي تسرق واذكر الحقوق خير ماتنهان وتنسب
 
 
 @app.on_message(
@@ -49,7 +51,7 @@ async def activevc(_, message: Message):
 )
 async def activevi_(_, message: Message):
     mystic = await message.reply_text(
-        "ɢᴇᴛᴛɪɴɢ ᴀᴄᴛɪᴠᴇ ᴠɪᴅᴇᴏᴄʜᴀᴛs ʟɪsᴛ..."
+        "المحادثه الصوتيه نشطه حاليا..."
     )
     served_chats = await get_active_video_chats()
     text = ""
@@ -58,7 +60,7 @@ async def activevi_(_, message: Message):
         try:
             title = (await app.get_chat(x)).title
         except Exception:
-            title = "ᴩʀɪᴠᴀᴛᴇ ᴄʜᴀᴛ"
+            title = "محادثه خاصه"
         if (await app.get_chat(x)).username:
             user = (await app.get_chat(x)).username
             text += f"<b>{j + 1}.</b>  [{title}](https://t.me/{user})[`{x}`]\n"
@@ -66,9 +68,11 @@ async def activevi_(_, message: Message):
             text += f"<b>{j + 1}. {title}</b> [`{x}`]\n"
         j += 1
     if not text:
-        await mystic.edit_text("ɴᴏ ᴀᴄᴛɪᴠᴇ ᴠɪᴅᴇᴏᴄʜᴀᴛs ᴏɴ ᴍᴜsɪᴄ ʙᴏᴛ...")
+        await mystic.edit_text("لا توجد محادثه نشطه في البوت...")
     else:
         await mystic.edit_text(
-            f"**ʟɪsᴛ ᴏғ ᴄᴜʀʀᴇɴᴛʟʏ ᴀᴄᴛɪᴠᴇ ᴠɪᴅᴇᴏᴄʜᴀᴛs ᴏɴ ᴍᴜsɪᴄ ʙᴏᴛ :-**\n\n{text}",
+            f"**المحادثات النشطه في البوت :-**\n\n{text}",
             disable_web_page_preview=True,
         )
+#حقوق سورس حيا
+#ركز وانت تعدل ياللي تسرق واذكر الحقوق خير ماتنهان وتنسب

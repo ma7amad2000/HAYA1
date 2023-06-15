@@ -1,3 +1,7 @@
+#حقوق سورس حيا
+#ركز وانت تعدل ياللي تسرق واذكر الحقوق خير ماتنهان وتنسب
+
+
 import asyncio
 import config
 from pyrogram import Client, filters
@@ -53,6 +57,8 @@ async def elgadee(c: Client, m: CallbackQuery):
 •︙مهنياً :  يدعوك هذا اليوم المليء بالسلبيات إلى عدم التورط في قضايا أكبر منك، وخصوصاً أن رياح التغيير بدأت تعصف باتجاهك"""
     await m.message.reply_text(abrag_text, reply_to_message_id=mid)
 
+#حقوق سورس حيا
+#ركز وانت تعدل ياللي تسرق واذكر الحقوق خير ماتنهان وتنسب
 
 @app.on_callback_query(filters.regex("^eldaloo (\\d+)$"))
 async def eldaloo(c: Client, m: CallbackQuery):
