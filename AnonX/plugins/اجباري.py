@@ -3,7 +3,20 @@ from telethon.errors import ChatAdminRequiredError
 from telethon.errors.rpcerrorlist import UserNotParticipantError
 from telethon.tl.functions.channels import GetParticipantRequest
 
+import asyncio
+
+import os
+import time
+import requests
+from config import OWNER_ID
+from pyrogram import filters
+import random
+from pyrogram import Client
+from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, ReplyKeyboardMarkup
+from strings.filters import command
+from AnonX import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app)
 from AnonX import app
+from random import  choice, randint
 
 
 
