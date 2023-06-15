@@ -35,7 +35,7 @@ async def activevc(_, message: Message):
             text += f"<b>{j + 1}. {title}</b> [`{x}`]\n"
         j += 1
     if not text:
-        await mystic.edit_text("**ا توجد محادثه صةتسه نشطه**")
+        await mystic.edit_text("**لا توجد محادثه صوتيه نشطه**")
     else:
         await mystic.edit_text(
             f"**المحادثات الصوتيه النشطه في البوت :-**\n\n{text}",
