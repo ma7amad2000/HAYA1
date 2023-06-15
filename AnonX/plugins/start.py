@@ -43,7 +43,7 @@ async def start_comm(client, message: Message, _):
         name = message.text.split(None, 1)[1]
         if name[0:4] == "help":
             keyboard = help_pannel(_)
-            await message.reply_sticker("CAACAgUAAxkBAAJE8GK4EsoLVZC2SW5W5Q-QAkaoN8f_AAL9BQACiy14VGoQxOCDfE1KKQQ")
+            await message.reply_text("**نـــورت يا حبـي الوسڪي مطور السورس♥🥺**")
             return await message.reply_photo(
                        photo=config.START_IMG_URL,
                        caption=_["help_1"].format(config.SUPPORT_HEHE), reply_markup=keyboard
@@ -128,7 +128,7 @@ async def start_comm(client, message: Message, _):
         if name[0:3] == "del":
             await del_plist_msg(client=client, message=message, _=_)
         if name == "verify":
-            await message.reply_text(f"هاي {message.from_user.first_name},\nᴛشكرا لأنك وثقت فسكوفي {config.MUSIC_BOT_NAME}, الان يمكنك ان تستخدمني.")
+            await message.reply_text(f"هاي {message.from_user.first_name},\n شكرا لانك وثقت في  {config.MUSIC_BOT_NAME}, الان يمكنك ان تستخدمني.")
             if await is_on_off(config.LOG):
                 sender_id = message.from_user.id
                 sender_name = message.from_user.first_name
@@ -155,7 +155,7 @@ async def start_comm(client, message: Message, _):
                 published = result["publishedTime"]
             searched_text = f"""
 😲**معلومات المسارات**😲
-[مقدم من سورس حياه](https://t.me/HL_BG) \n [المطور]  {config.OWNER_ID}
+[مقدم من سورس حياه](https://t.me/HL_BG) \n [المطور]({https://t.me/config.OWNER_ID})
 📌**عنوان:** {title}
 
 ⏳**المدة:** {duration} ᴍɪɴᴜᴛᴇs
