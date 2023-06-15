@@ -3715,8 +3715,8 @@ async def cutt(client: Client, message: Message):
 iddof = ["معطل"]
 @app.on_message(
     command(["قفل كت","تعطيل تويت"])
-    & filters.group
-    & ~filters.edited
+    && filters.group
+    && ~filters.edited
 )
 async def iddlock_two(client, message):
    get = await app.get_chat_member(message.chat.id, message.from_user.id)
@@ -3727,11 +3727,10 @@ async def iddlock_two(client, message):
       return await message.reply_text("تم تعطيل كت بنجاح ✅🔒")
    else:
       return await message.reply_text("لازم تكون ادمن يشخه علشان اسمع كلامك")
-
 @app.on_message(
     command(["قفل كت","تعطيل تويت"])
-    & filters.group
-    & ~filters.edited
+    && filters.group
+    && ~filters.edited
 )
 async def iddlock_two(client, message):
    get = await app.get_chat_member(message.chat.id, message.from_user.id)
@@ -3742,6 +3741,4 @@ async def iddlock_two(client, message):
       return await message.reply_text("تم تعطيل كت بنجاح ✅🔒")
    else:
       return await message.reply_text("لازم تكون ادمن يشخه علشان اسمع كلامك")
-
-
     
