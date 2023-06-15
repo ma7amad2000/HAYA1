@@ -40,7 +40,7 @@ async def participant_check(channel, user_id):
         return False
 
 
-@app.on_message(pattern="اجباري")
+@app.on_message(command(["اجباري"]))
 async def fsub(event):
     if event.is_private:
         return
@@ -82,7 +82,7 @@ async def fsub(event):
         )
 
 
-@app.on_message(pattern="تعطيل الاجباري")
+@app.on_message(command(["تعطيل الاشتراك الاجباري"]))
 async def removefsub(event):
     rm_fsub(event.chat_id)
     await edit_or_reply(event, "- تم بنجاح تعطيل الاشتراك الاجباري في هذه المجموعة")
