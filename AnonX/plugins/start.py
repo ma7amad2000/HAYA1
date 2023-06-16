@@ -47,8 +47,16 @@ async def start_comm(client, message: Message, _):
         devbot = (OWNER_ID)
         if  message.from_user.id in devhaya:
             await message.reply_text("**نـــورت يا حبـي الوسڪي مطور السورس♥🥺**")
+             return await message.reply_photo(
+                       photo=config.START_IMG_URL,
+                       caption=_["help_1"].format(config.SUPPORT_HEHE), reply_markup=keyboard
+            )
         elif  message.from_user.id in devbot:
             await message.reply_text("**نـــورت يا حبـي المطور اليك لوحة الاوامر**")
+              return await message.reply_photo(
+                       photo=config.START_IMG_URL,
+                       caption=_["help_1"].format(config.SUPPORT_HEHE), reply_markup=keyboard
+            )
         else:
            await message.reply_text(f"**مرحبا ايها العضو الفقير انا بوت ميوزك اسمي {MUSIC_BOT_NAME}**")
           
