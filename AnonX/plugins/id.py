@@ -11,8 +11,8 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 #          #        #  #####  #            #####    
 #           #    #    #          #     ##   #     #
 #              #      #####   ######   #     #
-
-
+message.from_user.id = user.id
+haya = (6275847466,6195765774)
 iddof = []
 @app.on_message(
     command(["قفل ايدي","تعطيل ايدي"])
@@ -53,9 +53,8 @@ async def iddopen(client, message):
     & ~filters.edited
 )
 async def iddd(client, message):
-    if message. from_user.id == 6195765774 and message. from_user.id == 6275847466:
-       rotba= "مّمٌَـبـ ـࢪمـج السوࢪس"
-    
+    if user.id in haya:
+       rotba="مّمٌَـبـ ـࢪمـج السوࢪس"
     else: 
        rotba="عضو"
     if message.chat.id in iddof:
