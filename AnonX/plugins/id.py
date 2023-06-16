@@ -65,7 +65,7 @@ async def iddd(client, message):
 \n {message.from_user.mention} ← آســمــگڪ | : ✧ 
 \n@{message.from_user.username} ← يـوزرڪ | : ✧
 \n`{message.from_user.id}`← ايـديـڪ | : ✧
-{rotba} ← ࢪتبتگ | : ✧"""
+{rotba} ← ࢪتبتگ | : ✧""",
     reply_markup=InlineKeyboardMarkup(
             [
                 [
