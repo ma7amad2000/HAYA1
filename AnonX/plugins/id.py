@@ -57,7 +57,7 @@ async def iddd(client, message):
     haya = (6275847466,6195765774)
     if message.from_user.id in haya:
        rotba= "مّمٌَـبـ ـࢪمـج السوࢪس"
-    if message.from_user.id in botdev:
+    elif message.from_user.id in botdev:
         rotba = "مطور اساسي"
     else: 
        rotba= "عضو"
