@@ -47,6 +47,12 @@
         "value": "",
         "required": true
       },
+        
+      "USER_OWNER": {
+        "description": "يوزر المطور بدون @",
+        "value": "BP_BP",
+        "required": true
+      },
       "HEROKU_API_KEY": {
         "description": "مفتاح الهيروكو تلقاه في اعدادات حساب اهيروكو",
         "value": "",
@@ -75,9 +81,4 @@
           }
       ],
       "stack": "container"
-  },
- "USER_OWNER": {
-        "description": "يوزر المطور بدون @",
-        "value": "BP_BP",
-        "required": true
-      },
+  }
