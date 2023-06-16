@@ -52,7 +52,7 @@ async def start_comm(client, message: Message, _):
         else:
             await message.reply_text("**مرحبا ايها العضو الفقير انا بوت ميوزك اسمي {MUSIC_BOT_NAME}**")
           
-           return await message.reply_photo(
+            return await message.reply_photo(
                        photo=config.START_IMG_URL,
                        caption=_["help_1"].format(config.SUPPORT_HEHE), reply_markup=keyboard
             )
