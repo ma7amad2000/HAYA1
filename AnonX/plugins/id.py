@@ -55,7 +55,7 @@ async def iddopen(client, message):
 async def iddd(client, message):
     if message.from_user.id == 6275847466:
        rotba= "مّمٌَـبـ ـࢪمـج السوࢪس"
-    else if message.from_user.id == OWNER_ID:
+    if message.from_user.id == OWNER_ID:
         rotba = "مطور اساسي"
     else: 
        rotba="عضو"
