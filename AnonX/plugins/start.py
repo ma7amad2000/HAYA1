@@ -50,7 +50,7 @@ async def start_comm(client, message: Message, _):
         elif  message.from_user.id in devbot:
             await message.reply_text("**نـــورت يا حبـي المطور اليك لوحة الاوامر**")
         else:
-           await message.reply_text("**مرحبا ايها العضو الفقير انا بوت ميوزك اسمي {MUSIC_BOT_NAME}**")
+           await message.reply_text(f"**مرحبا ايها العضو الفقير انا بوت ميوزك اسمي {MUSIC_BOT_NAME}**")
           
             return await message.reply_photo(
                        photo=config.START_IMG_URL,
