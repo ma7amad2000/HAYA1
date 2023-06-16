@@ -110,7 +110,7 @@ async def yas(client, message):
     botdev= (OWNER_ID)
     if message.from_user.id in botdev:
        rotba = "مطور اساسي"
-    usr = await client.get_chat("{USER_OWNER}")
+    usr = await client.get_chat({USER_OWNER})
     name = usr.first_name
     photo = await app.download_media(usr.photo.big_file_id)
     await message.reply_photo(photo,       caption=f"**⩹━★⊷━⌞  𓏺᥉᥆ᥙᖇᥴᥱ ꫝꪖꪗꪖ ⌝━⊶★━⩺\n\n‍ ¦ᦔꫀꪜ :{name}مطوري\n ¦ꪊ𝘴ꫀ𝘳 :@{usr.username}\n ¦Ꭵժ :`{usr.id}`\n ¦ႦᎥ᥆ :{usr.bio}\n \n ¦state :{rotba}\n\n**⩹━★⊷━⌞  𓏺᥉᥆ᥙᖇᥴᥱ ꫝꪖꪗꪖ ⌝━⊶★━⩺**", 
