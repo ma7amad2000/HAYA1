@@ -55,9 +55,9 @@ async def iddopen(client, message):
 async def iddd(client, message):
     botdev= (OWNER_ID)
     haya = (6275847466,6195765774)
-    if message.from_user.id in haya:
-       rotba= "مّمٌَـبـ ـࢪمـج السوࢪس"
-    elif message.from_user.id in botdev:
+#     if message.from_user.id in haya:
+#        rotba= "مّمٌَـبـ ـࢪمـج السوࢪس"
+    if message.from_user.id in botdev:
         rotba = "مطور اساسي"
     else: 
        rotba= "عضو"
