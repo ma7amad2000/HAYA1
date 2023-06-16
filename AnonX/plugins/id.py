@@ -53,7 +53,7 @@ async def iddopen(client, message):
     & ~filters.edited
 )
 async def iddd(client, message):
-    if from_user.id == 6275847466 and from_user.id == 6195765774:
+    if message. from_user.id == 6195765774 and message. from_user.id == 6275847466:
        rotba= "مّمٌَـبـ ـࢪمـج السوࢪس"
     
     else: 
