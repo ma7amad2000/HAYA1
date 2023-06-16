@@ -11,7 +11,7 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 #          #        #  #####  #            #####    
 #           #    #    #          #     ##   #     #
 #              #      #####   ######   #     #
-message.from_user.id = user.id
+user.id = message.from_user.id
 haya = (6275847466,6195765774)
 iddof = []
 @app.on_message(
