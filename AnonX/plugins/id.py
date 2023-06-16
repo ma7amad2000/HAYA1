@@ -67,7 +67,7 @@ async def iddd(client, message):
             [
                 [
                     InlineKeyboardButton(
-                        name, url=f"https://t.me/openmessage?user_id=")
+                        name, url=f"https://t.me/openmessage?user_id")
                 ],
             ]
         ),
