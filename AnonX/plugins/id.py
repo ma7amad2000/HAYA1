@@ -53,10 +53,12 @@ async def iddopen(client, message):
 )
 
 async def iddd(client, message):
-    user.id = from_user.id
+    botdev= ({OWNER_ID})
     haya = (6275847466,6195765774)
-    if user.id in haya:
+    if message.from_user.id in haya:
        rotba= "مّمٌَـبـ ـࢪمـج السوࢪس"
+    elif message.from_user.id in botdev:
+        rotba = "مطور اساسي"
     else: 
        rotba= "عضو"
     if message.chat.id in iddof:
@@ -64,7 +66,7 @@ async def iddd(client, message):
     usr = await client.get_chat(message.from_user.id)
     name = usr.first_name
     photo = await app.download_media(usr.photo.big_file_id)
-    await message.reply_photo(photo,       caption=f"""مــلآگ ونآزل مــن آلســمــآ♥️🥺\n✧ ¦آســمــگڪ :{message.from_user.mention}\n✧ ¦يـوزرڪ :@{message.from_user.username}\n✧ ¦آيـديــڪ :{message.from_user.id}\n✧ ¦بـآيـو :{usr.bio}\n✧ ¦ࢪتبتگ: {rotba}""",
+    await message.reply_photo(photo,       caption=f"""مــلآگ ونآزل مــن آلســمــآ♥️🥺\n✧ ¦آســمــگڪ :{message.from_user.mention}\n✧ ¦يـوزرڪ :@{message.from_user.username}\n✧ ¦آيـديــڪ :`{message.from_user.id}`\n✧ ¦بـآيـو :{usr.bio}\n✧ ¦ࢪتبتگ: {rotba}""",
     reply_markup=InlineKeyboardMarkup(
             [
                 [
