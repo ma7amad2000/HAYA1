@@ -1,4 +1,5 @@
 import asyncio
+from config import OWNER_ID
 from pyrogram import Client, filters
 from AnonX import app
 import random
@@ -52,8 +53,10 @@ async def iddopen(client, message):
     & ~filters.edited
 )
 async def iddd(client, message):
-    if message. from_user.id == 6275847466:
+    if message.from_user.id == 6275847466:
        rotba= "مّمٌَـبـ ـࢪمـج السوࢪس"
+    else if message.from_user.id == OWNER_ID:
+        rotba = "مطور اساسي"
     else: 
        rotba="عضو"
     if message.chat.id in iddof:
@@ -61,11 +64,7 @@ async def iddd(client, message):
     usr = await client.get_chat(message.from_user.id)
     name = usr.first_name
     photo = await app.download_media(usr.photo.big_file_id)
-    await message.reply_photo(photo,       caption=f"""\nمــلآگ ونآزل مــن آلســمــآ♥️🥺
-\n {message.from_user.mention} ← آســمــگڪ | : ✧ 
-\n@{message.from_user.username} ← يـوزرڪ | : ✧
-\n`{message.from_user.id}`← ايـديـڪ | : ✧
-{rotba} ← ࢪتبتگ | : ✧""",
+    await message.reply_photo(photo,       caption=f"""مــلآگ ونآزل مــن آلســمــآ♥️🥺\n✧ ¦آســمــگڪ :{message.from_user.mention}\n✧ ¦يـوزرڪ :@{message.from_user.username}\n✧ ¦آيـديــڪ :{message.from_user.id}\n✧ ¦بـآيـو :{usr.bio}\n✧ ¦ࢪتبتگ: {rotba}""",
     reply_markup=InlineKeyboardMarkup(
             [
                 [
