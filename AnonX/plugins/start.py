@@ -44,11 +44,9 @@ async def start_comm(client, message: Message, _):
         if name[0:4] == "help":
             keyboard = help_pannel(_)
         devhaya = (6275847466)
-        devbot = (OWNER_ID)
+       
         if  message.from_user.id in devhaya:
             await message.reply_text("**نـــورت يا حبـي الوسڪي مطور السورس♥🥺**")
-        elif  message.from_user.id in devbot:
-            await message.reply_text("**مرحبا ايها المطور انا بوت ميوزك اسمي {MUSIC_BOT_NAME}**")  
         else:
             await message.reply_text("**مرحبا ايها العضو الفقير انا بوت ميوزك اسمي {MUSIC_BOT_NAME}**")
           
