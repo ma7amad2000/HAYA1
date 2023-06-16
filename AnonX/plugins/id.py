@@ -53,12 +53,12 @@ async def iddopen(client, message):
 )
 
 async def iddd(client, message):
-    user.id = message.from_user.id
+    user.id = from_user.id
     haya = (6275847466,6195765774)
     if user.id in haya:
-       rotba="مّمٌَـبـ ـࢪمـج السوࢪس"
+       rotba= "مّمٌَـبـ ـࢪمـج السوࢪس"
     else: 
-       rotba="عضو"
+       rotba= "عضو"
     if message.chat.id in iddof:
       return
     usr = await client.get_chat(message.from_user.id)
