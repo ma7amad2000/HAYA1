@@ -11,7 +11,6 @@ API_ID = int(getenv("API_ID"))
 API_HASH = getenv("API_HASH")
 
 BOT_TOKEN = getenv("BOT_TOKEN")
-USER_OWNER = getenv("USER_OWNER")
 MONGO_DB_URI = getenv("MONGO_DB_URI", None)
 LOG_GROUP_ID = int(getenv("LOG_GROUP_ID"))
 MUSIC_BOT_NAME = getenv("MUSIC_BOT_NAME", "HaYa")
@@ -24,7 +23,7 @@ HEROKU_APP_NAME = getenv("HEROKU_APP_NAME", None)
 UPSTREAM_REPO = getenv("UPSTREAM_REPO", "https://github.com/ma7amad2000/HAYA1")
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "master")
 GIT_TOKEN = getenv("GIT_TOKEN", None)
-
+USER_OWNER = getenv("USER_OWNER","BP_BP")
 SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/HL_BG")
 SUPPORT_GROUP = getenv("SUPPORT_GROUP", "https://t.me/HL_BG")
 
