@@ -5,12 +5,6 @@ from pyrogram import Client, filters
 from AnonX import app
 import random
 from strings.filters import command
-app = Client(
-    "Bot",
-    api_id = API_ID
-    api_hash = API_HASH
-    bot_token = BOT_TOKEN
-)
 
 iddof = []
 
