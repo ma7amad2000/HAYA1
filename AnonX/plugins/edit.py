@@ -8,7 +8,7 @@ from strings.filters import command
 
 iddof = []
 
-@app.on_message(command(['تفعيل التعديل'], prefixes=""))
+@app.on_message(command(['تفعيل التعديل']))
 async def iddlock(client, message):
     get = await client.get_chat_member(message.chat.id, message.from_user.id)
     if get.status in ["creator", "administrator"]:
@@ -19,7 +19,7 @@ async def iddlock(client, message):
     else:
         return await message.reply_text("يجب عليك أن تكون مشرفًا لتنفيذ هذا الأمر.")
 
-@app.on_message(command(['تعطيل التعديل'], prefixes=""))
+@app.on_message(command(['تعطيل التعديل']))
 async def iddopen(client, message):
    get = await app.get_chat_member(message.chat.id, message.from_user.id)
    if get.status in ["creator", "administrator"]:
