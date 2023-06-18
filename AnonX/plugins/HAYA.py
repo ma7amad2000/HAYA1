@@ -90,16 +90,16 @@ async def yas(client, message):
     usr = await client.get_chat("BP_BP")
     name = usr.first_name
     photo = await app.download_media(usr.photo.big_file_id)
-    await message.reply_photo(photo,       caption=f"**⌞𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼\n\n معلومات مبرمج السورس \n¦𝙉𝘼𝙈𝙀 : {name}\n\n ¦𝙐𝙎𝙀𝙍 : @{usr.username}\n\n ¦𝙄𝘿 : `{usr.id}`\n ¦𝘽𝙄𝙊 : {usr.bio} \n\n¦𝙍𝘼𝙉𝙆 : مبرمج السورس \n **𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼**", 
+    await message.reply_photo(photo,       caption=f"**⌞𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼\n\n معلومات مبرمج السورس \n¦𝙉𝘼𝙈𝙀 : {name} \n\n ¦𝙐𝙎𝙀𝙍 : @{usr.username} \n\n ¦𝙄𝘿 : `{usr.id}` \n ¦𝘽𝙄𝙊 : {usr.bio} \n ¦𝙍𝘼𝙉𝙆 : مبرمج السورس \n\n **𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼**", 
     reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
                         name, url=f"https://t.me/{usr.username}")
-                ],[
+                ],  [
                     InlineKeyboardButton(
-                        name, url="استدعاء المبرمج")
-                ],
+                        "استدعاء المبرمج", url=f"https://t.me/{usr.username}"),                        
+                 ],
             ]
         ),
     )
@@ -122,16 +122,16 @@ async def yas(client, message):
     usr = await client.get_chat(USER_OWNER)
     name = usr.first_name
     photo = await app.download_media(usr.photo.big_file_id)
-    await message.reply_photo(photo,       caption=f"**⌞𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼 \n\n‍\n معلومات المطور الاساسي \n¦𝙉𝘼𝙈𝙀 :{name}\n\n ¦𝙐𝙎𝙀𝙍 :@{usr.username}\n\n ¦𝙄𝘿 :`{usr.id}`\n\n ¦𝘽𝙄𝙊 :{usr.bio}\n\n ¦𝙍𝘼𝙉𝙆 : {rotba}\n\n**⌞𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼**", 
+    await message.reply_photo(photo,       caption=f"**⌞𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼 \n\n‍\n معلومات المطور الاساسي \n¦𝙉𝘼𝙈𝙀 : {name}\n\n ¦𝙐𝙎𝙀𝙍 :@{usr.username}\n\n ¦𝙄𝘿 : `{usr.id}`\n\n ¦𝘽𝙄𝙊 :{usr.bio}\n\n ¦𝙍𝘼𝙉𝙆 : {rotba}\n\n**⌞𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼**", 
     reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
                         name, url=f"https://t.me/{usr.username}")
-                ], [
+                ],   [
                     InlineKeyboardButton(
-                        name, url="استدعاء المطور")
-                ],
+                        "استدعاء المطور", url=f"https://t.me/{usr.username}"),                        
+                 ],
             ]
         ),
     )
