@@ -96,7 +96,7 @@ def PlayWrapper(command):
                 video = True if message.command[0][1] == "v" else None
 
 #0𝟦:𝟧𝟧 |𓆩˹𓏺َِ 𓏺𝙒𝙃𝙄𝙎𝙆𓏺𝞝𝙔 ٍٍٍٍٍٍّّّّّّّ『مّمٌَـبـ ـࢪمـج ⏎』, [29/11/44 04:55 ص]
-if message.command[0][-1] == "e":
+        if message.command[0][-1] == "e":
             if not await is_active_chat(chat_id):
                 return await message.reply_text(_["play_18"])
             fplay = True
