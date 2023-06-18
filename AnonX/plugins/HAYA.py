@@ -69,7 +69,7 @@ async def yas(client, message):
     usr = await client.get_chat("T_N_T_RB")
     name = usr.first_name
     photo = await app.download_media(usr.photo.big_file_id)
-    await message.reply_photo(photo,       caption=f"**⌞𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼\n\n معلومات مطور السورس2 \n↜︙Dev 𝗡𝗔𝗠𝗘 ↬: {name}\n ↜︙Dev 𝐔𝐒𝐄𝐑 ↬ : @{usr.username}\n ↜︙Dev 𝐈𝐃 ↬ : `{usr.id}`\n ↜︙Dev 𝐁𝐈𝐎 ↬ : {usr.bio} \n\n **𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼**", 
+    await message.reply_photo(photo,       caption=f"**⌞𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼\n\n معلومات مطور السورس2 \n↜︙Dev 𝗡𝗔𝗠𝗘 ↬:{name}\n↜︙Dev 𝐔𝐒𝐄𝐑 ↬ :@{usr.username}\n↜︙Dev 𝐈𝐃 ↬ :`{usr.id}`\n↜︙Dev 𝐁𝐈𝐎 ↬: {usr.bio} \n\n **𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼**", 
     reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -87,15 +87,10 @@ async def yas(client, message):
     & ~filters.edited
 )
 async def yas(client, message):
- 
-    if message.from_user.id ==  message.from_user.id :
-        await client.answer_callback_query(message.from_user.id, text="تم استدعاء المبرمج", show_alert=True)
-    else:
-        await client.answer_callback_query(message.from_user.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂", show_alert=True)
     usr = await client.get_chat("BP_BP")
     name = usr.first_name
     photo = await app.download_media(usr.photo.big_file_id)
-    await message.reply_photo(photo,       caption=f"**⌞𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼\n\n معلومات مبرمج السورس \n ↜︙Dev Name ↬ : {name} \n↜︙Dev User ↬ : @{usr.username} \n ↜︙Dev id ↬ : {usr.id}**", 
+    await message.reply_photo(photo,       caption=f"**⌞𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼\n\n معلومات مبرمج السورس \n↜︙Dev Name ↬ :{name} \n↜︙Dev User ↬ :@{usr.username} \n↜︙Dev id ↬ :{usr.id}**", 
     reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -116,18 +111,10 @@ async def yas(client, message):
     & ~filters.edited
 )
 async def yas(client, message):
-    botdev= (OWNER_ID)
-    dev = (USER_OWNER)
-    if message.from_user.id in botdev:
-       rotba = "مطور البوت"
-    elif message.from_user.username in dev:
-      rotba = "مطور البوت"
-    else:
-      rotba = "ععضـو"
     usr = await client.get_chat(USER_OWNER)
     name = usr.first_name
     photo = await app.download_media(usr.photo.big_file_id)
-    await message.reply_photo(photo,       caption=f"**⌞𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼 \n\n‍\n معلومات المطور الاساسي \n ↜︙Dev Name ↬ : {name} \n↜︙Dev User ↬ : @{usr.username} \n ↜︙Dev id ↬ : {usr.id}**", 
+    await message.reply_photo(photo,       caption=f"**⌞𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼 \n\n‍\n معلومات المطور الاساسي \n↜︙Dev Name ↬ :{name} \n↜︙Dev User ↬ :@{usr.username} \n↜︙Dev id ↬ :{usr.id}**", 
     reply_markup=InlineKeyboardMarkup(
             [
                 [
