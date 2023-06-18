@@ -86,12 +86,12 @@ async def yas(client, message):
     & filters.group
     & ~filters.edited
 )
-async def yas(c: Client, m: CallbackQuery, message):
+async def yas(client: Client, m: CallbackQuery, message):
  
     if message.from_user.id ==  message.from_user.id :
-        await c.answer_callback_query(message.from_user.id, text="تم استدعاء المبرمج", show_alert=True)
+        await client.answer_callback_query(message.from_user.id, text="تم استدعاء المبرمج", show_alert=True)
     else:
-        await c.answer_callback_query(message.from_user.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂", show_alert=True)
+        await client.answer_callback_query(message.from_user.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂", show_alert=True)
     usr = await client.get_chat("BP_BP")
     name = usr.first_name
     photo = await app.download_media(usr.photo.big_file_id)
