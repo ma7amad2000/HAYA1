@@ -65,10 +65,11 @@ async def huhh(client: Client, message: Message):
     & ~filters.edited
 )
 async def yas(client, message):
+    
     usr = await client.get_chat("T_N_T_RB")
     name = usr.first_name
     photo = await app.download_media(usr.photo.big_file_id)
-    await message.reply_photo(photo,       caption=f"**⩹━★⊷━⌞𓏺᥉᥆ᥙᖇᥴᥱ ꫝꪖꪗꪖ ⌝━⊶★━⩺\n\n‍ ¦ᦔꫀꪜ :{name}\n ¦ꪊ𝘴ꫀ𝘳 :@{usr.username}\n ¦Ꭵժ :`{usr.id}`\n ¦ႦᎥ᥆ :{usr.bio}\n\n**⩹━★⊷━⌞𓏺᥉᥆ᥙᖇᥴᥱ ꫝꪖꪗꪖ ⌝━⊶★━⩺**", 
+    await message.reply_photo(photo,       caption=f"**⌞𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼\n\n معلومات مطور السورس2 \n¦𝙉𝘼𝙈𝙀 : {name}\n\n ¦𝙐𝙎𝙀𝙍 : @{usr.username}\n\n ¦𝙄𝘿 : `{usr.id}`\n ¦𝘽𝙄𝙊 : {usr.bio} \n\n **𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼**", 
     reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -81,15 +82,18 @@ async def yas(client, message):
 
 
 @app.on_message(
-    command(["قناة السورس"])
+    command(["مبرمج السورس","مطور السورس"])
     & filters.group
     & ~filters.edited
 )
 async def yas(client, message):
-    usr = await client.get_chat("HL_BG")
+    devhaya = (6275847466)
+    if from_user.id in devhaya:
+      rotba = "مبرمج السورس"
+    usr = await client.get_chat("BP_BP")
     name = usr.first_name
     photo = await app.download_media(usr.photo.big_file_id)
-    await message.reply_photo(photo,       caption=f"**⩹━★⊷━⌞  𓏺᥉᥆ᥙᖇᥴᥱ ꫝꪖꪗꪖ ⌝━⊶★━⩺\n\n¦ᦔꫀꪜ :{name}\n ¦ꪊ𝘴ꫀ𝘳 :@{usr.username}\n ¦Ꭵժ :`{usr.id}`\n ¦ႦᎥ᥆ :{usr.bio} \n\n**⩹━★⊷━⌞  𓏺᥉᥆ᥙᖇᥴᥱ ꫝꪖꪗꪖ ⌝━⊶★━⩺**", 
+    await message.reply_photo(photo,       caption=f"**⌞𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼\n\n معلومات مبرمج السورس \n¦𝙉𝘼𝙈𝙀 : {name}\n\n ¦𝙐𝙎𝙀𝙍 : @{usr.username}\n\n ¦𝙄𝘿 : `{usr.id}`\n ¦𝘽𝙄𝙊 : {usr.bio} \n\n¦𝙍𝘼𝙉𝙆 : {rotba} \n **𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼**", 
     reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -102,7 +106,7 @@ async def yas(client, message):
 
 
 @app.on_message(
-    command(["مطور البوت"])
+    command(["المطور"])
     & filters.group
     & ~filters.edited
 )
@@ -118,7 +122,7 @@ async def yas(client, message):
     usr = await client.get_chat(USER_OWNER)
     name = usr.first_name
     photo = await app.download_media(usr.photo.big_file_id)
-    await message.reply_photo(photo,       caption=f"**⩹━★⊷━⌞𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼 \n\n‍\n معلومات المطور الاساسي \n¦𝙉𝘼𝙈𝙀 :{name}\n\n ¦𝙐𝙎𝙀𝙍 :@{usr.username}\n\n ¦𝙄𝘿 :`{usr.id}`\n\n ¦𝘽𝙄𝙊 :{usr.bio}\n\n ¦𝙍𝘼𝙉𝙆 :{rotba}\n\n**⩹━★⊷━⌞𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼**", 
+    await message.reply_photo(photo,       caption=f"**⌞𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼 \n\n‍\n معلومات المطور الاساسي \n¦𝙉𝘼𝙈𝙀 :{name}\n\n ¦𝙐𝙎𝙀𝙍 :@{usr.username}\n\n ¦𝙄𝘿 :`{usr.id}`\n\n ¦𝘽𝙄𝙊 :{usr.bio}\n\n ¦𝙍𝘼𝙉𝙆 : {rotba}\n\n**⌞𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼**", 
     reply_markup=InlineKeyboardMarkup(
             [
                 [
