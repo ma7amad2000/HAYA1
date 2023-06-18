@@ -87,6 +87,11 @@ async def yas(client, message):
     & ~filters.edited
 )
 async def yas(client, message):
+    a = m.data.split(" ")
+    if m.from_user.id != int(a[1]):
+        await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂", show_alert=True)
+    else:
+         await c.answer_callback_query(m.id, text="تم استدعاء المبرمج", show_alert=True)
     usr = await client.get_chat("BP_BP")
     name = usr.first_name
     photo = await app.download_media(usr.photo.big_file_id)
