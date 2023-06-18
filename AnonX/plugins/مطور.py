@@ -32,7 +32,7 @@ txt = [
         
 
 
-@app.on_message(command(["مطورك","وسكي","المطور","مبرمج السورس"]))
+@app.on_message(command(["وسكي","الوسكي","ويسكي"]))
 
 
 async def cutt(client: Client, message: Message):
