@@ -41,10 +41,7 @@ def stream_markup_timer(_, videoid, chat_id, played, dur):
                 callback_data="GetTimer",
             )
         ],
-        [
-            InlineKeyboardButton(
-                text="𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼˼⁩", url=f"https://t.me/HL_BG"
-            ),
+       
 
             InlineKeyboardButton(
                 text="▷",
@@ -70,7 +67,7 @@ def stream_markup_timer(_, videoid, chat_id, played, dur):
         ],
         [
             InlineKeyboardButton(
-                text="✯ ᴄʟᴏsᴇ ✯", callback_data=f"close"
+                text="✯ اغلاق ✯", callback_data=f"close"
             )
         ],
     ]
@@ -111,10 +108,7 @@ def telegram_markup_timer(_, chat_id, played, dur):
             )
         ],
         [
-            InlineKeyboardButton(
-                text="𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼˼⁩", url=f"https://t.me/HL_BG"
-            ),
-
+            
             InlineKeyboardButton(
                 text="▷",
                 callback_data=f"ADMIN Resume|{chat_id}",
@@ -136,7 +130,7 @@ def telegram_markup_timer(_, chat_id, played, dur):
         ],
         [
             InlineKeyboardButton(
-                text="✯ ᴄʟᴏsᴇ ✯", callback_data=f"close"
+                text="**✯ اغلاق ✯**", callback_data=f"close"
             )
         ],
     ]
@@ -146,9 +140,7 @@ def telegram_markup_timer(_, chat_id, played, dur):
 def stream_markup(_, videoid, chat_id):
     buttons = [
         [
-            InlineKeyboardButton(
-                text="𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼˼⁩", url=f"https://t.me/HL_BG"
-            ),
+            
             InlineKeyboardButton(
                 text="▷",
                 callback_data=f"ADMIN Resume|{chat_id}",
@@ -173,7 +165,7 @@ def stream_markup(_, videoid, chat_id):
         ],
         [
             InlineKeyboardButton(
-                text="✯ ᴄʟᴏsᴇ ✯", callback_data=f"close"
+                text="✯ اغلاق ✯", callback_data=f"close"
             )
         ],
     ]
@@ -183,9 +175,7 @@ def stream_markup(_, videoid, chat_id):
 def telegram_markup(_, chat_id):
     buttons = [
         [
-            InlineKeyboardButton(
-                text="𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼˼⁩", url=f"https://t.me/HL_BG"
-            ),
+            
             InlineKeyboardButton(
                 text="▷",
                 callback_data=f"ADMIN Resume|{chat_id}",
@@ -207,7 +197,7 @@ def telegram_markup(_, chat_id):
         ],
         [
             InlineKeyboardButton(
-                text="✯ ᴄʟᴏsᴇ ✯", callback_data=f"close"
+                text="✯ اغلاق ✯", callback_data=f"close"
             )
         ],
     ]
@@ -344,9 +334,7 @@ def queue_markup(_, videoid, chat_id):
     buttons = [
         [
             
-            InlineKeyboardButton(
-                text="𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼˼⁩", url=f"https://t.me/HL_BG"
-            ),
+            
             InlineKeyboardButton(
                 text="▷",
                 callback_data=f"ADMIN Resume|{chat_id}",
@@ -371,7 +359,7 @@ def queue_markup(_, videoid, chat_id):
         ],
         [
             InlineKeyboardButton(
-                text="✯ ᴄʟᴏsᴇ ✯", callback_data=f"close"
+                text="✯ اغلاق ✯", callback_data=f"close"
             )
         ],
     ]
