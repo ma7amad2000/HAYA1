@@ -43,6 +43,10 @@ def stream_markup_timer(_, videoid, chat_id, played, dur):
         ],
         [
             InlineKeyboardButton(
+                text="𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼˼⁩", url=f"https://t.me/HL_BG"
+            ),
+
+            InlineKeyboardButton(
                 text="▷",
                 callback_data=f"ADMIN Resume|{chat_id}",
             ),
@@ -61,7 +65,7 @@ def stream_markup_timer(_, videoid, chat_id, played, dur):
         ],
         [
             InlineKeyboardButton(
-                text="⩹━⊷⌯ 𓏺᥉᥆ᥙᖇᥴᥱ ꫝꪖꪗꪖ⌯ ˹🎧˼⁩", url=f"https://t.me/HL_BG"
+                text="𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼˹🎧˼⁩", url=f"https://t.me/HL_BG"
             )
         ],
         [
@@ -108,6 +112,10 @@ def telegram_markup_timer(_, chat_id, played, dur):
         ],
         [
             InlineKeyboardButton(
+                text="𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼˼⁩", url=f"https://t.me/HL_BG"
+            ),
+
+            InlineKeyboardButton(
                 text="▷",
                 callback_data=f"ADMIN Resume|{chat_id}",
             ),
@@ -123,7 +131,7 @@ def telegram_markup_timer(_, chat_id, played, dur):
         ],
         [
             InlineKeyboardButton(
-                text="⩹━⊷⌯ 𓏺᥉᥆ᥙᖇᥴᥱ ꫝꪖꪗꪖ⌯ ˹🎧˼⁩", url=f"https://t.me/HL_BG"
+                text="𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼˼⁩", url=f"https://t.me/HL_BG"
             )
         ],
         [
@@ -138,6 +146,9 @@ def telegram_markup_timer(_, chat_id, played, dur):
 def stream_markup(_, videoid, chat_id):
     buttons = [
         [
+            InlineKeyboardButton(
+                text="𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼˼⁩", url=f"https://t.me/HL_BG"
+            ),
             InlineKeyboardButton(
                 text="▷",
                 callback_data=f"ADMIN Resume|{chat_id}",
@@ -157,7 +168,7 @@ def stream_markup(_, videoid, chat_id):
         ],
         [
             InlineKeyboardButton(
-                text="⩹━⊷⌯ 𓏺᥉᥆ᥙᖇᥴᥱ ꫝꪖꪗꪖ⌯ ˹🎧˼⁩", url=f"https://t.me/HL_BG"
+                text="𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼˹🎧˼⁩", url=f"https://t.me/HL_BG"
             )
         ],
         [
@@ -172,6 +183,9 @@ def stream_markup(_, videoid, chat_id):
 def telegram_markup(_, chat_id):
     buttons = [
         [
+            InlineKeyboardButton(
+                text="𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼˼⁩", url=f"https://t.me/HL_BG"
+            ),
             InlineKeyboardButton(
                 text="▷",
                 callback_data=f"ADMIN Resume|{chat_id}",
@@ -188,7 +202,7 @@ def telegram_markup(_, chat_id):
         ],
         [
             InlineKeyboardButton(
-                text="⩹━⊷⌯ 𓏺᥉᥆ᥙᖇᥴᥱ ꫝꪖꪗꪖ⌯ ˹🎧˼⁩", url=f"https://t.me/HL_BG"
+                text="𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼˼⁩", url=f"https://t.me/HL_BG"
             )
         ],
         [
@@ -329,6 +343,10 @@ close_keyboard = InlineKeyboardMarkup(
 def queue_markup(_, videoid, chat_id):
     buttons = [
         [
+            
+            InlineKeyboardButton(
+                text="𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼˼⁩", url=f"https://t.me/HL_BG"
+            ),
             InlineKeyboardButton(
                 text="▷",
                 callback_data=f"ADMIN Resume|{chat_id}",
@@ -348,7 +366,7 @@ def queue_markup(_, videoid, chat_id):
         ],
         [
             InlineKeyboardButton(
-                text="⩹━⊷⌯ 𓏺᥉᥆ᥙᖇᥴᥱ ꫝꪖꪗꪖ⌯ ˹🎧˼⁩", url=f"https://t.me/HL_BG"
+                text="𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼˼⁩", url=f"https://t.me/HL_BG"
             )
         ],
         [
