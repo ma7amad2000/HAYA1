@@ -86,7 +86,7 @@ async def yas(client, message):
     & filters.group
     & ~filters.edited
 )
-async def yas(client: Client, m: CallbackQuery, message):
+async def yas(client, message):
  
     if message.from_user.id ==  message.from_user.id :
         await client.answer_callback_query(message.from_user.id, text="تم استدعاء المبرمج", show_alert=True)
