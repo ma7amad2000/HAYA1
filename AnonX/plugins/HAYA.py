@@ -98,7 +98,7 @@ async def yas(client, message):
                         name, url=f"https://t.me/{usr.username}")
                 ],[
                     InlineKeyboardButton(
-                        name, url=f"https://t.me/{usr.username}","استدعاء المطور")
+                        name, url="استدعاء المبرمج")
                 ],
             ]
         ),
@@ -128,6 +128,9 @@ async def yas(client, message):
                 [
                     InlineKeyboardButton(
                         name, url=f"https://t.me/{usr.username}")
+                ], [
+                    InlineKeyboardButton(
+                        name, url="استدعاء المطور")
                 ],
             ]
         ),
