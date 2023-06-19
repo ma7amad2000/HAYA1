@@ -14,7 +14,10 @@ from pyrogram.errors import UserAlreadyParticipant, UserNotParticipant
 
 
        
-@app.on_message(command(["start"]))
+@app.on_message(
+    command(["start"])
+    & ~filters.edited
+)
 async def start(client: Client, message: Message):
        m = message.chat.id
        user = message.from_user.mention
