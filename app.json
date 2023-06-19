@@ -37,9 +37,9 @@
         "value": "HaYa ダ ᴍᴜsɪᴄ",
         "required": true
       },
-       "CHANNEL": {
+       "USER_CHANNEL": {
         "description": "يوزر قناتك بدون @",
-        "value": "BP_BP",
+        "value": "HL_BG",
         "required": true
       },
       "OWNER_ID": {
