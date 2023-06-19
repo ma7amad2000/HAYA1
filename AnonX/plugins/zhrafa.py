@@ -6,7 +6,6 @@ from strings.filters import command
 from pyrogram import Client
 from pyrogram.types import Message
 from AnonX import app
-from AnonX import app
 
 @app.on_message(command("زخرفه"))
 async def zahrafa(c: Client, m: Message):
