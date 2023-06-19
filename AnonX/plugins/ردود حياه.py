@@ -7,7 +7,7 @@ from pyrogram.types import (InlineKeyboardButton,
                             InlineKeyboardMarkup, Message)
 from strings.filters import command
 from pyrogram import filters, Client
-import config
+from config import OWNER_ID
 
 
 
@@ -37,7 +37,28 @@ txt = [
 
         ]
 
+txt1 = [
 
+            "**؏ـيوٍڼ حـيآهہ😻🫶 يا مطوريي**",
+
+
+             "**ﻧ؏ـم يامطوريي**",
+            
+
+            "**امرني يا مطوري الحبيب**",
+            
+            
+           
+            
+            
+ 
+            
+            
+
+        ]
+
+
+        
         
 
 
@@ -45,12 +66,23 @@ txt = [
 
 
 async def cutt(client: Client, message: Message):
+     if message.from_user.id == OWNER_ID:
 
 
-      a = random.choice(txt)
+         a = random.choice(txt1)
 
 
-      await message.reply(
+         await message.reply(
 
 
-        f"{a}")
+         f"{a}")
+     else:
+         a = random.choice(txt)
+
+
+         await message.reply(
+
+
+         f"{a}")
+       
+
