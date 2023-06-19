@@ -284,7 +284,7 @@ async def remove_a_filter(event):
 
 
 @app.on_message(
-    command"حذف الردود$",
+    command(["حذف الردود"])
 )
 async def on_all_snip_delete(event):
     if filters := get_filters(event.chat_id):
