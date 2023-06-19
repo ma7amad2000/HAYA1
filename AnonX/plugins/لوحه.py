@@ -9,9 +9,9 @@ from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message, CallbackQuery
 from AnonX import app
 
-bot_id = (BOT_TOKEN) 
+bot_id = ("BOT_TOKEN") 
 
-owner = (OWNER_ID)
+owner = ("OWNER_ID")
 
 try:
 	open(f"Users{bot_id}.json","r")
