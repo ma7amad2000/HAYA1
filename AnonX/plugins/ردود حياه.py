@@ -37,7 +37,7 @@ txt = [
 
         ]
 
-txt1 = [
+ txt1 = [
 
             "**؏ـيوٍڼ حـيآهہ😻🫶 يا مطوريي**",
 
@@ -66,16 +66,17 @@ txt1 = [
 
 
 async def cutt(client: Client, message: Message):
-     if message.from_user.id == OWNER_ID:
+     dev = (OWNER_ID)
+     if message.from_user.id in dev:
 
 
-         a = random.choice(txt1)
+         b = random.choice(txt1)
 
 
          await message.reply(
 
 
-         f"{a}")
+         f"{b}")
      else:
          a = random.choice(txt)
 
