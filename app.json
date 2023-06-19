@@ -37,6 +37,11 @@
         "value": "HaYa ダ ᴍᴜsɪᴄ",
         "required": true
       },
+       "CHANNEL": {
+        "description": "يوزر قناتك بدون @",
+        "value": "BP_BP",
+        "required": true
+      },
       "OWNER_ID": {
         "description": "ايديك ولو تبي تخلي مطور ثاني معاك خلي مسافه بين ايديك وايديه",
         "value": "",
