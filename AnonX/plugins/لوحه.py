@@ -406,7 +406,7 @@ async def __count(c:Client,m:Message):
 		return await m.reply(msg,reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("close",callback_data="close")]]))
 	return await m.reply("**◍ انت لست مطور في البوت \n√**")
 	
-@app.on_callback_query(regex("close"))
+@app.on_callback_query(command("close"))
 async def close__(_,query:CallbackQuery):
 	user = query.from_user.id
 	mainSudo = open(f"maindevs{bot_id}.json","r").read()
