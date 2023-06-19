@@ -1,6 +1,6 @@
 import re
 
-from telethon.utils import get_display_name
+from pyrogram.utils import get_display_name
 
 from AnonX import app
 from strings.filters import command
