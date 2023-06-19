@@ -1,3 +1,5 @@
+
+
 import asyncio
 from datetime import datetime
 
@@ -6,7 +8,7 @@ from AnonX import app
 from AnonX.core.call import Anon, autoend
 from AnonX.utils.database import (get_client, is_active_chat,
                                        is_autoend)
-from strings.filters import command
+
 
 async def auto_leave():
     if config.AUTO_LEAVING_ASSISTANT == str(True):
@@ -17,7 +19,6 @@ async def auto_leave():
 
             for num in assistants:
                 client = await get_client(num)
-                left = 0
                 try:
                     async for i in client.iter_dialogs():
                         chat_type = i.chat.type
@@ -29,18 +30,12 @@ async def auto_leave():
                             chat_id = i.chat.id
                             if (
                                 chat_id != config.LOG_GROUP_ID
-                                and chat_id != -1001686672798
-                                and chat_id != -1001840101403
-                                and chat_id != -1001549206010
                             ):
-                                if left == 20:
-                                    continue
                                 if not await is_active_chat(chat_id):
                                     try:
                                         await client.leave_chat(
                                             chat_id
                                         )
-                                        left += 1
                                     except:
                                         continue
                 except:
@@ -64,13 +59,13 @@ async def auto_end():
                     continue
                 autoend[chat_id] = {}
                 try:
-                    await Anon.stop_stream(chat_id)
+                    await Yukki.stop_stream(chat_id)
                 except:
                     continue
                 try:
                     await app.send_message(
                         chat_id,
-                        "» ʙᴏᴛ ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟʏ ʟᴇғᴛ ᴠɪᴅᴇᴏᴄʜᴀᴛ ʙᴇᴄᴀᴜsᴇ ɴᴏ ᴏɴᴇ ᴡᴀs ʟɪsᴛᴇɴɪɴɢ ᴏɴ ᴠɪᴅᴇᴏᴄʜᴀᴛ.",
+                        "✧ **معليش كنت بروحي فوق من 3 دقايق لين ضربني التل💔 ♡**",
                     )
                 except:
                     continue
