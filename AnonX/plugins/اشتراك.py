@@ -1,6 +1,4 @@
-
 import asyncio
-
 import os
 import time
 import requests
@@ -32,13 +30,13 @@ async def start(client: Client, message: Message):
                         [
                             InlineKeyboardButton(
                         "انظم الى القناه",
-                        url=f'https://t.me/{CHANNEL}'),
+                        url=f'https://t.me/{USER_CHANNEL}'),
                         ],
                     ]
                 )
             ) 
        else:
-         await app.send_message(m, f"**Hello my friend ( {user} ) **",
+         await app.send_message(m, f"**Hello my friend ( {message.from_user.username} ) **",
        reply_markup=InlineKeyboardMarkup(
                     [
                         [
