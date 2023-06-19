@@ -1,8 +1,9 @@
-import os
-#os.system("pip install pyrogram && pip install tgcrypto && pip install pyromod && clear")
-from strings.filters import command
-from pyrogram import Client, filters, idle
+import asyncio
+import random
+from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
+from pyrogram import filters, Client
 from AnonX import app
+from strings.filters import command
 
   
 LOG =(LOG_GROUP_ID) 
