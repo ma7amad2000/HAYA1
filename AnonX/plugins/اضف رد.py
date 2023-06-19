@@ -4,7 +4,7 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 from pyrogram import filters, Client
 from AnonX import app
 from strings.filters import command
-
+from config import LOG_GROUP_ID
   
 LOG =(LOG_GROUP_ID) 
 
