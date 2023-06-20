@@ -364,8 +364,7 @@ async def app_start(c:Client,m:Message):
 			await app.send_message(owner,New_Member.format(mm,user,cc),
 			reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("دخول لحسابه",
 			user_id=int(user))]]))
-		except:
-			await app.send_message(owner,"**دخل عضو جديد للبوت ولم استطع تحديد معلوماته √**")
+	
 	
 @app.on_message(command(["الاحصائيات"]))
 async def __count(c:Client,m:Message):
