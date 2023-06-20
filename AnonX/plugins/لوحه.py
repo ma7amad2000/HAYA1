@@ -8,7 +8,8 @@ from pyrogram.errors import PeerIdInvalid
 from AnonX import app
 from config import OWNER_ID,  BOT_TOKEN
 from strings.filters import command
-bot_id = app.BOT_TOKEN.split(":")[0]
+
+
 
 # create a Redis client
 r = redis.Redis(
@@ -56,9 +57,9 @@ async def for_users (app,m):
         list = get_admins()
         for admin in list:
           await app.send_message(int(admin), text, reply_markup=reply_markup)
-        await app.send_message(int(r.get(f"bot_owner{bot_id}")), text, reply_markup=reply_markup)
+        await app.send_message(int(r.get(f"bot_owner{BOT_TOKEN}")), text, reply_markup=reply_markup)
      else:
-        await app.send_message(int(r.get(f"bot_owner{bot_id}")), text, reply_markup=reply_markup)
+        await app.send_message(int(r.get(f"bot_owner{BOT_TOKEN}")), text, reply_markup=reply_markup)
      
         
      
@@ -95,17 +96,17 @@ async def keyboard_for_admins(app, m):
         await m.reply(text, quote=True)
         
       if m.text == 'تفعيل التواصل':
-        if r.get(f'enable_twasol{bot_id}'):
+        if r.get(f'enable_twasol{BOT_TOKEN}'):
           return await m.reply("• تم تفعيل التواصل مسبقاً", quote=True)
           
         await m.reply(f'**• بواسطة ⟨ {m.from_user.mention} ⟩\n• تم تفعيل التواصل بنجاح**', quote=True)
-        r.set(f'enable_twasol{bot_id}', 1)
+        r.set(f'enable_twasol{BOT_TOKEN}', 1)
       
       if m.text == 'تعطيل التواصل':
-        if not r.get(f'enable_twasol{bot_id}'):
+        if not r.get(f'enable_twasol{BOT_TOKEN}'):
           return await m.reply("• تم تعطيل التواصل مسبقاً", quote=True)
         await m.reply(f'**• بواسطة ⟨ {m.from_user.mention} ⟩\n• تم تعطيل التواصل بنجاح**', quote=True)
-        r.delete(f'enable_twasol{bot_id}')
+        r.delete(f'enable_twasol{BOT_TOKEN}')
       
       if m.text == 'المستخدمين':
         await m.reply_document(get_users_backup(), quote=True)
@@ -117,40 +118,40 @@ async def keyboard_for_admins(app, m):
         await m.reply_document(get_groups_backup(), quote=True)
       
       if m.text == 'تفعيل الاشتراك':
-        if r.get(f"enable_force_subscribe{bot_id}"):
+        if r.get(f"enable_force_subscribe{BOT_TOKEN}"):
           return await m.reply('• تم تفعيل الاشتراك الاجباري مسبقاً',quote=True)
         await m.reply(f'**• بواسطة ⟨ {m.from_user.mention} ⟩\n• تم تفعيل الاشتراك بنجاح**', quote=True) 
-        r.set(f"enable_force_subscribe{bot_id}", 1)
+        r.set(f"enable_force_subscribe{BOT_TOKEN}", 1)
       
       if m.text == 'تعطيل الاشتراك':
-        if not r.get(f"enable_force_subscribe{bot_id}"):
+        if not r.get(f"enable_force_subscribe{BOT_TOKEN}"):
           return await m.reply('• تم تعطيل الاشتراك الاجباري مسبقاً',quote=True)
         await m.reply(f'**• بواسطة ⟨ {m.from_user.mention} ⟩\n• تم تعطيل الاشتراك بنجاح**', quote=True) 
-        r.delete(f"enable_force_subscribe{bot_id}")
+        r.delete(f"enable_force_subscribe{BOT_TOKEN}")
       
       if m.text == 'ضع قناة الاشتراك':
         await m.reply("• ارسل معرف القناة العام مثال @Y88F8", quote=True)
-        r.set(f"{m.from_user.id}addchannel{m.chat.id}{bot_id}",1)
-        r.delete(f"{m.from_user.id}addadmin{m.chat.id}{bot_id}")
-        r.delete(f"{m.from_user.id}transfer{m.chat.id}{bot_id}")
-        r.delete(f"{m.from_user.id}deladmin{m.chat.id}{bot_id}")
-        r.delete(f"{m.from_user.id}broadcastfor{m.chat.id}{bot_id}")
-        r.delete(f"{m.from_user.id}broadcastpin{m.chat.id}{bot_id}")
-        r.delete(f"{m.from_user.id}broadcast{m.chat.id}{bot_id}")
-        r.delete(f"{m.from_user.id}gbroad{m.chat.id}{bot_id}")
-        r.delete(f"{m.from_user.id}gbroadpin{m.chat.id}{bot_id}")
+        r.set(f"{m.from_user.id}addchannel{m.chat.id}{BOT_TOKEN}",1)
+        r.delete(f"{m.from_user.id}addadmin{m.chat.id}{BOT_TOKEN}")
+        r.delete(f"{m.from_user.id}transfer{m.chat.id}{BOT_TOKEN}")
+        r.delete(f"{m.from_user.id}deladmin{m.chat.id}{BOT_TOKEN}")
+        r.delete(f"{m.from_user.id}broadcastfor{m.chat.id}{BOT_TOKEN}")
+        r.delete(f"{m.from_user.id}broadcastpin{m.chat.id}{BOT_TOKEN}")
+        r.delete(f"{m.from_user.id}broadcast{m.chat.id}{BOT_TOKEN}")
+        r.delete(f"{m.from_user.id}gbroad{m.chat.id}{BOT_TOKEN}")
+        r.delete(f"{m.from_user.id}gbroadpin{m.chat.id}{BOT_TOKEN}")
       
       if m.text == 'حذف قناة الاشتراك':
-        if not r.get(f'force_channel{bot_id}'):
+        if not r.get(f'force_channel{BOT_TOKEN}'):
           return await m.reply("• لا توجد قناة اشتراك معينة", quote=True)
         await m.reply("• تم حذف قناة الاشتراك بنجاح", quote=True)
-        r.delete(f'force_channel{bot_id}')
+        r.delete(f'force_channel{BOT_TOKEN}')
       
       if m.text == 'قناة الاشتراك':
-        if not r.get(f'force_channel{bot_id}'):
+        if not r.get(f'force_channel{BOT_TOKEN}'):
           await m.reply('• لاتوجد قناة مضافة', quote=True)
         else:
-          channel = r.get(f'force_channel{bot_id}').decode('utf-8')
+          channel = r.get(f'force_channel{BOT_TOKEN}').decode('utf-8')
           await m.reply(f"https://t.me/{channel}", quote=True)
       
       if m.text == 'قائمه الأدمنيه':
@@ -168,63 +169,63 @@ async def keyboard_for_admins(app, m):
           
       if m.text == 'اذاعة':
         await m.reply("• ارسل الإذاعة الآن ( صورة، ملصق، نص، متحركة، جهة اتصال، ملف )",quote=True)
-        r.set(f"{m.from_user.id}broadcast{m.chat.id}{bot_id}",1)
-        r.delete(f"{m.from_user.id}addadmin{m.chat.id}{bot_id}")
-        r.delete(f"{m.from_user.id}transfer{m.chat.id}{bot_id}")
-        r.delete(f"{m.from_user.id}deladmin{m.chat.id}{bot_id}")
-        r.delete(f"{m.from_user.id}broadcastfor{m.chat.id}{bot_id}")
-        r.delete(f"{m.from_user.id}broadcastpin{m.chat.id}{bot_id}")
-        r.delete(f"{m.from_user.id}gbroad{m.chat.id}{bot_id}")
-        r.delete(f"{m.from_user.id}gbroadpin{m.chat.id}{bot_id}")
-        r.delete(f"{m.from_user.id}addchannel{m.chat.id}{bot_id}")
+        r.set(f"{m.from_user.id}broadcast{m.chat.id}{BOT_TOKEN}",1)
+        r.delete(f"{m.from_user.id}addadmin{m.chat.id}{BOT_TOKEN}")
+        r.delete(f"{m.from_user.id}transfer{m.chat.id}{BOT_TOKEN}")
+        r.delete(f"{m.from_user.id}deladmin{m.chat.id}{BOT_TOKEN}")
+        r.delete(f"{m.from_user.id}broadcastfor{m.chat.id}{BOT_TOKEN}")
+        r.delete(f"{m.from_user.id}broadcastpin{m.chat.id}{BOT_TOKEN}")
+        r.delete(f"{m.from_user.id}gbroad{m.chat.id}{BOT_TOKEN}")
+        r.delete(f"{m.from_user.id}gbroadpin{m.chat.id}{BOT_TOKEN}")
+        r.delete(f"{m.from_user.id}addchannel{m.chat.id}{BOT_TOKEN}")
       
       if m.text == 'اذاعة بالتثبيت':
         await m.reply("• ارسل الإذاعة الآن ( صورة، ملصق، نص، متحركة، جهة اتصال، ملف )",quote=True)
-        r.set(f"{m.from_user.id}broadcastpin{m.chat.id}{bot_id}",1)
-        r.delete(f"{m.from_user.id}addadmin{m.chat.id}{bot_id}")
-        r.delete(f"{m.from_user.id}transfer{m.chat.id}{bot_id}")
-        r.delete(f"{m.from_user.id}deladmin{m.chat.id}{bot_id}")
-        r.delete(f"{m.from_user.id}broadcastfor{m.chat.id}{bot_id}")
-        r.delete(f"{m.from_user.id}broadcast{m.chat.id}{bot_id}")
-        r.delete(f"{m.from_user.id}gbroad{m.chat.id}{bot_id}")
-        r.delete(f"{m.from_user.id}gbroadpin{m.chat.id}{bot_id}")
-        r.delete(f"{m.from_user.id}addchannel{m.chat.id}{bot_id}")
+        r.set(f"{m.from_user.id}broadcastpin{m.chat.id}{BOT_TOKEN}",1)
+        r.delete(f"{m.from_user.id}addadmin{m.chat.id}{BOT_TOKEN}")
+        r.delete(f"{m.from_user.id}transfer{m.chat.id}{BOT_TOKEN}")
+        r.delete(f"{m.from_user.id}deladmin{m.chat.id}{BOT_TOKEN}")
+        r.delete(f"{m.from_user.id}broadcastfor{m.chat.id}{BOT_TOKEN}")
+        r.delete(f"{m.from_user.id}broadcast{m.chat.id}{BOT_TOKEN}")
+        r.delete(f"{m.from_user.id}gbroad{m.chat.id}{BOT_TOKEN}")
+        r.delete(f"{m.from_user.id}gbroadpin{m.chat.id}{BOT_TOKEN}")
+        r.delete(f"{m.from_user.id}addchannel{m.chat.id}{BOT_TOKEN}")
         
       if m.text == 'اذاعة بالتوجيه':
         await m.reply("• ارسل الإذاعة الآن ( صورة، ملصق، نص، متحركة، جهة اتصال، ملف )",quote=True)
-        r.set(f"{m.from_user.id}broadcastfor{m.chat.id}{bot_id}",1)
-        r.delete(f"{m.from_user.id}addadmin{m.chat.id}{bot_id}")
-        r.delete(f"{m.from_user.id}transfer{m.chat.id}{bot_id}")
-        r.delete(f"{m.from_user.id}deladmin{m.chat.id}{bot_id}")
-        r.delete(f"{m.from_user.id}broadcastpin{m.chat.id}{bot_id}")
-        r.delete(f"{m.from_user.id}broadcast{m.chat.id}{bot_id}")
-        r.delete(f"{m.from_user.id}gbroad{m.chat.id}{bot_id}")
-        r.delete(f"{m.from_user.id}gbroadpin{m.chat.id}{bot_id}")
-        r.delete(f"{m.from_user.id}addchannel{m.chat.id}{bot_id}")
+        r.set(f"{m.from_user.id}broadcastfor{m.chat.id}{BOT_TOKEN}",1)
+        r.delete(f"{m.from_user.id}addadmin{m.chat.id}{BOT_TOKEN}")
+        r.delete(f"{m.from_user.id}transfer{m.chat.id}{BOT_TOKEN}")
+        r.delete(f"{m.from_user.id}deladmin{m.chat.id}{BOT_TOKEN}")
+        r.delete(f"{m.from_user.id}broadcastpin{m.chat.id}{BOT_TOKEN}")
+        r.delete(f"{m.from_user.id}broadcast{m.chat.id}{BOT_TOKEN}")
+        r.delete(f"{m.from_user.id}gbroad{m.chat.id}{BOT_TOKEN}")
+        r.delete(f"{m.from_user.id}gbroadpin{m.chat.id}{BOT_TOKEN}")
+        r.delete(f"{m.from_user.id}addchannel{m.chat.id}{BOT_TOKEN}")
       
       if m.text == 'اذاعة بالمجموعات':
         await m.reply("• ارسل الإذاعة الآن ( صورة، ملصق، نص، متحركة، جهة اتصال، ملف )",quote=True)
-        r.set(f"{m.from_user.id}gbroad{m.chat.id}{bot_id}",1)
-        r.delete(f"{m.from_user.id}addadmin{m.chat.id}{bot_id}")
-        r.delete(f"{m.from_user.id}transfer{m.chat.id}{bot_id}")
-        r.delete(f"{m.from_user.id}deladmin{m.chat.id}{bot_id}")
-        r.delete(f"{m.from_user.id}broadcastfor{m.chat.id}{bot_id}")
-        r.delete(f"{m.from_user.id}broadcastpin{m.chat.id}{bot_id}")
-        r.delete(f"{m.from_user.id}broadcast{m.chat.id}{bot_id}")
-        r.delete(f"{m.from_user.id}gbroadpin{m.chat.id}{bot_id}")
-        r.delete(f"{m.from_user.id}addchannel{m.chat.id}{bot_id}")
+        r.set(f"{m.from_user.id}gbroad{m.chat.id}{BOT_TOKEN}",1)
+        r.delete(f"{m.from_user.id}addadmin{m.chat.id}{BOT_TOKEN}")
+        r.delete(f"{m.from_user.id}transfer{m.chat.id}{BOT_TOKEN}")
+        r.delete(f"{m.from_user.id}deladmin{m.chat.id}{BOT_TOKEN}")
+        r.delete(f"{m.from_user.id}broadcastfor{m.chat.id}{BOT_TOKEN}")
+        r.delete(f"{m.from_user.id}broadcastpin{m.chat.id}{BOT_TOKEN}")
+        r.delete(f"{m.from_user.id}broadcast{m.chat.id}{BOT_TOKEN}")
+        r.delete(f"{m.from_user.id}gbroadpin{m.chat.id}{BOT_TOKEN}")
+        r.delete(f"{m.from_user.id}addchannel{m.chat.id}{BOT_TOKEN}")
       
       if m.text == 'اذاعة بالتثبيت بالمجموعات':
         await m.reply("• ارسل الإذاعة الآن ( صورة، ملصق، نص، متحركة، جهة اتصال، ملف )",quote=True)
-        r.set(f"{m.from_user.id}gbroadpin{m.chat.id}{bot_id}",1)
-        r.delete(f"{m.from_user.id}addadmin{m.chat.id}{bot_id}")
-        r.delete(f"{m.from_user.id}transfer{m.chat.id}{bot_id}")
-        r.delete(f"{m.from_user.id}deladmin{m.chat.id}{bot_id}")
-        r.delete(f"{m.from_user.id}broadcastfor{m.chat.id}{bot_id}")
-        r.delete(f"{m.from_user.id}broadcastpin{m.chat.id}{bot_id}")
-        r.delete(f"{m.from_user.id}broadcast{m.chat.id}{bot_id}")
-        r.delete(f"{m.from_user.id}gbroad{m.chat.id}{bot_id}")
-        r.delete(f"{m.from_user.id}addchannel{m.chat.id}{bot_id}")
+        r.set(f"{m.from_user.id}gbroadpin{m.chat.id}{BOT_TOKEN}",1)
+        r.delete(f"{m.from_user.id}addadmin{m.chat.id}{BOT_TOKEN}")
+        r.delete(f"{m.from_user.id}transfer{m.chat.id}{BOT_TOKEN}")
+        r.delete(f"{m.from_user.id}deladmin{m.chat.id}{BOT_TOKEN}")
+        r.delete(f"{m.from_user.id}broadcastfor{m.chat.id}{BOT_TOKEN}")
+        r.delete(f"{m.from_user.id}broadcastpin{m.chat.id}{BOT_TOKEN}")
+        r.delete(f"{m.from_user.id}broadcast{m.chat.id}{BOT_TOKEN}")
+        r.delete(f"{m.from_user.id}gbroad{m.chat.id}{BOT_TOKEN}")
+        r.delete(f"{m.from_user.id}addchannel{m.chat.id}{BOT_TOKEN}")
       
       if m.text == 'اخفاء الكيبورد':
         await m.reply("• تم اخفاء لوحة التحكم لاظهارها مجدداً ارسل /start",
@@ -235,43 +236,43 @@ async def keyboard_for_admins(app, m):
 async def for_owner(app,m):
   text = m.text
   if text in owner_commands:
-   if not m.from_user.id == int(r.get(f"bot_owner{bot_id}")):
+   if not m.from_user.id == int(r.get(f"bot_owner{BOT_TOKEN}")):
       return await m.reply("• هذا الأمر يخص المطور الأساسي فقط", quote=True)
    
    if text == 'نقل ملكية البوت':
      await m.reply("• ارسل ايدي المالك الجديد الآن", quote=True)
-     r.set(f"{m.from_user.id}transfer{m.chat.id}{bot_id}",1)
-     r.delete(f"{m.from_user.id}addadmin{m.chat.id}{bot_id}")
-     r.delete(f"{m.from_user.id}deladmin{m.chat.id}{bot_id}")
-     r.delete(f"{m.from_user.id}broadcastfor{m.chat.id}{bot_id}")
-     r.delete(f"{m.from_user.id}broadcastpin{m.chat.id}{bot_id}")
-     r.delete(f"{m.from_user.id}broadcast{m.chat.id}{bot_id}")
-     r.delete(f"{m.from_user.id}gbroad{m.chat.id}{bot_id}")
-     r.delete(f"{m.from_user.id}gbroadpin{m.chat.id}{bot_id}")
-     r.delete(f"{m.from_user.id}addchannel{m.chat.id}{bot_id}")
+     r.set(f"{m.from_user.id}transfer{m.chat.id}{BOT_TOKEN}",1)
+     r.delete(f"{m.from_user.id}addadmin{m.chat.id}{BOT_TOKEN}")
+     r.delete(f"{m.from_user.id}deladmin{m.chat.id}{BOT_TOKEN}")
+     r.delete(f"{m.from_user.id}broadcastfor{m.chat.id}{BOT_TOKEN}")
+     r.delete(f"{m.from_user.id}broadcastpin{m.chat.id}{BOT_TOKEN}")
+     r.delete(f"{m.from_user.id}broadcast{m.chat.id}{BOT_TOKEN}")
+     r.delete(f"{m.from_user.id}gbroad{m.chat.id}{BOT_TOKEN}")
+     r.delete(f"{m.from_user.id}gbroadpin{m.chat.id}{BOT_TOKEN}")
+     r.delete(f"{m.from_user.id}addchannel{m.chat.id}{BOT_TOKEN}")
    if text == 'رفع ادمن':
      await m.reply("• ارسل ايدي الآدمن الآن", quote=True)
-     r.set(f"{m.from_user.id}addadmin{m.chat.id}{bot_id}",1)
-     r.delete(f"{m.from_user.id}transfer{m.chat.id}{bot_id}")
-     r.delete(f"{m.from_user.id}deladmin{m.chat.id}{bot_id}")
-     r.delete(f"{m.from_user.id}broadcastfor{m.chat.id}{bot_id}")
-     r.delete(f"{m.from_user.id}broadcastpin{m.chat.id}{bot_id}")
-     r.delete(f"{m.from_user.id}broadcast{m.chat.id}{bot_id}")
-     r.delete(f"{m.from_user.id}gbroad{m.chat.id}{bot_id}")
-     r.delete(f"{m.from_user.id}gbroadpin{m.chat.id}{bot_id}")
-     r.delete(f"{m.from_user.id}addchannel{m.chat.id}{bot_id}")
+     r.set(f"{m.from_user.id}addadmin{m.chat.id}{BOT_TOKEN}",1)
+     r.delete(f"{m.from_user.id}transfer{m.chat.id}{BOT_TOKEN}")
+     r.delete(f"{m.from_user.id}deladmin{m.chat.id}{BOT_TOKEN}")
+     r.delete(f"{m.from_user.id}broadcastfor{m.chat.id}{BOT_TOKEN}")
+     r.delete(f"{m.from_user.id}broadcastpin{m.chat.id}{BOT_TOKEN}")
+     r.delete(f"{m.from_user.id}broadcast{m.chat.id}{BOT_TOKEN}")
+     r.delete(f"{m.from_user.id}gbroad{m.chat.id}{BOT_TOKEN}")
+     r.delete(f"{m.from_user.id}gbroadpin{m.chat.id}{BOT_TOKEN}")
+     r.delete(f"{m.from_user.id}addchannel{m.chat.id}{BOT_TOKEN}")
    
    if text == 'تنزيل ادمن':
      await m.reply("• ارسل ايدي الآدمن الآن", quote=True)
-     r.set(f"{m.from_user.id}deladmin{m.chat.id}{bot_id}", 1)
-     r.delete(f"{m.from_user.id}addadmin{m.chat.id}{bot_id}")
-     r.delete(f"{m.from_user.id}transfer{m.chat.id}{bot_id}")
-     r.delete(f"{m.from_user.id}broadcastfor{m.chat.id}{bot_id}")
-     r.delete(f"{m.from_user.id}broadcastpin{m.chat.id}{bot_id}")
-     r.delete(f"{m.from_user.id}broadcast{m.chat.id}{bot_id}")
-     r.delete(f"{m.from_user.id}gbroad{m.chat.id}{bot_id}")
-     r.delete(f"{m.from_user.id}gbroadpin{m.chat.id}{bot_id}")
-     r.delete(f"{m.from_user.id}addchannel{m.chat.id}{bot_id}")
+     r.set(f"{m.from_user.id}deladmin{m.chat.id}{BOT_TOKEN}", 1)
+     r.delete(f"{m.from_user.id}addadmin{m.chat.id}{BOT_TOKEN}")
+     r.delete(f"{m.from_user.id}transfer{m.chat.id}{BOT_TOKEN}")
+     r.delete(f"{m.from_user.id}broadcastfor{m.chat.id}{BOT_TOKEN}")
+     r.delete(f"{m.from_user.id}broadcastpin{m.chat.id}{BOT_TOKEN}")
+     r.delete(f"{m.from_user.id}broadcast{m.chat.id}{BOT_TOKEN}")
+     r.delete(f"{m.from_user.id}gbroad{m.chat.id}{BOT_TOKEN}")
+     r.delete(f"{m.from_user.id}gbroadpin{m.chat.id}{BOT_TOKEN}")
+     r.delete(f"{m.from_user.id}addchannel{m.chat.id}{BOT_TOKEN}")
 
 @app.on_message(filters.text & filters.private, group=4)
 async def response_for_commands(app,m):
@@ -286,23 +287,23 @@ async def response_for_commands(app,m):
    if check(m.from_user.id):
      if text == 'الغاء':
        await m.reply("• تم الغاء كل شيء", quote=True)
-       r.delete(f"{m.from_user.id}addadmin{m.chat.id}{bot_id}")
-       r.delete(f"{m.from_user.id}transfer{m.chat.id}{bot_id}")
-       r.delete(f"{m.from_user.id}deladmin{m.chat.id}{bot_id}")
-       r.delete(f"{m.from_user.id}broadcastfor{m.chat.id}{bot_id}")
-       r.delete(f"{m.from_user.id}broadcastpin{m.chat.id}{bot_id}")
-       r.delete(f"{m.from_user.id}broadcast{m.chat.id}{bot_id}")
-       r.delete(f"{m.from_user.id}gbroad{m.chat.id}{bot_id}")
-       r.delete(f"{m.from_user.id}gbroadpin{m.chat.id}{bot_id}")
-       r.delete(f"{m.from_user.id}addchannel{m.chat.id}{bot_id}")
+       r.delete(f"{m.from_user.id}addadmin{m.chat.id}{BOT_TOKEN}")
+       r.delete(f"{m.from_user.id}transfer{m.chat.id}{BOT_TOKEN}")
+       r.delete(f"{m.from_user.id}deladmin{m.chat.id}{BOT_TOKEN}")
+       r.delete(f"{m.from_user.id}broadcastfor{m.chat.id}{BOT_TOKEN}")
+       r.delete(f"{m.from_user.id}broadcastpin{m.chat.id}{BOT_TOKEN}")
+       r.delete(f"{m.from_user.id}broadcast{m.chat.id}{BOT_TOKEN}")
+       r.delete(f"{m.from_user.id}gbroad{m.chat.id}{BOT_TOKEN}")
+       r.delete(f"{m.from_user.id}gbroadpin{m.chat.id}{BOT_TOKEN}")
+       r.delete(f"{m.from_user.id}addchannel{m.chat.id}{BOT_TOKEN}")
        
      
-     if r.get(f"{m.from_user.id}transfer{m.chat.id}{bot_id}"):
+     if r.get(f"{m.from_user.id}transfer{m.chat.id}{BOT_TOKEN}"):
        try:
          get = await app.get_chat(int(text))
        except:
          return await m.reply("• الآيدي خطأ أرسل آيدي آخر او تأكد ان المستخدم مو حاظر البوت", quote=True)
-       r.delete(f"{m.from_user.id}transfer{m.chat.id}{bot_id}")
+       r.delete(f"{m.from_user.id}transfer{m.chat.id}{BOT_TOKEN}")
        txt = '• تم نقل ملكية البوت بنجاح إلى :\n\n'
        txt += f'• الأسم : {get.first_name}\n'
        txt += f'• الآيدي : {get.id}\n'
@@ -310,20 +311,20 @@ async def response_for_commands(app,m):
          txt += f'• اليوزر : @{get.username}\n'
        if get.bio:
          txt += f'• البايو : {get.bio}\n'
-       r.set(f"bot_owner{bot_id}", get.id)
+       r.set(f"bot_owner{BOT_TOKEN}", get.id)
        await m.reply(txt, quote=True)
        return
      
-     if r.get(f"{m.from_user.id}addadmin{m.chat.id}{bot_id}"):
+     if r.get(f"{m.from_user.id}addadmin{m.chat.id}{BOT_TOKEN}"):
        try:
          get = await app.get_chat(int(text))
        except:
          return await m.reply("• الآيدي خطأ أرسل آيدي آخر او تأكد ان المستخدم مو حاظر البوت", quote=True)
          
        if is_admin(int(text)):
-         r.delete(f"{m.from_user.id}addadmin{m.chat.id}{bot_id}")
+         r.delete(f"{m.from_user.id}addadmin{m.chat.id}{BOT_TOKEN}")
          return await m.reply(f"• المستخدم [{get.first_name}]({get.id}) ادمن من قبل")
-       r.delete(f"{m.from_user.id}addadmin{m.chat.id}{bot_id}")
+       r.delete(f"{m.from_user.id}addadmin{m.chat.id}{BOT_TOKEN}")
        txt = '• تم رفع المستخدم ادمن بنجاح :\n\n'
        txt += f'• الأسم : {get.first_name}\n'
        txt += f'• الآيدي : {get.id}\n'
@@ -335,29 +336,29 @@ async def response_for_commands(app,m):
        await m.reply(txt, quote=True)
        return 
      
-     if r.get(f"{m.from_user.id}deladmin{m.chat.id}{bot_id}"):
+     if r.get(f"{m.from_user.id}deladmin{m.chat.id}{BOT_TOKEN}"):
       try: 
        if not is_admin(int(text)):
-         r.delete(f"{m.from_user.id}deladmin{m.chat.id}{bot_id}")
+         r.delete(f"{m.from_user.id}deladmin{m.chat.id}{BOT_TOKEN}")
          return await m.reply("• المستخدم مو ادمن من قبل")
-       r.delete(f"{m.from_user.id}deladmin{m.chat.id}{bot_id}")
+       r.delete(f"{m.from_user.id}deladmin{m.chat.id}{BOT_TOKEN}")
        del_admin(int(text))
        await m.reply("• تم تنزيل المستخدم ادمن بنجاح", quote=True)
        return 
       except:
        return await m.reply("• الآيدي خطأ")
      
-     if r.get(f"{m.from_user.id}addchannel{m.chat.id}{bot_id}"):
+     if r.get(f"{m.from_user.id}addchannel{m.chat.id}{BOT_TOKEN}"):
        channel = text.replace("@","")
-       r.set(f"force_channel{bot_id}", channel)
-       r.delete(f"{m.from_user.id}addchannel{m.chat.id}{bot_id}")
+       r.set(f"force_channel{BOT_TOKEN}", channel)
+       r.delete(f"{m.from_user.id}addchannel{m.chat.id}{BOT_TOKEN}")
        await m.reply("• تم تعيين القناة بنجاح ", quote=True)
        
      
      
 @app.on_message(filters.regex("^المطور$"), group=5)
 async def get_dev_about(app,m):
-   id = int(r.get(f"bot_owner{bot_id}"))
+   id = int(r.get(f"bot_owner{BOT_TOKEN}"))
    get = await app.get_chat(id)
    text = f'• Name -» [{get.first_name}](tg://user?id={get.id})\n'
    reply_markup= InlineKeyboardMarkup (
@@ -395,10 +396,10 @@ async def add_group(app,m):
           for admin in list:
             await app.send_message(int(admin), text,
             disable_web_page_preview=True)
-          await app.send_message(int(r.get(f"bot_owner{bot_id}")), text,
+          await app.send_message(int(r.get(f"bot_owner{BOT_TOKEN}")), text,
           disable_web_page_preview=True)
         else:
-          await app.send_message(int(r.get(f"bot_owner{bot_id}")), text,
+          await app.send_message(int(r.get(f"bot_owner{BOT_TOKEN}")), text,
           disable_web_page_preview=True)
 
 @app.on_raw_update(group=7)
@@ -426,10 +427,10 @@ async def kick_from_group(app: Client, m: Update, _, __):
           for admin in list:
             await app.send_message(int(admin), text,
             disable_web_page_preview=True)
-          await app.send_message(int(r.get(f"bot_owner{bot_id}")), text,
+          await app.send_message(int(r.get(f"bot_owner{BOT_TOKEN}")), text,
           disable_web_page_preview=True)
       else:
-          await app.send_message(int(r.get(f"bot_owner{bot_id}")), text,
+          await app.send_message(int(r.get(f"bot_owner{BOT_TOKEN}")), text,
           disable_web_page_preview=True)
    except:
      pass
@@ -441,8 +442,8 @@ async def forbroacasts(app,m):
       if m.text in admins_commands:  return
       if m.text in owner_commands:  return 
    if m.from_user:
-     if r.get(f"{m.from_user.id}broadcast{m.chat.id}{bot_id}"):
-       r.delete(f"{m.from_user.id}broadcast{m.chat.id}{bot_id}")
+     if r.get(f"{m.from_user.id}broadcast{m.chat.id}{BOT_TOKEN}"):
+       r.delete(f"{m.from_user.id}broadcast{m.chat.id}{BOT_TOKEN}")
        rep = await m.reply("• جاري الإذاعة ..", quote=True)
        for user in get_users():
           try:
@@ -454,8 +455,8 @@ async def forbroacasts(app,m):
             pass
        await rep.edit("• تمت الاذاعة بنجاح")
      
-     if r.get(f"{m.from_user.id}broadcastpin{m.chat.id}{bot_id}"):
-       r.delete(f"{m.from_user.id}broadcastpin{m.chat.id}{bot_id}")
+     if r.get(f"{m.from_user.id}broadcastpin{m.chat.id}{BOT_TOKEN}"):
+       r.delete(f"{m.from_user.id}broadcastpin{m.chat.id}{BOT_TOKEN}")
        rep = await m.reply("• جاري الإذاعة ..", quote=True)
        for user in get_users():
           try:
@@ -469,8 +470,8 @@ async def forbroacasts(app,m):
             pass
        await rep.edit("• تمت الاذاعة بنجاح")
      
-     if r.get(f"{m.from_user.id}broadcastfor{m.chat.id}{bot_id}"):
-       r.delete(f"{m.from_user.id}broadcastfor{m.chat.id}{bot_id}")
+     if r.get(f"{m.from_user.id}broadcastfor{m.chat.id}{BOT_TOKEN}"):
+       r.delete(f"{m.from_user.id}broadcastfor{m.chat.id}{BOT_TOKEN}")
        rep = await m.reply("• جاري الإذاعة ..", quote=True)
        for user in get_users():
           try:
@@ -482,8 +483,8 @@ async def forbroacasts(app,m):
             pass
        await rep.edit("• تمت الاذاعة بنجاح")
      
-     if r.get(f"{m.from_user.id}gbroad{m.chat.id}{bot_id}"):
-       r.delete(f"{m.from_user.id}gbroad{m.chat.id}{bot_id}")
+     if r.get(f"{m.from_user.id}gbroad{m.chat.id}{BOT_TOKEN}"):
+       r.delete(f"{m.from_user.id}gbroad{m.chat.id}{BOT_TOKEN}")
        rep = await m.reply("• جاري الإذاعة ..", quote=True)
        for group in get_groups():
           try:
@@ -493,8 +494,8 @@ async def forbroacasts(app,m):
        await rep.edit("• تمت الاذاعة بنجاح")
        
      
-     if r.get(f"{m.from_user.id}gbroadpin{m.chat.id}{bot_id}"):
-       r.delete(f"{m.from_user.id}gbroadpin{m.chat.id}{bot_id}")
+     if r.get(f"{m.from_user.id}gbroadpin{m.chat.id}{BOT_TOKEN}"):
+       r.delete(f"{m.from_user.id}gbroadpin{m.chat.id}{BOT_TOKEN}")
        rep = await m.reply("• جاري الإذاعة ..", quote=True)
        for group in get_groups():
           try:
@@ -507,10 +508,10 @@ async def forbroacasts(app,m):
 @app.on_message(filters.private, group=9)
 async def twasol__(app,m):
    if not check(m.from_user.id):
-     if r.get(f'enable_twasol{bot_id}'):
-       await m.forward(int(r.get(f"bot_owner{bot_id}")))
+     if r.get(f'enable_twasol{BOT_TOKEN}'):
+       await m.forward(int(r.get(f"bot_owner{BOT_TOKEN}")))
    
-   if m.from_user.id == int(r.get(f"bot_owner{bot_id}")):
+   if m.from_user.id == int(r.get(f"bot_owner{BOT_TOKEN}")):
       if m.reply_to_message:
         if m.reply_to_message.forward_from:
           await m.reply(f"• تم إرسال رسالتك إلى {m.reply_to_message.forward_from.first_name} بنجاح", quote=True)
@@ -527,7 +528,7 @@ async def for_admins_in_group(app,m):
    if not m.reply_to_message.from_user:
       return
       
-   if m.from_user.id == int(r.get(f"bot_owner{bot_id}")):
+   if m.from_user.id == int(r.get(f"bot_owner{BOT_TOKEN}")):
      text = m.text
      user_id = m.reply_to_message.from_user.id
      if text == 'رفع ادمن':
@@ -547,7 +548,7 @@ async def for_admins_in_group(app,m):
 def add_user(user_id: int):
 	if is_user(user_id):
 		return
-	r.sadd(f"botusers{bot_id}", user_id)
+	r.sadd(f"botusers{BOT_TOKEN}", user_id)
 	
 def is_user(user_id: int):
   try:
@@ -561,13 +562,13 @@ def is_user(user_id: int):
 def del_user(user_id: int):
 	if not is_user(user_id):
 		return False
-	r.srem(f"botusers{bot_id}", user_id)
+	r.srem(f"botusers{BOT_TOKEN}", user_id)
 	return True
 
 def get_users():
    try:
      list = []
-     for a in r.smembers(f"botusers{bot_id}"):
+     for a in r.smembers(f"botusers{BOT_TOKEN}"):
         list.append(int(a.decode('utf-8')))
      return list
    except:
@@ -575,7 +576,7 @@ def get_users():
 
 def get_users_backup() -> str:
 	text = ''
-	for user in r.smembers(f"botusers{bot_id}"):
+	for user in r.smembers(f"botusers{BOT_TOKEN}"):
 		text += user.decode('utf-8')+'\n'
 	with open('users.txt', 'w+') as f:
 		f.write(text)
@@ -583,7 +584,7 @@ def get_users_backup() -> str:
 	
 def add_admin(user_id: int):
     if is_admin(user_id):  return 
-    r.sadd(f"botadmins{bot_id}", user_id)
+    r.sadd(f"botadmins{BOT_TOKEN}", user_id)
 
 def is_admin(user_id: int):
   try:
@@ -597,12 +598,12 @@ def is_admin(user_id: int):
 def del_admin(user_id: int):
 	if not is_admin(user_id):
 		return False
-	r.srem(f"botadmins{bot_id}", user_id)
+	r.srem(f"botadmins{BOT_TOKEN}", user_id)
 	
 def get_admins():
    try:
      list = []
-     for a in r.smembers(f"botadmins{bot_id}"):
+     for a in r.smembers(f"botadmins{BOT_TOKEN}"):
         list.append(int(a.decode('utf-8')))
      return list
    except:
@@ -610,7 +611,7 @@ def get_admins():
 
 def get_admins_backup() -> str:
 	text = ''
-	for admin in r.smembers(f"botadmins{bot_id}"):
+	for admin in r.smembers(f"botadmins{BOT_TOKEN}"):
 		text += admin.decode('utf-8')+'\n'
 	with open('admins.txt', 'w+') as f:
 		f.write(text)
@@ -620,22 +621,22 @@ def get_admins_backup() -> str:
 def check(id):
     if is_admin(id):
       return True
-    if id == int(r.get(f"bot_owner{bot_id}")):
+    if id == int(r.get(f"bot_owner{BOT_TOKEN}")):
       return True
     else:
       return False
 
 async def check_sub(c,m):
-    if not r.get(f"enable_force_subscribe{bot_id}"):
+    if not r.get(f"enable_force_subscribe{BOT_TOKEN}"):
       return
     else:
-      if not r.get(f"force_channel{bot_id}"):
+      if not r.get(f"force_channel{BOT_TOKEN}"):
         return 
       else:
-        channel = r.get(f"force_channel{bot_id}").decode('utf-8')
+        channel = r.get(f"force_channel{BOT_TOKEN}").decode('utf-8')
         text = f'✖️ عذراً عليك الاشتراك بقناة البوت أولاً لتتمكن من استخدامه !\n\nhttps://t.me/{channel}\n- /start'
         try:
-           get = await c.get_chat_member(r.get(f"force_channel{bot_id}").decode('utf-8'), m.from_user.id)
+           get = await c.get_chat_member(r.get(f"force_channel{BOT_TOKEN}").decode('utf-8'), m.from_user.id)
            if get.status in [enums.ChatMemberStatus.LEFT, enums.ChatMemberStatus.BANNED]:
              return await m.reply(text, quote=True, disable_web_page_preview=True)
         except:
@@ -643,7 +644,7 @@ async def check_sub(c,m):
 
 def add_group(chat_id: int):
     if is_group(chat_id):  return 
-    r.sadd(f"botgroups{bot_id}", chat_id)
+    r.sadd(f"botgroups{BOT_TOKEN}", chat_id)
 
 def is_group(chat_id: int):
   try:
@@ -657,12 +658,12 @@ def is_group(chat_id: int):
 def del_group(chat_id: int):
 	if not is_group(chat_id):
 		return False
-	r.srem(f"botgroups{bot_id}", chat_id)
+	r.srem(f"botgroups{BOT_TOKEN}", chat_id)
 
 def get_groups():
    try:
      list = []
-     for a in r.smembers(f"botgroups{bot_id}"):
+     for a in r.smembers(f"botgroups{BOT_TOKEN}"):
         list.append(int(a.decode('utf-8')))
      return list
    except:
@@ -670,13 +671,13 @@ def get_groups():
 
 def get_groups_backup() -> str:
 	text = ''
-	for group in r.smembers(f"botgroups{bot_id}"):
+	for group in r.smembers(f"botgroups{BOT_TOKEN}"):
 		text += group.decode('utf-8')+'\n'
 	with open('groups.txt', 'w+') as f:
 		f.write(text)
 	return 'groups.txt'
 
-if not r.get(f"bot_owner{bot_id}"):
+if not r.get(f"bot_owner{BOT_TOKEN}"):
    owner = (OWNER_ID)
-   r.set(f"bot_owner{bot_id}", owner)
+   r.set(f"bot_owner{BOT_TOKEN}", owner)
    
