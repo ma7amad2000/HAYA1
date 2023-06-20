@@ -1,6 +1,3 @@
-''
-
-
 import redis, re
 from pyrogram import *
 from pyrogram.types import *
