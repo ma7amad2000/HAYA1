@@ -5,7 +5,8 @@ from pyrogram.errors import PeerIdInvalid
 from AnonX import app
 from config import OWNER_ID,  BOT_TOKEN
 from strings.filters import command
-
+from pyrogram import Client
+from pyrogram import filters
 
 
 # create a Redis client
