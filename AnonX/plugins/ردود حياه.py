@@ -36,28 +36,7 @@ txt = [
 
         ]
 
-txt1 = [
 
-            f"**؏ـيوٍڼ حـيآهہ😻🫶 يا مطوريي {Message.from_user.mention}**",
-
-
-             f"**ﻧ؏ـم يامطوريي{Message.from_user.mention}**",
-            
-
-            f"**امرني يا مطوري الحبيب{Message.from_user.mention}**",
-            
-            
-           
-            
-            
- 
-            
-            
-
-        ]
-
-
-        
         
 
 
@@ -85,4 +64,25 @@ async def cutt(client: Client, message: Message):
 
          f"{a}")
        
+      txt1 = [
 
+            f"**؏ـيوٍڼ حـيآهہ😻🫶 يا مطوريي {message.from_user.mention}**",
+
+
+             f"**ﻧ؏ـم يامطوريي{message.from_user.mention}**",
+            
+
+            f"**امرني يا مطوري الحبيب{message.from_user.mention}**",
+            
+            
+           
+            
+            
+ 
+            
+            
+
+        ]
+
+
+        
