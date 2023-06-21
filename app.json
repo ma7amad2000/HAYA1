@@ -9,8 +9,7 @@
     "AnonX",
     "MusicBot",
     "telegram-bot",
-    "pyrogram",
-    "pyromod"
+    "pyrogram"
     ],
     "env": {
       "API_ID": {
