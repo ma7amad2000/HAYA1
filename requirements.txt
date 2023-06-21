@@ -10,10 +10,9 @@ lyricsgenius
 motor==3.0.0
 pillow
 psutil
-pyromod==1.5
 py-tgcalls==0.8.6
 pykeyboard
-pyrogram==2.0.56
+pyrogram
 python-dotenv
 pyyaml
 requests
