@@ -51,7 +51,7 @@ packages(){
 			pprint "SUCCESS.\n\n" "cgreen"
 		else
 			pprint "FAIL.\n\n" "cred"
-			pprint "تحتاج إلى تثبيت ffmpeg يدويًا لنشر HAYA Music ، والخروج ...\n" "cblue"
+			pprint "You need to install ffmpeg manually in order to deploy AnonX Music, exiting...\n" "cblue"
 			exit 1
 		fi
 	fi
@@ -82,19 +82,19 @@ installation(){
 }
 
 clear
-pprint "Welcome to cr Setup Installer\n\n"
-pprint "إذا رأيت أي خطأ أثناء عملية التثبيت ، فيرجى الرجوع إلى هذه الملفات للحصول على السجلات: "
+pprint "Welcome to AnonXMusic Setup Installer\n\n"
+pprint "If you see any error during Installation Process, Please refer to these files for logs: "
 pprint "\nFor node js errors , Checkout nodelog.txt"
 pprint "\nFor pypi packages errors , Checkout pypilog.txt"
 sleep 1
-pprint "\n\nيحتاج البرنامج النصي إلى امتيازات sudo لتحديث الحزم وتثبيتها.\n"
+pprint "\n\nScript needs sudo privileges in order to update & install packages.\n"
 sudo test
 
 update
 packages
 node
 installation
-pprint "\n\n\n\n\nاكتمل تثبيت HAYA Music!" "cgreen"
+pprint "\n\n\n\n\nAnonX Music Installation Completed !" "cgreen"
 sleep 1
 clear
 
@@ -124,5 +124,5 @@ STRING_SESSION = $string_session
 OWNER_ID = $ownid""" > .env
 clear
 
-pprint "\n\n\nشكرًا لاستخدام أداة تثبيت HAYA Music ، تم حفظ vars الخاصة بك بنجاح ! \nIf you wanna add more variables add them in your env by : vi .env"
+pprint "\n\n\nThanks for using AnonX Music installer, your vars have been saved successfully ! \nIf you wanna add more variables add them in your env by : vi .env"
 pprint "\n\nNow you can start the bot by : bash zara\n\n"
