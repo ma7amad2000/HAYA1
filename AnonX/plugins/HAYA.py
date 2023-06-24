@@ -16,7 +16,7 @@ from random import  choice, randint
                 
 @app.on_message(
     command(["مطورين haya","المطورين","مطورين","مطورين حياه"])
-    & ~filters.edited
+  
 )
 async def huhh(client: Client, message: Message):
     await message.reply_photo(
@@ -62,7 +62,7 @@ async def huhh(client: Client, message: Message):
 @app.on_message(
     command(["شيكاغو تعال","عبادي","شيكاغو"])
     & filters.group
-    & ~filters.edited
+   
 )
 async def yas(client, message):
     
@@ -84,7 +84,7 @@ async def yas(client, message):
 @app.on_message(
     command(["مبرمج السورس","مطور السورس"])
     & filters.group
-    & ~filters.edited
+  
 )
 async def yas(client, message):
     usr = await client.get_chat("BP_BP")
@@ -108,7 +108,7 @@ async def yas(client, message):
 @app.on_message(
     command(["المطور"])
     & filters.group
-    & ~filters.edited
+   
 )
 async def yas(client, message):
     usr = await client.get_chat(USER_OWNER)
@@ -133,7 +133,7 @@ async def yas(client, message):
 
 @app.on_message(
     command(["ذكاء حياه"])
-    & ~filters.edited
+  
     
 )
 async def huhh(client: Client, message: Message):
@@ -161,7 +161,7 @@ async def huhh(client: Client, message: Message):
 
 @app.on_message(
     command(["قرأن"])
-    & ~filters.edited
+  
     
 )
 async def huhh(client: Client, message: Message):
