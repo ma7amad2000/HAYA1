@@ -25,7 +25,7 @@ from AnonX import app
 
 @app.on_message(
     command(["افلام"])
-    & ~filters.edited
+   
 )
 async def aflamAR(c: Client, m: Message):
     global mid
