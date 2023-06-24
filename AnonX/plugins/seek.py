@@ -1,6 +1,6 @@
 from pyrogram import filters
 from pyrogram.types import Message
-from strings.filters import command
+
 from config import BANNED_USERS
 from strings import get_command
 from AnonX import YouTube, app
@@ -13,7 +13,7 @@ SEEK_COMMAND = get_command("SEEK_COMMAND")
 
 
 @app.on_message(
-    command(SEEK_COMMAND)
+    filters.command(SEEK_COMMAND)
     & filters.group
     & ~BANNED_USERS
 )

@@ -21,7 +21,7 @@ from pyrogram.errors import MessageNotModified
 async def cr_source(client: Client, message: Message):
     await message.reply_photo(
         photo=f"https://b.top4top.io/p_2682mb2f41.jpg",
-        caption=f"""**⩹━★⊷━⌞ 𓏺᥉᥆ᥙᖇᥴᥱ ꫝꪖꪗꪖ⌝⌯⊶★━⩺ ⌝━⊶★━⩺**\nمرحبا بك عزيزي {message.from_user.mention}\nهذا قسم الاوامر الخاص بسورس حياه \nلمعرفة الاوامر اضغط على الأزرار بالأسفل👇\n**⩹━★⊷━⌞𓏺᥉᥆ᥙᖇᥴᥱ ꫝꪖꪗꪖ⌝⌯⊶★━⩺⌝━⊶★━⩺**""",
+        caption=f"""** 𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼**\nمرحبا بك عزيزي {message.from_user.mention}\nهذا قسم الاوامر الخاص بسورس حياه \nلمعرفة الاوامر اضغط على الأزرار بالأسفل👇\n** 𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼**""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -35,7 +35,7 @@ async def cr_source(client: Client, message: Message):
                 ],[
                 
                     InlineKeyboardButton(
-                        "★⌞𓏺᥉᥆ᥙᖇᥴᥱ ꫝꪖꪗꪖ⌝⌯⊶★━⩺ ⌝⚡", url=f"https://t.me/HL_BG"),
+                        "★ 𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼⚡", url=f"https://t.me/HL_BG"),
                 ],
 
             ]
@@ -49,7 +49,7 @@ async def cr_source(client: Client, message: Message):
 async def cr_usage(_, callback_query: CallbackQuery):
     await callback_query.answer()
     await callback_query.message.edit_text(
-        text="""**⌯⌞𓏺᥉᥆ᥙᖇᥴᥱ ꫝꪖꪗꪖ⌝⌯⊶★━⩺⌝⌯⊶★━⩺**
+        text="""**⌯ 𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼**
 ★¦ اهلا بك عزيزي في قسم اوامر التشغيل في الجروبات
 ★¦ تشغيل + اسم الاغنيه
 ★¦ فديو + اسم الاغنيه
@@ -74,7 +74,7 @@ async def cr_usage(_, callback_query: CallbackQuery):
 ★¦ vplay + اسم الاغنيه
 ★¦ play + اسم الاغنيه
 
-**⌯⌞𓏺᥉᥆ᥙᖇᥴᥱ ꫝꪖꪗꪖ⌝⌯⊶★━⩺⌝⌯⊶★━⩺**""",
+**⌯ 𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼**""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -94,7 +94,7 @@ async def cr_usage(_, callback_query: CallbackQuery):
 async def cr_usage(_, callback_query: CallbackQuery):
     await callback_query.answer()
     await callback_query.message.edit_text(
-        text="""**⌯𓏺᥉᥆ᥙᖇᥴᥱ ꫝꪖꪗꪖ⌝⌯⊶★━⩺⌝⌯⊶★━⩺**
+        text="""** 𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼**
 ★¦ اهلا بك عزيزي في قسم اوامر التشغيل في القنوات
 ★¦ شغل + اسم الاغنيه
 ★¦ قناه + اسم الاغنيه
@@ -103,7 +103,7 @@ async def cr_usage(_, callback_query: CallbackQuery):
 ★¦ اغاني + اسم الاغنيه
 ★¦ . + اسم الاغنيه
 ★¦ / + اسم الاغنيه
-**⩹⌯⌞𓏺᥉᥆ᥙᖇᥴᥱ ꫝꪖꪗꪖ⌝⌯⊶★━⩺⌝⌯⊶★━⩺**""",
+** 𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼**""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -124,7 +124,7 @@ async def cr_usage(_, callback_query: CallbackQuery):
 async def cr_usage(_, callback_query: CallbackQuery):
     await callback_query.answer()
     await callback_query.message.edit_text(
-        text="""**𓏺᥉᥆ᥙᖇᥴᥱ ꫝꪖꪗꪖ⌝⌯⊶★━⩺⌝⌯⊶★━⩺**
+        text="""** 𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼**
 ★¦ اهلا بك عزيزي في قسم اوامر تشغيل الادمن
 ★¦ رفع ثانوي
 ★¦ تنزيل ثانوي
@@ -162,7 +162,7 @@ async def cr_usage(_, callback_query: CallbackQuery):
 ★¦ الاعدادت
 ★¦ بينج
 
-**⩹━★⊷⌯⌞𓏺᥉᥆ᥙᖇᥴᥱ ꫝꪖꪗꪖ⌝⌯⊶★━⩺ ⌝⌯⊶★━⩺**""",
+** 𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼**""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -184,7 +184,7 @@ async def cr_usage(_, callback_query: CallbackQuery):
 async def cr_back(_, callback_query: CallbackQuery):
     await message.reply_photo(
         photo=f"https://b.top4top.io/p_2682mb2f41.jpg",
-        caption=f"""**⩹━★⊷━⌞𓏺᥉᥆ᥙᖇᥴᥱ ꫝꪖꪗꪖ⌝⌯⊶★━⩺ ⌝━⊶★━⩺**\nمرحبا بك عزيزي {message.from_user.mention}\nهذا قسم الاوامر الخاص بسورس حياه \nلمعرفة الاوامر اضغط على الأزرار بالأسفل👇\n**⩹━★⊷━⌞𓏺᥉᥆ᥙᖇᥴᥱ ꫝꪖꪗꪖ⌝⌯⊶★━⩺ ⌝━⊶★━⩺**""",
+        caption=f"""** 𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼**\nمرحبا بك عزيزي {message.from_user.mention}\nهذا قسم الاوامر الخاص بسورس حياه \nلمعرفة الاوامر اضغط على الأزرار بالأسفل👇\n** 𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼**""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -198,7 +198,7 @@ async def cr_back(_, callback_query: CallbackQuery):
                 ],[
                 
                     InlineKeyboardButton(
-                        "★⌞𓏺᥉᥆ᥙᖇᥴᥱ ꫝꪖꪗꪖ⌝⌯⊶★━⩺⌝⚡", url=f"https://t.me/HL_BG"),
+                        "★ 𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼⚡", url=f"https://t.me/HL_BG"),
                 ],
 
             ]

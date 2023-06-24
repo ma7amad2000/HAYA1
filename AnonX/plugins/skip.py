@@ -1,16 +1,6 @@
-#
-# Copyright (C) 2021-2022 by TeamYukki@Github, < https://github.com/TeamYukki >.
-#
-# This file is part of < https://github.com/TeamYukki/YukkiMusicBot > project,
-# and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/TeamYukki/YukkiMusicBot/blob/master/LICENSE >
-#
-# All rights reserved.
-
-from strings.filters import command
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardMarkup, Message
-
+from strings.filters import command
 import config
 from config import BANNED_USERS
 from strings import get_command
@@ -18,9 +8,10 @@ from AnonX import YouTube, app
 from AnonX.core.call import Anon
 from AnonX.misc import db
 from AnonX.utils.database import get_loop
-from AnonX.utils.decorators import AdminRightsCheckCB
+from AnonX.utils.decorators import AdminRightsCheck
 from AnonX.utils.inline.play import (stream_markup,
-                                          telegram_markup)
+                                          telegram_markup,
+                                          close_keyboard)
 from AnonX.utils.stream.autoclear import auto_clean
 from AnonX.utils.thumbnails import gen_thumb
 
@@ -30,10 +21,10 @@ SKIP_COMMAND = get_command("SKIP_COMMAND")
 
 @app.on_message(
     command(SKIP_COMMAND)
-    & ~filters.edited
+    & filters.group
     & ~BANNED_USERS
 )
-@AdminRightsCheckCB
+@AdminRightsCheck
 async def skip(cli, message: Message, _, chat_id):
     if not len(message.command) < 2:
         loop = await get_loop(chat_id)
@@ -66,8 +57,10 @@ async def skip(cli, message: Message, _, chat_id):
                                 try:
                                     await message.reply_text(
                                         _["admin_10"].format(
-                                            message.from_user.first_name
-                                        )
+                                            message.from_user.first_name,
+                                            message.chat.title
+                                        ),
+                                        reply_markup=close_keyboard
                                     )
                                     await Anon.stop_stream(chat_id)
                                 except:
@@ -93,7 +86,8 @@ async def skip(cli, message: Message, _, chat_id):
                     await auto_clean(popped)
             if not check:
                 await message.reply_text(
-                    _["admin_10"].format(message.from_user.first_name)
+                    _["admin_10"].format(message.from_user.first_name, message.chat.title),
+                    reply_markup=close_keyboard
                 )
                 try:
                     return await Anon.stop_stream(chat_id)
@@ -102,7 +96,8 @@ async def skip(cli, message: Message, _, chat_id):
         except:
             try:
                 await message.reply_text(
-                    _["admin_10"].format(message.from_user.first_name)
+                    _["admin_10"].format(message.from_user.first_name, message.chat.title),
+                    reply_markup=close_keyboard
                 )
                 return await Anon.stop_stream(chat_id)
             except:
@@ -112,6 +107,8 @@ async def skip(cli, message: Message, _, chat_id):
     user = check[0]["by"]
     streamtype = check[0]["streamtype"]
     videoid = check[0]["vidid"]
+    user_id = check[0]["user_id"]
+    duration_min = check[0]["dur"]
     status = True if str(streamtype) == "video" else None
     if "live_" in queued:
         n, link = await YouTube.video(videoid, True)
@@ -120,11 +117,16 @@ async def skip(cli, message: Message, _, chat_id):
                 _["admin_11"].format(title)
             )
         try:
-            await Anon.skip_stream(chat_id, link, video=status)
+            image = await YouTube.thumbnail(videoid, True)
+        except:
+            image = None
+        try:
+            await Anon.skip_stream(chat_id, link, video=status, image=image)
         except Exception:
             return await message.reply_text(_["call_9"])
+
         button = telegram_markup(_, chat_id)
-        img = await gen_thumb(videoid)
+        img = await gen_thumb(videoid, user_id)
         run = await message.reply_photo(
             photo=img,
             caption=_["stream_1"].format(
@@ -149,17 +151,23 @@ async def skip(cli, message: Message, _, chat_id):
         except:
             return await mystic.edit_text(_["call_9"])
         try:
-            await Anon.skip_stream(chat_id, file_path, video=status)
+            image = await YouTube.thumbnail(videoid, True)
+        except:
+            image = None
+        try:
+            await Anon.skip_stream(chat_id, file_path, video=status, image=image)
         except Exception:
             return await mystic.edit_text(_["call_9"])
         button = stream_markup(_, videoid, chat_id)
-        img = await gen_thumb(videoid)
+        img = await gen_thumb(videoid, user_id)
         run = await message.reply_photo(
             photo=img,
             caption=_["stream_1"].format(
-                user,
-                f"https://t.me/{app.username}?start=info_{videoid}",
-            ),
+                    title[:27],
+                    f"https://t.me/{app.username}?start=info_{videoid}",
+                    duration_min,
+                    user,
+                ),
             reply_markup=InlineKeyboardMarkup(button),
         )
         db[chat_id][0]["mystic"] = run
@@ -179,8 +187,17 @@ async def skip(cli, message: Message, _, chat_id):
         db[chat_id][0]["mystic"] = run
         db[chat_id][0]["markup"] = "tg"
     else:
+        if videoid == "telegram":
+            image = None
+        elif videoid == "soundcloud":
+            image = None
+        else:
+            try:
+                image = await YouTube.thumbnail(videoid, True)
+            except:
+                image = None
         try:
-            await Anon.skip_stream(chat_id, queued, video=status)
+            await Anon.skip_stream(chat_id, queued, video=status, image=image)
         except Exception:
             return await message.reply_text(_["call_9"])
         if videoid == "telegram":
@@ -211,12 +228,14 @@ async def skip(cli, message: Message, _, chat_id):
             db[chat_id][0]["markup"] = "tg"
         else:
             button = stream_markup(_, videoid, chat_id)
-            img = await gen_thumb(videoid)
+            img = await gen_thumb(videoid, user_id)
             run = await message.reply_photo(
                 photo=img,
                 caption=_["stream_1"].format(
-                    user,
+                    title[:27],
                     f"https://t.me/{app.username}?start=info_{videoid}",
+                    duration_min,
+                    user,
                 ),
                 reply_markup=InlineKeyboardMarkup(button),
             )

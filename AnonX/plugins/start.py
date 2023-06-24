@@ -5,10 +5,10 @@ from pyrogram import filters
 from pyrogram.types import (InlineKeyboardButton,
                             InlineKeyboardMarkup, Message)
 from youtubesearchpython.__future__ import VideosSearch
-from strings.filters import command
+from pyrogram.enums import ChatType, ParseMode
 import config
 from config import BANNED_USERS
-from config import OWNER_ID
+from config import OWNER_ID , USER_OWNER
 from strings import get_command, get_string
 from AnonX import Telegram, YouTube, app
 from AnonX.misc import SUDOERS, _boot_
@@ -33,7 +33,6 @@ loop = asyncio.get_running_loop()
 @app.on_message(
     filters.command(get_command("START_COMMAND"))
     & filters.private
-    & ~filters.edited
     & ~BANNED_USERS
 )
 @LanguageStart
@@ -43,13 +42,7 @@ async def start_comm(client, message: Message, _):
         name = message.text.split(None, 1)[1]
         if name[0:4] == "help":
             keyboard = help_pannel(_)
-        devhaya = (6275847466)
-       
-        if  message.from_user.id in devhaya:
-            await message.reply_text("**نـــورت يا حبـي الوسڪي مطور السورس♥🥺**")
-        else:
-            await message.reply_text("**مرحبا ايها العضو الفقير انا بوت ميوزك اسمي {MUSIC_BOT_NAME}**")
-          
+            await message.reply_text(f"اهلا عزيزي {message.from_user.first_name} في بوت الميوزك الخاص بي @{USER_OWNER}")
             return await message.reply_photo(
                        photo=config.START_IMG_URL,
                        caption=_["help_1"].format(config.SUPPORT_HEHE), reply_markup=keyboard
@@ -58,7 +51,7 @@ async def start_comm(client, message: Message, _):
             return await message.reply_text(_["song_2"])
         if name[0:3] == "sta":
             m = await message.reply_text(
-                f"🥱 احضار بيناتك الخاصه من {config.MUSIC_BOT_NAME} سيرفر."
+                f"🥱 يتم جلب الاحصائيات الخاصه لـ {config.MUSIC_BOT_NAME} sᴇʀᴠᴇʀ."
             )
             stats = await get_userss(message.from_user.id)
             tot = len(stats)
@@ -94,7 +87,7 @@ async def start_comm(client, message: Message, _):
                     details = stats.get(vidid)
                     title = (details["title"][:35]).title()
                     if vidid == "telegram":
-                        msg += f"🔗[ᴛᴇʟᴇɢʀᴀᴍ ᴍᴇᴅɪᴀ](https://t.me/DevilsHeavenMF) ** ᴩʟᴀʏᴇᴅ {count} ᴛɪᴍᴇs**\n\n"
+                        msg += f"🔗[قناة السورس](https://t.me/HL_BG) ** ᴩʟᴀʏᴇᴅ {count} ᴛɪᴍᴇs**\n\n"
                     else:
                         msg += f"🔗 [{title}](https://www.youtube.com/watch?v={vidid}) ** played {count} times**\n\n"
                 msg = _["ustats_2"].format(tot, tota, limit) + msg
@@ -118,7 +111,7 @@ async def start_comm(client, message: Message, _):
                 sender_name = message.from_user.first_name
                 return await app.send_message(
                     config.LOG_GROUP_ID,
-                    f"{message.from_user.mention} البوت بدا ليفحص <code>sᴜᴅᴏʟɪsᴛ</code>\n\n**ᴜsᴇʀ ɪᴅ:** {sender_id}\n**ᴜsᴇʀɴᴀᴍᴇ:** {sender_name}",
+                    f"{message.from_user.mention} ضغط ستارت على البوت <code>دخل على قائمة المطورين</code>\n\n**ايديه:** {sender_id}\n**اسمه:** {sender_name}",
                 )
             return
         if name[0:3] == "lyr":
@@ -134,17 +127,17 @@ async def start_comm(client, message: Message, _):
         if name[0:3] == "del":
             await del_plist_msg(client=client, message=message, _=_)
         if name == "verify":
-            await message.reply_text(f"هاي {message.from_user.first_name},\n شكرا لانك وثقت في  {config.MUSIC_BOT_NAME}, الان يمكنك ان تستخدمني.")
+            await message.reply_text(f"ʜᴇʏ {message.from_user.first_name},\nشكرا لوثوقك في انا  {config.MUSIC_BOT_NAME}, تم تخزين بياناتك اللازمه يمكنك التشغيل الان")
             if await is_on_off(config.LOG):
                 sender_id = message.from_user.id
                 sender_name = message.from_user.first_name
                 return await app.send_message(
                     config.LOG_GROUP_ID,
-                    f"{message.from_user.mention} البوت بدا  <code>ᴠᴇʀɪғʏ ʜɪᴍsᴇʟғ</code>\n\n**ᴜsᴇʀ ɪᴅ:** {sender_id}\n**ᴜsᴇʀɴᴀᴍᴇ:** {sender_name}",
+                    f"{message.from_user.mention}ضغط ستارت على البوت <code>تحقق من نفسه</code>\n\n**ايديه:** {sender_id}\n**اسمه:** {sender_name}",
                 )
             return
         if name[0:3] == "inf":
-            m = await message.reply_text("ثواني ياحبي بس")
+            m = await message.reply_text("دقيقه يقلبي وحانجيب البيانات")
             query = (str(name)).replace("info_", "", 1)
             query = f"https://www.youtube.com/watch?v={query}"
             results = VideosSearch(query, limit=1)
@@ -160,20 +153,18 @@ async def start_comm(client, message: Message, _):
                 link = result["link"]
                 published = result["publishedTime"]
             searched_text = f"""
-😲**معلومات المسارات**😲
-[مقدم من سورس حياه](https://t.me/HL_BG) \n [المطور]({config.OWNER_ID})
-📌**عنوان:** {title}
+😲**جلب المعلومات**😲
+ 𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼
+📌 **العنوان:** {title}
 
-⏳**المدة:** {duration} ᴍɪɴᴜᴛᴇs
-👀**المشاهدات:** `{views}`
-⏰**نشرت في:** {published}
-🎥**القناة:** {channel}
-📎**رابط القناة:** [ᴠɪsɪᴛ ᴄʜᴀɴɴᴇʟ]({channellink})
-🔗**الرابط:** [ᴡᴀᴛᴄʜ ᴏɴ ʏᴏᴜᴛᴜʙᴇ]({link})
-
-💖 البحث يعمل بواسطة {config.MUSIC_BOT_NAME} \n
- 𓏺[᥉᥆ᥙᖇᥴᥱ ꫝꪖꪗꪖ](https://t.me/HL_BG)
-"""
+⏳ **المده:** {duration} دقيقه
+👀 **المشاهدات:** `{views}`
+⏰ **نشرت في:** {published}
+🎥 **القناه:** {channel}
+📎 **رابط القناه:** [عرض القناه]({channellink})
+🔗 **الرابط:** [مشاهده في اليوتيوب]({link})
+ 𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼
+💖 بحث بواسطة {config.MUSIC_BOT_NAME}"""
             key = InlineKeyboardMarkup(
                 [
                     [
@@ -181,7 +172,7 @@ async def start_comm(client, message: Message, _):
                             text="• ʏᴏᴜᴛᴜʙᴇ •", url=f"{link}"
                         ),
                         InlineKeyboardButton(
-                            text="𓏺᥉᥆ᥙᖇᥴᥱ ꫝꪖꪗꪖ", url="https://t.me/HL_BG"
+                            text="• قناة السورس •", url="https://t.me/HL_BG"
                         ),
                     ],
                 ]
@@ -191,7 +182,7 @@ async def start_comm(client, message: Message, _):
                 message.chat.id,
                 photo=thumbnail,
                 caption=searched_text,
-                parse_mode="markdown",
+                parse_mode=ParseMode.MARKDOWN,
                 reply_markup=key,
             )
             if await is_on_off(config.LOG):
@@ -199,7 +190,7 @@ async def start_comm(client, message: Message, _):
                 sender_name = message.from_user.first_name
                 return await app.send_message(
                     config.LOG_GROUP_ID,
-                    f"{message.from_user.mention} البوت بدا ليفحص <code>ᴛʀᴀᴄᴋ ɪɴғᴏʀᴍᴀᴛɪᴏɴ</code>\n\n**ᴜsᴇʀ ɪᴅ:** {sender_id}\n**ᴜsᴇʀɴᴀᴍᴇ:** {sender_name}",
+                    f"{message.from_user.mention}ضغط ستارت على البوت<code>جلب المعلومات</code>\n\n**ايديه:** {sender_id}\n**اسمه:** {sender_name}",
                 )
     else:
         try:
@@ -210,7 +201,7 @@ async def start_comm(client, message: Message, _):
         out = private_panel(_, app.username, OWNER)
         if config.START_IMG_URL:
             try:
-                await message.reply_text("نـــورت يا حبـي الوسڪي مطور السورس♥🥺")
+                await message.reply_text(f"اهلا عزيزي {message.from_user.first_name} في بوت الميوزك الخاص بي @{USER_OWNER}")
                 await message.reply_photo(
                     photo=config.START_IMG_URL,
                     caption=_["start_2"].format(
@@ -233,14 +224,13 @@ async def start_comm(client, message: Message, _):
             sender_name = message.from_user.first_name
             return await app.send_message(
                 config.LOG_GROUP_ID,
-                f"{message.from_user.mention} البوت بدا .\n\n**ᴜsᴇʀ ɪᴅ:** {sender_id}\n**ᴜsᴇʀɴᴀᴍᴇ:** {sender_name}",
+                f"{message.from_user.mention} ضغط ستارت في البوت.\n\n**ايديه:** {sender_id}\n**اسمه:** {sender_name}",
             )
 
 
 @app.on_message(
     filters.command(get_command("START_COMMAND"))
     & filters.group
-    & ~filters.edited
     & ~BANNED_USERS
 )
 @LanguageStart
@@ -265,7 +255,7 @@ async def welcome(client, message: Message):
     if config.PRIVATE_BOT_MODE == str(True):
         if not await is_served_private_chat(message.chat.id):
             await message.reply_text(
-                "**خاص بوت الموسيقى**\n\nفقط للمحادثات المصرح بها من قبل مالكي الحساب، يرجى الطلب من مالك الحساب في الرسائل الخاصة للمصادقة على محادثتك، وإذا لم ترغب في ذلك، فافعل ما تريد لأني سأغادر.."
+                "**بوت ميوزك خاص**\n\فقط الدردشات المصرح بها بواسطة المطور."
             )
             return await app.leave_chat(message.chat.id)
     else:
@@ -276,7 +266,7 @@ async def welcome(client, message: Message):
             _ = get_string(language)
             if member.id == app.id:
                 chat_type = message.chat.type
-                if chat_type != "supergroup":
+                if chat_type != ChatType.SUPERGROUP:
                     await message.reply_text(_["start_6"])
                     return await app.leave_chat(message.chat.id)
                 if chat_id in await blacklisted_chats():
