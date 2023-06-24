@@ -5,7 +5,7 @@ def botplaylist_markup(_):
     buttons = [
         [
             InlineKeyboardButton(
-                text="شخصي",
+                text="شخصي ",
                 callback_data="get_playlist_playmode",
             ),
             InlineKeyboardButton(
@@ -14,7 +14,7 @@ def botplaylist_markup(_):
         ],
         [
             InlineKeyboardButton(
-                text="✯ إغلاق ✯", callback_data="close"
+                text="✯ اغلاق ✯", callback_data="close"
             ),
         ],
     ]
@@ -46,7 +46,7 @@ def top_play_markup(_):
                 text="رجوع", callback_data="get_playmarkup"
             ),
             InlineKeyboardButton(
-                text="إغلاق", callback_data="close"
+                text="اغلاق", callback_data="close"
             ),
         ],
     ]
@@ -57,10 +57,10 @@ def get_playlist_markup(_):
     buttons = [
         [
             InlineKeyboardButton(
-                text="الصوت", callback_data="play_playlist a"
+                text="صوت", callback_data="play_playlist a"
             ),
             InlineKeyboardButton(
-                text="الفيديو", callback_data="play_playlist v"
+                text="فيديو", callback_data="play_playlist v"
             ),
         ],
         [
@@ -68,7 +68,7 @@ def get_playlist_markup(_):
                 text="رجوع", callback_data="home_play"
             ),
             InlineKeyboardButton(
-                text="إغلاق", callback_data="close"
+                text="اغلاق", callback_data="close"
             ),
         ],
     ]
@@ -79,7 +79,7 @@ def top_play_markup(_):
     buttons = [
         [
             InlineKeyboardButton(
-                text="افضل 10 قوائم تشغيل", callback_data="SERVERTOP"
+                text="افضل 10 قائمة تشغيل", callback_data="SERVERTOP"
             )
         ],
         [
@@ -100,7 +100,7 @@ def top_play_markup(_):
                 text="رجوع", callback_data="get_playmarkup"
             ),
             InlineKeyboardButton(
-                text="إغلاق", callback_data="close"
+                text="اغلاق", callback_data="close"
             ),
         ],
     ]
@@ -115,7 +115,7 @@ def failed_top_markup(_):
                 callback_data="get_top_playlists",
             ),
             InlineKeyboardButton(
-                text="إغلاق", callback_data="close"
+                text="اغلاق", callback_data="close"
             ),
         ],
     ]
@@ -137,7 +137,7 @@ def warning_markup(_):
                     callback_data="del_back_playlist",
                 ),
                 InlineKeyboardButton(
-                    text="إغلاق",
+                    text="اغلاق",
                     callback_data="close",
                 ),
             ],
@@ -151,7 +151,7 @@ def close_markup(_):
         [
             [
                 InlineKeyboardButton(
-                    text="✯ إغلاق ✯",
+                    text="✯ اغلاق ✯",
                     callback_data="close",
                 ),
             ]

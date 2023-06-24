@@ -1,4 +1,5 @@
 import random
+
 from AnonX import userbot
 from AnonX.core.mongo import mongodb
 
@@ -104,5 +105,3 @@ async def group_assistant(self, chat_id: int) -> int:
         return self.four
     elif int(assis) == 5:
         return self.five
-
-    

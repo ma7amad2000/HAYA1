@@ -23,57 +23,57 @@ def help_pannel(_, START: Union[bool, int] = None):
         [
             [
                 InlineKeyboardButton(
-                    text="المشرف",
+                    text="[𖢿اوامر الادمن𖢿]",
                     callback_data="help_callback hb1",
                 ),
                 InlineKeyboardButton(
-                    text="منشئ",
+                    text="[𖢿المصادقه𖢿]",
                     callback_data="help_callback hb2",
                 ),
                 InlineKeyboardButton(
-                    text="blacklist",
+                    text="[𖢿القائمه السوداء𖢿]",
                     callback_data="help_callback hb3",
                 ),
             ],
             [
                 InlineKeyboardButton(
-                    text="الإذاعة",
+                    text="[𖢿الاذاعه𖢿]",
                     callback_data="help_callback hb4",
                 ),
                 InlineKeyboardButton(
-                    text="الحظر",
+                    text="[𖢿المحظورين𖢿]",
                     callback_data="help_callback hb12",
                 ),
                 InlineKeyboardButton(
-                    text="المطورين",
+                    text="[𖢿كلمات𖢿]",
                     callback_data="help_callback hb5",
                 ),
             ],
             [
                 InlineKeyboardButton(
-                    text="بينج",
+                    text="[𖢿بينج𖢿]",
                     callback_data="help_callback hb7",
                 ),
                 InlineKeyboardButton(
-                    text="التشغيل",
+                    text="[𖢿تشغيل𖢿]",
                     callback_data="help_callback hb8",
                 ),
                 InlineKeyboardButton(
-                    text="playlist",
+                    text="[𖢿قائمة التشغيل𖢿]",
                     callback_data="help_callback hb6",
                 ),
             ],
             [
                 InlineKeyboardButton(
-                    text="ᴠɪᴅᴇᴏᴄʜᴀᴛs",
+                    text="[𖢿المكالمات الصوتيه𖢿]",
                     callback_data="help_callback hb10",
                 ),
                 InlineKeyboardButton(
-                    text="sᴛᴀʀᴛ",
+                    text="[𖢿ستارت𖢿]",
                     callback_data="help_callback hb11",
                 ),
                 InlineKeyboardButton(
-                    text="الادمن",
+                    text="[𖢿اوامر المطورين𖢿]",
                     callback_data="help_callback hb9",
                 ),
             ],
@@ -92,7 +92,7 @@ def help_back_markup(_):
                     callback_data=f"settings_back_helper",
                 ),
                 InlineKeyboardButton(
-                    text=_["CLOSE_BUTTON"], callback_data=f"إغلاق"
+                    text=_["CLOSE_BUTTON"], callback_data=f"close"
                 )
             ]
         ]
@@ -104,7 +104,7 @@ def private_help_panel(_):
     buttons = [
         [
             InlineKeyboardButton(
-                text="🗒 الاوامر",
+                text="❄ ʜᴇʟᴩ ❄",
                 callback_data="settings_back_helper",
             ),
         ],
