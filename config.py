@@ -11,26 +11,27 @@ API_ID = int(getenv("API_ID"))
 API_HASH = getenv("API_HASH")
 
 BOT_TOKEN = getenv("BOT_TOKEN")
+
 MONGO_DB_URI = getenv("MONGO_DB_URI", None)
 LOG_GROUP_ID = int(getenv("LOG_GROUP_ID"))
-MUSIC_BOT_NAME = getenv("MUSIC_BOT_NAME", "HaYa")
-USER_CHANNEL = getenv("USER_CHANNEL","HL_BG")
-OWNER_ID = list(
-  map(int, getenv("OWNER_ID", "").split())) + [6275847466]
+MUSIC_BOT_NAME = getenv("MUSIC_BOT_NAME", "HaYa ダ ᴍᴜsɪᴄ")
+
+OWNER_ID = list(map(int, getenv("OWNER_ID", "6275847466").split()))
+
 HEROKU_API_KEY = getenv("HEROKU_API_KEY", None)
 HEROKU_APP_NAME = getenv("HEROKU_APP_NAME", None)
-
-UPSTREAM_REPO = getenv("UPSTREAM_REPO", "https://github.com/ma7amad2000/HAYA1")
+USER_OWNER = getenv("USER_OWNER","bp_bp")
+UPSTREAM_REPO = getenv("UPSTREAM_REPO", "https://github.com/ma7amad2000/HAYA01")
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "master")
 GIT_TOKEN = getenv("GIT_TOKEN", None)
-USER_OWNER = getenv("USER_OWNER","BP_BP")
+
 SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/HL_BG")
 SUPPORT_GROUP = getenv("SUPPORT_GROUP", "https://t.me/HL_BG")
 
 SUPPORT_HEHE = SUPPORT_GROUP.split("me/")[1]
 
-DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", "10080"))
-SONG_DOWNLOAD_DURATION = int(getenv("SONG_DOWNLOAD_DURATION_LIMIT", "10080"))
+DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", "9999999"))
+SONG_DOWNLOAD_DURATION = int(getenv("SONG_DOWNLOAD_DURATION_LIMIT", "180"))
 
 AUTO_LEAVING_ASSISTANT = getenv("AUTO_LEAVING_ASSISTANT", "False")
 AUTO_LEAVE_ASSISTANT_TIME = int(
@@ -68,6 +69,7 @@ YTDOWNLOADER = 1
 LOG = 2
 LOG_FILE_NAME = "logs.txt"
 adminlist = {}
+bitch = {}
 lyrical = {}
 chatstats = {}
 userstats = {}
@@ -75,18 +77,18 @@ clean = {}
 autoclean = []
 
 
-START_IMG_URL = getenv("START_IMG_URL", "https://b.top4top.io/p_2682mb2f41.jpg")
+START_IMG_URL = getenv("START_IMG_URL", "https://i.top4top.io/p_2729n1wub1.jpg")
 
 PING_IMG_URL = getenv(
     "PING_IMG_URL",
-    "https://b.top4top.io/p_2682mb2f41.jpg",
+    "https://i.top4top.io/p_2729n1wub1.jpg",
 )
 
-PLAYLIST_IMG_URL = "https://b.top4top.io/p_2682mb2f41.jpg"
+PLAYLIST_IMG_URL = "https://i.top4top.io/p_2729n1wub1.jpg"
 
-GLOBAL_IMG_URL = "https://b.top4top.io/p_2682mb2f41.jpg"
+GLOBAL_IMG_URL = "https://i.top4top.io/p_2729n1wub1.jpg"
 
-STATS_IMG_URL = "https://te.legra.ph/file/e906c2def5afe8a9b9120.jpg"
+STATS_IMG_URL = "https://i.top4top.io/p_2729n1wub1.jpg"
 
 TELEGRAM_AUDIO_URL = "https://te.legra.ph/file/6298d377ad3eb46711644.jpg"
 
@@ -129,9 +131,13 @@ if UPSTREAM_REPO:
 if PING_IMG_URL:
     if PING_IMG_URL != "assets/Ping.jpeg":
         if not re.match("(?:http|https)://", PING_IMG_URL):
-            PING_IMG_URL = "https://b.top4top.io/p_2682mb2f41.jpg"
+            PING_IMG_URL = "https://i.top4top.io/p_2729n1wub1.jpg"
 
 if START_IMG_URL:
     if START_IMG_URL != "assets/Ping.jpeg":
         if not re.match("(?:http|https)://", START_IMG_URL):
-            START_IMG_URL = "https://b.top4top.io/p_2682mb2f41.jpg"
+            START_IMG_URL = "https://i.top4top.io/p_2729n1wub1.jpg"
+if MONGO_DB_URI != None:
+    MONGO_DB_URI = MONGO_DB_URI.strip()
+if MONGO_DB_URI == "":
+    MONGO_DB_URI = None

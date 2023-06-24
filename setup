@@ -121,6 +121,7 @@ MONGO_DB_URI = $mongo_db
 LOG_GROUP_ID = $logger
 MUSIC_BOT_NAME = $mbt
 STRING_SESSION = $string_session
+USER_OWNER = $user_owner
 OWNER_ID = $ownid""" > .env
 clear
 

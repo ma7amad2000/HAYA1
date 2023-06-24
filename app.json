@@ -1,7 +1,7 @@
 {
-    "name": "HaYa ダ ᴍᴜsɪᴄ",
-    "description": "سورس حياه الاول على ليبيا",
-    "logo": "https://graph.org/file/300e2214b4bbf1a72feaa.jpg",
+    "name": "ᴀɴᴏɴ ダ ᴍᴜsɪᴄ",
+    "description": "A Telegram Music Player Bot, written in Python with Pyrogram and Py-Tgcalls.",
+    "logo": "https://telegra.ph/file/56d1760224589ee370186.jpg",
     "keywords": [
     "python3",
     "telegram",
@@ -13,59 +13,58 @@
     ],
     "env": {
       "API_ID": {
-        "description": "الايبي ايدي مكون من 7 ارقام",
-        "value": "",
+        "description": "Get this value from https://my.telegram.org",
+        "value": "1747534",
         "required": true
       },
-      "API_HASH": {
-        "description": "ايبي هاش المسترج مع الايبي ايدي",
-        "value": "",
-        "required": true
-      },
-      "BOT_TOKEN": {
-        "description": "توكن بوتك لو ماتعرفش كيف تبي تدير بوت ؟",
-        "value": "",
-        "required": true
-      },
-      "MONGO_DB_URI": {
-        "description": "حط هنا كود المونجو .",
-        "value": "mongodb+srv://bot_vambir:Al2552001@cluster0.heabj.mongodb.net/vambir_bot?retryWrites=true&w=majority",
-        "required": false
-      },
-      "MUSIC_BOT_NAME": {
-        "description": "اسم بوت الميوزك متاعك",
-        "value": "HaYa ダ ᴍᴜsɪᴄ",
-        "required": true
-      },
-      "OWNER_ID": {
-        "description": "ايديك ولو تبي تخلي مطور ثاني معاك خلي مسافه بين ايديك وايديه",
-        "value": "",
-        "required": true
-      },
-      "STRING_SESSION": {
-        "description": "جلسة بايروجرام v1",
-        "value": "",
-        "required": true
-      },
-        
       "USER_OWNER": {
-        "description": "يوزر المطور بدون @",
+        "description": "Your user",
         "value": "BP_BP",
         "required": true
       },
+      "API_HASH": {
+        "description": "Get this value from https://my.telegram.org",
+        "value": "5a2684512006853f2e48aca9652d83ea",
+        "required": true
+      },
+      "BOT_TOKEN": {
+        "description": "A Bot's token from Botfather",
+        "value": "6263074417:AAFH170jmvECjc1WaTNNukjSS-Ad50gbhVc",
+        "required": true
+      },
+      "MONGO_DB_URI": {
+        "description": "Get a mongodb url from https://cloud.mongodb.com.",
+        "value": "mongodb+srv://islam2005:islam2005@cluster0.rdjot.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+        "required": true
+      },
+      "MUSIC_BOT_NAME": {
+        "description": "A name for your Music Bot. You can use special characters bot ko jhaat farak ni padega",
+        "value": "ᴀɴᴏɴ ダ ᴍᴜsɪᴄ",
+        "required": true
+      },
+      "OWNER_ID": {
+        "description": "The user id(s) of user(s) whom you would like to add as a OWNER. Multiple values shall be seperated with a space.",
+        "value": "6275847466",
+        "required": true
+      },
+      "STRING_SESSION": {
+        "description": "A Pyrogram String Session. One Assistant is Compulsory.",
+        "value": "BAAhIHQAHuauxQHiZT8f721r4sGcC2gBgFQW8f4Us-JDJNsQtD3qUTZZ0aDsyquZ2TsIcDF33CWTjXGvNP5GIK9szulT0Pz4rT7q57q7AV083qNnvEfFfh1YGnBNOSwbBa_uVZco_zlk1AekyAV8ipS4lNa5KqrCWuF6Fxm8OpfV1VCiNAI6zTQdNFNrgJBm_hI8sdLGXos6inormyPX1d9IBIwkfizCmM2dJ1YGVtvJh0KtGwkWUHgYEknfPZk0XaMKuQREaq8MNo5dkat5Akj0tOFS573n0lseF0Gk3vwtgyWi8VNB750GxXY-YhV02F0yEZuXi2l0wpw7T0M67BHMvIakygAAAAFhguqrAA",
+        "required": true
+      },
       "HEROKU_API_KEY": {
-        "description": "مفتاح الهيروكو تلقاه في اعدادات حساب اهيروكو",
-        "value": "",
+        "description": "Your Heroku account's API key",
+        "value": "d9a23be7-206e-435a-ba18-6085484ce67b",
         "required": false
       },
       "HEROKU_APP_NAME": {
-        "description": "اسم التطبيق يكون انجليزي وكل حروفه سمول",
-        "value": "",
+        "description": "Your heroku app/bot's name",
+        "value": "abyuziv",
         "required": false
       },
       "LOG_GROUP_ID": {
-        "description": "ايدي قروب التخزين ولازم يكون بدايته -100",
-        "value": "",
+        "description": "Your Log Group ID, add your bot and promote as an admin with full rights!. Channel ki id mat daal dena bsdk.",
+        "value": "-1001969933498",
         "required": true
       }
     },
