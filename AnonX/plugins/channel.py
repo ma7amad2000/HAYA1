@@ -6,13 +6,13 @@ from strings import get_command
 from AnonX import app
 from AnonX.utils.database import set_cmode
 from AnonX.utils.decorators.admins import AdminActual
-from strings.filters import command
+
 ### Multi-Lang Commands
 CHANNELPLAY_COMMAND = get_command("CHANNELPLAY_COMMAND")
 
 
 @app.on_message(
-    command(CHANNELPLAY_COMMAND)
+    filters.command(CHANNELPLAY_COMMAND)
     & filters.group
     & ~BANNED_USERS
 )
