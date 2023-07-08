@@ -5,7 +5,6 @@
 # Commands in Every Language
 
 # Bot Commands
-STARTC_COMMAND : ["افتح المكالمه"]
 PING_COMMAND : ["ping", "بينج"]
 START_COMMAND : ["start", "/start", "تفعيل"]
 HELP_COMMAND : ["help", "مساعده"]
