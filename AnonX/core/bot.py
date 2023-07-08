@@ -6,7 +6,7 @@ import config
 
 from ..logging import LOGGER
 
-from pyrogram.enums import ChatMemberStatus
+
 
 class AnonXBot(Client):
     def __init__(self):
@@ -28,7 +28,7 @@ class AnonXBot(Client):
         else:
             self.name = get_me.first_name
         a = await self.get_chat_member(config.LOG_GROUP_ID, self.id)
-        if a.status != ChatMemberStatus.ADMINISTRATOR:
+        if a.status != "administrator":
             LOGGER(__name__).error(
                 "Please promote Bot as Admin in Logger Group"
             )
@@ -36,10 +36,10 @@ class AnonXBot(Client):
         LOGGER(__name__).info(f"MusicBot Started as {self.name}")
         try:
             await self.send_message(
-                config.LOG_GROUP_ID, f"**» {config.MUSIC_BOT_NAME} تم تشغيل البوت على 𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼 بنجاح:**\n\n✨ ɪᴅ : `{self.id}`\n❄ الاسم : {self.name}\n💫 المعرف : @{self.username}"
+                config.LOG_GROUP_ID, f"**»  تم تشغيل بوتك على 𓏺᥉᥆ᥙᖇᥴᥱ ꫝꪖꪗꪖ⌝ بنجاح :**\n\n✨ ɪᴅ : `{self.id}`\n❄ ɴᴀᴍᴇ : {self.name}\n💫 ᴜsᴇʀɴᴀᴍᴇ : @{self.username}"
             )
         except:
             LOGGER(__name__).error(
-                "فشل في استدعاء البوت تأكد من اضافته في المجموعه وترقيتع كمسؤول"
+                "Bot has failed to access the log Group. Make sure that you have added your bot to your log channel and promoted as admin!"
             )
             sys.exit()
