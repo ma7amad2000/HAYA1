@@ -1,9 +1,9 @@
 import random
 import string
 from ast import ExceptHandler
-
+from strings.filters import command
 from pyrogram import filters
-from pyrogram.types import (InlineKeyboardMarkup, InlineKeyboardButton, InputMediaPhoto,
+from pyrogram.types import (InlineKeyboardMarkup, InputMediaPhoto,
                             Message)
 from pytgcalls.exceptions import NoActiveGroupCall
 
@@ -22,11 +22,9 @@ from AnonX.utils.formatters import formats
 from AnonX.utils.inline.play import (livestream_markup,
                                           playlist_markup,
                                           slider_markup, track_markup)
-from AnonX.utils.database import is_served_user
 from AnonX.utils.inline.playlist import botplaylist_markup
 from AnonX.utils.logger import play_logs
 from AnonX.utils.stream.stream import stream
-from strings.filters import command
 
 # Command
 PLAY_COMMAND = get_command("PLAY_COMMAND")
@@ -49,21 +47,6 @@ async def play_commnd(
     url,
     fplay,
 ):
-    if not await is_served_user(message.from_user.id):
-        await message.reply_text(
-            text="😢 عزيزي انت غير موثق في بيانات cr .\n☔ من فضلك استخدم /verify لتوثيق نفسك في بيانات افاتار.",
-            reply_markup=InlineKeyboardMarkup(
-                [
-                    [
-                        InlineKeyboardButton(
-                            text="ᴄʟɪᴄᴋ ʜᴇʀᴇ ᴛᴏ ᴠᴇʀɪғʏ",
-                            url=f"https://t.me/{app.username}?start=verify",
-                        )
-                    ]
-                ]
-            ),
-        )
-        return
     mystic = await message.reply_text(
         _["play_2"].format(channel) if channel else _["play_1"]
     )
@@ -71,8 +54,8 @@ async def play_commnd(
     slider = None
     plist_type = None
     spotify = None
-    user_id = message.from_user.id if message.from_user else "5881570606"
-    user_name = message.from_user.first_name if message.from_user else "None"
+    user_id = message.from_user.id
+    user_name = message.from_user.first_name
     audio_telegram = (
         (
             message.reply_to_message.audio
