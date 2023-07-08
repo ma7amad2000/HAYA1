@@ -116,10 +116,10 @@ async def yas(client, message):
     & ~filters.edited
 )
 async def yas(client, message):
-    usr = await client.get_chat(OWNER_ID)
+    usr = await client.get_chat(USER_OWNER)
     name = usr.first_name
-    photo = await app.download_media(OWNER_ID.usr.photo.big_file_id)
-    await message.reply_photo(photo,       caption=f"**⩹━★⊷━⌞  𓏺᥉᥆ᥙᖇᥴᥱ ꫝꪖꪗꪖ ⌝━⊶★━⩺\n\n ¦ᦔꫀꪜ :{name}\n ¦ꪊ𝘴ꫀ𝘳 :@{usr.username}\n ¦Ꭵժ :`{OWNER_ID}`\n ¦ႦᎥ᥆ :{usr.bio}\n\n**⩹━★⊷━⌞  𓏺᥉᥆ᥙᖇᥴᥱ ꫝꪖꪗꪖ ⌝━⊶★━⩺**", 
+    photo = await app.download_media(usr.photo.big_file_id)
+    await message.reply_photo(photo,       caption=f"**⩹━★⊷━⌞  𓏺᥉᥆ᥙᖇᥴᥱ ꫝꪖꪗꪖ ⌝━⊶★━⩺\n\n ¦ᦔꫀꪜ :{name}\n ¦ꪊ𝘴ꫀ𝘳 :@{usr.username}\n ¦Ꭵժ :`{usr.id}`\n ¦ႦᎥ᥆ :{usr.bio}\n\n**⩹━★⊷━⌞  𓏺᥉᥆ᥙᖇᥴᥱ ꫝꪖꪗꪖ ⌝━⊶★━⩺**", 
     reply_markup=InlineKeyboardMarkup(
             [
                 [
