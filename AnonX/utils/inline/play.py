@@ -14,25 +14,25 @@ def stream_markup_timer(_, videoid, chat_id, played, dur):
     percentage = (played_sec / duration_sec) * 100
     anon = math.floor(percentage)
     if 0 < anon <= 10:
-        bar = "◉—————————"
+        bar = "𖢿—————————"
     elif 10 < anon < 20:
-        bar = "—◉————————"
+        bar = "—𖢿————————"
     elif 20 <= anon < 30:
-        bar = "——◉———————"
+        bar = "——𖢿———————"
     elif 30 <= anon < 40:
-        bar = "———◉——————"
+        bar = "———𖢿——————"
     elif 40 <= anon < 50:
-        bar = "————◉—————"
+        bar = "————𖢿—————"
     elif 50 <= anon < 60:
-        bar = "—————◉————"
+        bar = "—————𖢿————"
     elif 60 <= anon < 70:
-        bar = "——————◉———"
+        bar = "——————𖢿———"
     elif 70 <= anon < 80:
-        bar = "———————◉——"
+        bar = "———————𖢿——"
     elif 80 <= anon < 95:
-        bar = "————————◉—"
+        bar = "————————𖢿—"
     else:
-        bar = "—————————◉"
+        bar = "—————————𖢿"
 
     buttons = [
         [
@@ -61,7 +61,12 @@ def stream_markup_timer(_, videoid, chat_id, played, dur):
         ],
         [
             InlineKeyboardButton(
-                text="✯ ᴄʟᴏsᴇ ✯", callback_data=f"close"
+                text="𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼˹🎧˼⁩", url=f"https://t.me/HL_BG"
+                )
+        ],
+        [
+            InlineKeyboardButton(
+                text="✯ اغلاق ✯", callback_data=f"close"
             )
         ],
     ]
@@ -74,25 +79,25 @@ def telegram_markup_timer(_, chat_id, played, dur):
     percentage = (played_sec / duration_sec) * 100
     anon = math.floor(percentage)
     if 0 < anon <= 10:
-        bar = "◉—————————"
+        bar = "𖢿—————————"
     elif 10 < anon < 20:
-        bar = "—◉————————"
+        bar = "—𖢿————————"
     elif 20 <= anon < 30:
-        bar = "——◉———————"
+        bar = "——𖢿———————"
     elif 30 <= anon < 40:
-        bar = "———◉——————"
+        bar = "———𖢿——————"
     elif 40 <= anon < 50:
-        bar = "————◉—————"
+        bar = "————𖢿—————"
     elif 50 <= anon < 60:
-        bar = "—————◉————"
+        bar = "—————𖢿————"
     elif 60 <= anon < 70:
-        bar = "——————◉———"
+        bar = "——————𖢿———"
     elif 70 <= anon < 80:
-        bar = "———————◉——"
+        bar = "———————𖢿——"
     elif 80 <= anon < 95:
-        bar = "————————◉—"
+        bar = "————————𖢿—"
     else:
-        bar = "—————————◉"
+        bar = "—————————𖢿"
 
     buttons = [
         [
@@ -118,7 +123,12 @@ def telegram_markup_timer(_, chat_id, played, dur):
         ],
         [
             InlineKeyboardButton(
-                text="✯ ᴄʟᴏsᴇ ✯", callback_data=f"close"
+                text="𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼˹🎧˼⁩", url=f"https://t.me/HL_BG"
+                )
+        ],
+        [
+            InlineKeyboardButton(
+                text="✯ اغلاق ✯", callback_data=f"close"
             )
         ],
     ]
@@ -147,7 +157,12 @@ def stream_markup(_, videoid, chat_id):
         ],
         [
             InlineKeyboardButton(
-                text="✯ ᴄʟᴏsᴇ ✯", callback_data=f"close"
+                text="𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼˹🎧˼⁩", url=f"https://t.me/HL_BG"
+                )
+        ],
+        [
+            InlineKeyboardButton(
+                text="✯ اغلاق ✯", callback_data=f"close"
             )
         ],
     ]
@@ -173,7 +188,12 @@ def telegram_markup(_, chat_id):
         ],
         [
             InlineKeyboardButton(
-                text="✯ ᴄʟᴏsᴇ ✯", callback_data=f"close"
+                text="𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼˹🎧˼⁩", url=f"https://t.me/HL_BG"
+            )
+        ],
+        [
+            InlineKeyboardButton(
+                text="✯ اغلاق ✯", callback_data=f"close"
             )
         ],
     ]
@@ -297,7 +317,7 @@ close_keyboard = InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        text="✯ ᴄʟᴏsᴇ ✯", callback_data="close"
+                        text="✯ اغلاق ✯", callback_data="close"
                     )
                 ]    
             ]
@@ -328,7 +348,12 @@ def queue_markup(_, videoid, chat_id):
         ],
         [
             InlineKeyboardButton(
-                text="✯ ᴄʟᴏsᴇ ✯", callback_data=f"close"
+                text="𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼˹🎧˼⁩", url=f"https://t.me/HL_BG"
+            )
+        ],
+        [
+            InlineKeyboardButton(
+                text="✯ اغلاق ✯", callback_data=f"close"
             )
         ],
     ]

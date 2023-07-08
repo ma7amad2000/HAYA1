@@ -8,23 +8,23 @@ def setting_markup(_):
     buttons = [
         [
             InlineKeyboardButton(
-                text="[𖢿جودة الصوت𖢿]", callback_data="AQ"
+                text="جودة الصوت", callback_data="AQ"
             ),
             InlineKeyboardButton(
-                text="[𖢿جودة الفيديو𖢿]", callback_data="VQ"
-            ),
-        ],
-        [
-            InlineKeyboardButton(
-                text="[𖢿مستخدمون المصادقه𖢿]", callback_data="AU"
-            ),
-            InlineKeyboardButton(
-                text="[𖢿وضع النظيف𖢿]", callback_data="CM"
+                text="جودة الفيديو", callback_data="VQ"
             ),
         ],
         [
             InlineKeyboardButton(
-                text="• الدعم •", url=f"https://t.me/HL_BG",
+                text="المصادقه", callback_data="AU"
+            ),
+            InlineKeyboardButton(
+                text="وضع التنظيف", callback_data="CM"
+            ),
+        ],
+        [
+            InlineKeyboardButton(
+                text="⌞⩹━⊷⌯ 𓏺᥉᥆ᥙᖇᥴᥱ ꫝꪖꪗꪖ ⌝", url=f"https://t.me/HL_BG",
             ),
             InlineKeyboardButton(
                 text=_["CLOSE_BUTTON"], callback_data="close"
