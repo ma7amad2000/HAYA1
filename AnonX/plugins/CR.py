@@ -111,7 +111,7 @@ async def yas(client, message):
     
 
 @app.on_message(
-    command(["مطور البوت"])
+    command(["المطور"])
     & filters.group
     & ~filters.edited
 )
