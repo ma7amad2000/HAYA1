@@ -8,7 +8,7 @@ from pyrogram import filters
 from pyrogram.errors import MessageIdInvalid
 from pyrogram.types import CallbackQuery, InputMediaPhoto, Message
 from pytgcalls.__version__ import __version__ as pytgver
-
+from strings.filters import command
 import config
 from config import BANNED_USERS, MUSIC_BOT_NAME
 from strings import get_command
@@ -37,7 +37,7 @@ STATS_COMMAND = get_command("STATS_COMMAND")
 
 
 @app.on_message(
-    filters.command(STATS_COMMAND)
+    command(STATS_COMMAND)
     & filters.group
     & ~BANNED_USERS
 )
@@ -54,7 +54,7 @@ async def stats_global(client, message: Message, _):
 
 
 @app.on_message(
-    filters.command(GSTATS_COMMAND)
+    command(GSTATS_COMMAND)
     & filters.group
     & ~BANNED_USERS
 )
@@ -104,7 +104,7 @@ async def gstats_global(client, message: Message, _):
         vidid,
     ) = await YouTube.details(videoid, True)
     title = title.title()
-    final = f"افضل قوائم التشغيل في {MUSIC_BOT_NAME}\n\n**عنوان :** {title}\n\n تشغيل** {co} **الوقت."
+    final = f"ᴛᴏᴩ ᴍᴏsᴛ ᴩʟᴀʏᴇᴅ ᴛʀᴀᴄᴋ ᴏɴ {MUSIC_BOT_NAME}\n\n**ᴛɪᴛʟᴇ:** {title}\n\nᴩʟᴀʏᴇᴅ** {co} **ᴛɪᴍᴇs."
     upl = get_stats_markup(
         _, True if message.from_user.id in SUDOERS else False
     )
@@ -178,7 +178,7 @@ async def top_users_ten(client, CallbackQuery: CallbackQuery, _):
                 details = stats.get(items)
                 title = (details["title"][:35]).title()
                 if items == "telegram":
-                    msg += f"🍒 [𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼](https://t.me/HL_BG) ** التشفيل {count} الوقت**\n\n"
+                    msg += f"🍒 [ᴛᴇʟᴇɢʀᴀᴍ ᴍᴇᴅɪᴀ](https://t.me/DevilsHeavenMF) ** ᴩʟᴀʏᴇᴅ {count} ᴛɪᴍᴇs**\n\n"
                 else:
                     msg += f"📌 [{title}](https://www.youtube.com/watch?v={items}) ** ᴩʟᴀʏᴇᴅ {count} ᴛɪᴍᴇs**\n\n"
 
@@ -272,21 +272,21 @@ async def overall_stats(client, CallbackQuery, _):
     cm = config.CLEANMODE_DELETE_MINS
     text = f"""**ʙᴏᴛ's sᴛᴀᴛs ᴀɴᴅ ɪɴғᴏ:**
 
-**الوحدات:** {mod}
-**القروبات والقنوات:** {served_chats} 
-**المستخدمين:** {served_users} 
-**المحظورين:** {blocked} 
-**المطورين:** {sudoers} 
+**ᴍᴏᴅᴜʟᴇs:** {mod}
+**ᴄʜᴀᴛs:** {served_chats} 
+**ᴜsᴇʀs:** {served_users} 
+**ʙʟᴏᴄᴋᴇᴅ:** {blocked} 
+**sᴜᴅᴏᴇʀs:** {sudoers} 
     
-**الاستفسارات:** {total_queries} 
-**المساعدين:** {assistant}
-**التوقفات:** {ass}
-**وضع النظيف:** {cm} ᴍɪɴᴜᴛᴇs
+**ǫᴜᴇʀɪᴇs:** {total_queries} 
+**ᴀssɪsᴛᴀɴᴛs:** {assistant}
+**ᴀss ᴀᴜᴛᴏ ʟᴇᴀᴠᴇ:** {ass}
+**ᴄʟᴇᴀɴᴍᴏᴅᴇ:** {cm} ᴍɪɴᴜᴛᴇs
 
-**اقصى مده للتشغيل:** {play_duration} ᴍɪɴᴜᴛᴇs
-**اقصى مده للتنزيل:** {song} ᴍɪɴᴜᴛᴇs
-**قائمة التشغيل:** {playlist_limit}
-**حد مدة تشغيل قائمة التشغيل:** {fetch_playlist}"""
+**ᴅᴜʀᴀᴛɪᴏɴ ʟɪᴍɪᴛ:** {play_duration} ᴍɪɴᴜᴛᴇs
+**ᴅᴏᴡɴʟᴏᴀᴅ ʟɪᴍɪᴛ:** {song} ᴍɪɴᴜᴛᴇs
+**ᴩʟᴀʏʟɪsᴛ ʟɪᴍɪᴛ:** {playlist_limit}
+**ᴩʟᴀʏʟɪsᴛ ᴩʟᴀʏ ʟɪᴍɪᴛ:** {fetch_playlist}"""
     med = InputMediaPhoto(media=config.STATS_IMG_URL, caption=text)
     try:
         await CallbackQuery.edit_message_media(

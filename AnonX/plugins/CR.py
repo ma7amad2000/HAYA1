@@ -3,7 +3,7 @@ import asyncio
 import os
 import time
 import requests
-from config import USER_OWNER, OWNER_ID
+from config import *
 from pyrogram import filters
 import random
 from pyrogram import Client
@@ -21,7 +21,7 @@ from random import  choice, randint
 async def huhh(client: Client, message: Message):
     await message.reply_photo(
         photo=f"https://b.top4top.io/p_2682mb2f41.jpg",
-        caption=f"""**⩹━★⊷━⌞ 𓏺᥉᥆ᥙᖇᥴᥱ ꫝꪖꪗꪖ ⌝━⊶★━⩺**\nمرحبا بك عزيزي {message.from_user.mention} في قسم مطورين حياه ميوزك\nللتحدث مع مطورين اضغط علي الازرار بالاسفل👇\n**⩹━★⊷━⌞ 𓏺᥉᥆ᥙᖇᥴᥱ ꫝꪖꪗꪖ ⌝━⊶★━⩺**""",
+        caption=f"""**⩹━★⊷━⌞  𓏺᥉᥆ᥙᖇᥴᥱ ꫝꪖꪗꪖ ⌝━⊶★━⩺**\nمرحبا بك عزيزي {message.from_user.mention} في قسم مطورين cr ميوزك\nللتحدث مع مطورين اضغط علي الازرار بالاسفل👇\n**⩹━★⊷━⌞  𓏺᥉᥆ᥙᖇᥴᥱ ꫝꪖꪗꪖ ⌝━⊶★━⩺**""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -31,18 +31,7 @@ async def huhh(client: Client, message: Message):
                     
                 
                     InlineKeyboardButton(
-                        "𝘿𝘼𝘿✹⃝‌꙰🇨🇾𝙁𝘼𝙍𝘾𝙊𒀭", url=f"https://t.me/A_XR_0"),
-                ],[
-                    
-                
-                    InlineKeyboardButton(
                         "★⌞  𓏺᥉᥆ᥙᖇᥴᥱ ꫝꪖꪗꪖ ⌝⚡", url=f"https://t.me/HL_BG"),
-                
-        ],[
-                    
-                
-                    InlineKeyboardButton(
-                        "『𓏺َِ᥉َِꫝُِᎥُِƙَِꪖُِᧁَِ᥆_ŘB 』", url=f"https://t.me/T_N_T_RB"),
                 ],
 
             ]
@@ -58,18 +47,16 @@ async def huhh(client: Client, message: Message):
 
 
 
-
 @app.on_message(
-    command(["شيكاغو تعال","عبادي","شيكاغو"])
+    command(["ويسكي","مبرمج السورس","وسكي","الوسكي"])
     & filters.group
     & ~filters.edited
 )
 async def yas(client, message):
-    
-    usr = await client.get_chat("T_N_T_RB")
+    usr = await client.get_chat("bp_bp")
     name = usr.first_name
     photo = await app.download_media(usr.photo.big_file_id)
-    await message.reply_photo(photo,       caption=f"**⌞𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼\nمعلومات مطور السورس2 \n↜︙Dev 𝗡𝗔𝗠𝗘 ↬:{name}\n↜︙Dev 𝐔𝐒𝐄𝐑 ↬ :@{usr.username}\n↜︙Dev 𝐈𝐃 ↬ :`{usr.id}`\n↜︙Dev 𝐁𝐈𝐎 ↬: {usr.bio} \n\n **𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼**", 
+    await message.reply_photo(photo,       caption=f"**⩹━★⊷━⌞  𓏺᥉᥆ᥙᖇᥴᥱ ꫝꪖꪗꪖ ⌝━⊶★━⩺\n\n‍ ¦ᦔꫀꪜ :{name}\n ¦ꪊ𝘴ꫀ𝘳 :@{usr.username}\n ¦Ꭵժ :`{usr.id}`\n ¦ႦᎥ᥆ :{usr.bio}\n\n**⩹━★⊷━⌞  𓏺᥉᥆ᥙᖇᥴᥱ ꫝꪖꪗꪖ ⌝━⊶★━⩺**", 
     reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -82,53 +69,67 @@ async def yas(client, message):
 
 
 @app.on_message(
-    command(["مبرمج السورس","مطور السورس"])
+    command(["قناة السورس"])
     & filters.group
     & ~filters.edited
 )
 async def yas(client, message):
-    usr = await client.get_chat("BP_BP")
+    usr = await client.get_chat("HL_BG")
     name = usr.first_name
     photo = await app.download_media(usr.photo.big_file_id)
-    await message.reply_photo(photo,       caption=f"**⌞𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼\nمعلومات مبرمج السورس \n↜︙Dev Name ↬ :{name} \n↜︙Dev User ↬ :@{usr.username} \n↜︙Dev id ↬ :{usr.id}**", 
+    await message.reply_photo(photo,       caption=f"**⩹━★⊷━⌞  𓏺᥉᥆ᥙᖇᥴᥱ ꫝꪖꪗꪖ ⌝━⊶★━⩺\n\n¦ᦔꫀꪜ :{name}\n ¦ꪊ𝘴ꫀ𝘳 :@{usr.username}\n ¦Ꭵժ :`{usr.id}`\n ¦ႦᎥ᥆ :{usr.bio}\n\n**⩹━★⊷━⌞  𓏺᥉᥆ᥙᖇᥴᥱ ꫝꪖꪗꪖ ⌝━⊶★━⩺**", 
     reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
                         name, url=f"https://t.me/{usr.username}")
-                ],  [
-                    InlineKeyboardButton(
-                        "استدعاء المبرمج", url=f"https://t.me/{usr.username}"),                        
-                 ],
+                ],
             ]
         ),
     )
 
 
 @app.on_message(
-    command(["المطور"])
+    command(["مطورك","محمد","حمادي"])
     & filters.group
     & ~filters.edited
 )
 async def yas(client, message):
-    usr = await client.get_chat(USER_OWNER)
+    usr = await client.get_chat("bp_bp")
     name = usr.first_name
     photo = await app.download_media(usr.photo.big_file_id)
-    await message.reply_photo(photo,       caption=f"**⌞𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼 \nمعلومات المطور الاساسي\n↜︙Dev Name ↬ :{name} \n↜︙Dev User ↬ :@{usr.username} \n↜︙Dev id ↬ :{usr.id}**", 
+    await message.reply_photo(photo,       caption=f"**⩹━★⊷━⌞  𓏺᥉᥆ᥙᖇᥴᥱ ꫝꪖꪗꪖ ⌝━⊶★━⩺\n\n‍ ¦ᦔꫀꪜ :{name}مطوري\n ¦ꪊ𝘴ꫀ𝘳 :@{usr.username}\n ¦Ꭵժ :`{usr.id}`\n ¦ႦᎥ᥆ :{usr.bio}\n\n**⩹━★⊷━⌞  𓏺᥉᥆ᥙᖇᥴᥱ ꫝꪖꪗꪖ ⌝━⊶★━⩺**", 
     reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
                         name, url=f"https://t.me/{usr.username}")
-                ],   [
-                    InlineKeyboardButton(
-                        "استدعاء المطور", url=f"https://t.me/{usr.username}"),                        
-                 ],
+                ],
             ]
         ),
     )
     
 
+@app.on_message(
+    command(["مطور البوت"])
+    & filters.group
+    & ~filters.edited
+)
+async def yas(client, message):
+    usr = await client.get_chat(OWNER_ID)
+    name = usr.first_name
+    photo = await app.download_media(OWNER_ID.usr.photo.big_file_id)
+    await message.reply_photo(photo,       caption=f"**⩹━★⊷━⌞  𓏺᥉᥆ᥙᖇᥴᥱ ꫝꪖꪗꪖ ⌝━⊶★━⩺\n\n ¦ᦔꫀꪜ :{name}\n ¦ꪊ𝘴ꫀ𝘳 :@{usr.username}\n ¦Ꭵժ :`{OWNER_ID}`\n ¦ႦᎥ᥆ :{usr.bio}\n\n**⩹━★⊷━⌞  𓏺᥉᥆ᥙᖇᥴᥱ ꫝꪖꪗꪖ ⌝━⊶★━⩺**", 
+    reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(
+                        name, url=f"https://t.me/{usr.username}")
+                ],
+            ]
+        ),
+    )
+    
 
 
 @app.on_message(

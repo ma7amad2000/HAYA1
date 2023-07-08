@@ -77,3 +77,25 @@ async def ihd(client: Client, message: Message):
 
     
  
+async def cutt(client: Client, message: Message):
+     dev = (OWNER_ID)
+     if message.from_user.id in dev:
+
+
+         b = random.choice(txt1)
+
+
+         await message.reply(
+
+
+         f"{b}")
+     else:
+         a = random.choice(txt)
+
+
+         await message.reply(
+
+
+         f"{a}")
+       
+     

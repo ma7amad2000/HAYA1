@@ -13,7 +13,7 @@ async def strcall(client, message):
     assistant = await group_assistant(Anon,message.chat.id)
     try:
         await assistant.join_group_call(message.chat.id, AudioPiped("./AnonX/assets/call.mp3"), stream_type=StreamType().pulse_stream)
-        text="الناس القاعده في المكالمه تكذب:\n\n"
+        text="الناس الموجودين ف الكول:\n\n"
         participants = await assistant.get_participants(message.chat.id)
         k =0
         for participant in participants:
@@ -30,17 +30,17 @@ async def strcall(client, message):
         await asyncio.sleep(7)
         await assistant.leave_group_call(message.chat.id)
     except NoActiveGroupCall:
-        await message.reply(f"المكالمه مش مفتوحه اصلا")
+        await message.reply(f"المكالمه مقفوله اصلا يصاحبي")
     except TelegramServerError:
         await message.reply(f"ارسل الامر تاني في مشكله في سيرفر التلجرام")
     except AlreadyJoinedError:
-        text="االناس القاعده في المكالمه تكذب:\n\n"
+        text="الناس اللي قاعدين في المكالمه:\n\n"
         participants = await assistant.get_participants(message.chat.id)
         k =0
         for participant in participants:
             info = participant
             if info.muted == False:
-                mut="يرغوي"
+                mut="يتحدث "
             else:
                 mut="ساكت "
             user = await client.get_users(participant.user_id)
@@ -55,31 +55,31 @@ async def brah2(client, message):
     ho = divmod(ma[0], 60)
     day = divmod(ho[0], 24)
     if da < 60:
-       await message.reply(f"** - تم انهاء مكالمة الفيديو مدتها {da} ثواني وصكرها **")        
+       await message.reply(f"**- تم انهاء مكالمة الفيديو مدتها {da} ثواني**")        
     elif 60 < da < 3600:
         if 1 <= ma[0] < 2:
             await message.reply(f"**- تم انهاء مكالمة الفيديو مدتها دقيقه**")
         elif 2 <= ma[0] < 3:
-            await message.reply(f"**- تم انهاء مكالمة الفيديو مدتها دقيقتين **")
+            await message.reply(f"**- تم انهاء مكالمة الفيديو مدتها دقيقتين**")
         elif 3 <= ma[0] < 11:
-            await message.reply(f"**- تم انهاء مكالمة الفيديو مدتها {ma[0]} دقايق **")  
+            await message.reply(f"**- تم انهاء مكالمة الفيديو مدتها {ma[0]} دقايق**")  
         else:
             await message.reply(f"**- تم إنهاء مكالمة الفيديو مدتها {ma[0]} دقيقه**")
     elif 3600 < da < 86400:
         if 1 <= ho[0] < 2:
-            await message.reply(f"**- تم انهاء مكالمة الفيديو مدتها ساعه **")
+            await message.reply(f"**- تم انهاء مكالمة الفيديو مدتها ساعه**")
         elif 2 <= ho[0] < 3:
-            await message.reply(f"**- تم انهاء مكالمة الفيديو مدتها ساعتين **")
+            await message.reply(f"**- تم انهاء مكالمة الفيديو مدتها ساعتين**")
         elif 3 <= ho[0] < 11:
-            await message.reply(f"**- تم انهاء مكالمة الفيديو مدتها {ho[0]} ساعات **")  
+            await message.reply(f"**- تم انهاء مكالمة الفيديو مدتها {ho[0]} ساعات**")  
         else:
-            await message.reply(f"**- تم إنهاء مكالمة الفيديو مدتها {ho[0]} ساعة **")
+            await message.reply(f"**- تم إنهاء مكالمة الفيديو مدتها {ho[0]} ساعة**")
     else:
         if 1 <= day[0] < 2:
-            await message.reply(f"**- تم انهاء مكالمة الفيديو مدتها يوم **")
+            await message.reply(f"**- تم انهاء مكالمة الفيديو مدتها يوم**")
         elif 2 <= day[0] < 3:
-            await message.reply(f"**- تم انهاء مكالمة الفيديو مدتها يومين **")
+            await message.reply(f"**- تم انهاء مكالمة الفيديو مدتها يومين**")
         elif 3 <= day[0] < 11:
-            await message.reply(f"**- تم انهاء مكالمة الفيديو مدتها {day[0]} ايام **")  
+            await message.reply(f"**- تم انهاء مكالمة الفيديو مدتها {day[0]} ايام**")  
         else:
             await message.reply(f"**- تم إنهاء مكالمة الفيديو مدتها {day[0]} يوم**")
